@@ -1,22 +1,34 @@
 ﻿using Bunifu.Framework.UI;
 using System.Windows.Forms;
 using System.Drawing;
-
+using System.Collections.Generic;
 namespace QLNT.Presentation_Layer
 {
     public partial class frmMain : Form
     {
-         private void OnUCButtonClicked(object sender, MouseEventArgs e)
-        {
-            // Handle event from here
-            MessageBox.Show("Horray!");
-        }
-
         Drag drag = new Drag();
+
+        Dictionary<function, UserControl> listView;
+
         public frmMain()
         {
             InitializeComponent();
             InitForm();
+            InitListView();
+            UpdateView(function.TimKiemTre);
+        }
+
+        private void InitListView()
+        {
+            listView = new Dictionary<function, UserControl>();
+            listView.Add(function.ThemTre, view_ThemTre1);
+            listView.Add(function.TimKiemTre, view_TimKiemTre1);
+
+            foreach (function f in listView.Keys)
+            {
+                listView[f].Visible = false;
+                listView[f].Enabled = false;
+            }
         }
 
         private void InitForm()
@@ -58,22 +70,20 @@ namespace QLNT.Presentation_Layer
 
         public void UpdateView(function function)
         {
-            switch(function)
+            foreach (function f in listView.Keys)
             {
-                case function.ThemTre:
-                    view_ThemTre1.Enabled = true;
-                    view_ThemTre1.BringToFront();
-
-                    view_TimKiemTre1.Enabled = false;
-                    break;
-                case function.TimKiemTre:
-                    view_TimKiemTre1.Enabled = true;
-                    view_TimKiemTre1.BringToFront();
-
-                    view_ThemTre1.Enabled = false;
-                    break;
+                if (f == function)
+                {
+                    listView[f].Enabled = true;
+                    listView[f].Visible = true;
+                    listView[f].BringToFront();
+                }
+                else
+                {
+                    listView[f].Enabled = false;
+                    listView[f].Visible = false;
+                }
             }
-            
         }
         
     }
