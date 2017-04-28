@@ -1,18 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QLNT
+namespace QLNT.Presentation_Layer.Tab_Menu
 {
-    public partial class Form1 : Form
+    public partial class Tab_QLNhanVien : UserControl
     {
-        public Form1()
+        public Tab_QLNhanVien()
         {
             InitializeComponent();
         }

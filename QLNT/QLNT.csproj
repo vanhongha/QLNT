@@ -22,6 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,9 +34,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Bunifu_UI_v1.4">
-      <HintPath>C:\Users\Hong Ha\Desktop\Bunifu_UI_v1.4.dll</HintPath>
+    <Reference Include="Bunifu_UI_v1.52">
+      <HintPath>..\Bunifu_UI_v1.52.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -47,18 +50,56 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Presentation Layer\Form1.cs">
+    <Compile Include="Presentation Layer\frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Presentation Layer\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\Tab Menu\Tab_QLNhanVien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\Tab Menu\Tab_QLNhanVien.Designer.cs">
+      <DependentUpon>Tab_QLNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\Tab Menu\Tab_QLTre.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\Tab Menu\Tab_QLTre.Designer.cs">
+      <DependentUpon>Tab_QLTre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\Utilities.cs" />
+    <Compile Include="Presentation Layer\View\View_ThemTre.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\View\View_ThemTre.Designer.cs">
+      <DependentUpon>View_ThemTre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\View\View_TimKiemTre.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\View\View_TimKiemTre.Designer.cs">
+      <DependentUpon>View_TimKiemTre.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Presentation Layer\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\Tab Menu\Tab_QLNhanVien.resx">
+      <DependentUpon>Tab_QLNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\Tab Menu\Tab_QLTre.resx">
+      <DependentUpon>Tab_QLTre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\View\View_ThemTre.resx">
+      <DependentUpon>View_ThemTre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\View\View_TimKiemTre.resx">
+      <DependentUpon>View_TimKiemTre.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
