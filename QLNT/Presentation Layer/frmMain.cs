@@ -10,11 +10,14 @@ namespace QLNT.Presentation_Layer
 
         Dictionary<function, UserControl> listView;
 
+        Dictionary<tab, UserControl> listTabMenu;
+
         public frmMain()
         {
             InitializeComponent();
             InitForm();
             InitListView();
+            InitTabMenu();
             UpdateView(function.Introduction);
         }
 
@@ -27,11 +30,29 @@ namespace QLNT.Presentation_Layer
             listView.Add(function.TimKiemTre, view_TimKiemTre1);
             listView.Add(function.ThemNV, view_ThemNV1);
             listView.Add(function.TimKiemNV, view_TimKiemNV1);
+            listView.Add(function.ChinhSuaDiemHocTap, view_ChinhSuaDiemHocTap1);
+            listView.Add(function.ChinhSuaDiemNgoaiKhoa, view_ChinhSuaDiemNgoaiKhoa1);
 
             foreach (function f in listView.Keys)
             {
                 listView[f].Visible = false;
                 listView[f].Enabled = false;
+            }
+        }
+
+        private void InitTabMenu()
+        {
+            listTabMenu = new Dictionary<tab, UserControl>();
+
+            listTabMenu.Add(tab.QLTre, tab_QLTre1);
+            listTabMenu.Add(tab.QLNhanVien, tab_QLNhanVien1);
+            listTabMenu.Add(tab.QLDinhDuong, tab_QLDinhDuong1);
+            listTabMenu.Add(tab.QLHocTap, tab_QLHocTap1);
+
+            foreach (tab tab in listTabMenu.Keys)
+            {
+                listTabMenu[tab].Visible = false;
+                listTabMenu[tab].Enabled = false;
             }
         }
 
@@ -57,13 +78,23 @@ namespace QLNT.Presentation_Layer
 
         private void btnQLNhanVien_Click(object sender, System.EventArgs e)
         {
-            SetNormalColor(btnQLTreEm);
-            tab_QLNhanVien1.BringToFront();
+            //SetNormalColor(btnQLTreEm);
+            UpdateTab(tab.QLNhanVien);
         }
 
         private void btnQLTreEm_Click(object sender, System.EventArgs e)
         {
-            tab_QLTre1.BringToFront();
+            UpdateTab(tab.QLTre);
+        }
+
+        private void btnQLDinhDuong_Click(object sender, System.EventArgs e)
+        {
+            UpdateTab(tab.QLDinhDuong);
+        }
+        
+        private void btnQLHocTap_Click(object sender, System.EventArgs e)
+        {
+            UpdateTab(tab.QLHocTap);
         }
 
         private void SetNormalColor(BunifuFlatButton button)
@@ -89,6 +120,24 @@ namespace QLNT.Presentation_Layer
                 }
             }
         }
-        
+
+        private void UpdateTab(tab tab)
+        {
+            foreach (tab t in listTabMenu.Keys)
+            {
+                if (t == tab)
+                {
+                    listTabMenu[t].Enabled = true;
+                    listTabMenu[t].Visible = true;
+                    listTabMenu[t].BringToFront();
+                }
+                else
+                {
+                    listTabMenu[t].Enabled = false;
+                    listTabMenu[t].Visible = false;
+                }
+            }
+        }
+
     }
 }

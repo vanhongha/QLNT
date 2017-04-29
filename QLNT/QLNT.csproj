@@ -59,6 +59,18 @@
     <Compile Include="Presentation Layer\Form1.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentation Layer\Tab Menu\Tab_QLDinhDuong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\Tab Menu\Tab_QLDinhDuong.Designer.cs">
+      <DependentUpon>Tab_QLDinhDuong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\Tab Menu\Tab_QLHocTap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\Tab Menu\Tab_QLHocTap.Designer.cs">
+      <DependentUpon>Tab_QLHocTap.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentation Layer\Tab Menu\Tab_QLNhanVien.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -72,11 +84,29 @@
       <DependentUpon>Tab_QLTre.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentation Layer\Utilities.cs" />
+    <Compile Include="Presentation Layer\View\View_ChinhSuaDiemNgoaiKhoa.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\View\View_ChinhSuaDiemNgoaiKhoa.Designer.cs">
+      <DependentUpon>View_ChinhSuaDiemNgoaiKhoa.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentation Layer\View\View_Introduction.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Presentation Layer\View\View_Introduction.Designer.cs">
       <DependentUpon>View_Introduction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\View\View_ChinhSuaDiemHocTap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\View\View_ChinhSuaDiemHocTap.Designer.cs">
+      <DependentUpon>View_ChinhSuaDiemHocTap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\View\View_ThemMoiThucDon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\View\View_ThemMoiThucDon.Designer.cs">
+      <DependentUpon>View_ThemMoiThucDon.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentation Layer\View\View_ThemNV.cs">
       <SubType>UserControl</SubType>
@@ -107,14 +137,29 @@
     <EmbeddedResource Include="Presentation Layer\Form1.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\Tab Menu\Tab_QLDinhDuong.resx">
+      <DependentUpon>Tab_QLDinhDuong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\Tab Menu\Tab_QLHocTap.resx">
+      <DependentUpon>Tab_QLHocTap.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentation Layer\Tab Menu\Tab_QLNhanVien.resx">
       <DependentUpon>Tab_QLNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation Layer\Tab Menu\Tab_QLTre.resx">
       <DependentUpon>Tab_QLTre.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\View\View_ChinhSuaDiemNgoaiKhoa.resx">
+      <DependentUpon>View_ChinhSuaDiemNgoaiKhoa.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentation Layer\View\View_Introduction.resx">
       <DependentUpon>View_Introduction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\View\View_ChinhSuaDiemHocTap.resx">
+      <DependentUpon>View_ChinhSuaDiemHocTap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\View\View_ThemMoiThucDon.resx">
+      <DependentUpon>View_ThemMoiThucDon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation Layer\View\View_ThemNV.resx">
       <DependentUpon>View_ThemNV.cs</DependentUpon>

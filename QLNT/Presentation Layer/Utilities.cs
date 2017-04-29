@@ -14,6 +14,16 @@ namespace QLNT.Presentation_Layer
         ThemTre,
         TimKiemTre,
         ThemNV,
-        TimKiemNV
+        TimKiemNV,
+        ChinhSuaDiemHocTap,
+        ChinhSuaDiemNgoaiKhoa
+    }
+
+    public enum tab
+    {
+        QLTre,
+        QLNhanVien,
+        QLDinhDuong,
+        QLHocTap
     }
 }
