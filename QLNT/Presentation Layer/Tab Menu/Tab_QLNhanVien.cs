@@ -16,5 +16,17 @@ namespace QLNT.Presentation_Layer.Tab_Menu
         {
             InitializeComponent();
         }
+
+        private void btnThemNhanVien_Click(object sender, EventArgs e)
+        {
+            frmMain parentForm = (this.Parent.Parent.Parent as frmMain);
+            parentForm.UpdateView(function.ThemNV);
+        }
+
+        private void btnCapNhatTraCuu_Click(object sender, EventArgs e)
+        {
+            frmMain parentForm = (this.Parent.Parent.Parent as frmMain);
+            parentForm.UpdateView(function.TimKiemNV);
+        }
     }
 }

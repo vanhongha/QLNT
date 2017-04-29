@@ -51,7 +51,7 @@
             this.btn_TiepNhanTre.IdleFillColor = System.Drawing.Color.White;
             this.btn_TiepNhanTre.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
             this.btn_TiepNhanTre.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
-            this.btn_TiepNhanTre.Location = new System.Drawing.Point(5, 5);
+            this.btn_TiepNhanTre.Location = new System.Drawing.Point(5, 7);
             this.btn_TiepNhanTre.Margin = new System.Windows.Forms.Padding(5);
             this.btn_TiepNhanTre.Name = "btn_TiepNhanTre";
             this.btn_TiepNhanTre.Size = new System.Drawing.Size(181, 41);
@@ -77,7 +77,7 @@
             this.btnCapNhatTraCuu.IdleFillColor = System.Drawing.Color.White;
             this.btnCapNhatTraCuu.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
             this.btnCapNhatTraCuu.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
-            this.btnCapNhatTraCuu.Location = new System.Drawing.Point(196, 5);
+            this.btnCapNhatTraCuu.Location = new System.Drawing.Point(196, 7);
             this.btnCapNhatTraCuu.Margin = new System.Windows.Forms.Padding(5);
             this.btnCapNhatTraCuu.Name = "btnCapNhatTraCuu";
             this.btnCapNhatTraCuu.Size = new System.Drawing.Size(181, 41);

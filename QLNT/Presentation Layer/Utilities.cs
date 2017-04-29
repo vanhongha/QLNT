@@ -10,7 +10,10 @@ namespace QLNT.Presentation_Layer
     
     public enum function
     {
+        Introduction,
         ThemTre,
-        TimKiemTre
+        TimKiemTre,
+        ThemNV,
+        TimKiemNV
     }
 }

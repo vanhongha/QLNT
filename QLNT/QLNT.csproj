@@ -72,11 +72,29 @@
       <DependentUpon>Tab_QLTre.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentation Layer\Utilities.cs" />
+    <Compile Include="Presentation Layer\View\View_Introduction.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\View\View_Introduction.Designer.cs">
+      <DependentUpon>View_Introduction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\View\View_ThemNV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\View\View_ThemNV.Designer.cs">
+      <DependentUpon>View_ThemNV.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentation Layer\View\View_ThemTre.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Presentation Layer\View\View_ThemTre.Designer.cs">
       <DependentUpon>View_ThemTre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\View\View_TimKiemNV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\View\View_TimKiemNV.Designer.cs">
+      <DependentUpon>View_TimKiemNV.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentation Layer\View\View_TimKiemTre.cs">
       <SubType>UserControl</SubType>
@@ -95,8 +113,17 @@
     <EmbeddedResource Include="Presentation Layer\Tab Menu\Tab_QLTre.resx">
       <DependentUpon>Tab_QLTre.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\View\View_Introduction.resx">
+      <DependentUpon>View_Introduction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\View\View_ThemNV.resx">
+      <DependentUpon>View_ThemNV.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentation Layer\View\View_ThemTre.resx">
       <DependentUpon>View_ThemTre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\View\View_TimKiemNV.resx">
+      <DependentUpon>View_TimKiemNV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation Layer\View\View_TimKiemTre.resx">
       <DependentUpon>View_TimKiemTre.cs</DependentUpon>
@@ -109,6 +136,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -123,7 +151,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\uit.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

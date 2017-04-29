@@ -44,6 +44,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.content = new System.Windows.Forms.Panel();
+            this.view_TimKiemNV1 = new QLNT.Presentation_Layer.View.View_TimKiemNV();
+            this.view_ThemNV1 = new QLNT.Presentation_Layer.View.View_ThemNV();
             this.view_TimKiemTre1 = new QLNT.Presentation_Layer.View.View_TimKiemTre();
             this.view_ThemTre1 = new QLNT.Presentation_Layer.View.View_ThemTre();
             this.header = new System.Windows.Forms.Panel();
@@ -52,6 +54,7 @@
             this.tab_QLTre1 = new QLNT.Presentation_Layer.Tab_Menu.Tab_QLTre();
             this.headerDrag = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
+            this.view_Introduction1 = new QLNT.Presentation_Layer.View.View_Introduction();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -90,7 +93,7 @@
             this.bunifuFlatButton8.DisabledColor = System.Drawing.Color.Gray;
             this.bunifuFlatButton8.Dock = System.Windows.Forms.DockStyle.Top;
             this.bunifuFlatButton8.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton8.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton8.Iconimage")));
+            this.bunifuFlatButton8.Iconimage = null;
             this.bunifuFlatButton8.Iconimage_right = null;
             this.bunifuFlatButton8.Iconimage_right_Selected = null;
             this.bunifuFlatButton8.Iconimage_Selected = null;
@@ -125,7 +128,7 @@
             this.bunifuFlatButton7.DisabledColor = System.Drawing.Color.Gray;
             this.bunifuFlatButton7.Dock = System.Windows.Forms.DockStyle.Top;
             this.bunifuFlatButton7.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton7.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton7.Iconimage")));
+            this.bunifuFlatButton7.Iconimage = null;
             this.bunifuFlatButton7.Iconimage_right = null;
             this.bunifuFlatButton7.Iconimage_right_Selected = null;
             this.bunifuFlatButton7.Iconimage_Selected = null;
@@ -160,7 +163,7 @@
             this.bunifuFlatButton6.DisabledColor = System.Drawing.Color.Gray;
             this.bunifuFlatButton6.Dock = System.Windows.Forms.DockStyle.Top;
             this.bunifuFlatButton6.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton6.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton6.Iconimage")));
+            this.bunifuFlatButton6.Iconimage = null;
             this.bunifuFlatButton6.Iconimage_right = null;
             this.bunifuFlatButton6.Iconimage_right_Selected = null;
             this.bunifuFlatButton6.Iconimage_Selected = null;
@@ -195,7 +198,7 @@
             this.bunifuFlatButton5.DisabledColor = System.Drawing.Color.Gray;
             this.bunifuFlatButton5.Dock = System.Windows.Forms.DockStyle.Top;
             this.bunifuFlatButton5.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton5.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton5.Iconimage")));
+            this.bunifuFlatButton5.Iconimage = null;
             this.bunifuFlatButton5.Iconimage_right = null;
             this.bunifuFlatButton5.Iconimage_right_Selected = null;
             this.bunifuFlatButton5.Iconimage_Selected = null;
@@ -230,7 +233,7 @@
             this.bunifuFlatButton4.DisabledColor = System.Drawing.Color.Gray;
             this.bunifuFlatButton4.Dock = System.Windows.Forms.DockStyle.Top;
             this.bunifuFlatButton4.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton4.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton4.Iconimage")));
+            this.bunifuFlatButton4.Iconimage = null;
             this.bunifuFlatButton4.Iconimage_right = null;
             this.bunifuFlatButton4.Iconimage_right_Selected = null;
             this.bunifuFlatButton4.Iconimage_Selected = null;
@@ -265,7 +268,7 @@
             this.bunifuFlatButton3.DisabledColor = System.Drawing.Color.Gray;
             this.bunifuFlatButton3.Dock = System.Windows.Forms.DockStyle.Top;
             this.bunifuFlatButton3.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton3.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton3.Iconimage")));
+            this.bunifuFlatButton3.Iconimage = null;
             this.bunifuFlatButton3.Iconimage_right = null;
             this.bunifuFlatButton3.Iconimage_right_Selected = null;
             this.bunifuFlatButton3.Iconimage_Selected = null;
@@ -300,7 +303,7 @@
             this.btnQLNhanVien.DisabledColor = System.Drawing.Color.Gray;
             this.btnQLNhanVien.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnQLNhanVien.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnQLNhanVien.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnQLNhanVien.Iconimage")));
+            this.btnQLNhanVien.Iconimage = null;
             this.btnQLNhanVien.Iconimage_right = null;
             this.btnQLNhanVien.Iconimage_right_Selected = null;
             this.btnQLNhanVien.Iconimage_Selected = null;
@@ -336,7 +339,7 @@
             this.btnQLTreEm.DisabledColor = System.Drawing.Color.Gray;
             this.btnQLTreEm.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnQLTreEm.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnQLTreEm.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnQLTreEm.Iconimage")));
+            this.btnQLTreEm.Iconimage = null;
             this.btnQLTreEm.Iconimage_right = null;
             this.btnQLTreEm.Iconimage_right_Selected = null;
             this.btnQLTreEm.Iconimage_Selected = null;
@@ -422,7 +425,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Image = global::QLNT.Properties.Resources.uit;
             this.pictureBox1.Location = new System.Drawing.Point(83, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(111, 99);
@@ -433,6 +436,9 @@
             // content
             // 
             this.content.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(236)))), ((int)(((byte)(245)))));
+            this.content.Controls.Add(this.view_Introduction1);
+            this.content.Controls.Add(this.view_TimKiemNV1);
+            this.content.Controls.Add(this.view_ThemNV1);
             this.content.Controls.Add(this.view_TimKiemTre1);
             this.content.Controls.Add(this.view_ThemTre1);
             this.content.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -441,8 +447,27 @@
             this.content.Size = new System.Drawing.Size(927, 542);
             this.content.TabIndex = 2;
             // 
+            // view_TimKiemNV1
+            // 
+            this.view_TimKiemNV1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(236)))), ((int)(((byte)(245)))));
+            this.view_TimKiemNV1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.view_TimKiemNV1.Location = new System.Drawing.Point(0, 0);
+            this.view_TimKiemNV1.Name = "view_TimKiemNV1";
+            this.view_TimKiemNV1.Size = new System.Drawing.Size(927, 542);
+            this.view_TimKiemNV1.TabIndex = 2;
+            // 
+            // view_ThemNV1
+            // 
+            this.view_ThemNV1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(236)))), ((int)(((byte)(245)))));
+            this.view_ThemNV1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.view_ThemNV1.Location = new System.Drawing.Point(0, 0);
+            this.view_ThemNV1.Name = "view_ThemNV1";
+            this.view_ThemNV1.Size = new System.Drawing.Size(927, 542);
+            this.view_ThemNV1.TabIndex = 1;
+            // 
             // view_TimKiemTre1
             // 
+            this.view_TimKiemTre1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(236)))), ((int)(((byte)(245)))));
             this.view_TimKiemTre1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.view_TimKiemTre1.Location = new System.Drawing.Point(0, 0);
             this.view_TimKiemTre1.Name = "view_TimKiemTre1";
@@ -521,6 +546,15 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Phần mềm quản lý nhà trẻ";
             // 
+            // view_Introduction1
+            // 
+            this.view_Introduction1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(236)))), ((int)(((byte)(245)))));
+            this.view_Introduction1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.view_Introduction1.Location = new System.Drawing.Point(0, 0);
+            this.view_Introduction1.Name = "view_Introduction1";
+            this.view_Introduction1.Size = new System.Drawing.Size(927, 542);
+            this.view_Introduction1.TabIndex = 3;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -570,6 +604,9 @@
         private System.Windows.Forms.Label label3;
         private View.View_TimKiemTre view_TimKiemTre1;
         private View.View_ThemTre view_ThemTre1;
+        private View.View_ThemNV view_ThemNV1;
+        private View.View_TimKiemNV view_TimKiemNV1;
+        private View.View_Introduction view_Introduction1;
     }
 }
 

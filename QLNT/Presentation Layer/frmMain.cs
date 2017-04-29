@@ -15,14 +15,18 @@ namespace QLNT.Presentation_Layer
             InitializeComponent();
             InitForm();
             InitListView();
-            UpdateView(function.TimKiemTre);
+            UpdateView(function.Introduction);
         }
 
         private void InitListView()
         {
             listView = new Dictionary<function, UserControl>();
+
+            listView.Add(function.Introduction, view_Introduction1);
             listView.Add(function.ThemTre, view_ThemTre1);
             listView.Add(function.TimKiemTre, view_TimKiemTre1);
+            listView.Add(function.ThemNV, view_ThemNV1);
+            listView.Add(function.TimKiemNV, view_TimKiemNV1);
 
             foreach (function f in listView.Keys)
             {
