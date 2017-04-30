@@ -32,6 +32,14 @@ namespace QLNT.Presentation_Layer
             listView.Add(function.TimKiemNV, view_TimKiemNV1);
             listView.Add(function.ChinhSuaDiemHocTap, view_ChinhSuaDiemHocTap1);
             listView.Add(function.ChinhSuaDiemNgoaiKhoa, view_ChinhSuaDiemNgoaiKhoa1);
+            listView.Add(function.ThemCapNhatSucKhoe, view_ThemMoiSucKhoe1);
+            listView.Add(function.DichVuSucKhoe, view_DichVuSucKhoe1);
+            listView.Add(function.Thu, view_Thu1);
+            listView.Add(function.Chi, view_Chi1);
+            listView.Add(function.ThemThucDon, view_TaoThucDon1);
+            listView.Add(function.CapNhatTraCuuThucDon, view_CapNhatTraCuuThucDon1);
+            listView.Add(function.ThemCapNhatHoatDong, view_ThemCapNhat1);
+            listView.Add(function.ApDungHoatDong, view_ApDungHoatDong1);
 
             foreach (function f in listView.Keys)
             {
@@ -48,6 +56,9 @@ namespace QLNT.Presentation_Layer
             listTabMenu.Add(tab.QLNhanVien, tab_QLNhanVien1);
             listTabMenu.Add(tab.QLDinhDuong, tab_QLDinhDuong1);
             listTabMenu.Add(tab.QLHocTap, tab_QLHocTap1);
+            listTabMenu.Add(tab.QLSucKhoe, tab_QLSucKhoe1);
+            listTabMenu.Add(tab.QLThuChi, tab_QLThuChi1);
+            listTabMenu.Add(tab.QLHoatDong, tab_QLHoatDong1);
 
             foreach (tab tab in listTabMenu.Keys)
             {
@@ -97,6 +108,21 @@ namespace QLNT.Presentation_Layer
             UpdateTab(tab.QLHocTap);
         }
 
+        private void btnQLSucKhoe_Click(object sender, System.EventArgs e)
+        {
+            UpdateTab(tab.QLSucKhoe);
+        }
+
+        private void btnQLThuChi_Click(object sender, System.EventArgs e)
+        {
+            UpdateTab(tab.QLThuChi);
+        }
+
+        private void btnQLHoatDong_Click(object sender, System.EventArgs e)
+        {
+            UpdateTab(tab.QLHoatDong);
+        }
+
         private void SetNormalColor(BunifuFlatButton button)
         {
             button.Normalcolor = Color.FromArgb(1, 41, 89, 180);
@@ -139,5 +165,6 @@ namespace QLNT.Presentation_Layer
             }
         }
 
+      
     }
 }

@@ -65,6 +65,12 @@
     <Compile Include="Presentation Layer\Tab Menu\Tab_QLDinhDuong.Designer.cs">
       <DependentUpon>Tab_QLDinhDuong.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentation Layer\Tab Menu\Tab_QLHoatDong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\Tab Menu\Tab_QLHoatDong.Designer.cs">
+      <DependentUpon>Tab_QLHoatDong.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentation Layer\Tab Menu\Tab_QLHocTap.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -77,6 +83,18 @@
     <Compile Include="Presentation Layer\Tab Menu\Tab_QLNhanVien.Designer.cs">
       <DependentUpon>Tab_QLNhanVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentation Layer\Tab Menu\Tab_QLSucKhoe.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\Tab Menu\Tab_QLSucKhoe.Designer.cs">
+      <DependentUpon>Tab_QLSucKhoe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\Tab Menu\Tab_QLThuChi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\Tab Menu\Tab_QLThuChi.Designer.cs">
+      <DependentUpon>Tab_QLThuChi.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentation Layer\Tab Menu\Tab_QLTre.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -84,11 +102,59 @@
       <DependentUpon>Tab_QLTre.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentation Layer\Utilities.cs" />
-    <Compile Include="Presentation Layer\View\View_ChinhSuaDiemNgoaiKhoa.cs">
+    <Compile Include="Presentation Layer\View\QLDinhDuong\View_CapNhatTraCuuThucDon.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Presentation Layer\View\View_ChinhSuaDiemNgoaiKhoa.Designer.cs">
+    <Compile Include="Presentation Layer\View\QLDinhDuong\View_CapNhatTraCuuThucDon.Designer.cs">
+      <DependentUpon>View_CapNhatTraCuuThucDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\View\QLDinhDuong\View_TaoThucDon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\View\QLDinhDuong\View_TaoThucDon.Designer.cs">
+      <DependentUpon>View_TaoThucDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\View\QLHoatDong\View_ApDungHoatDong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\View\QLHoatDong\View_ApDungHoatDong.Designer.cs">
+      <DependentUpon>View_ApDungHoatDong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\View\QLHoatDong\View_ThemCapNhat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\View\QLHoatDong\View_ThemCapNhat.Designer.cs">
+      <DependentUpon>View_ThemCapNhat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\View\QLHocTap\View_ChinhSuaDiemNgoaiKhoa.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\View\QLHocTap\View_ChinhSuaDiemNgoaiKhoa.Designer.cs">
       <DependentUpon>View_ChinhSuaDiemNgoaiKhoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\View\QLSucKhoe\View_DichVuSucKhoe.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\View\QLSucKhoe\View_DichVuSucKhoe.Designer.cs">
+      <DependentUpon>View_DichVuSucKhoe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\View\QLSucKhoe\View_ThemCapNhatSucKhoe.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\View\QLSucKhoe\View_ThemMoiSucKhoe.Designer.cs">
+      <DependentUpon>View_ThemCapNhatSucKhoe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\View\QLThuChi\View_Chi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\View\QLThuChi\View_Chi.Designer.cs">
+      <DependentUpon>View_Chi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\View\QLThuChi\View_Thu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\View\QLThuChi\View_Thu.Designer.cs">
+      <DependentUpon>View_Thu.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentation Layer\View\View_Introduction.cs">
       <SubType>UserControl</SubType>
@@ -96,40 +162,34 @@
     <Compile Include="Presentation Layer\View\View_Introduction.Designer.cs">
       <DependentUpon>View_Introduction.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentation Layer\View\View_ChinhSuaDiemHocTap.cs">
+    <Compile Include="Presentation Layer\View\QLHocTap\View_ChinhSuaDiemHocTap.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Presentation Layer\View\View_ChinhSuaDiemHocTap.Designer.cs">
+    <Compile Include="Presentation Layer\View\QLHocTap\View_ChinhSuaDiemHocTap.Designer.cs">
       <DependentUpon>View_ChinhSuaDiemHocTap.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentation Layer\View\View_ThemMoiThucDon.cs">
+    <Compile Include="Presentation Layer\View\QLNhanVien\View_ThemNV.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Presentation Layer\View\View_ThemMoiThucDon.Designer.cs">
-      <DependentUpon>View_ThemMoiThucDon.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Presentation Layer\View\View_ThemNV.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Presentation Layer\View\View_ThemNV.Designer.cs">
+    <Compile Include="Presentation Layer\View\QLNhanVien\View_ThemNV.Designer.cs">
       <DependentUpon>View_ThemNV.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentation Layer\View\View_ThemTre.cs">
+    <Compile Include="Presentation Layer\View\QLTre\View_ThemTre.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Presentation Layer\View\View_ThemTre.Designer.cs">
+    <Compile Include="Presentation Layer\View\QLTre\View_ThemTre.Designer.cs">
       <DependentUpon>View_ThemTre.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentation Layer\View\View_TimKiemNV.cs">
+    <Compile Include="Presentation Layer\View\QLNhanVien\View_TimKiemNV.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Presentation Layer\View\View_TimKiemNV.Designer.cs">
+    <Compile Include="Presentation Layer\View\QLNhanVien\View_TimKiemNV.Designer.cs">
       <DependentUpon>View_TimKiemNV.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentation Layer\View\View_TimKiemTre.cs">
+    <Compile Include="Presentation Layer\View\QLTre\View_TimKiemTre.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Presentation Layer\View\View_TimKiemTre.Designer.cs">
+    <Compile Include="Presentation Layer\View\QLTre\View_TimKiemTre.Designer.cs">
       <DependentUpon>View_TimKiemTre.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -140,37 +200,67 @@
     <EmbeddedResource Include="Presentation Layer\Tab Menu\Tab_QLDinhDuong.resx">
       <DependentUpon>Tab_QLDinhDuong.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\Tab Menu\Tab_QLHoatDong.resx">
+      <DependentUpon>Tab_QLHoatDong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentation Layer\Tab Menu\Tab_QLHocTap.resx">
       <DependentUpon>Tab_QLHocTap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation Layer\Tab Menu\Tab_QLNhanVien.resx">
       <DependentUpon>Tab_QLNhanVien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\Tab Menu\Tab_QLSucKhoe.resx">
+      <DependentUpon>Tab_QLSucKhoe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\Tab Menu\Tab_QLThuChi.resx">
+      <DependentUpon>Tab_QLThuChi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentation Layer\Tab Menu\Tab_QLTre.resx">
       <DependentUpon>Tab_QLTre.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentation Layer\View\View_ChinhSuaDiemNgoaiKhoa.resx">
+    <EmbeddedResource Include="Presentation Layer\View\QLDinhDuong\View_CapNhatTraCuuThucDon.resx">
+      <DependentUpon>View_CapNhatTraCuuThucDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\View\QLDinhDuong\View_TaoThucDon.resx">
+      <DependentUpon>View_TaoThucDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\View\QLHoatDong\View_ApDungHoatDong.resx">
+      <DependentUpon>View_ApDungHoatDong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\View\QLHoatDong\View_ThemCapNhat.resx">
+      <DependentUpon>View_ThemCapNhat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\View\QLHocTap\View_ChinhSuaDiemNgoaiKhoa.resx">
       <DependentUpon>View_ChinhSuaDiemNgoaiKhoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\View\QLSucKhoe\View_DichVuSucKhoe.resx">
+      <DependentUpon>View_DichVuSucKhoe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\View\QLSucKhoe\View_ThemMoiSucKhoe.resx">
+      <DependentUpon>View_ThemCapNhatSucKhoe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\View\QLThuChi\View_Chi.resx">
+      <DependentUpon>View_Chi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\View\QLThuChi\View_Thu.resx">
+      <DependentUpon>View_Thu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation Layer\View\View_Introduction.resx">
       <DependentUpon>View_Introduction.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentation Layer\View\View_ChinhSuaDiemHocTap.resx">
+    <EmbeddedResource Include="Presentation Layer\View\QLHocTap\View_ChinhSuaDiemHocTap.resx">
       <DependentUpon>View_ChinhSuaDiemHocTap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentation Layer\View\View_ThemMoiThucDon.resx">
-      <DependentUpon>View_ThemMoiThucDon.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Presentation Layer\View\View_ThemNV.resx">
+    <EmbeddedResource Include="Presentation Layer\View\QLNhanVien\View_ThemNV.resx">
       <DependentUpon>View_ThemNV.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentation Layer\View\View_ThemTre.resx">
+    <EmbeddedResource Include="Presentation Layer\View\QLTre\View_ThemTre.resx">
       <DependentUpon>View_ThemTre.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentation Layer\View\View_TimKiemNV.resx">
+    <EmbeddedResource Include="Presentation Layer\View\QLNhanVien\View_TimKiemNV.resx">
       <DependentUpon>View_TimKiemNV.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentation Layer\View\View_TimKiemTre.resx">
+    <EmbeddedResource Include="Presentation Layer\View\QLTre\View_TimKiemTre.resx">
       <DependentUpon>View_TimKiemTre.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QLNT.Presentation_Layer.View
+namespace QLNT.Presentation_Layer.View.QLHoatDong
 {
-    public partial class View_ThemMoiThucDon : UserControl
+    public partial class View_ApDungHoatDong : UserControl
     {
-        public View_ThemMoiThucDon()
+        public View_ApDungHoatDong()
         {
             InitializeComponent();
         }

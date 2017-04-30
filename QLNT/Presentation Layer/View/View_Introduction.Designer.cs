@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picLogo = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -45,15 +45,15 @@
             this.label1.TabIndex = 14;
             this.label1.Text = "Phần mềm quản lý nhà trẻ";
             // 
-            // pictureBox1
+            // picLogo
             // 
-            this.pictureBox1.Image = global::QLNT.Properties.Resources.uit;
-            this.pictureBox1.Location = new System.Drawing.Point(303, 183);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(150, 150);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 15;
-            this.pictureBox1.TabStop = false;
+            this.picLogo.Image = global::QLNT.Properties.Resources.uit;
+            this.picLogo.Location = new System.Drawing.Point(303, 183);
+            this.picLogo.Name = "picLogo";
+            this.picLogo.Size = new System.Drawing.Size(150, 150);
+            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.picLogo.TabIndex = 15;
+            this.picLogo.TabStop = false;
             // 
             // label2
             // 
@@ -72,11 +72,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(236)))), ((int)(((byte)(245)))));
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.picLogo);
             this.Controls.Add(this.label1);
             this.Name = "View_Introduction";
             this.Size = new System.Drawing.Size(927, 542);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -85,7 +85,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox picLogo;
         private System.Windows.Forms.Label label2;
     }
 }

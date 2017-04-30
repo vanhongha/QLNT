@@ -29,35 +29,36 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Tab_QLDinhDuong));
-            this.bunifuThinButton22 = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btnCapNhatNguyenLieu = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnCapNhatTraCuu = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnThemThcDon = new Bunifu.Framework.UI.BunifuThinButton2();
             this.SuspendLayout();
             // 
-            // bunifuThinButton22
+            // btnCapNhatNguyenLieu
             // 
-            this.bunifuThinButton22.ActiveBorderThickness = 1;
-            this.bunifuThinButton22.ActiveCornerRadius = 20;
-            this.bunifuThinButton22.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
-            this.bunifuThinButton22.ActiveForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton22.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
-            this.bunifuThinButton22.BackColor = System.Drawing.Color.White;
-            this.bunifuThinButton22.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton22.BackgroundImage")));
-            this.bunifuThinButton22.ButtonText = "Cập nhật nguyên liệu";
-            this.bunifuThinButton22.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton22.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
-            this.bunifuThinButton22.IdleBorderThickness = 1;
-            this.bunifuThinButton22.IdleCornerRadius = 20;
-            this.bunifuThinButton22.IdleFillColor = System.Drawing.Color.White;
-            this.bunifuThinButton22.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
-            this.bunifuThinButton22.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
-            this.bunifuThinButton22.Location = new System.Drawing.Point(439, 7);
-            this.bunifuThinButton22.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuThinButton22.Name = "bunifuThinButton22";
-            this.bunifuThinButton22.Size = new System.Drawing.Size(181, 41);
-            this.bunifuThinButton22.TabIndex = 5;
-            this.bunifuThinButton22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnCapNhatNguyenLieu.ActiveBorderThickness = 1;
+            this.btnCapNhatNguyenLieu.ActiveCornerRadius = 20;
+            this.btnCapNhatNguyenLieu.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
+            this.btnCapNhatNguyenLieu.ActiveForecolor = System.Drawing.Color.White;
+            this.btnCapNhatNguyenLieu.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
+            this.btnCapNhatNguyenLieu.BackColor = System.Drawing.Color.White;
+            this.btnCapNhatNguyenLieu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCapNhatNguyenLieu.BackgroundImage")));
+            this.btnCapNhatNguyenLieu.ButtonText = "Cập nhật nguyên liệu";
+            this.btnCapNhatNguyenLieu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCapNhatNguyenLieu.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCapNhatNguyenLieu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
+            this.btnCapNhatNguyenLieu.IdleBorderThickness = 1;
+            this.btnCapNhatNguyenLieu.IdleCornerRadius = 20;
+            this.btnCapNhatNguyenLieu.IdleFillColor = System.Drawing.Color.White;
+            this.btnCapNhatNguyenLieu.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
+            this.btnCapNhatNguyenLieu.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
+            this.btnCapNhatNguyenLieu.Location = new System.Drawing.Point(439, 7);
+            this.btnCapNhatNguyenLieu.Margin = new System.Windows.Forms.Padding(5);
+            this.btnCapNhatNguyenLieu.Name = "btnCapNhatNguyenLieu";
+            this.btnCapNhatNguyenLieu.Size = new System.Drawing.Size(181, 41);
+            this.btnCapNhatNguyenLieu.TabIndex = 5;
+            this.btnCapNhatNguyenLieu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnCapNhatNguyenLieu.Click += new System.EventHandler(this.btnCapNhatNguyenLieu_Click);
             // 
             // btnCapNhatTraCuu
             // 
@@ -83,6 +84,7 @@
             this.btnCapNhatTraCuu.Size = new System.Drawing.Size(233, 41);
             this.btnCapNhatTraCuu.TabIndex = 4;
             this.btnCapNhatTraCuu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnCapNhatTraCuu.Click += new System.EventHandler(this.btnCapNhatTraCuu_Click);
             // 
             // btnThemThcDon
             // 
@@ -108,13 +110,14 @@
             this.btnThemThcDon.Size = new System.Drawing.Size(181, 41);
             this.btnThemThcDon.TabIndex = 3;
             this.btnThemThcDon.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnThemThcDon.Click += new System.EventHandler(this.btnThemThcDon_Click);
             // 
             // Tab_QLDinhDuong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.bunifuThinButton22);
+            this.Controls.Add(this.btnCapNhatNguyenLieu);
             this.Controls.Add(this.btnCapNhatTraCuu);
             this.Controls.Add(this.btnThemThcDon);
             this.Name = "Tab_QLDinhDuong";
@@ -127,6 +130,6 @@
 
         private Bunifu.Framework.UI.BunifuThinButton2 btnCapNhatTraCuu;
         private Bunifu.Framework.UI.BunifuThinButton2 btnThemThcDon;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton22;
+        private Bunifu.Framework.UI.BunifuThinButton2 btnCapNhatNguyenLieu;
     }
 }

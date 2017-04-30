@@ -16,7 +16,16 @@ namespace QLNT.Presentation_Layer
         ThemNV,
         TimKiemNV,
         ChinhSuaDiemHocTap,
-        ChinhSuaDiemNgoaiKhoa
+        ChinhSuaDiemNgoaiKhoa,
+        ThemCapNhatSucKhoe,
+        DichVuSucKhoe,
+        Thu,
+        Chi,
+        ThemThucDon,
+        CapNhatTraCuuThucDon,
+        ThemNguyenLieu,
+        ThemCapNhatHoatDong,
+        ApDungHoatDong
     }
 
     public enum tab
@@ -24,6 +33,9 @@ namespace QLNT.Presentation_Layer
         QLTre,
         QLNhanVien,
         QLDinhDuong,
-        QLHocTap
+        QLHocTap,
+        QLSucKhoe,
+        QLThuChi,
+        QLHoatDong
     }
 }
