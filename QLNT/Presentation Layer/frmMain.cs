@@ -32,14 +32,14 @@ namespace QLNT.Presentation_Layer
             listView.Add(function.TimKiemNV, view_TimKiemNV1);
             listView.Add(function.ChinhSuaDiemHocTap, view_ChinhSuaDiemHocTap1);
             listView.Add(function.ChinhSuaDiemNgoaiKhoa, view_ChinhSuaDiemNgoaiKhoa1);
-            listView.Add(function.ThemCapNhatSucKhoe, view_ThemMoiSucKhoe1);
+            listView.Add(function.ThemCapNhatSucKhoe, view_ThongTinSucKhoe);
             listView.Add(function.DichVuSucKhoe, view_DichVuSucKhoe1);
             listView.Add(function.Thu, view_Thu1);
             listView.Add(function.Chi, view_Chi1);
             listView.Add(function.ThemThucDon, view_TaoThucDon1);
             listView.Add(function.CapNhatTraCuuThucDon, view_CapNhatTraCuuThucDon1);
-            listView.Add(function.ThemCapNhatHoatDong, view_ThemCapNhat1);
-            listView.Add(function.ApDungHoatDong, view_ApDungHoatDong1);
+            listView.Add(function.ThemCapNhatHoatDong, view_HoatDongNgoaiKhoa);
+            listView.Add(function.ApDungHoatDong, view_DiemNgoaiKhoa);
 
             foreach (function f in listView.Keys)
             {

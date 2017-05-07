@@ -10,11 +10,12 @@ using System.Windows.Forms;
 
 namespace QLNT.Presentation_Layer.View.QLSucKhoe
 {
-    public partial class View_ThemMoiSucKhoe : UserControl
+    public partial class View_ThongTinChiTietSK : UserControl
     {
-        public View_ThemMoiSucKhoe()
+        public View_ThongTinChiTietSK()
         {
             InitializeComponent();
         }
+
     }
 }

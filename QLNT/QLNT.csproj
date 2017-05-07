@@ -41,6 +41,7 @@
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -53,6 +54,19 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusinessLayer\DichVuSucKhoeBLL.cs" />
+    <Compile Include="BusinessLayer\HoatDongNgoaiKhoaBLL.cs" />
+    <Compile Include="BusinessLayer\LopBLL.cs" />
+    <Compile Include="BusinessLayer\TreBLL.cs" />
+    <Compile Include="DataLayer\DataAccessHelper.cs" />
+    <Compile Include="DataLayer\DichVuSucKhoeDAL.cs" />
+    <Compile Include="DataLayer\HoatDongNgoaiKhoaDAL.cs" />
+    <Compile Include="DataLayer\LopDAL.cs" />
+    <Compile Include="DataLayer\TreDAL.cs" />
+    <Compile Include="Entities\DichVuSucKhoe.cs" />
+    <Compile Include="Entities\HoatDongNgoaiKhoa.cs" />
+    <Compile Include="Entities\Lop.cs" />
+    <Compile Include="Entities\Tre.cs" />
     <Compile Include="Presentation Layer\frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +134,24 @@
     <Compile Include="Presentation Layer\View\QLHoatDong\View_ApDungHoatDong.Designer.cs">
       <DependentUpon>View_ApDungHoatDong.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentation Layer\View\QLHoatDong\View_DanhSachLopThamGiaHoatDong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\View\QLHoatDong\View_DanhSachLopThamGiaHoatDong.Designer.cs">
+      <DependentUpon>View_DanhSachLopThamGiaHoatDong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\View\QLHoatDong\View_DiemNgoaiKhoa.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\View\QLHoatDong\View_DiemNgoaiKhoa.Designer.cs">
+      <DependentUpon>View_DiemNgoaiKhoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\View\QLHoatDong\View_HoatDongNgoaiKhoa.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\View\QLHoatDong\View_HoatDongNgoaiKhoa.Designer.cs">
+      <DependentUpon>View_HoatDongNgoaiKhoa.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentation Layer\View\QLHoatDong\View_ThemCapNhat.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -132,17 +164,47 @@
     <Compile Include="Presentation Layer\View\QLHocTap\View_ChinhSuaDiemNgoaiKhoa.Designer.cs">
       <DependentUpon>View_ChinhSuaDiemNgoaiKhoa.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentation Layer\View\QLSucKhoe\View_LopThamGia.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\View\QLSucKhoe\View_LopThamGia.Designer.cs">
+      <DependentUpon>View_LopThamGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\View\QLSucKhoe\View_BieuDoCanNang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\View\QLSucKhoe\View_BieuDoCanNang.Designer.cs">
+      <DependentUpon>View_BieuDoCanNang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\View\QLSucKhoe\View_BieuDoChieuCao.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\View\QLSucKhoe\View_BieuDoChieuCao.Designer.cs">
+      <DependentUpon>View_BieuDoChieuCao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\View\QLSucKhoe\View_CapNhatSucKhoe.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\View\QLSucKhoe\View_CapNhatSucKhoe.Designer.cs">
+      <DependentUpon>View_CapNhatSucKhoe.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentation Layer\View\QLSucKhoe\View_DichVuSucKhoe.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Presentation Layer\View\QLSucKhoe\View_DichVuSucKhoe.Designer.cs">
       <DependentUpon>View_DichVuSucKhoe.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentation Layer\View\QLSucKhoe\View_ThemCapNhatSucKhoe.cs">
+    <Compile Include="Presentation Layer\View\QLSucKhoe\View_ThongTinChiTietSK.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Presentation Layer\View\QLSucKhoe\View_ThemMoiSucKhoe.Designer.cs">
-      <DependentUpon>View_ThemCapNhatSucKhoe.cs</DependentUpon>
+    <Compile Include="Presentation Layer\View\QLSucKhoe\View_ThongTinChiTietSK.Designer.cs">
+      <DependentUpon>View_ThongTinChiTietSK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\View\QLSucKhoe\View_ThongTinSucKhoe.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\View\QLSucKhoe\View_ThongTinSucKhoe.Designer.cs">
+      <DependentUpon>View_ThongTinSucKhoe.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentation Layer\View\QLThuChi\View_Chi.cs">
       <SubType>UserControl</SubType>
@@ -194,6 +256,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utility\ControlFormat.cs" />
     <EmbeddedResource Include="Presentation Layer\Form1.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -227,17 +290,41 @@
     <EmbeddedResource Include="Presentation Layer\View\QLHoatDong\View_ApDungHoatDong.resx">
       <DependentUpon>View_ApDungHoatDong.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\View\QLHoatDong\View_DanhSachLopThamGiaHoatDong.resx">
+      <DependentUpon>View_DanhSachLopThamGiaHoatDong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\View\QLHoatDong\View_DiemNgoaiKhoa.resx">
+      <DependentUpon>View_DiemNgoaiKhoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\View\QLHoatDong\View_HoatDongNgoaiKhoa.resx">
+      <DependentUpon>View_HoatDongNgoaiKhoa.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentation Layer\View\QLHoatDong\View_ThemCapNhat.resx">
       <DependentUpon>View_ThemCapNhat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation Layer\View\QLHocTap\View_ChinhSuaDiemNgoaiKhoa.resx">
       <DependentUpon>View_ChinhSuaDiemNgoaiKhoa.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\View\QLSucKhoe\View_LopThamGia.resx">
+      <DependentUpon>View_LopThamGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\View\QLSucKhoe\View_BieuDoCanNang.resx">
+      <DependentUpon>View_BieuDoCanNang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\View\QLSucKhoe\View_BieuDoChieuCao.resx">
+      <DependentUpon>View_BieuDoChieuCao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\View\QLSucKhoe\View_CapNhatSucKhoe.resx">
+      <DependentUpon>View_CapNhatSucKhoe.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentation Layer\View\QLSucKhoe\View_DichVuSucKhoe.resx">
       <DependentUpon>View_DichVuSucKhoe.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentation Layer\View\QLSucKhoe\View_ThemMoiSucKhoe.resx">
-      <DependentUpon>View_ThemCapNhatSucKhoe.cs</DependentUpon>
+    <EmbeddedResource Include="Presentation Layer\View\QLSucKhoe\View_ThongTinChiTietSK.resx">
+      <DependentUpon>View_ThongTinChiTietSK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\View\QLSucKhoe\View_ThongTinSucKhoe.resx">
+      <DependentUpon>View_ThongTinSucKhoe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation Layer\View\QLThuChi\View_Chi.resx">
       <DependentUpon>View_Chi.cs</DependentUpon>
@@ -273,6 +360,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Properties\DataSources\QLNT.DataLayer.TreDAL.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -289,6 +377,7 @@
   <ItemGroup>
     <None Include="Resources\uit.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
