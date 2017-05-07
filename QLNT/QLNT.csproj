@@ -66,9 +66,17 @@
     <Compile Include="DataLayer\HoatDongNgoaiKhoaDAL.cs" />
     <Compile Include="DataLayer\LopDAL.cs" />
     <Compile Include="DataLayer\TreDAL.cs" />
+    <Compile Include="Entities\ChiTietMonAn.cs" />
+    <Compile Include="Entities\ChiTietPhieuMuaNL.cs" />
+    <Compile Include="Entities\ChiTietThucDon.cs" />
     <Compile Include="Entities\DichVuSucKhoe.cs" />
     <Compile Include="Entities\HoatDongNgoaiKhoa.cs" />
+    <Compile Include="Entities\LoaiNguyenLieu.cs" />
     <Compile Include="Entities\Lop.cs" />
+    <Compile Include="Entities\MonAn.cs" />
+    <Compile Include="Entities\NguyenLieu.cs" />
+    <Compile Include="Entities\PhieuMuaNL.cs" />
+    <Compile Include="Entities\ThucDon.cs" />
     <Compile Include="Entities\Tre.cs" />
     <Compile Include="Presentation Layer\frmMain.cs">
       <SubType>Form</SubType>
