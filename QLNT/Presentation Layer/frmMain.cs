@@ -147,6 +147,23 @@ namespace QLNT.Presentation_Layer
             }
         }
 
+        public void UpdateSubView(string name)
+        {
+            switch(name)
+            {
+                case "BieuDoCanNang":
+                    view_BieuDoCanNang1.Enabled = true;
+                    view_BieuDoCanNang1.Visible = true;
+                    view_BieuDoCanNang1.BringToFront();
+                    break;
+                case "BieuDoChieuCao":
+                    view_BieuDoChieuCao1.Enabled = true;
+                    view_BieuDoChieuCao1.Visible = true;
+                    view_BieuDoChieuCao1.BringToFront();
+                    break;
+            }
+        }
+
         private void UpdateTab(tab tab)
         {
             foreach (tab t in listTabMenu.Keys)

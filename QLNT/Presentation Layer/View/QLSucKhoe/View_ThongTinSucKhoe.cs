@@ -24,7 +24,7 @@ namespace QLNT.Presentation_Layer.View.QLSucKhoe
         private void View_ThongTinSucKhoe_Load(object sender, EventArgs e)
         {
             GetListLop();
-            GetDataGridView();
+            //GetDataGridView();
         }
 
         private void GetListLop()
@@ -49,25 +49,31 @@ namespace QLNT.Presentation_Layer.View.QLSucKhoe
 
         private void btnXemCanNang_Click(object sender, EventArgs e)
         {
-            if(maTre != "")
+            /*if(maTre != "")
             {
                 //goi form bieu do can nang
             } else
             {
                 MessageBox.Show("Bạn phải chọn một trẻ trong danh sách để xem thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+            }*/
+
+            frmMain parentForm = (this.Parent.Parent as frmMain);
+            parentForm.UpdateSubView("BieuDoCanNang");
         }
 
         private void btnXemChieuCao_Click(object sender, EventArgs e)
         {
-            if (maTre != "")
-            {
-                //goi form bieu do chieu cao
-            }
-            else
-            {
-                MessageBox.Show("Bạn phải chọn một trẻ trong danh sách để xem thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+            //if (maTre != "")
+            //{
+            //    //goi form bieu do chieu cao
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Bạn phải chọn một trẻ trong danh sách để xem thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //}
+
+            frmMain parentForm = (this.Parent.Parent as frmMain);
+            parentForm.UpdateSubView("BieuDoChieuCao");
         }
 
         private void btnXemChiTietSK_Click(object sender, EventArgs e)

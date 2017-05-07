@@ -48,10 +48,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Gray;
-            this.label1.Location = new System.Drawing.Point(486, 33);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(324, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(331, 46);
+            this.label1.Size = new System.Drawing.Size(223, 31);
             this.label1.TabIndex = 16;
             this.label1.Text = "Biểu đồ cân nặng";
             // 
@@ -61,13 +60,14 @@
             this.chart1.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(156, 200);
+            this.chart1.Location = new System.Drawing.Point(104, 130);
+            this.chart1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chart1.Name = "chart1";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(1117, 541);
+            this.chart1.Size = new System.Drawing.Size(745, 352);
             this.chart1.TabIndex = 73;
             this.chart1.Text = "chart1";
             // 
@@ -89,12 +89,13 @@
             this.btnHuy.IdleFillColor = System.Drawing.Color.White;
             this.btnHuy.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
             this.btnHuy.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
-            this.btnHuy.Location = new System.Drawing.Point(775, 761);
-            this.btnHuy.Margin = new System.Windows.Forms.Padding(8);
+            this.btnHuy.Location = new System.Drawing.Point(517, 495);
+            this.btnHuy.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(272, 63);
+            this.btnHuy.Size = new System.Drawing.Size(181, 41);
             this.btnHuy.TabIndex = 71;
             this.btnHuy.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // btnInBaoCao
             // 
@@ -114,19 +115,20 @@
             this.btnInBaoCao.IdleFillColor = System.Drawing.Color.White;
             this.btnInBaoCao.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
             this.btnInBaoCao.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
-            this.btnInBaoCao.Location = new System.Drawing.Point(300, 761);
-            this.btnInBaoCao.Margin = new System.Windows.Forms.Padding(8);
+            this.btnInBaoCao.Location = new System.Drawing.Point(200, 495);
+            this.btnInBaoCao.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btnInBaoCao.Name = "btnInBaoCao";
-            this.btnInBaoCao.Size = new System.Drawing.Size(272, 63);
+            this.btnInBaoCao.Size = new System.Drawing.Size(181, 41);
             this.btnInBaoCao.TabIndex = 72;
             this.btnInBaoCao.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(1152, 135);
+            this.comboBox2.Location = new System.Drawing.Point(768, 88);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 28);
+            this.comboBox2.Size = new System.Drawing.Size(82, 21);
             this.comboBox2.TabIndex = 70;
             // 
             // bunifuMaterialTextbox2
@@ -141,10 +143,10 @@
             this.bunifuMaterialTextbox2.LineIdleColor = System.Drawing.Color.Gray;
             this.bunifuMaterialTextbox2.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(89)))), ((int)(((byte)(180)))));
             this.bunifuMaterialTextbox2.LineThickness = 3;
-            this.bunifuMaterialTextbox2.Location = new System.Drawing.Point(336, 113);
-            this.bunifuMaterialTextbox2.Margin = new System.Windows.Forms.Padding(6);
+            this.bunifuMaterialTextbox2.Location = new System.Drawing.Point(224, 73);
+            this.bunifuMaterialTextbox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuMaterialTextbox2.Name = "bunifuMaterialTextbox2";
-            this.bunifuMaterialTextbox2.Size = new System.Drawing.Size(522, 50);
+            this.bunifuMaterialTextbox2.Size = new System.Drawing.Size(348, 32);
             this.bunifuMaterialTextbox2.TabIndex = 69;
             this.bunifuMaterialTextbox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -153,10 +155,9 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Gray;
-            this.label7.Location = new System.Drawing.Point(1048, 137);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(699, 89);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(65, 26);
+            this.label7.Size = new System.Drawing.Size(44, 18);
             this.label7.TabIndex = 67;
             this.label7.Text = "Năm:";
             // 
@@ -165,16 +166,15 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Gray;
-            this.label3.Location = new System.Drawing.Point(95, 137);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(63, 89);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(113, 26);
+            this.label3.Size = new System.Drawing.Size(77, 18);
             this.label3.TabIndex = 68;
             this.label3.Text = "Họ tên trẻ:";
             // 
             // View_BieuDoCanNang
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(236)))), ((int)(((byte)(245)))));
             this.Controls.Add(this.chart1);
@@ -185,8 +185,9 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "View_BieuDoCanNang";
-            this.Size = new System.Drawing.Size(1390, 834);
+            this.Size = new System.Drawing.Size(927, 542);
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

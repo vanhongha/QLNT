@@ -39,13 +39,14 @@
             this.btnQLNhanVien = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnQLTreEm = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.content = new System.Windows.Forms.Panel();
-            this.header = new System.Windows.Forms.Panel();
-            this.tabMenu = new System.Windows.Forms.Panel();
-            this.headerDrag = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
+            this.view_BieuDoChieuCao1 = new QLNT.Presentation_Layer.View.QLSucKhoe.View_BieuDoChieuCao();
+            this.view_DiemNgoaiKhoa = new QLNT.Presentation_Layer.View.QLHoatDong.View_DiemNgoaiKhoa();
+            this.view_HoatDongNgoaiKhoa = new QLNT.Presentation_Layer.View.QLHoatDong.View_HoatDongNgoaiKhoa();
             this.view_CapNhatTraCuuThucDon1 = new QLNT.Presentation_Layer.View.QLDinhDuong.View_CapNhatTraCuuThucDon();
             this.view_TaoThucDon1 = new QLNT.Presentation_Layer.View.QLDinhDuong.View_TaoThucDon();
             this.view_Chi1 = new QLNT.Presentation_Layer.View.QLThuChi.View_Chi();
@@ -59,6 +60,8 @@
             this.view_ThemNV1 = new QLNT.Presentation_Layer.View.View_ThemNV();
             this.view_TimKiemTre1 = new QLNT.Presentation_Layer.View.View_TimKiemTre();
             this.view_ThemTre1 = new QLNT.Presentation_Layer.View.View_ThemTre();
+            this.header = new System.Windows.Forms.Panel();
+            this.tabMenu = new System.Windows.Forms.Panel();
             this.tab_QLHoatDong1 = new QLNT.Presentation_Layer.Tab_Menu.Tab_QLHoatDong();
             this.tab_QLThuChi1 = new QLNT.Presentation_Layer.Tab_Menu.Tab_QLThuChi();
             this.tab_QLSucKhoe1 = new QLNT.Presentation_Layer.Tab_Menu.Tab_QLSucKhoe();
@@ -66,17 +69,16 @@
             this.tab_QLDinhDuong1 = new QLNT.Presentation_Layer.Tab_Menu.Tab_QLDinhDuong();
             this.tab_QLNhanVien1 = new QLNT.Presentation_Layer.Tab_Menu.Tab_QLNhanVien();
             this.tab_QLTre1 = new QLNT.Presentation_Layer.Tab_Menu.Tab_QLTre();
-            this.view_HoatDongNgoaiKhoa = new QLNT.Presentation_Layer.View.QLHoatDong.View_HoatDongNgoaiKhoa();
-            this.view_DiemNgoaiKhoa = new QLNT.Presentation_Layer.View.QLHoatDong.View_DiemNgoaiKhoa();
-            this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.headerDrag = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.view_BieuDoCanNang1 = new QLNT.Presentation_Layer.View.QLSucKhoe.View_BieuDoCanNang();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.content.SuspendLayout();
             this.header.SuspendLayout();
             this.tabMenu.SuspendLayout();
             this.headerDrag.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -351,7 +353,7 @@
             // btnQLTreEm
             // 
             this.btnQLTreEm.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
-            this.btnQLTreEm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
+            this.btnQLTreEm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(89)))), ((int)(((byte)(180)))));
             this.btnQLTreEm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnQLTreEm.BorderRadius = 0;
             this.btnQLTreEm.ButtonText = "Quản lý trẻ em";
@@ -396,6 +398,31 @@
             this.panel4.Size = new System.Drawing.Size(276, 212);
             this.panel4.TabIndex = 0;
             // 
+            // bunifuThinButton21
+            // 
+            this.bunifuThinButton21.ActiveBorderThickness = 1;
+            this.bunifuThinButton21.ActiveCornerRadius = 20;
+            this.bunifuThinButton21.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
+            this.bunifuThinButton21.ActiveForecolor = System.Drawing.Color.White;
+            this.bunifuThinButton21.ActiveLineColor = System.Drawing.Color.White;
+            this.bunifuThinButton21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(89)))), ((int)(((byte)(180)))));
+            this.bunifuThinButton21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton21.BackgroundImage")));
+            this.bunifuThinButton21.ButtonText = "Chỉnh sửa thông tin cá nhân";
+            this.bunifuThinButton21.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuThinButton21.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuThinButton21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
+            this.bunifuThinButton21.IdleBorderThickness = 1;
+            this.bunifuThinButton21.IdleCornerRadius = 20;
+            this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.White;
+            this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
+            this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
+            this.bunifuThinButton21.Location = new System.Drawing.Point(16, 162);
+            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(5);
+            this.bunifuThinButton21.Name = "bunifuThinButton21";
+            this.bunifuThinButton21.Size = new System.Drawing.Size(244, 41);
+            this.bunifuThinButton21.TabIndex = 3;
+            this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -418,9 +445,21 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Nguyễn Văn A";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::QLNT.Properties.Resources.uit;
+            this.pictureBox1.Location = new System.Drawing.Point(83, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(111, 99);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // content
             // 
             this.content.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(236)))), ((int)(((byte)(245)))));
+            this.content.Controls.Add(this.view_BieuDoCanNang1);
+            this.content.Controls.Add(this.view_BieuDoChieuCao1);
             this.content.Controls.Add(this.view_DiemNgoaiKhoa);
             this.content.Controls.Add(this.view_HoatDongNgoaiKhoa);
             this.content.Controls.Add(this.view_CapNhatTraCuuThucDon1);
@@ -442,55 +481,35 @@
             this.content.Size = new System.Drawing.Size(927, 542);
             this.content.TabIndex = 2;
             // 
-            // header
+            // view_BieuDoChieuCao1
             // 
-            this.header.BackColor = System.Drawing.Color.White;
-            this.header.Controls.Add(this.tabMenu);
-            this.header.Controls.Add(this.headerDrag);
-            this.header.Dock = System.Windows.Forms.DockStyle.Top;
-            this.header.Location = new System.Drawing.Point(276, 0);
-            this.header.Name = "header";
-            this.header.Size = new System.Drawing.Size(927, 100);
-            this.header.TabIndex = 1;
+            this.view_BieuDoChieuCao1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(236)))), ((int)(((byte)(245)))));
+            this.view_BieuDoChieuCao1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.view_BieuDoChieuCao1.Location = new System.Drawing.Point(0, 0);
+            this.view_BieuDoChieuCao1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.view_BieuDoChieuCao1.Name = "view_BieuDoChieuCao1";
+            this.view_BieuDoChieuCao1.Size = new System.Drawing.Size(927, 542);
+            this.view_BieuDoChieuCao1.TabIndex = 14;
             // 
-            // tabMenu
+            // view_DiemNgoaiKhoa
             // 
-            this.tabMenu.Controls.Add(this.tab_QLHoatDong1);
-            this.tabMenu.Controls.Add(this.tab_QLThuChi1);
-            this.tabMenu.Controls.Add(this.tab_QLSucKhoe1);
-            this.tabMenu.Controls.Add(this.tab_QLHocTap1);
-            this.tabMenu.Controls.Add(this.tab_QLDinhDuong1);
-            this.tabMenu.Controls.Add(this.tab_QLNhanVien1);
-            this.tabMenu.Controls.Add(this.tab_QLTre1);
-            this.tabMenu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabMenu.Location = new System.Drawing.Point(0, 43);
-            this.tabMenu.Name = "tabMenu";
-            this.tabMenu.Size = new System.Drawing.Size(927, 57);
-            this.tabMenu.TabIndex = 1;
+            this.view_DiemNgoaiKhoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(236)))), ((int)(((byte)(245)))));
+            this.view_DiemNgoaiKhoa.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.view_DiemNgoaiKhoa.Location = new System.Drawing.Point(0, 0);
+            this.view_DiemNgoaiKhoa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.view_DiemNgoaiKhoa.Name = "view_DiemNgoaiKhoa";
+            this.view_DiemNgoaiKhoa.Size = new System.Drawing.Size(927, 542);
+            this.view_DiemNgoaiKhoa.TabIndex = 13;
             // 
-            // headerDrag
+            // view_HoatDongNgoaiKhoa
             // 
-            this.headerDrag.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(236)))), ((int)(((byte)(245)))));
-            this.headerDrag.Controls.Add(this.label3);
-            this.headerDrag.Dock = System.Windows.Forms.DockStyle.Top;
-            this.headerDrag.Location = new System.Drawing.Point(0, 0);
-            this.headerDrag.Name = "headerDrag";
-            this.headerDrag.Size = new System.Drawing.Size(927, 43);
-            this.headerDrag.TabIndex = 0;
-            this.headerDrag.MouseDown += new System.Windows.Forms.MouseEventHandler(this.headerDrag_MouseDown);
-            this.headerDrag.MouseMove += new System.Windows.Forms.MouseEventHandler(this.headerDrag_MouseMove);
-            this.headerDrag.MouseUp += new System.Windows.Forms.MouseEventHandler(this.headerDrag_MouseUp);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Gray;
-            this.label3.Location = new System.Drawing.Point(374, 12);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(179, 18);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Phần mềm quản lý nhà trẻ";
+            this.view_HoatDongNgoaiKhoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(236)))), ((int)(((byte)(245)))));
+            this.view_HoatDongNgoaiKhoa.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.view_HoatDongNgoaiKhoa.Location = new System.Drawing.Point(0, 0);
+            this.view_HoatDongNgoaiKhoa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.view_HoatDongNgoaiKhoa.Name = "view_HoatDongNgoaiKhoa";
+            this.view_HoatDongNgoaiKhoa.Size = new System.Drawing.Size(927, 542);
+            this.view_HoatDongNgoaiKhoa.TabIndex = 12;
             // 
             // view_CapNhatTraCuuThucDon1
             // 
@@ -542,6 +561,7 @@
             this.view_ThongTinSucKhoe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(236)))), ((int)(((byte)(245)))));
             this.view_ThongTinSucKhoe.Dock = System.Windows.Forms.DockStyle.Fill;
             this.view_ThongTinSucKhoe.Location = new System.Drawing.Point(0, 0);
+            this.view_ThongTinSucKhoe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.view_ThongTinSucKhoe.Name = "view_ThongTinSucKhoe";
             this.view_ThongTinSucKhoe.Size = new System.Drawing.Size(927, 542);
             this.view_ThongTinSucKhoe.TabIndex = 6;
@@ -609,6 +629,32 @@
             this.view_ThemTre1.Size = new System.Drawing.Size(927, 542);
             this.view_ThemTre1.TabIndex = 0;
             // 
+            // header
+            // 
+            this.header.BackColor = System.Drawing.Color.White;
+            this.header.Controls.Add(this.tabMenu);
+            this.header.Controls.Add(this.headerDrag);
+            this.header.Dock = System.Windows.Forms.DockStyle.Top;
+            this.header.Location = new System.Drawing.Point(276, 0);
+            this.header.Name = "header";
+            this.header.Size = new System.Drawing.Size(927, 100);
+            this.header.TabIndex = 1;
+            // 
+            // tabMenu
+            // 
+            this.tabMenu.Controls.Add(this.tab_QLHoatDong1);
+            this.tabMenu.Controls.Add(this.tab_QLThuChi1);
+            this.tabMenu.Controls.Add(this.tab_QLSucKhoe1);
+            this.tabMenu.Controls.Add(this.tab_QLHocTap1);
+            this.tabMenu.Controls.Add(this.tab_QLDinhDuong1);
+            this.tabMenu.Controls.Add(this.tab_QLNhanVien1);
+            this.tabMenu.Controls.Add(this.tab_QLTre1);
+            this.tabMenu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabMenu.Location = new System.Drawing.Point(0, 43);
+            this.tabMenu.Name = "tabMenu";
+            this.tabMenu.Size = new System.Drawing.Size(927, 57);
+            this.tabMenu.TabIndex = 1;
+            // 
             // tab_QLHoatDong1
             // 
             this.tab_QLHoatDong1.BackColor = System.Drawing.Color.White;
@@ -672,58 +718,39 @@
             this.tab_QLTre1.Size = new System.Drawing.Size(927, 57);
             this.tab_QLTre1.TabIndex = 0;
             // 
-            // view_HoatDongNgoaiKhoa
+            // headerDrag
             // 
-            this.view_HoatDongNgoaiKhoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(236)))), ((int)(((byte)(245)))));
-            this.view_HoatDongNgoaiKhoa.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.view_HoatDongNgoaiKhoa.Location = new System.Drawing.Point(0, 0);
-            this.view_HoatDongNgoaiKhoa.Name = "view_HoatDongNgoaiKhoa";
-            this.view_HoatDongNgoaiKhoa.Size = new System.Drawing.Size(927, 542);
-            this.view_HoatDongNgoaiKhoa.TabIndex = 12;
+            this.headerDrag.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(236)))), ((int)(((byte)(245)))));
+            this.headerDrag.Controls.Add(this.label3);
+            this.headerDrag.Dock = System.Windows.Forms.DockStyle.Top;
+            this.headerDrag.Location = new System.Drawing.Point(0, 0);
+            this.headerDrag.Name = "headerDrag";
+            this.headerDrag.Size = new System.Drawing.Size(927, 43);
+            this.headerDrag.TabIndex = 0;
+            this.headerDrag.MouseDown += new System.Windows.Forms.MouseEventHandler(this.headerDrag_MouseDown);
+            this.headerDrag.MouseMove += new System.Windows.Forms.MouseEventHandler(this.headerDrag_MouseMove);
+            this.headerDrag.MouseUp += new System.Windows.Forms.MouseEventHandler(this.headerDrag_MouseUp);
             // 
-            // view_DiemNgoaiKhoa
+            // label3
             // 
-            this.view_DiemNgoaiKhoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(236)))), ((int)(((byte)(245)))));
-            this.view_DiemNgoaiKhoa.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.view_DiemNgoaiKhoa.Location = new System.Drawing.Point(0, 0);
-            this.view_DiemNgoaiKhoa.Name = "view_DiemNgoaiKhoa";
-            this.view_DiemNgoaiKhoa.Size = new System.Drawing.Size(927, 542);
-            this.view_DiemNgoaiKhoa.TabIndex = 13;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Gray;
+            this.label3.Location = new System.Drawing.Point(374, 12);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(179, 18);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Phần mềm quản lý nhà trẻ";
             // 
-            // bunifuThinButton21
+            // view_BieuDoCanNang1
             // 
-            this.bunifuThinButton21.ActiveBorderThickness = 1;
-            this.bunifuThinButton21.ActiveCornerRadius = 20;
-            this.bunifuThinButton21.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
-            this.bunifuThinButton21.ActiveForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton21.ActiveLineColor = System.Drawing.Color.White;
-            this.bunifuThinButton21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(89)))), ((int)(((byte)(180)))));
-            this.bunifuThinButton21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton21.BackgroundImage")));
-            this.bunifuThinButton21.ButtonText = "Chỉnh sửa thông tin cá nhân";
-            this.bunifuThinButton21.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton21.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
-            this.bunifuThinButton21.IdleBorderThickness = 1;
-            this.bunifuThinButton21.IdleCornerRadius = 20;
-            this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.White;
-            this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
-            this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
-            this.bunifuThinButton21.Location = new System.Drawing.Point(16, 162);
-            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuThinButton21.Name = "bunifuThinButton21";
-            this.bunifuThinButton21.Size = new System.Drawing.Size(244, 41);
-            this.bunifuThinButton21.TabIndex = 3;
-            this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::QLNT.Properties.Resources.uit;
-            this.pictureBox1.Location = new System.Drawing.Point(83, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(111, 99);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.view_BieuDoCanNang1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(236)))), ((int)(((byte)(245)))));
+            this.view_BieuDoCanNang1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.view_BieuDoCanNang1.Location = new System.Drawing.Point(0, 0);
+            this.view_BieuDoCanNang1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.view_BieuDoCanNang1.Name = "view_BieuDoCanNang1";
+            this.view_BieuDoCanNang1.Size = new System.Drawing.Size(927, 542);
+            this.view_BieuDoCanNang1.TabIndex = 15;
             // 
             // frmMain
             // 
@@ -739,12 +766,12 @@
             this.panel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.content.ResumeLayout(false);
             this.header.ResumeLayout(false);
             this.tabMenu.ResumeLayout(false);
             this.headerDrag.ResumeLayout(false);
             this.headerDrag.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -792,6 +819,8 @@
         private Tab_Menu.Tab_QLHoatDong tab_QLHoatDong1;
         private View.QLHoatDong.View_HoatDongNgoaiKhoa view_HoatDongNgoaiKhoa;
         private View.QLHoatDong.View_DiemNgoaiKhoa view_DiemNgoaiKhoa;
+        private View.QLSucKhoe.View_BieuDoChieuCao view_BieuDoChieuCao1;
+        private View.QLSucKhoe.View_BieuDoCanNang view_BieuDoCanNang1;
     }
 }
 
