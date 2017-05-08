@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QLNT.Presentation_Layer.View.QLDinhDuong
 {
-    public partial class View_TaoThucDon : UserControl
+    public partial class View_CapNhatNguyenLieu : UserControl
     {
-        public View_TaoThucDon()
+        public View_CapNhatNguyenLieu()
         {
             InitializeComponent();
         }

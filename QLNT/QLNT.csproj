@@ -37,10 +37,13 @@
     <Reference Include="Bunifu_UI_v1.52">
       <HintPath>..\Bunifu_UI_v1.52.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -116,17 +119,17 @@
       <DependentUpon>Tab_QLTre.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentation Layer\Utilities.cs" />
+    <Compile Include="Presentation Layer\View\QLDinhDuong\View_CapNhatNguyenLieu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\View\QLDinhDuong\View_CapNhatNguyenLieu.Designer.cs">
+      <DependentUpon>View_CapNhatNguyenLieu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentation Layer\View\QLDinhDuong\View_CapNhatTraCuuThucDon.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Presentation Layer\View\QLDinhDuong\View_CapNhatTraCuuThucDon.Designer.cs">
       <DependentUpon>View_CapNhatTraCuuThucDon.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Presentation Layer\View\QLDinhDuong\View_TaoThucDon.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Presentation Layer\View\QLDinhDuong\View_TaoThucDon.Designer.cs">
-      <DependentUpon>View_TaoThucDon.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentation Layer\View\QLHoatDong\View_ApDungHoatDong.cs">
       <SubType>UserControl</SubType>
@@ -281,11 +284,11 @@
     <EmbeddedResource Include="Presentation Layer\Tab Menu\Tab_QLTre.resx">
       <DependentUpon>Tab_QLTre.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\View\QLDinhDuong\View_CapNhatNguyenLieu.resx">
+      <DependentUpon>View_CapNhatNguyenLieu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentation Layer\View\QLDinhDuong\View_CapNhatTraCuuThucDon.resx">
       <DependentUpon>View_CapNhatTraCuuThucDon.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Presentation Layer\View\QLDinhDuong\View_TaoThucDon.resx">
-      <DependentUpon>View_TaoThucDon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation Layer\View\QLHoatDong\View_ApDungHoatDong.resx">
       <DependentUpon>View_ApDungHoatDong.cs</DependentUpon>

@@ -13,19 +13,13 @@ namespace QLNT.Presentation_Layer.Tab_Menu
         private void btnThemThcDon_Click(object sender, EventArgs e)
         {
             frmMain parentForm = (this.Parent.Parent.Parent as frmMain);
-            parentForm.UpdateView(function.ThemThucDon);
-        }
-
-        private void btnCapNhatTraCuu_Click(object sender, EventArgs e)
-        {
-            frmMain parentForm = (this.Parent.Parent.Parent as frmMain);
-            parentForm.UpdateView(function.CapNhatTraCuuThucDon);
+            parentForm.UpdateView(function.CapNhatThucDon);
         }
 
         private void btnCapNhatNguyenLieu_Click(object sender, EventArgs e)
         {
             frmMain parentForm = (this.Parent.Parent.Parent as frmMain);
-            parentForm.UpdateView(function.ThemNguyenLieu);
+            parentForm.UpdateView(function.CapNhatNguyenLieu);
         }
     }
 }

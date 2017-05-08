@@ -21,8 +21,8 @@ namespace QLNT.Presentation_Layer
         DichVuSucKhoe,
         Thu,
         Chi,
-        ThemThucDon,
-        CapNhatTraCuuThucDon,
+        CapNhatThucDon,
+        CapNhatNguyenLieu,
         ThemNguyenLieu,
         ThemCapNhatHoatDong,
         ApDungHoatDong
