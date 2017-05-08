@@ -8,9 +8,9 @@ namespace QLNT.Presentation_Layer
     {
         Drag drag = new Drag();
 
-        Dictionary<function, UserControl> listView;
+        public Dictionary<function, UserControl> listView;
 
-        Dictionary<tab, UserControl> listTabMenu;
+        public Dictionary<tab, UserControl> listTabMenu;
 
         public frmMain()
         {
@@ -162,6 +162,18 @@ namespace QLNT.Presentation_Layer
                     view_BieuDoChieuCao1.BringToFront();
                     break;
             }
+        }
+
+        public UserControl GetSubView(string name)
+        {
+            switch (name)
+            {
+                case "BieuDoCanNang":
+                    return view_BieuDoCanNang1;
+                case "BieuDoChieuCao":
+                    return view_BieuDoChieuCao1;
+            }
+            return null;
         }
 
         private void UpdateTab(tab tab)

@@ -12,6 +12,8 @@ namespace QLNT.Presentation_Layer.View.QLSucKhoe
 {
     public partial class View_BieuDoChieuCao : UserControl
     {
+        public string maTre;
+
         public View_BieuDoChieuCao()
         {
             InitializeComponent();

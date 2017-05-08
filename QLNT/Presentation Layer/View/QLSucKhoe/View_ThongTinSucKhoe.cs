@@ -74,6 +74,9 @@ namespace QLNT.Presentation_Layer.View.QLSucKhoe
 
             frmMain parentForm = (this.Parent.Parent as frmMain);
             parentForm.UpdateSubView("BieuDoChieuCao");
+            View_BieuDoChieuCao viewBieuDoChieuCao = parentForm.GetSubView("BieuDoChieuCao") as View_BieuDoChieuCao;
+            viewBieuDoChieuCao.maTre = "HanhBenh";
+            MessageBox.Show(viewBieuDoChieuCao.maTre);
         }
 
         private void btnXemChiTietSK_Click(object sender, EventArgs e)
@@ -104,5 +107,6 @@ namespace QLNT.Presentation_Layer.View.QLSucKhoe
         {
             maTre = dgvListTre.Rows[e.RowIndex].Cells["MaTre"].Value.ToString();
         }
+
     }
 }
