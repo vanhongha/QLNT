@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Tab_QLDinhDuong));
             this.btnCapNhatNguyenLieu = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnCapNhatThucDon = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btnPhieuNguyenLieu = new Bunifu.Framework.UI.BunifuThinButton2();
             this.SuspendLayout();
             // 
             // btnCapNhatNguyenLieu
@@ -85,11 +86,38 @@
             this.btnCapNhatThucDon.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnCapNhatThucDon.Click += new System.EventHandler(this.btnThemThcDon_Click);
             // 
+            // btnPhieuNguyenLieu
+            // 
+            this.btnPhieuNguyenLieu.ActiveBorderThickness = 1;
+            this.btnPhieuNguyenLieu.ActiveCornerRadius = 20;
+            this.btnPhieuNguyenLieu.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
+            this.btnPhieuNguyenLieu.ActiveForecolor = System.Drawing.Color.White;
+            this.btnPhieuNguyenLieu.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
+            this.btnPhieuNguyenLieu.BackColor = System.Drawing.Color.White;
+            this.btnPhieuNguyenLieu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPhieuNguyenLieu.BackgroundImage")));
+            this.btnPhieuNguyenLieu.ButtonText = "Phiếu nguyên liệu";
+            this.btnPhieuNguyenLieu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPhieuNguyenLieu.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPhieuNguyenLieu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
+            this.btnPhieuNguyenLieu.IdleBorderThickness = 1;
+            this.btnPhieuNguyenLieu.IdleCornerRadius = 20;
+            this.btnPhieuNguyenLieu.IdleFillColor = System.Drawing.Color.White;
+            this.btnPhieuNguyenLieu.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
+            this.btnPhieuNguyenLieu.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
+            this.btnPhieuNguyenLieu.Location = new System.Drawing.Point(387, 7);
+            this.btnPhieuNguyenLieu.Margin = new System.Windows.Forms.Padding(5);
+            this.btnPhieuNguyenLieu.Name = "btnPhieuNguyenLieu";
+            this.btnPhieuNguyenLieu.Size = new System.Drawing.Size(181, 41);
+            this.btnPhieuNguyenLieu.TabIndex = 6;
+            this.btnPhieuNguyenLieu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnPhieuNguyenLieu.Click += new System.EventHandler(this.btnPhieuNguyenLieu_Click);
+            // 
             // Tab_QLDinhDuong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.btnPhieuNguyenLieu);
             this.Controls.Add(this.btnCapNhatNguyenLieu);
             this.Controls.Add(this.btnCapNhatThucDon);
             this.Name = "Tab_QLDinhDuong";
@@ -101,5 +129,6 @@
         #endregion
         private Bunifu.Framework.UI.BunifuThinButton2 btnCapNhatThucDon;
         private Bunifu.Framework.UI.BunifuThinButton2 btnCapNhatNguyenLieu;
+        private Bunifu.Framework.UI.BunifuThinButton2 btnPhieuNguyenLieu;
     }
 }

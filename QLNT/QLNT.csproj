@@ -139,6 +139,12 @@
     <Compile Include="Presentation Layer\View\QLDinhDuong\View_CapNhatTraCuuThucDon.Designer.cs">
       <DependentUpon>View_CapNhatTraCuuThucDon.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentation Layer\View\QLDinhDuong\View_PhieuNguyenLieu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\View\QLDinhDuong\View_PhieuNguyenLieu.Designer.cs">
+      <DependentUpon>View_PhieuNguyenLieu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentation Layer\View\QLHoatDong\View_ApDungHoatDong.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -297,6 +303,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation Layer\View\QLDinhDuong\View_CapNhatTraCuuThucDon.resx">
       <DependentUpon>View_CapNhatTraCuuThucDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\View\QLDinhDuong\View_PhieuNguyenLieu.resx">
+      <DependentUpon>View_PhieuNguyenLieu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation Layer\View\QLHoatDong\View_ApDungHoatDong.resx">
       <DependentUpon>View_ApDungHoatDong.cs</DependentUpon>

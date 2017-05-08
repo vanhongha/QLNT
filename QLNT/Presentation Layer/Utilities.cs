@@ -23,6 +23,7 @@ namespace QLNT.Presentation_Layer
         Chi,
         CapNhatThucDon,
         CapNhatNguyenLieu,
+        PhieuNguyenLieu,
         ThemNguyenLieu,
         ThemCapNhatHoatDong,
         ApDungHoatDong

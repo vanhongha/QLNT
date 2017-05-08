@@ -38,6 +38,7 @@ namespace QLNT.Presentation_Layer
             listView.Add(function.Chi, view_Chi1);
             listView.Add(function.CapNhatThucDon, view_CapNhatTraCuuThucDon1);
             listView.Add(function.CapNhatNguyenLieu, view_CapNhatNguyenLieu1);
+            listView.Add(function.PhieuNguyenLieu, view_PhieuNguyenLieu1);
             listView.Add(function.ThemCapNhatHoatDong, view_HoatDongNgoaiKhoa);
             listView.Add(function.ApDungHoatDong, view_DiemNgoaiKhoa);
 
