@@ -13,6 +13,25 @@ namespace QLNT.DataLayer
     {
         public TreDAL() { }
 
+        public static DataTable ThemTre(Tre tre)
+        {
+            DataAccessHelper db = new DataAccessHelper();
+            SqlCommand cmd = db.Command("ThemTre");
+
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@MaTre", tre.MaTre);
+            cmd.Parameters.AddWithValue("@TenTre", tre.HoTenTre);
+            cmd.Parameters.AddWithValue("@NgaySinh", tre.NgaySinh);
+            cmd.Parameters.AddWithValue("@TenBo", tre.HoTenCha);
+            cmd.Parameters.AddWithValue("@TenMe", tre.HoTenMe);
+            cmd.Parameters.AddWithValue("@DiaChi", tre.DiaChi);
+            cmd.Parameters.AddWithValue("@DienThoai", tre.SoDT);
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            db.dt = new DataTable();
+            da.Fill(db.dt);
+            return db.dt;
+        }
 
         public static List<Tre> GetListTre()
         {
