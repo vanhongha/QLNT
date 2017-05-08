@@ -16,5 +16,7 @@ namespace QLNT.Presentation_Layer.View
         {
             InitializeComponent();
         }
+
+
     }
 }

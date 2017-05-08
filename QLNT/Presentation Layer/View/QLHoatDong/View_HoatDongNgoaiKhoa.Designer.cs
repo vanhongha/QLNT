@@ -34,7 +34,6 @@
             this.btnLuu = new Bunifu.Framework.UI.BunifuThinButton2();
             this.txtKeHoach = new System.Windows.Forms.RichTextBox();
             this.txtChiPhi = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.txtNgayBatDau = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtTenHoatDong = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtMaHoatDong = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label2 = new System.Windows.Forms.Label();
@@ -44,8 +43,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.dgvListHoatDong = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtNgayKetThuc = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label7 = new System.Windows.Forms.Label();
+            this.dtNgayKetThuc = new Bunifu.Framework.UI.BunifuDatepicker();
+            this.dtNgayBatDau = new Bunifu.Framework.UI.BunifuDatepicker();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListHoatDong)).BeginInit();
             this.SuspendLayout();
             // 
@@ -154,25 +154,6 @@
             this.txtChiPhi.TabIndex = 66;
             this.txtChiPhi.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // txtNgayBatDau
-            // 
-            this.txtNgayBatDau.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNgayBatDau.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtNgayBatDau.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtNgayBatDau.HintForeColor = System.Drawing.Color.Empty;
-            this.txtNgayBatDau.HintText = "";
-            this.txtNgayBatDau.isPassword = false;
-            this.txtNgayBatDau.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(89)))), ((int)(((byte)(180)))));
-            this.txtNgayBatDau.LineIdleColor = System.Drawing.Color.Gray;
-            this.txtNgayBatDau.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(89)))), ((int)(((byte)(180)))));
-            this.txtNgayBatDau.LineThickness = 3;
-            this.txtNgayBatDau.Location = new System.Drawing.Point(1000, 285);
-            this.txtNgayBatDau.Margin = new System.Windows.Forms.Padding(6);
-            this.txtNgayBatDau.Name = "txtNgayBatDau";
-            this.txtNgayBatDau.Size = new System.Drawing.Size(316, 50);
-            this.txtNgayBatDau.TabIndex = 67;
-            this.txtNgayBatDau.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
             // txtTenHoatDong
             // 
             this.txtTenHoatDong.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -252,7 +233,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Gray;
-            this.label4.Location = new System.Drawing.Point(807, 309);
+            this.label4.Location = new System.Drawing.Point(807, 321);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(147, 26);
@@ -293,50 +274,59 @@
             this.label1.TabIndex = 59;
             this.label1.Text = "Hoạt động ngoại khóa";
             // 
-            // txtNgayKetThuc
-            // 
-            this.txtNgayKetThuc.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNgayKetThuc.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtNgayKetThuc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtNgayKetThuc.HintForeColor = System.Drawing.Color.Empty;
-            this.txtNgayKetThuc.HintText = "";
-            this.txtNgayKetThuc.isPassword = false;
-            this.txtNgayKetThuc.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(89)))), ((int)(((byte)(180)))));
-            this.txtNgayKetThuc.LineIdleColor = System.Drawing.Color.Gray;
-            this.txtNgayKetThuc.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(89)))), ((int)(((byte)(180)))));
-            this.txtNgayKetThuc.LineThickness = 3;
-            this.txtNgayKetThuc.Location = new System.Drawing.Point(1000, 363);
-            this.txtNgayKetThuc.Margin = new System.Windows.Forms.Padding(6);
-            this.txtNgayKetThuc.Name = "txtNgayKetThuc";
-            this.txtNgayKetThuc.Size = new System.Drawing.Size(316, 50);
-            this.txtNgayKetThuc.TabIndex = 75;
-            this.txtNgayKetThuc.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Gray;
-            this.label7.Location = new System.Drawing.Point(807, 387);
+            this.label7.Location = new System.Drawing.Point(807, 399);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(151, 26);
             this.label7.TabIndex = 74;
             this.label7.Text = "Ngày kết thúc:";
             // 
+            // dtNgayKetThuc
+            // 
+            this.dtNgayKetThuc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(89)))), ((int)(((byte)(180)))));
+            this.dtNgayKetThuc.BorderRadius = 0;
+            this.dtNgayKetThuc.ForeColor = System.Drawing.Color.White;
+            this.dtNgayKetThuc.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dtNgayKetThuc.FormatCustom = null;
+            this.dtNgayKetThuc.Location = new System.Drawing.Point(998, 370);
+            this.dtNgayKetThuc.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.dtNgayKetThuc.Name = "dtNgayKetThuc";
+            this.dtNgayKetThuc.Size = new System.Drawing.Size(318, 55);
+            this.dtNgayKetThuc.TabIndex = 75;
+            this.dtNgayKetThuc.Value = new System.DateTime(2017, 4, 27, 21, 49, 25, 791);
+            // 
+            // dtNgayBatDau
+            // 
+            this.dtNgayBatDau.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(89)))), ((int)(((byte)(180)))));
+            this.dtNgayBatDau.BorderRadius = 0;
+            this.dtNgayBatDau.ForeColor = System.Drawing.Color.White;
+            this.dtNgayBatDau.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dtNgayBatDau.FormatCustom = null;
+            this.dtNgayBatDau.Location = new System.Drawing.Point(998, 292);
+            this.dtNgayBatDau.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.dtNgayBatDau.Name = "dtNgayBatDau";
+            this.dtNgayBatDau.Size = new System.Drawing.Size(318, 55);
+            this.dtNgayBatDau.TabIndex = 75;
+            this.dtNgayBatDau.Value = new System.DateTime(2017, 4, 27, 21, 49, 25, 791);
+            // 
             // View_HoatDongNgoaiKhoa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(236)))), ((int)(((byte)(245)))));
-            this.Controls.Add(this.txtNgayKetThuc);
+            this.Controls.Add(this.dtNgayBatDau);
+            this.Controls.Add(this.dtNgayKetThuc);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.btnDSLopThamGia);
             this.Controls.Add(this.btnThemMoi);
             this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.txtKeHoach);
             this.Controls.Add(this.txtChiPhi);
-            this.Controls.Add(this.txtNgayBatDau);
             this.Controls.Add(this.txtTenHoatDong);
             this.Controls.Add(this.txtMaHoatDong);
             this.Controls.Add(this.label2);
@@ -362,7 +352,6 @@
         private Bunifu.Framework.UI.BunifuThinButton2 btnLuu;
         private System.Windows.Forms.RichTextBox txtKeHoach;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtChiPhi;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtNgayBatDau;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtTenHoatDong;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtMaHoatDong;
         private System.Windows.Forms.Label label2;
@@ -372,7 +361,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dgvListHoatDong;
         private System.Windows.Forms.Label label1;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtNgayKetThuc;
         private System.Windows.Forms.Label label7;
+        private Bunifu.Framework.UI.BunifuDatepicker dtNgayKetThuc;
+        private Bunifu.Framework.UI.BunifuDatepicker dtNgayBatDau;
     }
 }

@@ -30,20 +30,20 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(View_DiemNgoaiKhoa));
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cboLop = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.dgvDiemTre = new System.Windows.Forms.DataGridView();
+            this.cboHoatDong = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.btnHuy = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnLuu = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.bunifuMaterialTextbox2 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.txtDiem = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.txtNhanXet = new System.Windows.Forms.RichTextBox();
+            this.txtHoTenTre = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDiemTre)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -58,13 +58,14 @@
             this.label1.TabIndex = 18;
             this.label1.Text = "Điểm hoạt động ngoại khóa";
             // 
-            // comboBox1
+            // cboLop
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(179, 151);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 28);
-            this.comboBox1.TabIndex = 54;
+            this.cboLop.FormattingEnabled = true;
+            this.cboLop.Location = new System.Drawing.Point(179, 151);
+            this.cboLop.Name = "cboLop";
+            this.cboLop.Size = new System.Drawing.Size(121, 28);
+            this.cboLop.TabIndex = 54;
+            this.cboLop.SelectedIndexChanged += new System.EventHandler(this.cboLop_SelectedIndexChanged);
             // 
             // label8
             // 
@@ -78,22 +79,24 @@
             this.label8.TabIndex = 53;
             this.label8.Text = "Chọn lớp:";
             // 
-            // dataGridView1
+            // dgvDiemTre
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(33, 219);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(808, 500);
-            this.dataGridView1.TabIndex = 52;
+            this.dgvDiemTre.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDiemTre.Location = new System.Drawing.Point(33, 219);
+            this.dgvDiemTre.Name = "dgvDiemTre";
+            this.dgvDiemTre.RowTemplate.Height = 28;
+            this.dgvDiemTre.Size = new System.Drawing.Size(808, 500);
+            this.dgvDiemTre.TabIndex = 52;
+            this.dgvDiemTre.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDiemTre_CellClick);
             // 
-            // comboBox2
+            // cboHoatDong
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(668, 151);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(180, 28);
-            this.comboBox2.TabIndex = 56;
+            this.cboHoatDong.FormattingEnabled = true;
+            this.cboHoatDong.Location = new System.Drawing.Point(668, 151);
+            this.cboHoatDong.Name = "cboHoatDong";
+            this.cboHoatDong.Size = new System.Drawing.Size(180, 28);
+            this.cboHoatDong.TabIndex = 56;
+            this.cboHoatDong.SelectedIndexChanged += new System.EventHandler(this.cboHoatDong_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -167,6 +170,7 @@
             this.btnHuy.Size = new System.Drawing.Size(211, 63);
             this.btnHuy.TabIndex = 58;
             this.btnHuy.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // btnLuu
             // 
@@ -192,64 +196,76 @@
             this.btnLuu.Size = new System.Drawing.Size(211, 63);
             this.btnLuu.TabIndex = 58;
             this.btnLuu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
-            // bunifuMaterialTextbox2
+            // txtDiem
             // 
-            this.bunifuMaterialTextbox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox2.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuMaterialTextbox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMaterialTextbox2.HintForeColor = System.Drawing.Color.Empty;
-            this.bunifuMaterialTextbox2.HintText = "";
-            this.bunifuMaterialTextbox2.isPassword = false;
-            this.bunifuMaterialTextbox2.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(89)))), ((int)(((byte)(180)))));
-            this.bunifuMaterialTextbox2.LineIdleColor = System.Drawing.Color.Gray;
-            this.bunifuMaterialTextbox2.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(89)))), ((int)(((byte)(180)))));
-            this.bunifuMaterialTextbox2.LineThickness = 3;
-            this.bunifuMaterialTextbox2.Location = new System.Drawing.Point(1047, 237);
-            this.bunifuMaterialTextbox2.Margin = new System.Windows.Forms.Padding(6);
-            this.bunifuMaterialTextbox2.Name = "bunifuMaterialTextbox2";
-            this.bunifuMaterialTextbox2.Size = new System.Drawing.Size(325, 50);
-            this.bunifuMaterialTextbox2.TabIndex = 59;
-            this.bunifuMaterialTextbox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtDiem.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtDiem.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtDiem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtDiem.HintForeColor = System.Drawing.Color.Empty;
+            this.txtDiem.HintText = "";
+            this.txtDiem.isPassword = false;
+            this.txtDiem.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(89)))), ((int)(((byte)(180)))));
+            this.txtDiem.LineIdleColor = System.Drawing.Color.Gray;
+            this.txtDiem.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(89)))), ((int)(((byte)(180)))));
+            this.txtDiem.LineThickness = 3;
+            this.txtDiem.Location = new System.Drawing.Point(1037, 325);
+            this.txtDiem.Margin = new System.Windows.Forms.Padding(6);
+            this.txtDiem.Name = "txtDiem";
+            this.txtDiem.Size = new System.Drawing.Size(325, 50);
+            this.txtDiem.TabIndex = 59;
+            this.txtDiem.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // comboBox4
+            // txtNhanXet
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(1047, 347);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(121, 28);
-            this.comboBox4.TabIndex = 61;
+            this.txtNhanXet.Location = new System.Drawing.Point(1037, 440);
+            this.txtNhanXet.Name = "txtNhanXet";
+            this.txtNhanXet.Size = new System.Drawing.Size(325, 135);
+            this.txtNhanXet.TabIndex = 63;
+            this.txtNhanXet.Text = "";
             // 
-            // richTextBox2
+            // txtHoTenTre
             // 
-            this.richTextBox2.Location = new System.Drawing.Point(1037, 440);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(325, 135);
-            this.richTextBox2.TabIndex = 63;
-            this.richTextBox2.Text = "";
+            this.txtHoTenTre.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtHoTenTre.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtHoTenTre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtHoTenTre.HintForeColor = System.Drawing.Color.Empty;
+            this.txtHoTenTre.HintText = "";
+            this.txtHoTenTre.isPassword = false;
+            this.txtHoTenTre.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(89)))), ((int)(((byte)(180)))));
+            this.txtHoTenTre.LineIdleColor = System.Drawing.Color.Gray;
+            this.txtHoTenTre.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(89)))), ((int)(((byte)(180)))));
+            this.txtHoTenTre.LineThickness = 3;
+            this.txtHoTenTre.Location = new System.Drawing.Point(1037, 237);
+            this.txtHoTenTre.Margin = new System.Windows.Forms.Padding(6);
+            this.txtHoTenTre.Name = "txtHoTenTre";
+            this.txtHoTenTre.Size = new System.Drawing.Size(325, 50);
+            this.txtHoTenTre.TabIndex = 59;
+            this.txtHoTenTre.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // View_DiemNgoaiKhoa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(236)))), ((int)(((byte)(245)))));
-            this.Controls.Add(this.richTextBox2);
-            this.Controls.Add(this.comboBox4);
-            this.Controls.Add(this.bunifuMaterialTextbox2);
+            this.Controls.Add(this.txtNhanXet);
+            this.Controls.Add(this.txtHoTenTre);
+            this.Controls.Add(this.txtDiem);
             this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.cboHoatDong);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cboLop);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvDiemTre);
             this.Controls.Add(this.label1);
             this.Name = "View_DiemNgoaiKhoa";
             this.Size = new System.Drawing.Size(1390, 834);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDiemTre)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -258,18 +274,18 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cboLop;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.DataGridView dgvDiemTre;
+        private System.Windows.Forms.ComboBox cboHoatDong;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private Bunifu.Framework.UI.BunifuThinButton2 btnHuy;
         private Bunifu.Framework.UI.BunifuThinButton2 btnLuu;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox2;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.RichTextBox richTextBox2;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtDiem;
+        private System.Windows.Forms.RichTextBox txtNhanXet;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtHoTenTre;
     }
 }
