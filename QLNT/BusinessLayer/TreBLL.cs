@@ -18,12 +18,12 @@ namespace QLNT.BusinessLayer
             string id = TreDAL.GetLastID().Trim();
             if (id == "")
             {
-                return "G2_TRE_00001";
+                return "MTRE000001";
             }
-            int nextID = int.Parse(id.Remove(0, "G20_PSC_".Length)) + 1;
-            id = "0000" + nextID.ToString();
-            id = id.Substring(id.Length - 5, 5);
-            return "G2_TRE_" + id;
+            int nextID = int.Parse(id.Remove(0, "MTRE".Length)) + 1;
+            id = "00000" + nextID.ToString();
+            id = id.Substring(id.Length - 6, 6);
+            return "MTRE" + id;
         }
 
         public static bool ThemTre(Tre tre)
@@ -34,8 +34,8 @@ namespace QLNT.BusinessLayer
                 if (row.ItemArray[0].ToString().Trim() == "0")
                     return true;
             }
-            
-            return true;
+
+            return false;
         }
 
         public static DataTable GetListTreTheoLop(String maLop)
