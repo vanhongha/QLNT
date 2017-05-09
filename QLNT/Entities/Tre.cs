@@ -78,6 +78,18 @@ namespace QLNT.Entities
         #region constructor
         public Tre() { }
 
+        public Tre(string maTre, string hoTen, string gioiTinh, DateTime ngaySinh, string tenBo, string tenMe, string diaChi, string dienThoai)
+        {
+            this.MaTre = maTre;
+            this.HoTenTre = hoTen;
+            this.GioiTinh = gioiTinh;
+            this.NgaySinh = ngaySinh;
+            this.HoTenCha = tenBo;
+            this.HoTenMe = tenMe;
+            this.DiaChi = diaChi;
+            this.SoDT = dienThoai;
+        }
+
         public Tre(DataRow row)
         {
             this._maTre = row["MaTre"].ToString();

@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 using System.Windows.Forms;
+using QLNT.BusinessLayer;
 
 namespace QLNT.Presentation_Layer.View
 {
@@ -15,6 +10,32 @@ namespace QLNT.Presentation_Layer.View
         public View_ThemTre()
         {
             InitializeComponent();
+        }
+
+        private void btn_TiepNhanTre_Click(object sender, EventArgs e)
+        {
+                Entities.Tre tre = new Entities.Tre(TreBLL.AutoMaTre(), 
+                txtHoTen.Text, 
+                "Nam", 
+                dtNgaySinh.Value, 
+                txtTenBo.Text, 
+                txtTenMe.Text,
+                txtDiaChi.Text,
+                txtDienThoai.Text);
+            
+            try
+            {
+                if (TreBLL.ThemTre(tre))
+                {
+                    MessageBox.Show("Đã thêm trẻ thành công", "Thông báo", MessageBoxButtons.OK);
+                }
+                else
+                    MessageBox.Show("Lỗi chưa xác định", "Thông báo", MessageBoxButtons.OK);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin cần thiết!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }

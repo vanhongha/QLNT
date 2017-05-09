@@ -13,6 +13,19 @@ namespace QLNT.BusinessLayer
     {
         public TreBLL() { }
 
+        public static string AutoMaTre()
+        {
+            string id = TreDAL.GetLastID().Trim();
+            if (id == "")
+            {
+                return "G2_TRE_00001";
+            }
+            int nextID = int.Parse(id.Remove(0, "G20_PSC_".Length)) + 1;
+            id = "0000" + nextID.ToString();
+            id = id.Substring(id.Length - 5, 5);
+            return "G2_TRE_" + id;
+        }
+
         public static bool ThemTre(Tre tre)
         {
             DataTable dt = TreDAL.ThemTre(tre);
@@ -21,7 +34,8 @@ namespace QLNT.BusinessLayer
                 if (row.ItemArray[0].ToString().Trim() == "0")
                     return true;
             }
-            return false;
+            
+            return true;
         }
 
         public static DataTable GetListTreTheoLop(String maLop)
