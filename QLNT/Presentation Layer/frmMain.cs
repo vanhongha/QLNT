@@ -165,6 +165,21 @@ namespace QLNT.Presentation_Layer
                     view_BieuDoChieuCao1.Visible = true;
                     view_BieuDoChieuCao1.BringToFront();
                     break;
+                case "ThongTinChiTietSK":
+                    view_ThongTinChiTietSK1.Enabled = true;
+                    view_ThongTinChiTietSK1.Visible = true;
+                    view_ThongTinChiTietSK1.BringToFront();
+                    break;
+                case "CapNhatSucKhoe":
+                    view_CapNhatSucKhoe1.Enabled = true;
+                    view_CapNhatSucKhoe1.Visible = true;
+                    view_CapNhatSucKhoe1.BringToFront();
+                    break;
+                case "DanhSachLopThamGiaHoatDong":
+                    view_DanhSachLopThamGiaHoatDong1.Enabled = true;
+                    view_DanhSachLopThamGiaHoatDong1.Visible = true;
+                    view_DanhSachLopThamGiaHoatDong1.BringToFront();
+                    break;
             }
         }
 
@@ -176,6 +191,12 @@ namespace QLNT.Presentation_Layer
                     return view_BieuDoCanNang1;
                 case "BieuDoChieuCao":
                     return view_BieuDoChieuCao1;
+                case "ThongTinChiTietSK":
+                    return view_ThongTinChiTietSK1;
+                case "CapNhatSucKhoe":
+                    return view_CapNhatSucKhoe1;
+                case "DanhSachLopThamGiaHoatDong":
+                    return view_DanhSachLopThamGiaHoatDong1;
             }
             return null;
         }

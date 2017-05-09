@@ -12,6 +12,7 @@ namespace QLNT.Presentation_Layer.View
             InitializeComponent();
         }
 
+<<<<<<< HEAD
         private void btn_TiepNhanTre_Click(object sender, EventArgs e)
         {
                 Entities.Tre tre = new Entities.Tre(TreBLL.AutoMaTre(), 
@@ -37,5 +38,8 @@ namespace QLNT.Presentation_Layer.View
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin cần thiết!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+=======
+
+>>>>>>> origin/master
     }
 }

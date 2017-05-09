@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
 
+
 namespace QLNT.DataLayer
 {
     class DataAccessHelper
@@ -20,7 +21,11 @@ namespace QLNT.DataLayer
         #region Init properties
         public DataAccessHelper()
         {
-            String connectionString = @"Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=QLNT;Data Source=HONGHA";
+<<<<<<< HEAD
+            String connectionString = @"Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=QLNT;Data Source=DESKTOP-HVQQFLB\VYLE";
+=======
+            String connectionString = @"Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=QLNT;Data Source=DESKTOP-A7DLQ1N\HONGHANH";
+>>>>>>> origin/master
 
             con = new SqlConnection(connectionString);
         }

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using QLNT.BusinessLayer;
 using QLNT.Utility;
+using QLNT.Entities;
 
 namespace QLNT.Presentation_Layer.View.QLHoatDong
 {
@@ -38,21 +39,25 @@ namespace QLNT.Presentation_Layer.View.QLHoatDong
             maHD = dgvListHoatDong.Rows[e.RowIndex].Cells["MaHoatDong"].Value.ToString();
             txtMaHoatDong.Text = maHD;
             txtTenHoatDong.Text = dgvListHoatDong.Rows[e.RowIndex].Cells["TenHoatDong"].Value.ToString();
-            txtNgayBatDau.Text = dgvListHoatDong.Rows[e.RowIndex].Cells["NgayBatDau"].Value.ToString();
-            txtNgayKetThuc.Text = dgvListHoatDong.Rows[e.RowIndex].Cells["NgayKetThuc"].Value.ToString();
-            txtChiPhi.Text = dgvListHoatDong.Rows[e.RowIndex].Cells["ChiPhi"].Value.ToString(); 
+            dtNgayBatDau.Text = dgvListHoatDong.Rows[e.RowIndex].Cells["NgayBatDau"].Value.ToString();
+            dtNgayKetThuc.Text = dgvListHoatDong.Rows[e.RowIndex].Cells["NgayKetThuc"].Value.ToString();
+            txtChiPhi.Text = dgvListHoatDong.Rows[e.RowIndex].Cells["ChiPhi"].Value.ToString();
             txtKeHoach.Text = dgvListHoatDong.Rows[e.RowIndex].Cells["KeHoach"].Value.ToString();
         }
 
         private void btnDSLopThamGia_Click(object sender, EventArgs e)
         {
-            if(maHD != "")
+            if (maHD != "")
             {
                 //goi form danh sach lop tham gia hoat dong
-            } 
+                frmMain parentForm = (this.Parent.Parent as frmMain);
+                parentForm.UpdateSubView("DanhSachLopThamGiaHoatDong");
+                View_DanhSachLopThamGiaHoatDong view_DSLop = parentForm.GetSubView("DanhSachLopThamGiaHoatDong") as View_DanhSachLopThamGiaHoatDong;
+                view_DSLop.SetMaHD(maHD);
+            }
             else
             {
-
+                MessageBox.Show("Bạn phải chọn một hoạt động để xem thông tin lớp tham gia", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -60,8 +65,8 @@ namespace QLNT.Presentation_Layer.View.QLHoatDong
         {
             txtMaHoatDong.Text = "";
             txtTenHoatDong.Text = "";
-            txtNgayBatDau.Text = "";
-            txtNgayKetThuc.Text = "";
+            dtNgayBatDau.Text = "";
+            dtNgayKetThuc.Text = "";
             txtChiPhi.Text = "";
             txtKeHoach.Text = "";
 
@@ -72,7 +77,15 @@ namespace QLNT.Presentation_Layer.View.QLHoatDong
         private void btnLuu_Click(object sender, EventArgs e)
         {
             //luu hoat dong
+            HoatDongNgoaiKhoa hoatDong = new HoatDongNgoaiKhoa();
+            hoatDong.MaHoatDong = txtMaHoatDong.Text;
+            hoatDong.TenHoatDong = txtTenHoatDong.Text;
+            hoatDong.NgayBatDau = dtNgayBatDau.Value;
+            hoatDong.NgayKetThuc = dtNgayKetThuc.Value;
+            hoatDong.KeHoach = txtKeHoach.Text;
+            hoatDong.ChiPhi = decimal.Parse(txtChiPhi.Text);
 
+            HoatDongNgoaiKhoaBLL.LuuHoatDong(hoatDong);
         }
     }
 }

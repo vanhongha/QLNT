@@ -59,12 +59,16 @@
   <ItemGroup>
     <Compile Include="BusinessLayer\DichVuSucKhoeBLL.cs" />
     <Compile Include="BusinessLayer\HoatDongNgoaiKhoaBLL.cs" />
+    <Compile Include="BusinessLayer\LoaiNguyenLieuBLL.cs" />
     <Compile Include="BusinessLayer\LopBLL.cs" />
+    <Compile Include="BusinessLayer\NguyenLieuBLL.cs" />
     <Compile Include="BusinessLayer\TreBLL.cs" />
     <Compile Include="DataLayer\DataAccessHelper.cs" />
     <Compile Include="DataLayer\DichVuSucKhoeDAL.cs" />
     <Compile Include="DataLayer\HoatDongNgoaiKhoaDAL.cs" />
+    <Compile Include="DataLayer\LoaiNguyenLieuDAL.cs" />
     <Compile Include="DataLayer\LopDAL.cs" />
+    <Compile Include="DataLayer\NguyenLieuDAL.cs" />
     <Compile Include="DataLayer\TreDAL.cs" />
     <Compile Include="Entities\ChiTietMonAn.cs" />
     <Compile Include="Entities\ChiTietPhieuMuaNL.cs" />
