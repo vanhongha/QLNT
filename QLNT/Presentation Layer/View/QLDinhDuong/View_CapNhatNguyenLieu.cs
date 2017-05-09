@@ -21,8 +21,8 @@ namespace QLNT.Presentation_Layer.View.QLDinhDuong
 
         private void View_CapNhatNguyenLieu_Load(object sender, EventArgs e)
         {
-            getDataGridView();
-            getCombobox();
+            //getDataGridView();
+            //getCombobox();
         }
 
         private void getDataGridView()

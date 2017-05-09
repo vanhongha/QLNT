@@ -13,6 +13,19 @@ namespace QLNT.BusinessLayer
     {
         public TreBLL() { }
 
+        public static string AutoMaTre()
+        {
+            string id = TreDAL.GetLastID().Trim();
+            if (id == "")
+            {
+                return "MTRE000001";
+            }
+            int nextID = int.Parse(id.Remove(0, "MTRE".Length)) + 1;
+            id = "00000" + nextID.ToString();
+            id = id.Substring(id.Length - 6, 6);
+            return "MTRE" + id;
+        }
+
         public static bool ThemTre(Tre tre)
         {
             DataTable dt = TreDAL.ThemTre(tre);
@@ -21,6 +34,7 @@ namespace QLNT.BusinessLayer
                 if (row.ItemArray[0].ToString().Trim() == "0")
                     return true;
             }
+
             return false;
         }
 

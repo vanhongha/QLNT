@@ -41,6 +41,11 @@ namespace QLNT.Presentation_Layer
             listView.Add(function.PhieuNguyenLieu, view_PhieuNguyenLieu1);
             listView.Add(function.ThemCapNhatHoatDong, view_HoatDongNgoaiKhoa);
             listView.Add(function.ApDungHoatDong, view_DiemNgoaiKhoa);
+            listView.Add(function.CapNhatSucKhoe, view_CapNhatSucKhoe1);
+            listView.Add(function.ThongTinChiTietSK, view_ThongTinChiTietSK1);
+            listView.Add(function.DanhSachHoatDong, view_DanhSachLopThamGiaHoatDong1);
+            listView.Add(function.BieuDoCanNang, view_BieuDoCanNang1);
+            listView.Add(function.BieuDoChieuCao, view_BieuDoChieuCao1);
 
             foreach (function f in listView.Keys)
             {

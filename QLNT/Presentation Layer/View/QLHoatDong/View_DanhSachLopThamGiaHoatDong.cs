@@ -10,7 +10,7 @@ namespace QLNT.Presentation_Layer.View.QLHoatDong
 {
     public partial class View_DanhSachLopThamGiaHoatDong : UserControl
     {
-        string maHD;
+        string maHD = "";
         Dictionary<string, bool> listLop = new Dictionary<string, bool>();
 
         public View_DanhSachLopThamGiaHoatDong()

@@ -21,6 +21,7 @@ namespace QLNT.DataLayer
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@MaTre", tre.MaTre);
             cmd.Parameters.AddWithValue("@TenTre", tre.HoTenTre);
+            cmd.Parameters.AddWithValue("@GioiTinh", tre.GioiTinh);
             cmd.Parameters.AddWithValue("@NgaySinh", tre.NgaySinh);
             cmd.Parameters.AddWithValue("@TenBo", tre.HoTenCha);
             cmd.Parameters.AddWithValue("@TenMe", tre.HoTenMe);
@@ -58,6 +59,16 @@ namespace QLNT.DataLayer
             da.Fill(db.dt);
 
             return db.dt;
+        }
+        public static string GetLastID()
+        {
+            DataAccessHelper db = new DataAccessHelper();
+            DataTable dt = db.GetDataTable("Select top 1 MaTre from TRE order by MaTre desc");
+            foreach (DataRow row in dt.Rows)
+            {
+                return row.ItemArray[0].ToString();
+            }
+            return "";
         }
     }
 }

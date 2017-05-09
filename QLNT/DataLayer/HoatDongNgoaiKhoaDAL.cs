@@ -129,18 +129,18 @@ namespace QLNT.DataLayer
         {
             DataAccessHelper db = new DataAccessHelper();
 
-            DataTable dt = db.GetDataTable("SELECT * FROM HOATDONG_LOP WHERE MaHoatDong = '" + maHD + "'");
+            //DataTable dt = db.GetDataTable("SELECT * FROM HOATDONG_LOP WHERE MaHoatDong = '" + maHD + "'");
 
-            //SqlCommand cmd = db.Command("GetListLopThamGiaHoatDong");
-            //cmd.CommandType = CommandType.StoredProcedure;
-            //cmd.Parameters.AddWithValue("@MaHoatDong", maHD);
-            //SqlDataAdapter da = new SqlDataAdapter(cmd);
+            SqlCommand cmd = db.Command("GetListLopThamGiaHoatDong");
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@MaHoatDong", maHD);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
 
-            //db.dt = new DataTable();
-            //da.Fill(db.dt);
+            db.dt = new DataTable();
+            da.Fill(db.dt);
 
-            //return db.dt;
-            return dt;
+            return db.dt;
+            //return dt;
         }
 
         public static bool CheckExistsLopThamGia(string maHD, string maLop)

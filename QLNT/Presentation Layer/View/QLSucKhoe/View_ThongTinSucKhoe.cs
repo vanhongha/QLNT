@@ -49,34 +49,32 @@ namespace QLNT.Presentation_Layer.View.QLSucKhoe
 
         private void btnXemCanNang_Click(object sender, EventArgs e)
         {
-            /*if(maTre != "")
+            if (maTre != "")
             {
                 //goi form bieu do can nang
-            } else
+                frmMain parentForm = (this.Parent.Parent as frmMain);
+                parentForm.UpdateSubView("BieuDoCanNang");
+                View_BieuDoCanNang view_BieuDoCanNang = parentForm.GetSubView("BieuDoCanNang") as View_BieuDoCanNang;
+            }
+            else
             {
                 MessageBox.Show("Bạn phải chọn một trẻ trong danh sách để xem thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }*/
-
-            frmMain parentForm = (this.Parent.Parent as frmMain);
-            parentForm.UpdateSubView("BieuDoCanNang");
+            }
         }
 
         private void btnXemChieuCao_Click(object sender, EventArgs e)
         {
-            //if (maTre != "")
-            //{
-            //    //goi form bieu do chieu cao
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Bạn phải chọn một trẻ trong danh sách để xem thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //}
-
-            frmMain parentForm = (this.Parent.Parent as frmMain);
-            parentForm.UpdateSubView("BieuDoChieuCao");
-            View_BieuDoChieuCao viewBieuDoChieuCao = parentForm.GetSubView("BieuDoChieuCao") as View_BieuDoChieuCao;
-            viewBieuDoChieuCao.maTre = "HanhBenh";
-            MessageBox.Show(viewBieuDoChieuCao.maTre);
+            if (maTre != "")
+            {
+                //goi form bieu do chieu cao
+                frmMain parentForm = (this.Parent.Parent as frmMain);
+                parentForm.UpdateSubView("BieuDoChieuCao");
+                View_BieuDoChieuCao viewBieuDoChieuCao = parentForm.GetSubView("BieuDoChieuCao") as View_BieuDoChieuCao;
+            }
+            else
+            {
+                MessageBox.Show("Bạn phải chọn một trẻ trong danh sách để xem thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void btnXemChiTietSK_Click(object sender, EventArgs e)
@@ -84,6 +82,10 @@ namespace QLNT.Presentation_Layer.View.QLSucKhoe
             if (maTre != "")
             {
                 //goi form chi tiet suc khoe
+                frmMain parentForm = (this.Parent.Parent as frmMain);
+                parentForm.UpdateSubView("ThongTinChiTietSK");
+                View_ThongTinChiTietSK view_ThongTinChiTiet = parentForm.GetSubView("ThongTinChiTietSK") as View_ThongTinChiTietSK;
+                
             }
             else
             {
@@ -96,6 +98,10 @@ namespace QLNT.Presentation_Layer.View.QLSucKhoe
             if (maTre != "")
             {
                 //goi form cap nhat suc khoe
+                frmMain parentForm = (this.Parent.Parent as frmMain);
+                parentForm.UpdateSubView("CapNhatSucKhoe");
+                View_CapNhatSucKhoe view_CapNhatSucKhoe = parentForm.GetSubView("CapNhatSucKhoe") as View_CapNhatSucKhoe;
+
             }
             else
             {
