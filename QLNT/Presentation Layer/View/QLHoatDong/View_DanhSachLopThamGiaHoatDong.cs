@@ -10,7 +10,7 @@ namespace QLNT.Presentation_Layer.View.QLHoatDong
 {
     public partial class View_DanhSachLopThamGiaHoatDong : UserControl
     {
-        string maHD;
+        string maHD = "";
         Dictionary<string, bool> listLop = new Dictionary<string, bool>();
 
         public View_DanhSachLopThamGiaHoatDong()
@@ -26,8 +26,8 @@ namespace QLNT.Presentation_Layer.View.QLHoatDong
         private void View_DanhSachLopThamGiaHoatDong_Load(object sender, EventArgs e)
         {
             LoadListHoatDong();
-            //if(maHD != "")
-            //    LoadDataGridView();
+            if(maHD != "")
+                LoadDataGridView();
         }
 
         private void LoadListHoatDong()

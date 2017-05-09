@@ -15,7 +15,7 @@ namespace QLNT.Presentation_Layer.View.QLHoatDong
 {
     public partial class View_HoatDongNgoaiKhoa : UserControl
     {
-        private string maHD;
+        private string maHD = "";
 
         public View_HoatDongNgoaiKhoa()
         {
