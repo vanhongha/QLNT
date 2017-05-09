@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using QLNT.BusinessLayer;
 using QLNT.Utility;
@@ -25,6 +18,8 @@ namespace QLNT.Presentation_Layer.View.QLHoatDong
         private void View_HoatDongNgoaiKhoa_Load(object sender, EventArgs e)
         {
             LoadDataGridView();
+            dtNgayBatDau.Value = DateTime.Today;
+            dtNgayKetThuc.Value = DateTime.Today;
         }
 
         private void LoadDataGridView()
@@ -39,8 +34,8 @@ namespace QLNT.Presentation_Layer.View.QLHoatDong
             maHD = dgvListHoatDong.Rows[e.RowIndex].Cells["MaHoatDong"].Value.ToString();
             txtMaHoatDong.Text = maHD;
             txtTenHoatDong.Text = dgvListHoatDong.Rows[e.RowIndex].Cells["TenHoatDong"].Value.ToString();
-            dtNgayBatDau.Text = dgvListHoatDong.Rows[e.RowIndex].Cells["NgayBatDau"].Value.ToString();
-            dtNgayKetThuc.Text = dgvListHoatDong.Rows[e.RowIndex].Cells["NgayKetThuc"].Value.ToString();
+            dtNgayBatDau.Value = DateTime.Parse(dgvListHoatDong.Rows[e.RowIndex].Cells["NgayBatDau"].Value.ToString());
+            dtNgayKetThuc.Value = DateTime.Parse(dgvListHoatDong.Rows[e.RowIndex].Cells["NgayKetThuc"].Value.ToString());
             txtChiPhi.Text = dgvListHoatDong.Rows[e.RowIndex].Cells["ChiPhi"].Value.ToString();
             txtKeHoach.Text = dgvListHoatDong.Rows[e.RowIndex].Cells["KeHoach"].Value.ToString();
         }
@@ -51,9 +46,11 @@ namespace QLNT.Presentation_Layer.View.QLHoatDong
             {
                 //goi form danh sach lop tham gia hoat dong
                 frmMain parentForm = (this.Parent.Parent as frmMain);
+                //View_DanhSachLopThamGiaHoatDong view_DSLop = parentForm.GetSubView("DanhSachLopThamGiaHoatDong") as View_DanhSachLopThamGiaHoatDong;
+                //view_DSLop.SetMaHD(maHD);
+                //MessageBox.Show(maHD);
                 parentForm.UpdateSubView("DanhSachLopThamGiaHoatDong");
-                View_DanhSachLopThamGiaHoatDong view_DSLop = parentForm.GetSubView("DanhSachLopThamGiaHoatDong") as View_DanhSachLopThamGiaHoatDong;
-                view_DSLop.SetMaHD(maHD);
+                
             }
             else
             {
@@ -65,8 +62,8 @@ namespace QLNT.Presentation_Layer.View.QLHoatDong
         {
             txtMaHoatDong.Text = "";
             txtTenHoatDong.Text = "";
-            dtNgayBatDau.Text = "";
-            dtNgayKetThuc.Text = "";
+            dtNgayBatDau.Value = DateTime.Today;
+            dtNgayKetThuc.Value = DateTime.Today;
             txtChiPhi.Text = "";
             txtKeHoach.Text = "";
 
@@ -84,8 +81,16 @@ namespace QLNT.Presentation_Layer.View.QLHoatDong
             hoatDong.NgayKetThuc = dtNgayKetThuc.Value;
             hoatDong.KeHoach = txtKeHoach.Text;
             hoatDong.ChiPhi = decimal.Parse(txtChiPhi.Text);
+            if(HoatDongNgoaiKhoaBLL.LuuHoatDong(hoatDong))
+            {
+                MessageBox.Show("Đã lưu hoạt động thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LoadDataGridView();
+            }
+        }
 
-            HoatDongNgoaiKhoaBLL.LuuHoatDong(hoatDong);
+        public string GetMaHD()
+        {
+            return maHD;
         }
     }
 }

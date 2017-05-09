@@ -98,7 +98,7 @@ namespace QLNT.DataLayer
         {
             DataAccessHelper db = new DataAccessHelper();
 
-            SqlCommand cmd = db.Command("GetListDiemTheoLop");
+            SqlCommand cmd = db.Command("GetListDiemHoatDongTheoLop");
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@MaHoatDong", maHD);
             cmd.Parameters.AddWithValue("@MaLop", maLop);
@@ -220,6 +220,25 @@ namespace QLNT.DataLayer
 
             db.dt = new DataTable();
             da.Fill(db.dt);
+        }
+
+        public static HoatDongNgoaiKhoa GetHoatDong(string maHD)
+        {
+            DataAccessHelper db = new DataAccessHelper();
+
+            SqlCommand cmd = db.Command("GetHoatDong");
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@MaHoatDong", maHD);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            db.dt = new DataTable();
+            da.Fill(db.dt);
+
+            foreach (DataRow row in db.dt.Rows)
+            {
+                return new HoatDongNgoaiKhoa(row);
+            }
+            return null;
         }
 
     }

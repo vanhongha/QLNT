@@ -47,6 +47,7 @@
             this.dgvListLop.RowTemplate.Height = 28;
             this.dgvListLop.Size = new System.Drawing.Size(789, 423);
             this.dgvListLop.TabIndex = 62;
+            this.dgvListLop.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvListLop_DataBindingComplete);
             // 
             // cboHoatDong
             // 

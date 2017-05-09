@@ -19,6 +19,17 @@ namespace QLNT.Presentation_Layer.View.QLHoatDong
             InitializeComponent();
         }
 
+        private void View_DiemNgoaiKhoa_Load(object sender, EventArgs e)
+        {
+            cboLop.DataSource = LopBLL.GetListLop();
+            cboLop.DisplayMember = "TenLop";
+            cboLop.ValueMember = "MaLop";
+
+            cboHoatDong.DataSource = HoatDongNgoaiKhoaBLL.GetListHoatDong();
+            cboHoatDong.DisplayMember = "TenHoatDong";
+            cboHoatDong.ValueMember = "MaHoatDong";
+        }
+
         private void LoadDataGridView()
         {
             dgvDiemTre.DataSource = HoatDongNgoaiKhoaBLL.GetListDiemHoatDong(cboHoatDong.Text, cboLop.Text);
@@ -43,10 +54,18 @@ namespace QLNT.Presentation_Layer.View.QLHoatDong
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            if (txtHoTenTre.Text != null)
+            if (txtHoTenTre.Text != "")
             {
                 //cap nhat diem hoat dong cho tre
-
+                if(HoatDongNgoaiKhoaBLL.CapNhatDiemHoatDong(cboHoatDong.SelectedText, dgvDiemTre.CurrentRow.Cells["MaTre"].Value.ToString(),
+                                                        float.Parse(txtDiem.Text), txtNhanXet.Text))
+                {
+                    MessageBox.Show("Cập nhật điểm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Bạn phải chọn một trẻ để lưu điểm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -61,5 +80,7 @@ namespace QLNT.Presentation_Layer.View.QLHoatDong
             txtNhanXet.Text = dgvDiemTre.Rows[e.RowIndex].Cells["HoTenTre"].Value.ToString();
             txtDiem.Text = dgvDiemTre.Rows[e.RowIndex].Cells["Diem"].Value.ToString();
         }
+
+        
     }
 }

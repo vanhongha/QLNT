@@ -203,6 +203,16 @@ namespace QLNT.Presentation_Layer
             return null;
         }
 
+        public UserControl GetView(string name)
+        {
+            switch(name)
+            {
+                case "HoatDongNgoaiKhoa":
+                    return view_HoatDongNgoaiKhoa;
+            }
+            return null;
+        }
+
         private void UpdateTab(tab tab)
         {
             foreach (tab t in listTabMenu.Keys)

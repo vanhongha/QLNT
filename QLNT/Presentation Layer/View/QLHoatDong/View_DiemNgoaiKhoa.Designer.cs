@@ -265,6 +265,7 @@
             this.Controls.Add(this.label1);
             this.Name = "View_DiemNgoaiKhoa";
             this.Size = new System.Drawing.Size(1390, 834);
+            this.Load += new System.EventHandler(this.View_DiemNgoaiKhoa_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDiemTre)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
