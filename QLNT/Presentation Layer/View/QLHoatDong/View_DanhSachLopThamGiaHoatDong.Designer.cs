@@ -29,32 +29,33 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(View_DanhSachLopThamGiaHoatDong));
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.dgvListLop = new System.Windows.Forms.DataGridView();
+            this.cboHoatDong = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnHuy = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnLuu = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnApDungTatCa = new Bunifu.Framework.UI.BunifuThinButton2();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListLop)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgvListLop
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(277, 239);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(789, 423);
-            this.dataGridView1.TabIndex = 62;
+            this.dgvListLop.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListLop.Location = new System.Drawing.Point(277, 239);
+            this.dgvListLop.Name = "dgvListLop";
+            this.dgvListLop.RowTemplate.Height = 28;
+            this.dgvListLop.Size = new System.Drawing.Size(789, 423);
+            this.dgvListLop.TabIndex = 62;
             // 
-            // comboBox1
+            // cboHoatDong
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(555, 153);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(312, 28);
-            this.comboBox1.TabIndex = 61;
+            this.cboHoatDong.FormattingEnabled = true;
+            this.cboHoatDong.Location = new System.Drawing.Point(555, 153);
+            this.cboHoatDong.Name = "cboHoatDong";
+            this.cboHoatDong.Size = new System.Drawing.Size(312, 28);
+            this.cboHoatDong.TabIndex = 61;
+            this.cboHoatDong.SelectedIndexChanged += new System.EventHandler(this.cboHoatDong_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -104,6 +105,7 @@
             this.btnHuy.Size = new System.Drawing.Size(272, 63);
             this.btnHuy.TabIndex = 63;
             this.btnHuy.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // btnLuu
             // 
@@ -129,6 +131,7 @@
             this.btnLuu.Size = new System.Drawing.Size(272, 63);
             this.btnLuu.TabIndex = 64;
             this.btnLuu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnApDungTatCa
             // 
@@ -154,6 +157,7 @@
             this.btnApDungTatCa.Size = new System.Drawing.Size(272, 63);
             this.btnApDungTatCa.TabIndex = 65;
             this.btnApDungTatCa.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnApDungTatCa.Click += new System.EventHandler(this.btnApDungTatCa_Click);
             // 
             // View_DanhSachLopThamGiaHoatDong
             // 
@@ -163,13 +167,14 @@
             this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.btnApDungTatCa);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.dgvListLop);
+            this.Controls.Add(this.cboHoatDong);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Name = "View_DanhSachLopThamGiaHoatDong";
             this.Size = new System.Drawing.Size(1390, 834);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.View_DanhSachLopThamGiaHoatDong_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListLop)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -180,8 +185,8 @@
         private Bunifu.Framework.UI.BunifuThinButton2 btnHuy;
         private Bunifu.Framework.UI.BunifuThinButton2 btnLuu;
         private Bunifu.Framework.UI.BunifuThinButton2 btnApDungTatCa;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.DataGridView dgvListLop;
+        private System.Windows.Forms.ComboBox cboHoatDong;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
     }

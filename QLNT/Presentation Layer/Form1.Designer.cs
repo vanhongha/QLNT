@@ -39,15 +39,14 @@
             this.btnQLNhanVien = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnQLTreEm = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.content = new System.Windows.Forms.Panel();
             this.header = new System.Windows.Forms.Panel();
             this.tabMenu = new System.Windows.Forms.Panel();
             this.headerDrag = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
+            this.view_PhieuNguyenLieu1 = new QLNT.Presentation_Layer.View.QLDinhDuong.View_PhieuNguyenLieu();
             this.view_CapNhatNguyenLieu1 = new QLNT.Presentation_Layer.View.QLDinhDuong.View_CapNhatNguyenLieu();
             this.view_BieuDoCanNang1 = new QLNT.Presentation_Layer.View.QLSucKhoe.View_BieuDoCanNang();
             this.view_BieuDoChieuCao1 = new QLNT.Presentation_Layer.View.QLSucKhoe.View_BieuDoChieuCao();
@@ -72,14 +71,18 @@
             this.tab_QLDinhDuong1 = new QLNT.Presentation_Layer.Tab_Menu.Tab_QLDinhDuong();
             this.tab_QLNhanVien1 = new QLNT.Presentation_Layer.Tab_Menu.Tab_QLNhanVien();
             this.tab_QLTre1 = new QLNT.Presentation_Layer.Tab_Menu.Tab_QLTre();
-            this.view_PhieuNguyenLieu1 = new QLNT.Presentation_Layer.View.QLDinhDuong.View_PhieuNguyenLieu();
+            this.view_DanhSachLopThamGiaHoatDong1 = new QLNT.Presentation_Layer.View.QLHoatDong.View_DanhSachLopThamGiaHoatDong();
+            this.view_ThongTinChiTietSK1 = new QLNT.Presentation_Layer.View.QLSucKhoe.View_ThongTinChiTietSK();
+            this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.view_CapNhatSucKhoe1 = new QLNT.Presentation_Layer.View.QLSucKhoe.View_CapNhatSucKhoe();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.content.SuspendLayout();
             this.header.SuspendLayout();
             this.tabMenu.SuspendLayout();
             this.headerDrag.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -399,31 +402,6 @@
             this.panel4.Size = new System.Drawing.Size(276, 212);
             this.panel4.TabIndex = 0;
             // 
-            // bunifuThinButton21
-            // 
-            this.bunifuThinButton21.ActiveBorderThickness = 1;
-            this.bunifuThinButton21.ActiveCornerRadius = 20;
-            this.bunifuThinButton21.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
-            this.bunifuThinButton21.ActiveForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton21.ActiveLineColor = System.Drawing.Color.White;
-            this.bunifuThinButton21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(89)))), ((int)(((byte)(180)))));
-            this.bunifuThinButton21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton21.BackgroundImage")));
-            this.bunifuThinButton21.ButtonText = "Chỉnh sửa thông tin cá nhân";
-            this.bunifuThinButton21.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton21.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
-            this.bunifuThinButton21.IdleBorderThickness = 1;
-            this.bunifuThinButton21.IdleCornerRadius = 20;
-            this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.White;
-            this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
-            this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
-            this.bunifuThinButton21.Location = new System.Drawing.Point(16, 162);
-            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuThinButton21.Name = "bunifuThinButton21";
-            this.bunifuThinButton21.Size = new System.Drawing.Size(244, 41);
-            this.bunifuThinButton21.TabIndex = 3;
-            this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -446,19 +424,10 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Nguyễn Văn A";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::QLNT.Properties.Resources.uit;
-            this.pictureBox1.Location = new System.Drawing.Point(83, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(111, 99);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // content
             // 
             this.content.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(236)))), ((int)(((byte)(245)))));
+            this.content.Controls.Add(this.view_DanhSachLopThamGiaHoatDong1);
             this.content.Controls.Add(this.view_PhieuNguyenLieu1);
             this.content.Controls.Add(this.view_CapNhatNguyenLieu1);
             this.content.Controls.Add(this.view_BieuDoCanNang1);
@@ -532,6 +501,15 @@
             this.label3.Size = new System.Drawing.Size(179, 18);
             this.label3.TabIndex = 0;
             this.label3.Text = "Phần mềm quản lý nhà trẻ";
+            // 
+            // view_PhieuNguyenLieu1
+            // 
+            this.view_PhieuNguyenLieu1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(236)))), ((int)(((byte)(245)))));
+            this.view_PhieuNguyenLieu1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.view_PhieuNguyenLieu1.Location = new System.Drawing.Point(0, 0);
+            this.view_PhieuNguyenLieu1.Name = "view_PhieuNguyenLieu1";
+            this.view_PhieuNguyenLieu1.Size = new System.Drawing.Size(927, 542);
+            this.view_PhieuNguyenLieu1.TabIndex = 17;
             // 
             // view_CapNhatNguyenLieu1
             // 
@@ -754,20 +732,78 @@
             this.tab_QLTre1.Size = new System.Drawing.Size(927, 57);
             this.tab_QLTre1.TabIndex = 0;
             // 
-            // view_PhieuNguyenLieu1
+            // view_DanhSachLopThamGiaHoatDong1
             // 
-            this.view_PhieuNguyenLieu1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(236)))), ((int)(((byte)(245)))));
-            this.view_PhieuNguyenLieu1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.view_PhieuNguyenLieu1.Location = new System.Drawing.Point(0, 0);
-            this.view_PhieuNguyenLieu1.Name = "view_PhieuNguyenLieu1";
-            this.view_PhieuNguyenLieu1.Size = new System.Drawing.Size(927, 542);
-            this.view_PhieuNguyenLieu1.TabIndex = 17;
+            this.view_DanhSachLopThamGiaHoatDong1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(236)))), ((int)(((byte)(245)))));
+            this.view_DanhSachLopThamGiaHoatDong1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.view_DanhSachLopThamGiaHoatDong1.Location = new System.Drawing.Point(0, 0);
+            this.view_DanhSachLopThamGiaHoatDong1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.view_DanhSachLopThamGiaHoatDong1.Name = "view_DanhSachLopThamGiaHoatDong1";
+            this.view_DanhSachLopThamGiaHoatDong1.Size = new System.Drawing.Size(927, 542);
+            this.view_DanhSachLopThamGiaHoatDong1.TabIndex = 18;
+            // 
+            // view_ThongTinChiTietSK1
+            // 
+            this.view_ThongTinChiTietSK1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(236)))), ((int)(((byte)(245)))));
+            this.view_ThongTinChiTietSK1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.view_ThongTinChiTietSK1.Location = new System.Drawing.Point(276, 100);
+            this.view_ThongTinChiTietSK1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.view_ThongTinChiTietSK1.Name = "view_ThongTinChiTietSK1";
+            this.view_ThongTinChiTietSK1.Size = new System.Drawing.Size(927, 542);
+            this.view_ThongTinChiTietSK1.TabIndex = 19;
+            // 
+            // bunifuThinButton21
+            // 
+            this.bunifuThinButton21.ActiveBorderThickness = 1;
+            this.bunifuThinButton21.ActiveCornerRadius = 20;
+            this.bunifuThinButton21.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
+            this.bunifuThinButton21.ActiveForecolor = System.Drawing.Color.White;
+            this.bunifuThinButton21.ActiveLineColor = System.Drawing.Color.White;
+            this.bunifuThinButton21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(89)))), ((int)(((byte)(180)))));
+            this.bunifuThinButton21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton21.BackgroundImage")));
+            this.bunifuThinButton21.ButtonText = "Chỉnh sửa thông tin cá nhân";
+            this.bunifuThinButton21.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuThinButton21.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuThinButton21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
+            this.bunifuThinButton21.IdleBorderThickness = 1;
+            this.bunifuThinButton21.IdleCornerRadius = 20;
+            this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.White;
+            this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
+            this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
+            this.bunifuThinButton21.Location = new System.Drawing.Point(16, 162);
+            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(5);
+            this.bunifuThinButton21.Name = "bunifuThinButton21";
+            this.bunifuThinButton21.Size = new System.Drawing.Size(244, 41);
+            this.bunifuThinButton21.TabIndex = 3;
+            this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::QLNT.Properties.Resources.uit;
+            this.pictureBox1.Location = new System.Drawing.Point(83, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(111, 99);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // view_CapNhatSucKhoe1
+            // 
+            this.view_CapNhatSucKhoe1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(236)))), ((int)(((byte)(245)))));
+            this.view_CapNhatSucKhoe1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.view_CapNhatSucKhoe1.Location = new System.Drawing.Point(276, 100);
+            this.view_CapNhatSucKhoe1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.view_CapNhatSucKhoe1.Name = "view_CapNhatSucKhoe1";
+            this.view_CapNhatSucKhoe1.Size = new System.Drawing.Size(927, 542);
+            this.view_CapNhatSucKhoe1.TabIndex = 20;
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1203, 642);
+            this.Controls.Add(this.view_CapNhatSucKhoe1);
+            this.Controls.Add(this.view_ThongTinChiTietSK1);
             this.Controls.Add(this.content);
             this.Controls.Add(this.header);
             this.Controls.Add(this.panel1);
@@ -777,12 +813,12 @@
             this.panel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.content.ResumeLayout(false);
             this.header.ResumeLayout(false);
             this.tabMenu.ResumeLayout(false);
             this.headerDrag.ResumeLayout(false);
             this.headerDrag.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -833,6 +869,9 @@
         private View.QLSucKhoe.View_BieuDoCanNang view_BieuDoCanNang1;
         private View.QLDinhDuong.View_CapNhatNguyenLieu view_CapNhatNguyenLieu1;
         private View.QLDinhDuong.View_PhieuNguyenLieu view_PhieuNguyenLieu1;
+        private View.QLHoatDong.View_DanhSachLopThamGiaHoatDong view_DanhSachLopThamGiaHoatDong1;
+        private View.QLSucKhoe.View_ThongTinChiTietSK view_ThongTinChiTietSK1;
+        private View.QLSucKhoe.View_CapNhatSucKhoe view_CapNhatSucKhoe1;
     }
 }
 

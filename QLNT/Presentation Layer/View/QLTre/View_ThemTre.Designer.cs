@@ -51,9 +51,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Gray;
-            this.label1.Location = new System.Drawing.Point(406, 31);
+            this.label1.Location = new System.Drawing.Point(609, 48);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(122, 31);
+            this.label1.Size = new System.Drawing.Size(178, 46);
             this.label1.TabIndex = 0;
             this.label1.Text = "Thêm trẻ";
             // 
@@ -69,10 +70,10 @@
             this.bunifuMaterialTextbox1.LineIdleColor = System.Drawing.Color.Gray;
             this.bunifuMaterialTextbox1.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(89)))), ((int)(((byte)(180)))));
             this.bunifuMaterialTextbox1.LineThickness = 3;
-            this.bunifuMaterialTextbox1.Location = new System.Drawing.Point(127, 66);
-            this.bunifuMaterialTextbox1.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuMaterialTextbox1.Location = new System.Drawing.Point(190, 102);
+            this.bunifuMaterialTextbox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.bunifuMaterialTextbox1.Name = "bunifuMaterialTextbox1";
-            this.bunifuMaterialTextbox1.Size = new System.Drawing.Size(757, 44);
+            this.bunifuMaterialTextbox1.Size = new System.Drawing.Size(1136, 68);
             this.bunifuMaterialTextbox1.TabIndex = 1;
             this.bunifuMaterialTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -81,9 +82,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Gray;
-            this.label2.Location = new System.Drawing.Point(43, 92);
+            this.label2.Location = new System.Drawing.Point(64, 142);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 18);
+            this.label2.Size = new System.Drawing.Size(113, 26);
             this.label2.TabIndex = 2;
             this.label2.Text = "Họ tên trẻ:";
             // 
@@ -92,9 +94,10 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Gray;
-            this.label3.Location = new System.Drawing.Point(43, 151);
+            this.label3.Location = new System.Drawing.Point(64, 232);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(77, 18);
+            this.label3.Size = new System.Drawing.Size(115, 26);
             this.label3.TabIndex = 3;
             this.label3.Text = "Ngày sinh:";
             // 
@@ -105,9 +108,10 @@
             this.bunifuDatepicker1.ForeColor = System.Drawing.Color.White;
             this.bunifuDatepicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.bunifuDatepicker1.FormatCustom = null;
-            this.bunifuDatepicker1.Location = new System.Drawing.Point(126, 133);
+            this.bunifuDatepicker1.Location = new System.Drawing.Point(189, 205);
+            this.bunifuDatepicker1.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.bunifuDatepicker1.Name = "bunifuDatepicker1";
-            this.bunifuDatepicker1.Size = new System.Drawing.Size(757, 36);
+            this.bunifuDatepicker1.Size = new System.Drawing.Size(1136, 55);
             this.bunifuDatepicker1.TabIndex = 2;
             this.bunifuDatepicker1.Value = new System.DateTime(2017, 4, 27, 21, 49, 25, 791);
             // 
@@ -116,9 +120,10 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Gray;
-            this.label4.Location = new System.Drawing.Point(43, 210);
+            this.label4.Location = new System.Drawing.Point(64, 323);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(77, 18);
+            this.label4.Size = new System.Drawing.Size(112, 26);
             this.label4.TabIndex = 5;
             this.label4.Text = "Họ tên bố:";
             // 
@@ -134,10 +139,10 @@
             this.bunifuMaterialTextbox2.LineIdleColor = System.Drawing.Color.Gray;
             this.bunifuMaterialTextbox2.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(89)))), ((int)(((byte)(180)))));
             this.bunifuMaterialTextbox2.LineThickness = 3;
-            this.bunifuMaterialTextbox2.Location = new System.Drawing.Point(127, 184);
-            this.bunifuMaterialTextbox2.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuMaterialTextbox2.Location = new System.Drawing.Point(190, 283);
+            this.bunifuMaterialTextbox2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.bunifuMaterialTextbox2.Name = "bunifuMaterialTextbox2";
-            this.bunifuMaterialTextbox2.Size = new System.Drawing.Size(757, 44);
+            this.bunifuMaterialTextbox2.Size = new System.Drawing.Size(1136, 68);
             this.bunifuMaterialTextbox2.TabIndex = 3;
             this.bunifuMaterialTextbox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -146,9 +151,10 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Gray;
-            this.label5.Location = new System.Drawing.Point(39, 269);
+            this.label5.Location = new System.Drawing.Point(58, 414);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(81, 18);
+            this.label5.Size = new System.Drawing.Size(119, 26);
             this.label5.TabIndex = 7;
             this.label5.Text = "Họ tên mẹ:";
             // 
@@ -164,10 +170,10 @@
             this.bunifuMaterialTextbox3.LineIdleColor = System.Drawing.Color.Gray;
             this.bunifuMaterialTextbox3.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(89)))), ((int)(((byte)(180)))));
             this.bunifuMaterialTextbox3.LineThickness = 3;
-            this.bunifuMaterialTextbox3.Location = new System.Drawing.Point(127, 243);
-            this.bunifuMaterialTextbox3.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuMaterialTextbox3.Location = new System.Drawing.Point(190, 374);
+            this.bunifuMaterialTextbox3.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.bunifuMaterialTextbox3.Name = "bunifuMaterialTextbox3";
-            this.bunifuMaterialTextbox3.Size = new System.Drawing.Size(757, 44);
+            this.bunifuMaterialTextbox3.Size = new System.Drawing.Size(1136, 68);
             this.bunifuMaterialTextbox3.TabIndex = 4;
             this.bunifuMaterialTextbox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -176,9 +182,10 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Gray;
-            this.label6.Location = new System.Drawing.Point(63, 328);
+            this.label6.Location = new System.Drawing.Point(94, 505);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(57, 18);
+            this.label6.Size = new System.Drawing.Size(85, 26);
             this.label6.TabIndex = 9;
             this.label6.Text = "Địa chỉ:";
             // 
@@ -187,9 +194,10 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Gray;
-            this.label7.Location = new System.Drawing.Point(42, 387);
+            this.label7.Location = new System.Drawing.Point(63, 595);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(78, 18);
+            this.label7.Size = new System.Drawing.Size(116, 26);
             this.label7.TabIndex = 10;
             this.label7.Text = "Điện thoại:";
             // 
@@ -205,10 +213,10 @@
             this.bunifuMaterialTextbox4.LineIdleColor = System.Drawing.Color.Gray;
             this.bunifuMaterialTextbox4.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(89)))), ((int)(((byte)(180)))));
             this.bunifuMaterialTextbox4.LineThickness = 3;
-            this.bunifuMaterialTextbox4.Location = new System.Drawing.Point(127, 302);
-            this.bunifuMaterialTextbox4.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuMaterialTextbox4.Location = new System.Drawing.Point(190, 465);
+            this.bunifuMaterialTextbox4.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.bunifuMaterialTextbox4.Name = "bunifuMaterialTextbox4";
-            this.bunifuMaterialTextbox4.Size = new System.Drawing.Size(757, 44);
+            this.bunifuMaterialTextbox4.Size = new System.Drawing.Size(1136, 68);
             this.bunifuMaterialTextbox4.TabIndex = 5;
             this.bunifuMaterialTextbox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -224,10 +232,10 @@
             this.bunifuMaterialTextbox5.LineIdleColor = System.Drawing.Color.Gray;
             this.bunifuMaterialTextbox5.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(89)))), ((int)(((byte)(180)))));
             this.bunifuMaterialTextbox5.LineThickness = 3;
-            this.bunifuMaterialTextbox5.Location = new System.Drawing.Point(127, 361);
-            this.bunifuMaterialTextbox5.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuMaterialTextbox5.Location = new System.Drawing.Point(190, 555);
+            this.bunifuMaterialTextbox5.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.bunifuMaterialTextbox5.Name = "bunifuMaterialTextbox5";
-            this.bunifuMaterialTextbox5.Size = new System.Drawing.Size(757, 44);
+            this.bunifuMaterialTextbox5.Size = new System.Drawing.Size(1136, 68);
             this.bunifuMaterialTextbox5.TabIndex = 6;
             this.bunifuMaterialTextbox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -249,10 +257,10 @@
             this.btn_TiepNhanTre.IdleFillColor = System.Drawing.Color.White;
             this.btn_TiepNhanTre.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
             this.btn_TiepNhanTre.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
-            this.btn_TiepNhanTre.Location = new System.Drawing.Point(287, 484);
-            this.btn_TiepNhanTre.Margin = new System.Windows.Forms.Padding(5);
+            this.btn_TiepNhanTre.Location = new System.Drawing.Point(430, 745);
+            this.btn_TiepNhanTre.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
             this.btn_TiepNhanTre.Name = "btn_TiepNhanTre";
-            this.btn_TiepNhanTre.Size = new System.Drawing.Size(181, 41);
+            this.btn_TiepNhanTre.Size = new System.Drawing.Size(272, 63);
             this.btn_TiepNhanTre.TabIndex = 11;
             this.btn_TiepNhanTre.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -274,16 +282,16 @@
             this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.White;
             this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
             this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
-            this.bunifuThinButton21.Location = new System.Drawing.Point(478, 484);
-            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(5);
+            this.bunifuThinButton21.Location = new System.Drawing.Point(717, 745);
+            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
             this.bunifuThinButton21.Name = "bunifuThinButton21";
-            this.bunifuThinButton21.Size = new System.Drawing.Size(181, 41);
+            this.bunifuThinButton21.Size = new System.Drawing.Size(272, 63);
             this.bunifuThinButton21.TabIndex = 12;
             this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // View_ThemTre
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(236)))), ((int)(((byte)(245)))));
             this.Controls.Add(this.bunifuThinButton21);
@@ -301,8 +309,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.bunifuMaterialTextbox1);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "View_ThemTre";
-            this.Size = new System.Drawing.Size(927, 542);
+            this.Size = new System.Drawing.Size(1390, 834);
             this.ResumeLayout(false);
             this.PerformLayout();
 
