@@ -26,8 +26,8 @@ namespace QLNT.Presentation_Layer.View.QLHoatDong
         private void View_DanhSachLopThamGiaHoatDong_Load(object sender, EventArgs e)
         {
             LoadListHoatDong();
-            if(maHD != "")
-                LoadDataGridView();
+            //if(maHD != "")
+            //    LoadDataGridView();
         }
 
         private void LoadListHoatDong()

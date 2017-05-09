@@ -26,10 +26,14 @@ namespace QLNT.Presentation_Layer
         PhieuNguyenLieu,
         ThemNguyenLieu,
         ThemCapNhatHoatDong,
+        DanhSachHoatDong,
         ApDungHoatDong,
         CapNhatSucKhoe,
+        BieuDoCanNang,
+        BieuDoChieuCao,
         ThongTinSucKhoe,
         ThongTinChiTietSK,
+
     }
 
     public enum tab
