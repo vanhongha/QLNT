@@ -116,5 +116,32 @@ namespace QLNT.Presentation_Layer.View
             dgvTimKiem.Columns[1].HeaderText = "Ngày sinh";
             dgvTimKiem.Columns[2].HeaderText = "Giới tính";*/
         }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DialogResult dialog = MessageBox.Show("Bạn có chắc muốn xóa trẻ này không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (dialog == DialogResult.Yes)
+                {
+                    TreBLL.XoaTre(maTre);
+                    MessageBox.Show("Đã xóa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    txtDiaChi.Text = "";
+                    txtDienThoai.Text = "";
+                    txtHoTen.Text = "";
+                    txtHoTenBo.Text = "";
+                    txtHoTenMe.Text = "";
+                    dtNgaySinh.ResetText();
+
+                    GetDataGridView();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Thông báo");
+            }
+        }
     }
+    
 }

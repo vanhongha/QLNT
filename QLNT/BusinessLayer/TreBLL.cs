@@ -61,5 +61,10 @@ namespace QLNT.BusinessLayer
         {
             return TreDAL.GetList();
         }
+
+        public static void XoaTre(string maTre)
+        {
+            TreDAL.XoaTre(maTre);
+        }
     }
 }

@@ -140,5 +140,18 @@ namespace QLNT.DataLayer
 
             return tre;
         }
+
+        public static void XoaTre(string maTre)
+        {
+            DataAccessHelper db = new DataAccessHelper();
+            SqlCommand cmd = db.Command("XOATRE");
+
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@MaTre", maTre);
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            db.dt = new DataTable();
+            da.Fill(db.dt);
+        }
     }
 }

@@ -303,6 +303,7 @@
             this.btnXoa.Size = new System.Drawing.Size(181, 41);
             this.btnXoa.TabIndex = 47;
             this.btnXoa.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnCapNhat
             // 
