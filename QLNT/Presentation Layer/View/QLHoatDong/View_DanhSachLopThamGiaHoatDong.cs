@@ -40,9 +40,9 @@ namespace QLNT.Presentation_Layer.View.QLHoatDong
 
         private void View_DanhSachLopThamGiaHoatDong_Load(object sender, EventArgs e)
         {
-            SetMaHD();
+            //SetMaHD();
             LoadListHoatDong();
-            SetMaHD();
+            //SetMaHD();
             if(maHD != "")
                 LoadDataGridView();
         }
