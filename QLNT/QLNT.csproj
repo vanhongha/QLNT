@@ -131,6 +131,12 @@
       <DependentUpon>Tab_QLTre.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentation Layer\Utilities.cs" />
+    <Compile Include="Presentation Layer\View\QLDinhDuong\View_CapNhatMonAn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\View\QLDinhDuong\View_CapNhatMonAn.Designer.cs">
+      <DependentUpon>View_CapNhatMonAn.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentation Layer\View\QLDinhDuong\View_CapNhatNguyenLieu.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -301,6 +307,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation Layer\Tab Menu\Tab_QLTre.resx">
       <DependentUpon>Tab_QLTre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\View\QLDinhDuong\View_CapNhatMonAn.resx">
+      <DependentUpon>View_CapNhatMonAn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation Layer\View\QLDinhDuong\View_CapNhatNguyenLieu.resx">
       <DependentUpon>View_CapNhatNguyenLieu.cs</DependentUpon>

@@ -27,5 +27,11 @@ namespace QLNT.Presentation_Layer.Tab_Menu
             frmMain parentForm = (this.Parent.Parent.Parent as frmMain);
             parentForm.UpdateView(function.PhieuNguyenLieu);
         }
+
+        private void btnCapNhatMonAn_Click(object sender, EventArgs e)
+        {
+            frmMain parentForm = (this.Parent.Parent.Parent as frmMain);
+            parentForm.UpdateView(function.CapNhatMonAn);
+        }
     }
 }

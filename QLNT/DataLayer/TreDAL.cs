@@ -70,5 +70,75 @@ namespace QLNT.DataLayer
             }
             return "";
         }
+
+        public static DataTable TimKiemTre(string tuKhoa)
+        {
+            DataAccessHelper db = new DataAccessHelper();
+            SqlCommand cmd = db.Command("TIMKIEMTRE");
+
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@TUKHOA", tuKhoa);
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            db.dt = new DataTable();
+            da.Fill(db.dt);
+
+            return db.dt;
+        }
+
+        public static DataTable GetThongTinTre(string maTre)
+        {
+            DataAccessHelper db = new DataAccessHelper();
+            SqlCommand cmd = db.Command("GETTHONGTINTRE");
+
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@MaTre", maTre);
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            db.dt = new DataTable();
+            da.Fill(db.dt);
+
+            return db.dt;
+        }
+
+        public static void CapNhatThongTinTre(Tre tre)
+        {
+            DataAccessHelper db = new DataAccessHelper();
+            SqlCommand cmd = db.Command("SUATTTRE");
+
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@MaTre", tre.MaTre);
+            cmd.Parameters.AddWithValue("@TenTre", tre.HoTenTre);
+            cmd.Parameters.AddWithValue("@GioiTinh", tre.GioiTinh);
+            cmd.Parameters.AddWithValue("@NgaySinh", tre.NgaySinh);
+            cmd.Parameters.AddWithValue("@TenBo", tre.HoTenCha);
+            cmd.Parameters.AddWithValue("@TenMe", tre.HoTenMe);
+            cmd.Parameters.AddWithValue("@DiaChi", tre.DiaChi);
+            cmd.Parameters.AddWithValue("@DienThoai", tre.SoDT);
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            db.dt = new DataTable();
+            da.Fill(db.dt);
+        }
+
+        public static List<Tre> GetList()
+        {
+            DataAccessHelper db = new DataAccessHelper();
+            SqlCommand cmd = db.Command("GETLISTTRE");
+
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            db.dt = new DataTable();
+            da.Fill(db.dt);
+
+            List<Tre> tre = new List<Tre>();
+            foreach (DataRow row in db.dt.Rows)
+            {
+                tre.Add(new Tre(row));
+            }
+
+            return tre;
+        }
     }
 }

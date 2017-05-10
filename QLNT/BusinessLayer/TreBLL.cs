@@ -42,5 +42,24 @@ namespace QLNT.BusinessLayer
         {
             return TreDAL.GetListTreTheoLop(maLop);
         }
+
+        public static DataTable TimKiemTre(string tuKhoa)
+        {
+            return TreDAL.TimKiemTre(tuKhoa);
+        }
+
+        public static DataTable GetThongTinTre(string maTre)
+        {
+            return TreDAL.GetThongTinTre(maTre);
+        }
+        public static void CapNhatThongTinTre(Tre tre)
+        {
+            TreDAL.CapNhatThongTinTre(tre);
+        }
+
+        public static List<Tre> GetList()
+        {
+            return TreDAL.GetList();
+        }
     }
 }

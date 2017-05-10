@@ -45,8 +45,8 @@
             this.btn_TiepNhanTre = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.label8 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.rdoNam = new System.Windows.Forms.RadioButton();
+            this.rdoNu = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // label1
@@ -54,10 +54,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Gray;
-            this.label1.Location = new System.Drawing.Point(609, 48);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(406, 31);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(178, 46);
+            this.label1.Size = new System.Drawing.Size(122, 31);
             this.label1.TabIndex = 0;
             this.label1.Text = "Thêm trẻ";
             // 
@@ -73,40 +72,20 @@
             this.txtHoTen.LineIdleColor = System.Drawing.Color.Gray;
             this.txtHoTen.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(89)))), ((int)(((byte)(180)))));
             this.txtHoTen.LineThickness = 3;
-            this.txtHoTen.Location = new System.Drawing.Point(127, 66);
-            this.txtHoTen.Margin = new System.Windows.Forms.Padding(4);
+            this.txtHoTen.Location = new System.Drawing.Point(142, 68);
             this.txtHoTen.Name = "txtHoTen";
-            this.txtHoTen.Size = new System.Drawing.Size(757, 44);
+            this.txtHoTen.Size = new System.Drawing.Size(503, 42);
             this.txtHoTen.TabIndex = 1;
             this.txtHoTen.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // bunifuMaterialTextbox1
             // 
-            //this.bunifuMaterialTextbox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            //this.bunifuMaterialTextbox1.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            //this.bunifuMaterialTextbox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            //this.bunifuMaterialTextbox1.HintForeColor = System.Drawing.Color.Empty;
-            //this.bunifuMaterialTextbox1.HintText = "";
-            //this.bunifuMaterialTextbox1.isPassword = false;
-            //this.bunifuMaterialTextbox1.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(89)))), ((int)(((byte)(180)))));
-            //this.bunifuMaterialTextbox1.LineIdleColor = System.Drawing.Color.Gray;
-            //this.bunifuMaterialTextbox1.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(89)))), ((int)(((byte)(180)))));
-            //this.bunifuMaterialTextbox1.LineThickness = 3;
-            //this.bunifuMaterialTextbox1.Location = new System.Drawing.Point(190, 102);
-            //this.bunifuMaterialTextbox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            //this.bunifuMaterialTextbox1.Name = "bunifuMaterialTextbox1";
-            //this.bunifuMaterialTextbox1.Size = new System.Drawing.Size(1136, 68);
-            //this.bunifuMaterialTextbox1.TabIndex = 1;
-            //this.bunifuMaterialTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-//
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Gray;
-            this.label2.Location = new System.Drawing.Point(64, 142);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(43, 92);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(113, 26);
+            this.label2.Size = new System.Drawing.Size(77, 18);
             this.label2.TabIndex = 2;
             this.label2.Text = "Họ tên trẻ:";
             // 
@@ -115,10 +94,9 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Gray;
-            this.label3.Location = new System.Drawing.Point(64, 232);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(43, 151);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(115, 26);
+            this.label3.Size = new System.Drawing.Size(77, 18);
             this.label3.TabIndex = 3;
             this.label3.Text = "Ngày sinh:";
             // 
@@ -129,37 +107,24 @@
             this.dtNgaySinh.ForeColor = System.Drawing.Color.White;
             this.dtNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.dtNgaySinh.FormatCustom = null;
-            this.dtNgaySinh.Location = new System.Drawing.Point(126, 133);
+            this.dtNgaySinh.Location = new System.Drawing.Point(142, 127);
+            this.dtNgaySinh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtNgaySinh.Name = "dtNgaySinh";
-            this.dtNgaySinh.Size = new System.Drawing.Size(567, 36);
+            this.dtNgaySinh.Size = new System.Drawing.Size(682, 42);
             this.dtNgaySinh.TabIndex = 2;
             this.dtNgaySinh.Value = new System.DateTime(2017, 4, 27, 21, 49, 25, 791);
-
-            //this.bunifuDatepicker1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(89)))), ((int)(((byte)(180)))));
-            //this.bunifuDatepicker1.BorderRadius = 0;
-            //this.bunifuDatepicker1.ForeColor = System.Drawing.Color.White;
-            //this.bunifuDatepicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            //this.bunifuDatepicker1.FormatCustom = null;
-            //this.bunifuDatepicker1.Location = new System.Drawing.Point(189, 205);
-            //this.bunifuDatepicker1.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            //this.bunifuDatepicker1.Name = "bunifuDatepicker1";
-            //this.bunifuDatepicker1.Size = new System.Drawing.Size(1136, 55);
-            //this.bunifuDatepicker1.TabIndex = 2;
-            //this.bunifuDatepicker1.Value = new System.DateTime(2017, 4, 27, 21, 49, 25, 791);
-
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Gray;
-            this.label4.Location = new System.Drawing.Point(64, 323);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(43, 210);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(112, 26);
+            this.label4.Size = new System.Drawing.Size(77, 18);
             this.label4.TabIndex = 5;
             this.label4.Text = "Họ tên bố:";
-            //
+            // 
             // txtTenBo
             // 
             this.txtTenBo.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -172,44 +137,23 @@
             this.txtTenBo.LineIdleColor = System.Drawing.Color.Gray;
             this.txtTenBo.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(89)))), ((int)(((byte)(180)))));
             this.txtTenBo.LineThickness = 3;
-            this.txtTenBo.Location = new System.Drawing.Point(127, 184);
-            this.txtTenBo.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTenBo.Location = new System.Drawing.Point(142, 186);
             this.txtTenBo.Name = "txtTenBo";
-            this.txtTenBo.Size = new System.Drawing.Size(757, 44);
+            this.txtTenBo.Size = new System.Drawing.Size(682, 42);
             this.txtTenBo.TabIndex = 3;
             this.txtTenBo.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-
-            // bunifuMaterialTextbox2
             // 
-            //this.bunifuMaterialTextbox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            //this.bunifuMaterialTextbox2.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            //this.bunifuMaterialTextbox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            //this.bunifuMaterialTextbox2.HintForeColor = System.Drawing.Color.Empty;
-            //this.bunifuMaterialTextbox2.HintText = "";
-            //this.bunifuMaterialTextbox2.isPassword = false;
-            //this.bunifuMaterialTextbox2.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(89)))), ((int)(((byte)(180)))));
-            //this.bunifuMaterialTextbox2.LineIdleColor = System.Drawing.Color.Gray;
-            //this.bunifuMaterialTextbox2.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(89)))), ((int)(((byte)(180)))));
-            //this.bunifuMaterialTextbox2.LineThickness = 3;
-            //this.bunifuMaterialTextbox2.Location = new System.Drawing.Point(190, 283);
-            //this.bunifuMaterialTextbox2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            //this.bunifuMaterialTextbox2.Name = "bunifuMaterialTextbox2";
-            //this.bunifuMaterialTextbox2.Size = new System.Drawing.Size(1136, 68);
-            //this.bunifuMaterialTextbox2.TabIndex = 3;
-            //this.bunifuMaterialTextbox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            //// 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Gray;
-            this.label5.Location = new System.Drawing.Point(58, 414);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(39, 269);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(119, 26);
+            this.label5.Size = new System.Drawing.Size(81, 18);
             this.label5.TabIndex = 7;
             this.label5.Text = "Họ tên mẹ:";
-            //
+            // 
             // txtTenMe
             // 
             this.txtTenMe.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -222,41 +166,20 @@
             this.txtTenMe.LineIdleColor = System.Drawing.Color.Gray;
             this.txtTenMe.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(89)))), ((int)(((byte)(180)))));
             this.txtTenMe.LineThickness = 3;
-            this.txtTenMe.Location = new System.Drawing.Point(127, 243);
-            this.txtTenMe.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTenMe.Location = new System.Drawing.Point(142, 245);
             this.txtTenMe.Name = "txtTenMe";
-            this.txtTenMe.Size = new System.Drawing.Size(757, 44);
+            this.txtTenMe.Size = new System.Drawing.Size(682, 42);
             this.txtTenMe.TabIndex = 4;
             this.txtTenMe.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-
-            // bunifuMaterialTextbox3
-            // 
-            //this.bunifuMaterialTextbox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            //this.bunifuMaterialTextbox3.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            //this.bunifuMaterialTextbox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            //this.bunifuMaterialTextbox3.HintForeColor = System.Drawing.Color.Empty;
-            //this.bunifuMaterialTextbox3.HintText = "";
-            //this.bunifuMaterialTextbox3.isPassword = false;
-            //this.bunifuMaterialTextbox3.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(89)))), ((int)(((byte)(180)))));
-            //this.bunifuMaterialTextbox3.LineIdleColor = System.Drawing.Color.Gray;
-            //this.bunifuMaterialTextbox3.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(89)))), ((int)(((byte)(180)))));
-            //this.bunifuMaterialTextbox3.LineThickness = 3;
-            //this.bunifuMaterialTextbox3.Location = new System.Drawing.Point(190, 374);
-            //this.bunifuMaterialTextbox3.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            //this.bunifuMaterialTextbox3.Name = "bunifuMaterialTextbox3";
-            //this.bunifuMaterialTextbox3.Size = new System.Drawing.Size(1136, 68);
-            //this.bunifuMaterialTextbox3.TabIndex = 4;
-            //this.bunifuMaterialTextbox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Gray;
-            this.label6.Location = new System.Drawing.Point(94, 505);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(63, 328);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(85, 26);
+            this.label6.Size = new System.Drawing.Size(57, 18);
             this.label6.TabIndex = 9;
             this.label6.Text = "Địa chỉ:";
             // 
@@ -265,10 +188,9 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Gray;
-            this.label7.Location = new System.Drawing.Point(63, 595);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(42, 387);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(116, 26);
+            this.label7.Size = new System.Drawing.Size(78, 18);
             this.label7.TabIndex = 10;
             this.label7.Text = "Điện thoại:";
             // 
@@ -284,10 +206,9 @@
             this.txtDiaChi.LineIdleColor = System.Drawing.Color.Gray;
             this.txtDiaChi.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(89)))), ((int)(((byte)(180)))));
             this.txtDiaChi.LineThickness = 3;
-            this.txtDiaChi.Location = new System.Drawing.Point(127, 302);
-            this.txtDiaChi.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDiaChi.Location = new System.Drawing.Point(142, 304);
             this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(757, 44);
+            this.txtDiaChi.Size = new System.Drawing.Size(682, 42);
             this.txtDiaChi.TabIndex = 5;
             this.txtDiaChi.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -303,51 +224,11 @@
             this.txtDienThoai.LineIdleColor = System.Drawing.Color.Gray;
             this.txtDienThoai.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(89)))), ((int)(((byte)(180)))));
             this.txtDienThoai.LineThickness = 3;
-            this.txtDienThoai.Location = new System.Drawing.Point(127, 361);
-            this.txtDienThoai.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDienThoai.Location = new System.Drawing.Point(142, 363);
             this.txtDienThoai.Name = "txtDienThoai";
-            this.txtDienThoai.Size = new System.Drawing.Size(757, 44);
+            this.txtDienThoai.Size = new System.Drawing.Size(682, 42);
             this.txtDienThoai.TabIndex = 6;
             this.txtDienThoai.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-
-            // bunifuMaterialTextbox4
-            // 
-            //this.bunifuMaterialTextbox4.Cursor = System.Windows.Forms.Cursors.IBeam;
-            //this.bunifuMaterialTextbox4.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            //this.bunifuMaterialTextbox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            //this.bunifuMaterialTextbox4.HintForeColor = System.Drawing.Color.Empty;
-            //this.bunifuMaterialTextbox4.HintText = "";
-            //this.bunifuMaterialTextbox4.isPassword = false;
-            //this.bunifuMaterialTextbox4.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(89)))), ((int)(((byte)(180)))));
-            //this.bunifuMaterialTextbox4.LineIdleColor = System.Drawing.Color.Gray;
-            //this.bunifuMaterialTextbox4.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(89)))), ((int)(((byte)(180)))));
-            //this.bunifuMaterialTextbox4.LineThickness = 3;
-            //this.bunifuMaterialTextbox4.Location = new System.Drawing.Point(190, 465);
-            //this.bunifuMaterialTextbox4.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            //this.bunifuMaterialTextbox4.Name = "bunifuMaterialTextbox4";
-            //this.bunifuMaterialTextbox4.Size = new System.Drawing.Size(1136, 68);
-            //this.bunifuMaterialTextbox4.TabIndex = 5;
-            //this.bunifuMaterialTextbox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // bunifuMaterialTextbox5
-            // 
-            //this.bunifuMaterialTextbox5.Cursor = System.Windows.Forms.Cursors.IBeam;
-            //this.bunifuMaterialTextbox5.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            //this.bunifuMaterialTextbox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            //this.bunifuMaterialTextbox5.HintForeColor = System.Drawing.Color.Empty;
-            //this.bunifuMaterialTextbox5.HintText = "";
-            //this.bunifuMaterialTextbox5.isPassword = false;
-            //this.bunifuMaterialTextbox5.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(89)))), ((int)(((byte)(180)))));
-            //this.bunifuMaterialTextbox5.LineIdleColor = System.Drawing.Color.Gray;
-            //this.bunifuMaterialTextbox5.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(89)))), ((int)(((byte)(180)))));
-            //this.bunifuMaterialTextbox5.LineThickness = 3;
-            //this.bunifuMaterialTextbox5.Location = new System.Drawing.Point(190, 555);
-            //this.bunifuMaterialTextbox5.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            //this.bunifuMaterialTextbox5.Name = "bunifuMaterialTextbox5";
-            //this.bunifuMaterialTextbox5.Size = new System.Drawing.Size(1136, 68);
-            //this.bunifuMaterialTextbox5.TabIndex = 6;
-            //this.bunifuMaterialTextbox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-
             // 
             // btn_TiepNhanTre
             // 
@@ -367,10 +248,10 @@
             this.btn_TiepNhanTre.IdleFillColor = System.Drawing.Color.White;
             this.btn_TiepNhanTre.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
             this.btn_TiepNhanTre.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
-            this.btn_TiepNhanTre.Location = new System.Drawing.Point(430, 745);
-            this.btn_TiepNhanTre.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.btn_TiepNhanTre.Location = new System.Drawing.Point(287, 484);
+            this.btn_TiepNhanTre.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btn_TiepNhanTre.Name = "btn_TiepNhanTre";
-            this.btn_TiepNhanTre.Size = new System.Drawing.Size(272, 63);
+            this.btn_TiepNhanTre.Size = new System.Drawing.Size(181, 41);
             this.btn_TiepNhanTre.TabIndex = 11;
             this.btn_TiepNhanTre.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_TiepNhanTre.Click += new System.EventHandler(this.btn_TiepNhanTre_Click);
@@ -393,10 +274,10 @@
             this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.White;
             this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
             this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
-            this.bunifuThinButton21.Location = new System.Drawing.Point(717, 745);
-            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.bunifuThinButton21.Location = new System.Drawing.Point(478, 484);
+            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.bunifuThinButton21.Name = "bunifuThinButton21";
-            this.bunifuThinButton21.Size = new System.Drawing.Size(272, 63);
+            this.bunifuThinButton21.Size = new System.Drawing.Size(181, 41);
             this.bunifuThinButton21.TabIndex = 12;
             this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -405,43 +286,46 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Gray;
-            this.label8.Location = new System.Drawing.Point(699, 151);
+            this.label8.Location = new System.Drawing.Point(650, 92);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(83, 18);
             this.label8.TabIndex = 13;
             this.label8.Text = "  - Giới tính:";
             // 
-            // radioButton1
+            // rdoNam
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.ForeColor = System.Drawing.Color.Gray;
-            this.radioButton1.Location = new System.Drawing.Point(788, 153);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(47, 17);
-            this.radioButton1.TabIndex = 14;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Nam";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rdoNam.AutoSize = true;
+            this.rdoNam.ForeColor = System.Drawing.Color.Gray;
+            this.rdoNam.Location = new System.Drawing.Point(733, 93);
+            this.rdoNam.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdoNam.Name = "rdoNam";
+            this.rdoNam.Size = new System.Drawing.Size(47, 17);
+            this.rdoNam.TabIndex = 14;
+            this.rdoNam.TabStop = true;
+            this.rdoNam.Text = "Nam";
+            this.rdoNam.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // rdoNu
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.ForeColor = System.Drawing.Color.Gray;
-            this.radioButton2.Location = new System.Drawing.Point(841, 151);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(39, 17);
-            this.radioButton2.TabIndex = 15;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Nữ";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rdoNu.AutoSize = true;
+            this.rdoNu.ForeColor = System.Drawing.Color.Gray;
+            this.rdoNu.Location = new System.Drawing.Point(784, 92);
+            this.rdoNu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdoNu.Name = "rdoNu";
+            this.rdoNu.Size = new System.Drawing.Size(39, 17);
+            this.rdoNu.TabIndex = 15;
+            this.rdoNu.TabStop = true;
+            this.rdoNu.Text = "Nữ";
+            this.rdoNu.UseVisualStyleBackColor = true;
             // 
             // View_ThemTre
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(236)))), ((int)(((byte)(245)))));
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.rdoNu);
+            this.Controls.Add(this.rdoNam);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.bunifuThinButton21);
             this.Controls.Add(this.btn_TiepNhanTre);
@@ -458,9 +342,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtHoTen);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "View_ThemTre";
-            this.Size = new System.Drawing.Size(1390, 834);
+            this.Size = new System.Drawing.Size(927, 542);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -484,7 +367,7 @@
         private Bunifu.Framework.UI.BunifuThinButton2 btn_TiepNhanTre;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton21;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton rdoNam;
+        private System.Windows.Forms.RadioButton rdoNu;
     }
 }
