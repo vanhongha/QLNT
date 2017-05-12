@@ -17,5 +17,10 @@ namespace QLNT.Presentation_Layer.View.QLSucKhoe
             InitializeComponent();
         }
 
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            this.Enabled = false;
+        }
     }
 }

@@ -237,6 +237,7 @@
             this.btnHuy.Size = new System.Drawing.Size(173, 63);
             this.btnHuy.TabIndex = 68;
             this.btnHuy.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // btnLuu
             // 

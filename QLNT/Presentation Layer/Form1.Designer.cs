@@ -432,6 +432,7 @@
             this.content.Controls.Add(this.view_CapNhatNguyenLieu1);
             this.content.Controls.Add(this.view_BieuDoCanNang1);
             this.content.Controls.Add(this.view_BieuDoChieuCao1);
+            this.content.Controls.Add(this.view_ThongTinChiTietSK1);
             this.content.Controls.Add(this.view_DiemNgoaiKhoa);
             this.content.Controls.Add(this.view_HoatDongNgoaiKhoa);
             this.content.Controls.Add(this.view_CapNhatTraCuuThucDon1);

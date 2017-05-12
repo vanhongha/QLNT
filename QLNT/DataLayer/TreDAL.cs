@@ -70,5 +70,24 @@ namespace QLNT.DataLayer
             }
             return "";
         }
+
+        public static Tre GetTre(string maTre)
+        {
+            DataAccessHelper db = new DataAccessHelper();
+
+            SqlCommand cmd = db.Command("GetTre");
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@MaTre", maTre);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            db.dt = new DataTable();
+            da.Fill(db.dt);
+
+            foreach(DataRow row in db.dt.Rows)
+            {
+                return new Tre(row);
+            }
+            return null;
+        }
     }
 }

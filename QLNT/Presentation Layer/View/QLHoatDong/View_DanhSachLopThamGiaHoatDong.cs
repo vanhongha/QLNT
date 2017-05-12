@@ -87,9 +87,11 @@ namespace QLNT.Presentation_Layer.View.QLHoatDong
             {
                 listLop[dgvListLop.Rows[i].Cells["MaLop"].Value.ToString()] = true;
             }
-            HoatDongNgoaiKhoaBLL.CapNhatLopThamGia(listLop, maHD);
-            MessageBox.Show("Cập nhật lớp tham gia thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            LoadDataGridView();
+            if (HoatDongNgoaiKhoaBLL.CapNhatLopThamGia(listLop, maHD))
+            {
+                MessageBox.Show("Cập nhật lớp tham gia thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LoadDataGridView();
+            }
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
@@ -102,8 +104,10 @@ namespace QLNT.Presentation_Layer.View.QLHoatDong
                 else
                     listLop[maLop] = false;
             }
-            HoatDongNgoaiKhoaBLL.CapNhatLopThamGia(listLop, maHD);
-            MessageBox.Show("Cập nhật lớp tham gia thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if(HoatDongNgoaiKhoaBLL.CapNhatLopThamGia(listLop, maHD))
+            {
+                MessageBox.Show("Cập nhật lớp tham gia thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void btnHuy_Click(object sender, EventArgs e)

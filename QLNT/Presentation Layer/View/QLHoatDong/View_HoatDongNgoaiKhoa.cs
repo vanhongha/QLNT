@@ -46,11 +46,7 @@ namespace QLNT.Presentation_Layer.View.QLHoatDong
             {
                 //goi form danh sach lop tham gia hoat dong
                 frmMain parentForm = (this.Parent.Parent as frmMain);
-                //View_DanhSachLopThamGiaHoatDong view_DSLop = parentForm.GetSubView("DanhSachLopThamGiaHoatDong") as View_DanhSachLopThamGiaHoatDong;
-                //view_DSLop.SetMaHD(maHD);
-                //MessageBox.Show(maHD);
                 parentForm.UpdateSubView("DanhSachLopThamGiaHoatDong");
-                
             }
             else
             {
@@ -73,18 +69,21 @@ namespace QLNT.Presentation_Layer.View.QLHoatDong
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            //luu hoat dong
-            HoatDongNgoaiKhoa hoatDong = new HoatDongNgoaiKhoa();
-            hoatDong.MaHoatDong = txtMaHoatDong.Text;
-            hoatDong.TenHoatDong = txtTenHoatDong.Text;
-            hoatDong.NgayBatDau = dtNgayBatDau.Value;
-            hoatDong.NgayKetThuc = dtNgayKetThuc.Value;
-            hoatDong.KeHoach = txtKeHoach.Text;
-            hoatDong.ChiPhi = decimal.Parse(txtChiPhi.Text);
-            if(HoatDongNgoaiKhoaBLL.LuuHoatDong(hoatDong))
+            //luu hoat 
+            if(txtTenHoatDong.Text != "" && txtChiPhi.Text != "")
             {
-                MessageBox.Show("Đã lưu hoạt động thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                LoadDataGridView();
+                HoatDongNgoaiKhoa hoatDong = new HoatDongNgoaiKhoa();
+                hoatDong.MaHoatDong = txtMaHoatDong.Text;
+                hoatDong.TenHoatDong = txtTenHoatDong.Text;
+                hoatDong.NgayBatDau = dtNgayBatDau.Value;
+                hoatDong.NgayKetThuc = dtNgayKetThuc.Value;
+                hoatDong.KeHoach = txtKeHoach.Text;
+                hoatDong.ChiPhi = decimal.Parse(txtChiPhi.Text);
+                if (HoatDongNgoaiKhoaBLL.LuuHoatDong(hoatDong))
+                {
+                    MessageBox.Show("Đã lưu hoạt động thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadDataGridView();
+                }
             }
         }
 

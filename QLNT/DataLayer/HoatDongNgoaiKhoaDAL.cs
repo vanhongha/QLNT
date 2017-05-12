@@ -184,7 +184,7 @@ namespace QLNT.DataLayer
         {
             DataAccessHelper db = new DataAccessHelper();
 
-            SqlCommand cmd = db.Command("ThemKetQuaHoatDong");
+            SqlCommand cmd = db.Command("ThemKetQuaThamGiaHoatDong");
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@MaHoatDong", maHD);
             cmd.Parameters.AddWithValue("@MaTre", maTre);
@@ -212,7 +212,7 @@ namespace QLNT.DataLayer
         {
             DataAccessHelper db = new DataAccessHelper();
 
-            SqlCommand cmd = db.Command("XoaKetQuaHoatDong");
+            SqlCommand cmd = db.Command("XoaKetQuaThamGiaHoatDong");
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@MaHoatDong", maHD);
             cmd.Parameters.AddWithValue("@MaTre", maTre);

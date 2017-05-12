@@ -209,6 +209,8 @@ namespace QLNT.Presentation_Layer
             {
                 case "HoatDongNgoaiKhoa":
                     return view_HoatDongNgoaiKhoa;
+                case "ThongTinSucKhoe":
+                    return view_ThongTinSucKhoe;
             }
             return null;
         }

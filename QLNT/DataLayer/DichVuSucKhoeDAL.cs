@@ -76,5 +76,117 @@ namespace QLNT.DataLayer
 
             return (check == 1) ? true : false;
         }
+        public static DataTable GetListLopThamGia(string maDV)
+        {
+            DataAccessHelper db = new DataAccessHelper();
+
+            SqlCommand cmd = db.Command("GetListLopThamGiaDichVu");
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@MaDichVu", maDV);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            db.dt = new DataTable();
+            da.Fill(db.dt);
+
+            return db.dt;
+        }
+
+        public static bool CheckExistsLopThamGia(string maDV, string maLop)
+        {
+            DataAccessHelper db = new DataAccessHelper();
+
+            SqlCommand cmd = db.Command("CheckExistsLopThamGiaDichVu");
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@MaDichVu", maDV);
+            cmd.Parameters.AddWithValue("@MaLop", maLop);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            db.dt = new DataTable();
+            da.Fill(db.dt);
+
+            int check = 0;
+
+            foreach (DataRow row in db.dt.Rows)
+            {
+                check = (int)row.ItemArray[0];
+            }
+
+            return (check == 1) ? true : false;
+        }
+
+        public static void ThemLopThamGia(string maDV, string maLop)
+        {
+            DataAccessHelper db = new DataAccessHelper();
+
+            SqlCommand cmd = db.Command("ThemLopThamGiaDichVu");
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@MaDichVu", maDV);
+            cmd.Parameters.AddWithValue("@MaLop", maLop);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            db.dt = new DataTable();
+            da.Fill(db.dt);
+        }
+
+        public static void ThemThongTinSucKhoe(string maDV, string maTre)
+        {
+            DataAccessHelper db = new DataAccessHelper();
+
+            SqlCommand cmd = db.Command("ThemThongTinSucKhoe");
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@MaDichVu", maDV);
+            cmd.Parameters.AddWithValue("@MaTre", maTre);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            db.dt = new DataTable();
+            da.Fill(db.dt);
+        }
+
+        public static void XoaLopThamGia(string maDV, string maLop)
+        {
+            DataAccessHelper db = new DataAccessHelper();
+
+            SqlCommand cmd = db.Command("XoaLopThamGiaDichVu");
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@MaDichVu", maDV);
+            cmd.Parameters.AddWithValue("@MaLop", maLop);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            db.dt = new DataTable();
+            da.Fill(db.dt);
+        }
+
+        public static void XoaThongTinSucKhoe(string maDV, string maTre)
+        {
+            DataAccessHelper db = new DataAccessHelper();
+
+            SqlCommand cmd = db.Command("XoaThongTinSucKhoe");
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@MaDichVu", maDV);
+            cmd.Parameters.AddWithValue("@MaTre", maTre);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            db.dt = new DataTable();
+            da.Fill(db.dt);
+        }
+
+        public static DichVuSucKhoe GetDichVu(string maDV)
+        {
+            DataAccessHelper db = new DataAccessHelper();
+
+            SqlCommand cmd = db.Command("GetDichVu");
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@MaDichVu", maDV);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            db.dt = new DataTable();
+            da.Fill(db.dt);
+
+            foreach (DataRow row in db.dt.Rows)
+            {
+                return new DichVuSucKhoe(row);
+            }
+            return null;
+        }
     }
 }

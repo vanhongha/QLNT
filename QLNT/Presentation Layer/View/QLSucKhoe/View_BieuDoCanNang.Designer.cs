@@ -36,8 +36,8 @@
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.btnHuy = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnInBaoCao = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.bunifuMaterialTextbox2 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.cboNam = new System.Windows.Forms.ComboBox();
+            this.txtHoTenTre = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label7 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
@@ -48,9 +48,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Gray;
-            this.label1.Location = new System.Drawing.Point(324, 21);
+            this.label1.Location = new System.Drawing.Point(486, 32);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(223, 31);
+            this.label1.Size = new System.Drawing.Size(331, 46);
             this.label1.TabIndex = 16;
             this.label1.Text = "Biểu đồ cân nặng";
             // 
@@ -60,14 +61,13 @@
             this.chart1.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(104, 130);
-            this.chart1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chart1.Location = new System.Drawing.Point(156, 200);
             this.chart1.Name = "chart1";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(745, 352);
+            this.chart1.Size = new System.Drawing.Size(1118, 542);
             this.chart1.TabIndex = 73;
             this.chart1.Text = "chart1";
             // 
@@ -89,10 +89,10 @@
             this.btnHuy.IdleFillColor = System.Drawing.Color.White;
             this.btnHuy.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
             this.btnHuy.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
-            this.btnHuy.Location = new System.Drawing.Point(517, 495);
-            this.btnHuy.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnHuy.Location = new System.Drawing.Point(776, 762);
+            this.btnHuy.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
             this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(181, 41);
+            this.btnHuy.Size = new System.Drawing.Size(272, 63);
             this.btnHuy.TabIndex = 71;
             this.btnHuy.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
@@ -115,49 +115,49 @@
             this.btnInBaoCao.IdleFillColor = System.Drawing.Color.White;
             this.btnInBaoCao.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
             this.btnInBaoCao.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
-            this.btnInBaoCao.Location = new System.Drawing.Point(200, 495);
-            this.btnInBaoCao.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnInBaoCao.Location = new System.Drawing.Point(300, 762);
+            this.btnInBaoCao.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
             this.btnInBaoCao.Name = "btnInBaoCao";
-            this.btnInBaoCao.Size = new System.Drawing.Size(181, 41);
+            this.btnInBaoCao.Size = new System.Drawing.Size(272, 63);
             this.btnInBaoCao.TabIndex = 72;
             this.btnInBaoCao.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // comboBox2
+            // cboNam
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(768, 88);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(82, 21);
-            this.comboBox2.TabIndex = 70;
+            this.cboNam.FormattingEnabled = true;
+            this.cboNam.Location = new System.Drawing.Point(1152, 135);
+            this.cboNam.Name = "cboNam";
+            this.cboNam.Size = new System.Drawing.Size(121, 28);
+            this.cboNam.TabIndex = 70;
             // 
-            // bunifuMaterialTextbox2
+            // txtHoTenTre
             // 
-            this.bunifuMaterialTextbox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox2.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuMaterialTextbox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMaterialTextbox2.HintForeColor = System.Drawing.Color.Empty;
-            this.bunifuMaterialTextbox2.HintText = "";
-            this.bunifuMaterialTextbox2.isPassword = false;
-            this.bunifuMaterialTextbox2.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(89)))), ((int)(((byte)(180)))));
-            this.bunifuMaterialTextbox2.LineIdleColor = System.Drawing.Color.Gray;
-            this.bunifuMaterialTextbox2.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(89)))), ((int)(((byte)(180)))));
-            this.bunifuMaterialTextbox2.LineThickness = 3;
-            this.bunifuMaterialTextbox2.Location = new System.Drawing.Point(224, 73);
-            this.bunifuMaterialTextbox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bunifuMaterialTextbox2.Name = "bunifuMaterialTextbox2";
-            this.bunifuMaterialTextbox2.Size = new System.Drawing.Size(348, 32);
-            this.bunifuMaterialTextbox2.TabIndex = 69;
-            this.bunifuMaterialTextbox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtHoTenTre.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtHoTenTre.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtHoTenTre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtHoTenTre.HintForeColor = System.Drawing.Color.Empty;
+            this.txtHoTenTre.HintText = "";
+            this.txtHoTenTre.isPassword = false;
+            this.txtHoTenTre.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(89)))), ((int)(((byte)(180)))));
+            this.txtHoTenTre.LineIdleColor = System.Drawing.Color.Gray;
+            this.txtHoTenTre.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(89)))), ((int)(((byte)(180)))));
+            this.txtHoTenTre.LineThickness = 3;
+            this.txtHoTenTre.Location = new System.Drawing.Point(336, 112);
+            this.txtHoTenTre.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtHoTenTre.Name = "txtHoTenTre";
+            this.txtHoTenTre.Size = new System.Drawing.Size(522, 49);
+            this.txtHoTenTre.TabIndex = 69;
+            this.txtHoTenTre.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Gray;
-            this.label7.Location = new System.Drawing.Point(699, 89);
+            this.label7.Location = new System.Drawing.Point(1048, 137);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(44, 18);
+            this.label7.Size = new System.Drawing.Size(65, 26);
             this.label7.TabIndex = 67;
             this.label7.Text = "Năm:";
             // 
@@ -166,28 +166,29 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Gray;
-            this.label3.Location = new System.Drawing.Point(63, 89);
+            this.label3.Location = new System.Drawing.Point(94, 137);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(77, 18);
+            this.label3.Size = new System.Drawing.Size(113, 26);
             this.label3.TabIndex = 68;
             this.label3.Text = "Họ tên trẻ:";
             // 
             // View_BieuDoCanNang
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(236)))), ((int)(((byte)(245)))));
             this.Controls.Add(this.chart1);
             this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.btnInBaoCao);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.bunifuMaterialTextbox2);
+            this.Controls.Add(this.cboNam);
+            this.Controls.Add(this.txtHoTenTre);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "View_BieuDoCanNang";
-            this.Size = new System.Drawing.Size(927, 542);
+            this.Size = new System.Drawing.Size(1390, 834);
+            this.Load += new System.EventHandler(this.View_BieuDoCanNang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -200,8 +201,8 @@
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private Bunifu.Framework.UI.BunifuThinButton2 btnHuy;
         private Bunifu.Framework.UI.BunifuThinButton2 btnInBaoCao;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox2;
+        private System.Windows.Forms.ComboBox cboNam;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtHoTenTre;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label3;
     }
