@@ -62,6 +62,7 @@
     <Compile Include="BusinessLayer\LoaiNguyenLieuBLL.cs" />
     <Compile Include="BusinessLayer\LopBLL.cs" />
     <Compile Include="BusinessLayer\NguyenLieuBLL.cs" />
+    <Compile Include="BusinessLayer\NhanVienBLL.cs" />
     <Compile Include="BusinessLayer\TreBLL.cs" />
     <Compile Include="DataLayer\DataAccessHelper.cs" />
     <Compile Include="DataLayer\DichVuSucKhoeDAL.cs" />
@@ -69,6 +70,7 @@
     <Compile Include="DataLayer\LoaiNguyenLieuDAL.cs" />
     <Compile Include="DataLayer\LopDAL.cs" />
     <Compile Include="DataLayer\NguyenLieuDAL.cs" />
+    <Compile Include="DataLayer\NhanVienDAL.cs" />
     <Compile Include="DataLayer\TreDAL.cs" />
     <Compile Include="Entities\ChiTietMonAn.cs" />
     <Compile Include="Entities\ChiTietPhieuMuaNL.cs" />
@@ -79,6 +81,7 @@
     <Compile Include="Entities\Lop.cs" />
     <Compile Include="Entities\MonAn.cs" />
     <Compile Include="Entities\NguyenLieu.cs" />
+    <Compile Include="Entities\NhanVien.cs" />
     <Compile Include="Entities\PhieuMuaNL.cs" />
     <Compile Include="Entities\ThucDon.cs" />
     <Compile Include="Entities\Tre.cs" />
@@ -131,6 +134,12 @@
       <DependentUpon>Tab_QLTre.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentation Layer\Utilities.cs" />
+    <Compile Include="Presentation Layer\View\QLDinhDuong\View_CapNhatMonAn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\View\QLDinhDuong\View_CapNhatMonAn.Designer.cs">
+      <DependentUpon>View_CapNhatMonAn.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentation Layer\View\QLDinhDuong\View_CapNhatNguyenLieu.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -301,6 +310,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation Layer\Tab Menu\Tab_QLTre.resx">
       <DependentUpon>Tab_QLTre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\View\QLDinhDuong\View_CapNhatMonAn.resx">
+      <DependentUpon>View_CapNhatMonAn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation Layer\View\QLDinhDuong\View_CapNhatNguyenLieu.resx">
       <DependentUpon>View_CapNhatNguyenLieu.cs</DependentUpon>
