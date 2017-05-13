@@ -136,6 +136,9 @@ namespace QLNT.DataLayer
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@MaDichVu", maDV);
             cmd.Parameters.AddWithValue("@MaTre", maTre);
+            cmd.Parameters.AddWithValue("@CanNang", 0.0);
+            cmd.Parameters.AddWithValue("@ChieuCao", 0.0);
+            cmd.Parameters.AddWithValue("@TheTrang", "");
             SqlDataAdapter da = new SqlDataAdapter(cmd);
 
             db.dt = new DataTable();
@@ -206,7 +209,7 @@ namespace QLNT.DataLayer
             da.Fill(db.dt);
         }
 
-        public static DataTable GetListSucKhoeTheoLop(string maLop, string maDV)
+        public static DataTable GetListSucKhoeTheoLop(string maDV, string maLop)
         {
             DataAccessHelper db = new DataAccessHelper();
 

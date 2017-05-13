@@ -53,7 +53,7 @@ namespace QLNT.Presentation_Layer.View.QLSucKhoe
             DataTable dt = TreBLL.GetSucKhoe(maTre, year);
 
             int[] x = new int[dt.Rows.Count];
-            float[] y = new float[dt.Rows.Count];
+            double[] y = new double[dt.Rows.Count];
 
             DateTime ngayKham;
 
@@ -61,7 +61,7 @@ namespace QLNT.Presentation_Layer.View.QLSucKhoe
             {
                 ngayKham = (DateTime) dt.Rows[0]["NgayKham"];
                 x[i] = ngayKham.Month;
-                y[i] = (float)dt.Rows[0]["CanNang"];
+                y[i] = (double)dt.Rows[0]["CanNang"];
             }
 
             series.Points.DataBindXY(x, y);
@@ -72,7 +72,6 @@ namespace QLNT.Presentation_Layer.View.QLSucKhoe
 
             chartCanNang.Series.Clear();
             chartCanNang.Series.Add(series);
-        
         }
     }
     

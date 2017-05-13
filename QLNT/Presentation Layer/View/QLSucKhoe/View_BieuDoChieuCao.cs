@@ -2,12 +2,15 @@
 using System.Windows.Forms;
 using QLNT.BusinessLayer;
 using QLNT.Entities;
+using System.Windows.Forms.DataVisualization.Charting;
+using System.Data;
 
 namespace QLNT.Presentation_Layer.View.QLSucKhoe
 {
     public partial class View_BieuDoChieuCao : UserControl
     {
-        public string maTre;
+        private string maTre = "";
+        private Series series = new Series("Chiều cao");
 
         private void SetMaTre()
         {
@@ -33,6 +36,42 @@ namespace QLNT.Presentation_Layer.View.QLSucKhoe
             Tre tre = TreBLL.GetTre(maTre);
             if (tre != null)
                 txtHoTenTre.Text = tre.HoTenTre;
+            LoadCombobox();
+        }
+
+        private void LoadCombobox()
+        {
+            cboLop.DataSource = TreBLL.GetLopDaHoc(maTre);
+            cboLop.DisplayMember = "TenLop";
+            cboLop.ValueMember = "MaLop";
+            cboLop.Text = "";
+        }
+
+        private void cboLop_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int year = LopBLL.GetNamHoc(cboLop.SelectedValue.ToString());
+            DataTable dt = TreBLL.GetSucKhoe(maTre, year);
+
+            int[] x = new int[dt.Rows.Count];
+            double[] y = new double[dt.Rows.Count];
+
+            DateTime ngayKham;
+
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                ngayKham = (DateTime)dt.Rows[0]["NgayKham"];
+                x[i] = ngayKham.Month;
+                y[i] = (double)dt.Rows[0]["ChieuCao"];
+            }
+
+            series.Points.DataBindXY(x, y);
+            if (x.Length == 1)
+                series.ChartType = SeriesChartType.Column;
+            else
+                series.ChartType = SeriesChartType.Line;
+
+            chartChieuCao.Series.Clear();
+            chartChieuCao.Series.Add(series);
         }
     }
 }

@@ -82,5 +82,10 @@ namespace QLNT.BusinessLayer
         {
             return TreDAL.GetSucKhoe(maTre, nam);
         }
+
+        public static DataTable GetSucKhoeTheoThang(string maTre, int thang, int nam)
+        {
+            return TreDAL.GetSucKhoeTheoThang(maTre, thang, nam);
+        }
     }
 }

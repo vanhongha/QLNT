@@ -65,7 +65,7 @@ namespace QLNT.Presentation_Layer.View.QLSucKhoe
             {
                 //cap nhat suc khoe cho tre
                 if (DichVuSucKhoeBLL.CapNhatSucKhoe(cboDichVu.SelectedValue.ToString(), dgvListTre.CurrentRow.Cells["MaTre"].Value.ToString(),
-                                                        float.Parse(txtCanNang.Text), float.Parse(txtChieuCao.Text), txtTinhTrang.Text));
+                                                        float.Parse(txtCanNang.Text), float.Parse(txtChieuCao.Text), txtTinhTrang.Text))
                 {
                     MessageBox.Show("Cập nhật sức khỏe thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
@@ -79,8 +79,8 @@ namespace QLNT.Presentation_Layer.View.QLSucKhoe
         private void dgvListTre_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             txtHoTen.Text = dgvListTre.Rows[e.RowIndex].Cells["HoTenTre"].Value.ToString();
-            txtCanNang.Text = dgvListTre.Rows[e.RowIndex].Cells["NhanXet"].Value.ToString();
-            txtChieuCao.Text = dgvListTre.Rows[e.RowIndex].Cells["Diem"].Value.ToString();
+            txtCanNang.Text = dgvListTre.Rows[e.RowIndex].Cells["CanNang"].Value.ToString();
+            txtChieuCao.Text = dgvListTre.Rows[e.RowIndex].Cells["ChieuCao"].Value.ToString();
             txtTinhTrang.Text = dgvListTre.Rows[e.RowIndex].Cells["TheTrang"].Value.ToString();
         }
     }

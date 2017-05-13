@@ -264,6 +264,7 @@
             this.cboThang.Name = "cboThang";
             this.cboThang.Size = new System.Drawing.Size(121, 28);
             this.cboThang.TabIndex = 56;
+            this.cboThang.SelectedIndexChanged += new System.EventHandler(this.cboThang_SelectedIndexChanged);
             // 
             // cboNam
             // 
@@ -272,6 +273,7 @@
             this.cboNam.Name = "cboNam";
             this.cboNam.Size = new System.Drawing.Size(121, 28);
             this.cboNam.TabIndex = 57;
+            this.cboNam.SelectedIndexChanged += new System.EventHandler(this.cboNam_SelectedIndexChanged);
             // 
             // View_ThongTinChiTietSK
             // 

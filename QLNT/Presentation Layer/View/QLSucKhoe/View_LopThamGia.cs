@@ -26,7 +26,8 @@ namespace QLNT.Presentation_Layer.View.QLSucKhoe
         {
             frmMain parentForm = (this.Parent.Parent as frmMain);
             View_DichVuSucKhoe view_DSLop = parentForm.GetView("DichVuSucKhoe") as View_DichVuSucKhoe;
-            maDV = view_DSLop.GetMaDV();
+            if(view_DSLop != null)
+                maDV = view_DSLop.GetMaDV();
         }
 
         private void View_LopThamGia_Load(object sender, EventArgs e)
@@ -41,8 +42,8 @@ namespace QLNT.Presentation_Layer.View.QLSucKhoe
         private void LoadListDichVu()
         {
             cboTenDichVu.DataSource = DichVuSucKhoeBLL.GetListDichVu();
-            cboTenDichVu.DisplayMember = "TenHoatDong";
-            cboTenDichVu.ValueMember = "MaHoatDong";
+            cboTenDichVu.DisplayMember = "TenDichVu";
+            cboTenDichVu.ValueMember = "MaDichVu";
             if (cboTenDichVu.Text == "")
                 cboTenDichVu.SelectedText = maDV;
         }
@@ -90,7 +91,7 @@ namespace QLNT.Presentation_Layer.View.QLSucKhoe
             for (int i = 0; i < dgvListLop.Rows.Count - 1; i++)
             {
                 string maLop = dgvListLop.Rows[i].Cells["MaLop"].Value.ToString();
-                if (dgvListLop.Rows[i].Cells["CheckBox"].Value.ToString() == "true")
+                if (dgvListLop.Rows[i].Cells["CheckBox"].Value.ToString() == "True")
                     listLop[maLop] = true;
                 else
                     listLop[maLop] = false;
@@ -103,7 +104,8 @@ namespace QLNT.Presentation_Layer.View.QLSucKhoe
 
         private void btnHuy_Click(object sender, EventArgs e)
         {
-
+            this.Visible = false;
+            this.Enabled = false;
         }
 
         private void dgvListLop_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)

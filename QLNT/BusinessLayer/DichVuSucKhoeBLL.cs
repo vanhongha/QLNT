@@ -136,7 +136,7 @@ namespace QLNT.BusinessLayer
             DichVuSucKhoe dichVu = DichVuSucKhoeDAL.GetDichVu(maDV);
             if (DateTime.Today < dichVu.NgayKham)
             {
-                MessageBox.Show("Chỉ được nhập sức khỏe sau vào ngày khám", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Chỉ được nhập sức khỏe sau ngày khám", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             else

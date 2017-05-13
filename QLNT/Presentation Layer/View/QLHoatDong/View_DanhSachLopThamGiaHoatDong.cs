@@ -107,7 +107,8 @@ namespace QLNT.Presentation_Layer.View.QLHoatDong
 
         private void btnHuy_Click(object sender, EventArgs e)
         {
-
+            this.Visible = false;
+            this.Enabled = false;
         }
 
         private void dgvListLop_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
