@@ -43,11 +43,11 @@ namespace QLNT.BusinessLayer
             return TreDAL.GetListTreTheoLop(maLop);
         }
 
-<<<<<<< HEAD
         public static Tre GetTre(string maTre)
         {
             return TreDAL.GetTre(maTre);
-=======
+        }
+
         public static DataTable TimKiemTre(string tuKhoa)
         {
             return TreDAL.TimKiemTre(tuKhoa);
@@ -70,7 +70,6 @@ namespace QLNT.BusinessLayer
         public static void XoaTre(string maTre)
         {
             TreDAL.XoaTre(maTre);
->>>>>>> origin/master
         }
     }
 }
