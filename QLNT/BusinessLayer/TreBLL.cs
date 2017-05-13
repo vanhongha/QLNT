@@ -43,10 +43,7 @@ namespace QLNT.BusinessLayer
             return TreDAL.GetListTreTheoLop(maLop);
         }
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/master
         public static Tre GetTre(string maTre)
         {
             return TreDAL.GetTre(maTre);

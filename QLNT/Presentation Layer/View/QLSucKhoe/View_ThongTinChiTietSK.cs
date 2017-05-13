@@ -12,7 +12,6 @@ namespace QLNT.Presentation_Layer.View.QLSucKhoe
         private void SetMaTre()
         {
             frmMain parentForm = (this.Parent as frmMain);
-            MessageBox.Show(this.Parent.ToString(), "");
             View_ThongTinSucKhoe view_ThongTinSucKhoe = parentForm.GetView("ThongTinSucKhoe") as View_ThongTinSucKhoe;
             maTre = view_ThongTinSucKhoe.GetMaTre();
         }
