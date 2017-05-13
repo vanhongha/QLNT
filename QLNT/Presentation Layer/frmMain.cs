@@ -182,6 +182,11 @@ namespace QLNT.Presentation_Layer
                     view_DanhSachLopThamGiaHoatDong1.Visible = true;
                     view_DanhSachLopThamGiaHoatDong1.BringToFront();
                     break;
+                case "DanhSachLopThamGiaDichVu":
+                    view_LopThamGia1.Enabled = true;
+                    view_LopThamGia1.Visible = true;
+                    view_LopThamGia1.BringToFront();
+                    break;
             }
         }
 
