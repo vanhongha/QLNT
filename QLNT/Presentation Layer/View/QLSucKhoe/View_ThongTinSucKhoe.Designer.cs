@@ -36,7 +36,6 @@
             this.btnXemCanNang = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnXemChieuCao = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnXemChiTietSK = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.btnCapNhatSucKhoe = new Bunifu.Framework.UI.BunifuThinButton2();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListTre)).BeginInit();
             this.SuspendLayout();
             // 
@@ -127,7 +126,7 @@
             this.btnXemChieuCao.IdleFillColor = System.Drawing.Color.White;
             this.btnXemChieuCao.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
             this.btnXemChieuCao.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
-            this.btnXemChieuCao.Location = new System.Drawing.Point(934, 357);
+            this.btnXemChieuCao.Location = new System.Drawing.Point(934, 419);
             this.btnXemChieuCao.Margin = new System.Windows.Forms.Padding(8);
             this.btnXemChieuCao.Name = "btnXemChieuCao";
             this.btnXemChieuCao.Size = new System.Drawing.Size(343, 63);
@@ -153,7 +152,7 @@
             this.btnXemChiTietSK.IdleFillColor = System.Drawing.Color.White;
             this.btnXemChiTietSK.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
             this.btnXemChiTietSK.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
-            this.btnXemChiTietSK.Location = new System.Drawing.Point(934, 501);
+            this.btnXemChiTietSK.Location = new System.Drawing.Point(934, 624);
             this.btnXemChiTietSK.Margin = new System.Windows.Forms.Padding(8);
             this.btnXemChiTietSK.Name = "btnXemChiTietSK";
             this.btnXemChiTietSK.Size = new System.Drawing.Size(343, 63);
@@ -161,38 +160,11 @@
             this.btnXemChiTietSK.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnXemChiTietSK.Click += new System.EventHandler(this.btnXemChiTietSK_Click);
             // 
-            // btnCapNhatSucKhoe
-            // 
-            this.btnCapNhatSucKhoe.ActiveBorderThickness = 1;
-            this.btnCapNhatSucKhoe.ActiveCornerRadius = 20;
-            this.btnCapNhatSucKhoe.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
-            this.btnCapNhatSucKhoe.ActiveForecolor = System.Drawing.Color.White;
-            this.btnCapNhatSucKhoe.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
-            this.btnCapNhatSucKhoe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(236)))), ((int)(((byte)(245)))));
-            this.btnCapNhatSucKhoe.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCapNhatSucKhoe.BackgroundImage")));
-            this.btnCapNhatSucKhoe.ButtonText = "Cập nhật sức khỏe";
-            this.btnCapNhatSucKhoe.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCapNhatSucKhoe.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCapNhatSucKhoe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
-            this.btnCapNhatSucKhoe.IdleBorderThickness = 1;
-            this.btnCapNhatSucKhoe.IdleCornerRadius = 20;
-            this.btnCapNhatSucKhoe.IdleFillColor = System.Drawing.Color.White;
-            this.btnCapNhatSucKhoe.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
-            this.btnCapNhatSucKhoe.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
-            this.btnCapNhatSucKhoe.Location = new System.Drawing.Point(934, 639);
-            this.btnCapNhatSucKhoe.Margin = new System.Windows.Forms.Padding(8);
-            this.btnCapNhatSucKhoe.Name = "btnCapNhatSucKhoe";
-            this.btnCapNhatSucKhoe.Size = new System.Drawing.Size(343, 63);
-            this.btnCapNhatSucKhoe.TabIndex = 59;
-            this.btnCapNhatSucKhoe.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnCapNhatSucKhoe.Click += new System.EventHandler(this.btnCapNhatSucKhoe_Click);
-            // 
             // View_ThongTinSucKhoe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(236)))), ((int)(((byte)(245)))));
-            this.Controls.Add(this.btnCapNhatSucKhoe);
             this.Controls.Add(this.btnXemChiTietSK);
             this.Controls.Add(this.btnXemChieuCao);
             this.Controls.Add(this.btnXemCanNang);
@@ -218,6 +190,5 @@
         private Bunifu.Framework.UI.BunifuThinButton2 btnXemCanNang;
         private Bunifu.Framework.UI.BunifuThinButton2 btnXemChieuCao;
         private Bunifu.Framework.UI.BunifuThinButton2 btnXemChiTietSK;
-        private Bunifu.Framework.UI.BunifuThinButton2 btnCapNhatSucKhoe;
     }
 }

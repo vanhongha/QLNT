@@ -33,6 +33,20 @@ namespace QLNT.Presentation_Layer.View.QLSucKhoe
             Tre tre = TreBLL.GetTre(maTre);
             if(tre != null)
                 txtHoTenTre.Text = tre.HoTenTre;
+            LoadCombobox();
+        }
+
+        private void LoadCombobox()
+        {
+            cboLop.DataSource = TreBLL.GetLopDaHoc(maTre);
+            cboLop.DisplayMember = "TenLop";
+            cboLop.ValueMember = "MaLop";
+        }
+
+        private void cboLop_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
+    
 }

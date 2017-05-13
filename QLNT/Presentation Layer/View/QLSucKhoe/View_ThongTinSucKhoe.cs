@@ -80,26 +80,12 @@ namespace QLNT.Presentation_Layer.View.QLSucKhoe
 
         private void btnXemChiTietSK_Click(object sender, EventArgs e)
         {
-            //if (maTre != "")
+            if (maTre != "")
             {
                 //goi form chi tiet suc khoe
                 frmMain parentForm = (this.Parent.Parent as frmMain);
                 parentForm.UpdateSubView("ThongTinChiTietSK");
                
-            }
-            //else
-            {
-                //MessageBox.Show("Bạn phải chọn một trẻ trong danh sách để xem thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-        }
-
-        private void btnCapNhatSucKhoe_Click(object sender, EventArgs e)
-        {
-            if (maTre != "")
-            {
-                //goi form cap nhat suc khoe
-                frmMain parentForm = (this.Parent.Parent as frmMain);
-                parentForm.UpdateSubView("CapNhatSucKhoe");
             }
             else
             {

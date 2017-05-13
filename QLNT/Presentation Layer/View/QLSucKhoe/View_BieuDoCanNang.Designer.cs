@@ -28,19 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(View_BieuDoCanNang));
             this.label1 = new System.Windows.Forms.Label();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chartCanNang = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.btnHuy = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnInBaoCao = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.cboNam = new System.Windows.Forms.ComboBox();
+            this.cboLop = new System.Windows.Forms.ComboBox();
             this.txtHoTenTre = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label7 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartCanNang)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -55,21 +55,21 @@
             this.label1.TabIndex = 16;
             this.label1.Text = "Biểu đồ cân nặng";
             // 
-            // chart1
+            // chartCanNang
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(156, 200);
-            this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(1118, 542);
-            this.chart1.TabIndex = 73;
-            this.chart1.Text = "chart1";
+            chartArea2.Name = "ChartArea1";
+            this.chartCanNang.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chartCanNang.Legends.Add(legend2);
+            this.chartCanNang.Location = new System.Drawing.Point(156, 200);
+            this.chartCanNang.Name = "chartCanNang";
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chartCanNang.Series.Add(series2);
+            this.chartCanNang.Size = new System.Drawing.Size(1118, 542);
+            this.chartCanNang.TabIndex = 73;
+            this.chartCanNang.Text = "chart1";
             // 
             // btnHuy
             // 
@@ -90,7 +90,7 @@
             this.btnHuy.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
             this.btnHuy.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
             this.btnHuy.Location = new System.Drawing.Point(776, 762);
-            this.btnHuy.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.btnHuy.Margin = new System.Windows.Forms.Padding(8);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(272, 63);
             this.btnHuy.TabIndex = 71;
@@ -116,19 +116,20 @@
             this.btnInBaoCao.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
             this.btnInBaoCao.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
             this.btnInBaoCao.Location = new System.Drawing.Point(300, 762);
-            this.btnInBaoCao.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.btnInBaoCao.Margin = new System.Windows.Forms.Padding(8);
             this.btnInBaoCao.Name = "btnInBaoCao";
             this.btnInBaoCao.Size = new System.Drawing.Size(272, 63);
             this.btnInBaoCao.TabIndex = 72;
             this.btnInBaoCao.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // cboNam
+            // cboLop
             // 
-            this.cboNam.FormattingEnabled = true;
-            this.cboNam.Location = new System.Drawing.Point(1152, 135);
-            this.cboNam.Name = "cboNam";
-            this.cboNam.Size = new System.Drawing.Size(121, 28);
-            this.cboNam.TabIndex = 70;
+            this.cboLop.FormattingEnabled = true;
+            this.cboLop.Location = new System.Drawing.Point(1152, 135);
+            this.cboLop.Name = "cboLop";
+            this.cboLop.Size = new System.Drawing.Size(121, 28);
+            this.cboLop.TabIndex = 70;
+            this.cboLop.SelectedIndexChanged += new System.EventHandler(this.cboLop_SelectedIndexChanged);
             // 
             // txtHoTenTre
             // 
@@ -143,7 +144,7 @@
             this.txtHoTenTre.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(89)))), ((int)(((byte)(180)))));
             this.txtHoTenTre.LineThickness = 3;
             this.txtHoTenTre.Location = new System.Drawing.Point(336, 112);
-            this.txtHoTenTre.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtHoTenTre.Margin = new System.Windows.Forms.Padding(6);
             this.txtHoTenTre.Name = "txtHoTenTre";
             this.txtHoTenTre.Size = new System.Drawing.Size(522, 49);
             this.txtHoTenTre.TabIndex = 69;
@@ -157,9 +158,9 @@
             this.label7.Location = new System.Drawing.Point(1048, 137);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(65, 26);
+            this.label7.Size = new System.Drawing.Size(54, 26);
             this.label7.TabIndex = 67;
-            this.label7.Text = "Năm:";
+            this.label7.Text = "Lớp:";
             // 
             // label3
             // 
@@ -178,10 +179,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(236)))), ((int)(((byte)(245)))));
-            this.Controls.Add(this.chart1);
+            this.Controls.Add(this.chartCanNang);
             this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.btnInBaoCao);
-            this.Controls.Add(this.cboNam);
+            this.Controls.Add(this.cboLop);
             this.Controls.Add(this.txtHoTenTre);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label3);
@@ -189,7 +190,7 @@
             this.Name = "View_BieuDoCanNang";
             this.Size = new System.Drawing.Size(1390, 834);
             this.Load += new System.EventHandler(this.View_BieuDoCanNang_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartCanNang)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -198,10 +199,10 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartCanNang;
         private Bunifu.Framework.UI.BunifuThinButton2 btnHuy;
         private Bunifu.Framework.UI.BunifuThinButton2 btnInBaoCao;
-        private System.Windows.Forms.ComboBox cboNam;
+        private System.Windows.Forms.ComboBox cboLop;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtHoTenTre;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label3;

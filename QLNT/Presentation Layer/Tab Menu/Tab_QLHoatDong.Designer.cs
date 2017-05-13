@@ -42,7 +42,7 @@
             this.btnThemMoi.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
             this.btnThemMoi.BackColor = System.Drawing.Color.White;
             this.btnThemMoi.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnThemMoi.BackgroundImage")));
-            this.btnThemMoi.ButtonText = "Thêm/cập nhật";
+            this.btnThemMoi.ButtonText = "Hoạt động ngoại khóa";
             this.btnThemMoi.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThemMoi.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThemMoi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
@@ -51,10 +51,10 @@
             this.btnThemMoi.IdleFillColor = System.Drawing.Color.White;
             this.btnThemMoi.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
             this.btnThemMoi.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
-            this.btnThemMoi.Location = new System.Drawing.Point(0, 7);
-            this.btnThemMoi.Margin = new System.Windows.Forms.Padding(5);
+            this.btnThemMoi.Location = new System.Drawing.Point(0, 11);
+            this.btnThemMoi.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
             this.btnThemMoi.Name = "btnThemMoi";
-            this.btnThemMoi.Size = new System.Drawing.Size(181, 41);
+            this.btnThemMoi.Size = new System.Drawing.Size(300, 63);
             this.btnThemMoi.TabIndex = 4;
             this.btnThemMoi.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnThemMoi.Click += new System.EventHandler(this.btnThemMoi_Click);
@@ -68,7 +68,7 @@
             this.btnApDung.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
             this.btnApDung.BackColor = System.Drawing.Color.White;
             this.btnApDung.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnApDung.BackgroundImage")));
-            this.btnApDung.ButtonText = "Áp dụng hoạt động cho lớp";
+            this.btnApDung.ButtonText = "Điểm hoạt động ngoại khóa";
             this.btnApDung.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnApDung.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnApDung.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
@@ -77,23 +77,24 @@
             this.btnApDung.IdleFillColor = System.Drawing.Color.White;
             this.btnApDung.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
             this.btnApDung.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
-            this.btnApDung.Location = new System.Drawing.Point(191, 7);
-            this.btnApDung.Margin = new System.Windows.Forms.Padding(5);
+            this.btnApDung.Location = new System.Drawing.Point(316, 11);
+            this.btnApDung.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
             this.btnApDung.Name = "btnApDung";
-            this.btnApDung.Size = new System.Drawing.Size(250, 41);
+            this.btnApDung.Size = new System.Drawing.Size(375, 63);
             this.btnApDung.TabIndex = 5;
             this.btnApDung.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnApDung.Click += new System.EventHandler(this.btnApDung_Click);
             // 
             // Tab_QLHoatDong
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.btnApDung);
             this.Controls.Add(this.btnThemMoi);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Tab_QLHoatDong";
-            this.Size = new System.Drawing.Size(927, 53);
+            this.Size = new System.Drawing.Size(1390, 82);
             this.ResumeLayout(false);
 
         }
