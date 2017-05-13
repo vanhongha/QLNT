@@ -90,6 +90,10 @@ namespace QLNT.DataLayer
             }
             return null;
         }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/master
         public static DataTable TimKiemTre(string tuKhoa)
         {
             DataAccessHelper db = new DataAccessHelper();
