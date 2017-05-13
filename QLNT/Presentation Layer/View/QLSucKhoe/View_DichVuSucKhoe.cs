@@ -15,6 +15,11 @@ namespace QLNT.Presentation_Layer.View.QLSucKhoe
             InitializeComponent();
         }
 
+        public string GetMaDV()
+        {
+            return maDV;
+        }
+
         private void View_DichVuSucKhoe_Load(object sender, EventArgs e)
         {
             LoadDataGridView();

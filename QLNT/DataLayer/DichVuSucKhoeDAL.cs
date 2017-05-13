@@ -188,5 +188,53 @@ namespace QLNT.DataLayer
             }
             return null;
         }
+
+        public static void CapNhatSucKhoe(string maDV, string maTre, float canNang, float chieuCao, string tinhTrang)
+        {
+            DataAccessHelper db = new DataAccessHelper();
+
+            SqlCommand cmd = db.Command("CapNhatSucKhoe");
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@MaDichVu", maDV);
+            cmd.Parameters.AddWithValue("@MaTre", maTre);
+            cmd.Parameters.AddWithValue("@CanNang", canNang);
+            cmd.Parameters.AddWithValue("@ChieuCao", chieuCao);
+            cmd.Parameters.AddWithValue("@TheTrang", tinhTrang);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            db.dt = new DataTable();
+            da.Fill(db.dt);
+        }
+
+        public static DataTable GetListSucKhoeTheoLop(string maLop, string maDV)
+        {
+            DataAccessHelper db = new DataAccessHelper();
+
+            SqlCommand cmd = db.Command("GetKetQuaKhamTheoLop");
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@MaDichVu", maDV);
+            cmd.Parameters.AddWithValue("@MaLop", maLop);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            db.dt = new DataTable();
+            da.Fill(db.dt);
+            return db.dt;
+        }
+
+        public static DataTable GetListSucKhoeKoTheoLop(string maDV)
+        {
+            DataAccessHelper db = new DataAccessHelper();
+
+            SqlCommand cmd = db.Command("GetKetQuaKhamKoTheoLop");
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@MaDichVu", maDV);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            db.dt = new DataTable();
+            da.Fill(db.dt);
+
+            return db.dt;
+        }
+
     }
 }

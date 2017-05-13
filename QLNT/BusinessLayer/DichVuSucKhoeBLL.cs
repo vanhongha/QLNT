@@ -116,5 +116,34 @@ namespace QLNT.BusinessLayer
             //Tien hanh xoa lop nay trong danh sach lop tham gia
             DichVuSucKhoeDAL.XoaLopThamGia(maDV, maLop);
         }
+
+        public static DataTable GetListSucKhoe(string maDV, string maLop)
+        {
+            if (maLop != "")
+            {
+                //get list suc khoe cua tre tham gia dich vu y te theo lop
+                return DichVuSucKhoeDAL.GetListSucKhoeTheoLop(maDV, maLop);
+            }
+            else
+            {
+                //get list suc khoe cua tat ca tre tham gia hoat dong
+                return DichVuSucKhoeDAL.GetListSucKhoeKoTheoLop(maDV);
+            }
+        }
+
+        public static bool CapNhatSucKhoe(string maDV, string maTre, float canNang, float chieuCao, string tinhTrang)
+        {
+            DichVuSucKhoe dichVu = DichVuSucKhoeDAL.GetDichVu(maDV);
+            if (DateTime.Today < dichVu.NgayKham)
+            {
+                MessageBox.Show("Chỉ được nhập sức khỏe sau vào ngày khám", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            else
+            {
+                DichVuSucKhoeDAL.CapNhatSucKhoe(maDV, maTre, canNang, chieuCao, tinhTrang);
+                return true;
+            }
+        }
     }
 }

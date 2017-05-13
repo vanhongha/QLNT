@@ -72,5 +72,15 @@ namespace QLNT.BusinessLayer
         {
             TreDAL.XoaTre(maTre);
         }
+
+        public static DataTable GetLopDaHoc(string maTre)
+        {
+            return TreDAL.GetLopDaHoc(maTre);
+        }
+
+        public static DataTable GetSucKhoe(string maTre, int nam)
+        {
+            return TreDAL.GetSucKhoe(maTre, nam);
+        }
     }
 }

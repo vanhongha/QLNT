@@ -33,16 +33,11 @@ namespace QLNT.Presentation_Layer.View.QLHoatDong
             maHD = view_DSLop.GetMaHD();
         }
 
-        public void SetMaHD(string _maHD)
-        {
-            maHD = _maHD;
-        }
-
         private void View_DanhSachLopThamGiaHoatDong_Load(object sender, EventArgs e)
         {
-            //SetMaHD();
+            SetMaHD();
             LoadListHoatDong();
-            //SetMaHD();
+            SetMaHD();
             if(maHD != "")
                 LoadDataGridView();
         }

@@ -16,5 +16,10 @@ namespace QLNT.BusinessLayer
         {
             return LopDAL.GetListLop();
         }
+
+        public static int GetNamHoc(string maLop)
+        {
+            return LopDAL.GetNamHoc(maLop);
+        }
     }
 }

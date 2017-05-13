@@ -20,5 +20,16 @@ namespace QLNT.DataLayer
             return dt;
         }
 
+        public static int GetNamHoc(string maLop)
+        {
+            DataAccessHelper db = new DataAccessHelper();
+            DataTable dt = db.GetDataTable("SELECT NamHoc FROM LOP WHERE MaLop = '" + maLop + "'");
+            foreach(DataRow row in dt.Rows)
+            {
+                return (int)row[0];
+            }
+            return -1;
+        }
+
     }
 }

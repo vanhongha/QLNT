@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(View_BieuDoCanNang));
             this.label1 = new System.Windows.Forms.Label();
             this.chartCanNang = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -57,19 +57,19 @@
             // 
             // chartCanNang
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chartCanNang.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chartCanNang.Legends.Add(legend2);
+            chartArea1.Name = "ChartArea1";
+            this.chartCanNang.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartCanNang.Legends.Add(legend1);
             this.chartCanNang.Location = new System.Drawing.Point(156, 200);
             this.chartCanNang.Name = "chartCanNang";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chartCanNang.Series.Add(series2);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chartCanNang.Series.Add(series1);
             this.chartCanNang.Size = new System.Drawing.Size(1118, 542);
             this.chartCanNang.TabIndex = 73;
-            this.chartCanNang.Text = "chart1";
+            this.chartCanNang.Text = "Biểu đồ cân nặng";
             // 
             // btnHuy
             // 

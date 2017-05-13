@@ -72,6 +72,7 @@ namespace QLNT.Presentation_Layer.View.QLHoatDong
         private void btnHuy_Click(object sender, EventArgs e)
         {
             //quay ve form main hoac form hoat dong
+
         }
 
         private void dgvDiemTre_CellClick(object sender, DataGridViewCellEventArgs e)

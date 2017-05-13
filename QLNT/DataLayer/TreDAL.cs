@@ -173,5 +173,36 @@ namespace QLNT.DataLayer
             db.dt = new DataTable();
             da.Fill(db.dt);
         }
+
+        public static DataTable GetLopDaHoc(string maTre)
+        {
+            DataAccessHelper db = new DataAccessHelper();
+            SqlCommand cmd = db.Command("GetLopDaHoc");
+
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@MaTre", maTre);
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            db.dt = new DataTable();
+            da.Fill(db.dt);
+
+            return db.dt;
+        }
+
+        public static DataTable GetSucKhoe(string maTre, int nam)
+        {
+            DataAccessHelper db = new DataAccessHelper();
+            SqlCommand cmd = db.Command("GetCanNang");
+
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@MaTre", maTre);
+            cmd.Parameters.AddWithValue("@Nam", nam);
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            db.dt = new DataTable();
+            da.Fill(db.dt);
+
+            return db.dt;
+        }
     }
 }

@@ -2,12 +2,15 @@
 using System.Windows.Forms;
 using QLNT.BusinessLayer;
 using QLNT.Entities;
+using System.Windows.Forms.DataVisualization.Charting;
+using System.Data;
 
 namespace QLNT.Presentation_Layer.View.QLSucKhoe
 {
     public partial class View_BieuDoCanNang : UserControl
     {
         private string maTre = "";
+        private Series series = new Series("Cân Nặng");
 
         private void SetMaTre()
         {
@@ -41,11 +44,35 @@ namespace QLNT.Presentation_Layer.View.QLSucKhoe
             cboLop.DataSource = TreBLL.GetLopDaHoc(maTre);
             cboLop.DisplayMember = "TenLop";
             cboLop.ValueMember = "MaLop";
+            cboLop.Text = "";
         }
 
-        private void cboLop_SelectedIndexChanged(object sender, EventArgs e)
+        private void cboLop_SelectedIndexChanged(object sender, EventArgs e) 
         {
+            int year = LopBLL.GetNamHoc(cboLop.SelectedValue.ToString());
+            DataTable dt = TreBLL.GetSucKhoe(maTre, year);
 
+            int[] x = new int[dt.Rows.Count];
+            float[] y = new float[dt.Rows.Count];
+
+            DateTime ngayKham;
+
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                ngayKham = (DateTime) dt.Rows[0]["NgayKham"];
+                x[i] = ngayKham.Month;
+                y[i] = (float)dt.Rows[0]["CanNang"];
+            }
+
+            series.Points.DataBindXY(x, y);
+            if (x.Length == 1)
+                series.ChartType = SeriesChartType.Column;
+            else
+                series.ChartType = SeriesChartType.Line;
+
+            chartCanNang.Series.Clear();
+            chartCanNang.Series.Add(series);
+        
         }
     }
     
