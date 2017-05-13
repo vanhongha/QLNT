@@ -71,7 +71,7 @@ namespace QLNT.DataLayer
             return "";
         }
 
-<<<<<<< HEAD
+
         public static Tre GetTre(string maTre)
         {
             DataAccessHelper db = new DataAccessHelper();
@@ -84,12 +84,12 @@ namespace QLNT.DataLayer
             db.dt = new DataTable();
             da.Fill(db.dt);
 
-            foreach(DataRow row in db.dt.Rows)
+            foreach (DataRow row in db.dt.Rows)
             {
                 return new Tre(row);
             }
             return null;
-=======
+        }
         public static DataTable TimKiemTre(string tuKhoa)
         {
             DataAccessHelper db = new DataAccessHelper();
@@ -171,7 +171,6 @@ namespace QLNT.DataLayer
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             db.dt = new DataTable();
             da.Fill(db.dt);
->>>>>>> origin/master
         }
     }
 }
