@@ -194,6 +194,32 @@
     <Compile Include="Presentation Layer\View\QLHocTap\View_ChinhSuaDiemNgoaiKhoa.Designer.cs">
       <DependentUpon>View_ChinhSuaDiemNgoaiKhoa.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentation Layer\View\QLSucKhoe\frm_BaoCaoCanNang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\View\QLSucKhoe\frm_BaoCaoCanNang.Designer.cs">
+      <DependentUpon>frm_BaoCaoCanNang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\View\QLSucKhoe\frm_BaoCaoChieuCao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\View\QLSucKhoe\frm_BaoCaoChieuCao.Designer.cs">
+      <DependentUpon>frm_BaoCaoChieuCao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\View\QLSucKhoe\frm_BaoCaoChiTietSK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\View\QLSucKhoe\frm_BaoCaoChiTietSK.Designer.cs">
+      <DependentUpon>frm_BaoCaoChiTietSK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\View\QLSucKhoe\SucKhoeDataSet.cs">
+      <DependentUpon>SucKhoeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\View\QLSucKhoe\SucKhoeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SucKhoeDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Presentation Layer\View\QLSucKhoe\View_LopThamGia.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -341,6 +367,18 @@
     <EmbeddedResource Include="Presentation Layer\View\QLHocTap\View_ChinhSuaDiemNgoaiKhoa.resx">
       <DependentUpon>View_ChinhSuaDiemNgoaiKhoa.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\View\QLSucKhoe\BaoCaoCanNang.rdlc" />
+    <EmbeddedResource Include="Presentation Layer\View\QLSucKhoe\BaoCaoChieuCao.rdlc" />
+    <EmbeddedResource Include="Presentation Layer\View\QLSucKhoe\ChiTietSK.rdlc" />
+    <EmbeddedResource Include="Presentation Layer\View\QLSucKhoe\frm_BaoCaoCanNang.resx">
+      <DependentUpon>frm_BaoCaoCanNang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\View\QLSucKhoe\frm_BaoCaoChieuCao.resx">
+      <DependentUpon>frm_BaoCaoChieuCao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\View\QLSucKhoe\frm_BaoCaoChiTietSK.resx">
+      <DependentUpon>frm_BaoCaoChiTietSK.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentation Layer\View\QLSucKhoe\View_LopThamGia.resx">
       <DependentUpon>View_LopThamGia.cs</DependentUpon>
     </EmbeddedResource>
@@ -396,6 +434,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Presentation Layer\View\QLSucKhoe\SucKhoeDataSet.xsc">
+      <DependentUpon>SucKhoeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Presentation Layer\View\QLSucKhoe\SucKhoeDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SucKhoeDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Presentation Layer\View\QLSucKhoe\SucKhoeDataSet.xss">
+      <DependentUpon>SucKhoeDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\DataSources\QLNT.DataLayer.TreDAL.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

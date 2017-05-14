@@ -221,5 +221,20 @@ namespace QLNT.DataLayer
 
             return db.dt;
         }
+
+        public static DataTable GetHoTenTre(string maTre)
+        {
+            DataAccessHelper db = new DataAccessHelper();
+            SqlCommand cmd = db.Command("GetHoTenTre");
+
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@MaTre", maTre);
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            db.dt = new DataTable();
+            da.Fill(db.dt);
+
+            return db.dt;
+        }
     }
 }

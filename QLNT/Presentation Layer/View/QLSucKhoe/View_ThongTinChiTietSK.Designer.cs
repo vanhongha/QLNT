@@ -142,6 +142,7 @@
             this.btnInBaoCao.Size = new System.Drawing.Size(272, 63);
             this.btnInBaoCao.TabIndex = 54;
             this.btnInBaoCao.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnInBaoCao.Click += new System.EventHandler(this.btnInBaoCao_Click);
             // 
             // btnHuy
             // 

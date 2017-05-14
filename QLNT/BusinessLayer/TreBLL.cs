@@ -87,5 +87,16 @@ namespace QLNT.BusinessLayer
         {
             return TreDAL.GetSucKhoeTheoThang(maTre, thang, nam);
         }
+
+        public static string GetHoTen(string maTre)
+        {
+            DataTable dt = TreDAL.GetHoTenTre(maTre);
+            foreach(DataRow row in dt.Rows)
+            {
+                return row["HoTenTre"].ToString();
+            }
+
+            return "";
+        }
     }
 }

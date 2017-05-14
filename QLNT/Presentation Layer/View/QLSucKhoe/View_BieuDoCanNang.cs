@@ -73,6 +73,19 @@ namespace QLNT.Presentation_Layer.View.QLSucKhoe
             chartCanNang.Series.Clear();
             chartCanNang.Series.Add(series);
         }
+
+        private void btnInBaoCao_Click(object sender, EventArgs e)
+        {
+            if(cboLop.SelectedValue.ToString() != "")
+            {
+                Form frm_BaoCaoCanNang = new frm_BaoCaoCanNang(maTre, LopBLL.GetNamHoc(cboLop.SelectedValue.ToString()));
+                frm_BaoCaoCanNang.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Bạn phải chọn lớp cho trẻ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
     }
     
 }

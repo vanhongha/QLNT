@@ -83,5 +83,11 @@ namespace QLNT.Presentation_Layer.View.QLSucKhoe
 
             }
         }
+
+        private void btnInBaoCao_Click(object sender, EventArgs e)
+        {
+            Form frm_BaoCaoCTSK = new frm_BaoCaoChiTietSK(maTre, int.Parse(cboNam.Text));
+            frm_BaoCaoCTSK.ShowDialog();
+        }
     }
 }

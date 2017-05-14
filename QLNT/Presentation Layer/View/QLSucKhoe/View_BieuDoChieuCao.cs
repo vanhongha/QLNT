@@ -73,5 +73,11 @@ namespace QLNT.Presentation_Layer.View.QLSucKhoe
             chartChieuCao.Series.Clear();
             chartChieuCao.Series.Add(series);
         }
+
+        private void btnInBaoCao_Click(object sender, EventArgs e)
+        {
+            Form frm_BaoCaoChieuCao = new frm_BaoCaoChieuCao(maTre, LopBLL.GetNamHoc(cboLop.SelectedValue.ToString()));
+            frm_BaoCaoChieuCao.ShowDialog();
+        }
     }
 }
