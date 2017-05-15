@@ -170,6 +170,12 @@
     <Compile Include="Presentation Layer\View\QLHoatDong\View_DanhSachLopThamGiaHoatDong.Designer.cs">
       <DependentUpon>View_DanhSachLopThamGiaHoatDong.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentation Layer\View\QLHoatDong\View_DanhSachTreThamGiaHoatDong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\View\QLHoatDong\View_DanhSachTreThamGiaHoatDong.Designer.cs">
+      <DependentUpon>View_DanhSachTreThamGiaHoatDong.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentation Layer\View\QLHoatDong\View_DiemNgoaiKhoa.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -354,6 +360,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation Layer\View\QLHoatDong\View_DanhSachLopThamGiaHoatDong.resx">
       <DependentUpon>View_DanhSachLopThamGiaHoatDong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\View\QLHoatDong\View_DanhSachTreThamGiaHoatDong.resx">
+      <DependentUpon>View_DanhSachTreThamGiaHoatDong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation Layer\View\QLHoatDong\View_DiemNgoaiKhoa.resx">
       <DependentUpon>View_DiemNgoaiKhoa.cs</DependentUpon>
