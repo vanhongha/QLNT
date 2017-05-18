@@ -12,19 +12,76 @@ namespace QLNT.BusinessLayer
 {
     class NguyenLieuBLL
     {
-        public static DataTable layDanhSachNguyenLieu()
+        public static DataTable LayDanhSachNguyenLieu()
         {
-            return NguyenLieuDAL.layDanhSachNguyenLieu();
+            return NguyenLieuDAL.LayDanhSachNguyenLieu();
         }
 
-        public static void themNguyenLieu(NguyenLieu nguyenlieu)
+        public static DataTable LayDanhSachNguyenLieu(string tuKhoa)
         {
-            NguyenLieuDAL.themNguyenLieu(nguyenlieu);
+            return NguyenLieuDAL.LayDanhSachNguyenLieu(tuKhoa);
+        }
+        
+        public static DataTable LayDanhSachTenVaMaNguyenLieu()
+        {
+            return NguyenLieuDAL.LayDanhSachTenVaMaNguyenLieu();
         }
 
-        public static void capNhatNguyenLieu(NguyenLieu nguyenlieu)
+        public static string LayMaNguyenLieuTheoTen(string tenNL)
         {
-            NguyenLieuDAL.capNhatNguyenLieu(nguyenlieu);
+            return NguyenLieuDAL.LayMaNguyenLieuTheoTen(tenNL);
+        }
+
+        public static void ThemNguyenLieu(NguyenLieu nguyenlieu)
+        {
+            NguyenLieuDAL.ThemNguyenLieu(nguyenlieu);
+        }
+
+        public static void XoaNguyenLieu(string maNL)
+        {
+            NguyenLieuDAL.XoaNguyenLieu(maNL);
+        }
+
+        public static void CapNhatNguyenLieu(NguyenLieu nguyenlieu)
+        {
+            NguyenLieuDAL.CapNhatNguyenLieu(nguyenlieu);
+        }
+
+        public static string SinhMaTuDong()
+        {
+            string maCuoi = NguyenLieuDAL.LayMaCuoi().Trim();
+
+            //chưa có Nguyên liệu nào trong CSDL
+            if (maCuoi == "")
+            {
+                return "MANL000001";
+            }
+
+            //xoa 4 chữ cái đầu chuỗi và tăng số đếm lên 1
+            int maTiepTheo = int.Parse(maCuoi.Remove(0, 4)) + 1;
+            string maTuDong = maTiepTheo.ToString().Trim();
+
+            while (maTuDong.Length < 6)
+            {
+                maTuDong = "0" + maTuDong;
+                maTuDong.Trim();
+            }
+
+            return "MANL" + maTuDong;
+        }
+
+        public static bool KiemTraTenNL(string TenNL)
+        {
+            return NguyenLieuDAL.KiemTraTenNL(TenNL);
+        }
+
+        public static bool KiemTraMaNL(string MaNL)
+        {
+            return NguyenLieuDAL.KiemTraMaNL(MaNL);
+        }
+        public static bool CoTrongChiTietPhieuMua(string MaNL)
+        {
+            return NguyenLieuDAL.CoTrongChiTietPhieuMua(MaNL);
         }
     }
 }

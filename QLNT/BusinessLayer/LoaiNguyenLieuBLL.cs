@@ -14,5 +14,10 @@ namespace QLNT.BusinessLayer
         {
             return LoaiNguyenLieuDAL.layDanhSachLoaiNguyenLieu();
         }
+
+        public static string layMaLoaiNguyenLieuTheoTen(string tenLoaiNL)
+        {
+            return LoaiNguyenLieuDAL.layMaLoaiNguyenLieuTheoTen(tenLoaiNL);
+        }
     }
 }

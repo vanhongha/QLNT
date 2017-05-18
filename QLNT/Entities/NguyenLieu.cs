@@ -49,5 +49,17 @@ namespace QLNT.Entities
             get { return _donViTinh; }
             set { _donViTinh = value; }
         }
+
+        public NguyenLieu() { }
+
+        public NguyenLieu(string MaNguyenLieu, string TenNguyenLieu, string MaLoai, string ChiSoDinhDuong, string SoLuongTon, string DonViTinh)
+        {
+            _maNguyenLieu = MaNguyenLieu;
+            _tenNguyenLieu = TenNguyenLieu;
+            _maLoai = MaLoai;
+            _chiSoDinhDuong = ChiSoDinhDuong;
+            _soLuongTon = SoLuongTon;
+            _donViTinh = DonViTinh;
+        }
     }
 }

@@ -45,7 +45,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.content = new System.Windows.Forms.Panel();
             this.view_DanhSachLopThamGiaHoatDong1 = new QLNT.Presentation_Layer.View.QLHoatDong.View_DanhSachLopThamGiaHoatDong();
-            this.view_PhieuNguyenLieu1 = new QLNT.Presentation_Layer.View.QLDinhDuong.View_PhieuNguyenLieu();
+            this.view_PhieuNguyenLieu1 = new QLNT.Presentation_Layer.View.QLDinhDuong.View_PhieuMuaNguyenLieu();
             this.view_CapNhatNguyenLieu1 = new QLNT.Presentation_Layer.View.QLDinhDuong.View_CapNhatNguyenLieu();
             this.view_BieuDoCanNang1 = new QLNT.Presentation_Layer.View.QLSucKhoe.View_BieuDoCanNang();
             this.view_BieuDoChieuCao1 = new QLNT.Presentation_Layer.View.QLSucKhoe.View_BieuDoChieuCao();
@@ -880,7 +880,7 @@
         private View.QLSucKhoe.View_BieuDoChieuCao view_BieuDoChieuCao1;
         private View.QLSucKhoe.View_BieuDoCanNang view_BieuDoCanNang1;
         private View.QLDinhDuong.View_CapNhatNguyenLieu view_CapNhatNguyenLieu1;
-        private View.QLDinhDuong.View_PhieuNguyenLieu view_PhieuNguyenLieu1;
+        private View.QLDinhDuong.View_PhieuMuaNguyenLieu view_PhieuNguyenLieu1;
         private View.QLHoatDong.View_DanhSachLopThamGiaHoatDong view_DanhSachLopThamGiaHoatDong1;
         private View.QLSucKhoe.View_ThongTinChiTietSK view_ThongTinChiTietSK1;
         private View.QLSucKhoe.View_CapNhatSucKhoe view_CapNhatSucKhoe1;

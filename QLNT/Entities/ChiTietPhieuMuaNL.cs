@@ -15,29 +15,29 @@ namespace QLNT.Entities
             set { _maPhieu = value; }
         }
 
-        private double _maNguyenLieu;
-        public double MaNguyenLieu
+        private string _maNguyenLieu;
+        public string MaNguyenLieu
         {
             get { return _maNguyenLieu; }
             set { _maNguyenLieu = value; }
         }
 
-        private int _soLuong;
-        public int SoLuong
+        private decimal _soLuong;
+        public decimal SoLuong
         {
             get { return _soLuong; }
             set { _soLuong = value; }
         }
 
-        private double _donGia;
-        public double DonGia
+        private decimal _donGia;
+        public decimal DonGia
         {
             get { return _donGia; }
             set { _donGia = value; }
         }
 
-        private double _thanhTien;
-        public double ThanhTien
+        private decimal _thanhTien;
+        public decimal ThanhTien
         {
             get { return _thanhTien; }
             set { _thanhTien = value; }

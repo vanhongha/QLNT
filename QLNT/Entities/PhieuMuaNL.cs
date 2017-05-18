@@ -28,5 +28,19 @@ namespace QLNT.Entities
             get { return _tongTien; }
             set { _tongTien = value; }
         }
+
+        private string _trangThai;
+        public string TrangThai
+        {
+            get { return _trangThai; }
+            set { _trangThai = value; }
+        }
+
+        private string _nguoiLapPhieu;
+        public string NguoiLapPhieu
+        {
+            get { return _nguoiLapPhieu; }
+            set { _nguoiLapPhieu = value; }
+        }
     }
 }
