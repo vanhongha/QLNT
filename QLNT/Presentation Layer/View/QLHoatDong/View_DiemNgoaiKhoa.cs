@@ -32,7 +32,7 @@ namespace QLNT.Presentation_Layer.View.QLHoatDong
 
         private void LoadDataGridView()
         {
-            dgvDiemTre.DataSource = HoatDongNgoaiKhoaBLL.GetListDiemHoatDong(cboHoatDong.Text, cboLop.Text);
+            dgvDiemTre.DataSource = HoatDongNgoaiKhoaBLL.GetListDiemHoatDong(cboHoatDong.SelectedValue.ToString(), cboLop.SelectedValue.ToString());
             string[] listProp = { "MaTre", "HoTenTre", "Diem" };
             ControlFormat.DataGridViewFormat(dgvDiemTre, listProp);
         }
@@ -56,12 +56,20 @@ namespace QLNT.Presentation_Layer.View.QLHoatDong
         {
             if (txtHoTenTre.Text != "")
             {
-                //cap nhat diem hoat dong cho tre
-                if(HoatDongNgoaiKhoaBLL.CapNhatDiemHoatDong(cboHoatDong.SelectedText, dgvDiemTre.CurrentRow.Cells["MaTre"].Value.ToString(),
-                                                        float.Parse(txtDiem.Text), txtNhanXet.Text))
+                if(txtDiem.Text == "")
                 {
-                    MessageBox.Show("Cập nhật điểm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Bạn phải nhập điểm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
+                else
+                {
+                    //cap nhat diem hoat dong cho tre
+                    if (HoatDongNgoaiKhoaBLL.CapNhatDiemHoatDong(cboHoatDong.SelectedValue.ToString(), dgvDiemTre.CurrentRow.Cells["MaTre"].Value.ToString(),
+                                                            float.Parse(txtDiem.Text), txtNhanXet.Text))
+                    {
+                        MessageBox.Show("Cập nhật điểm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                
             }
             else
             {
@@ -72,12 +80,14 @@ namespace QLNT.Presentation_Layer.View.QLHoatDong
         private void btnHuy_Click(object sender, EventArgs e)
         {
             //quay ve form main hoac form hoat dong
+            this.Visible = false;
+            this.Enabled = false;
         }
 
         private void dgvDiemTre_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             txtHoTenTre.Text = dgvDiemTre.Rows[e.RowIndex].Cells["HoTenTre"].Value.ToString();
-            txtNhanXet.Text = dgvDiemTre.Rows[e.RowIndex].Cells["HoTenTre"].Value.ToString();
+            txtNhanXet.Text = dgvDiemTre.Rows[e.RowIndex].Cells["NhanXet"].Value.ToString();
             txtDiem.Text = dgvDiemTre.Rows[e.RowIndex].Cells["Diem"].Value.ToString();
         }
 

@@ -16,6 +16,11 @@ namespace QLNT.Presentation_Layer.View.QLSucKhoe
     {
         private string maTre = "";
 
+        public string GetMaTre()
+        {
+            return maTre;
+        }
+
         public View_ThongTinSucKhoe()
         {
             InitializeComponent();
@@ -24,7 +29,6 @@ namespace QLNT.Presentation_Layer.View.QLSucKhoe
         private void View_ThongTinSucKhoe_Load(object sender, EventArgs e)
         {
             GetListLop();
-            //GetDataGridView();
         }
 
         private void GetListLop()
@@ -32,12 +36,11 @@ namespace QLNT.Presentation_Layer.View.QLSucKhoe
             cboLop.DataSource = LopBLL.GetListLop();
             cboLop.DisplayMember = "TenLop";
             cboLop.ValueMember = "MaLop";
-            cboLop.SelectedItem = cboLop.Top;
         }
 
         private void GetDataGridView()
         {
-            dgvListTre.DataSource = TreBLL.GetListTreTheoLop(cboLop.Text);
+            dgvListTre.DataSource = TreBLL.GetListTreTheoLop(cboLop.SelectedValue.ToString());
             string[] listProp = { "MaTre", "HoTenTre", "GioiTinh", "NgaySinh" };
             ControlFormat.DataGridViewFormat(dgvListTre, listProp);
         }
@@ -54,7 +57,6 @@ namespace QLNT.Presentation_Layer.View.QLSucKhoe
                 //goi form bieu do can nang
                 frmMain parentForm = (this.Parent.Parent as frmMain);
                 parentForm.UpdateSubView("BieuDoCanNang");
-                View_BieuDoCanNang view_BieuDoCanNang = parentForm.GetSubView("BieuDoCanNang") as View_BieuDoCanNang;
             }
             else
             {
@@ -69,7 +71,6 @@ namespace QLNT.Presentation_Layer.View.QLSucKhoe
                 //goi form bieu do chieu cao
                 frmMain parentForm = (this.Parent.Parent as frmMain);
                 parentForm.UpdateSubView("BieuDoChieuCao");
-                View_BieuDoChieuCao viewBieuDoChieuCao = parentForm.GetSubView("BieuDoChieuCao") as View_BieuDoChieuCao;
             }
             else
             {
@@ -84,24 +85,7 @@ namespace QLNT.Presentation_Layer.View.QLSucKhoe
                 //goi form chi tiet suc khoe
                 frmMain parentForm = (this.Parent.Parent as frmMain);
                 parentForm.UpdateSubView("ThongTinChiTietSK");
-                View_ThongTinChiTietSK view_ThongTinChiTiet = parentForm.GetSubView("ThongTinChiTietSK") as View_ThongTinChiTietSK;
-                
-            }
-            else
-            {
-                MessageBox.Show("Bạn phải chọn một trẻ trong danh sách để xem thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-        }
-
-        private void btnCapNhatSucKhoe_Click(object sender, EventArgs e)
-        {
-            if (maTre != "")
-            {
-                //goi form cap nhat suc khoe
-                frmMain parentForm = (this.Parent.Parent as frmMain);
-                parentForm.UpdateSubView("CapNhatSucKhoe");
-                View_CapNhatSucKhoe view_CapNhatSucKhoe = parentForm.GetSubView("CapNhatSucKhoe") as View_CapNhatSucKhoe;
-
+               
             }
             else
             {
@@ -111,7 +95,14 @@ namespace QLNT.Presentation_Layer.View.QLSucKhoe
 
         private void dgvListTre_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            maTre = dgvListTre.Rows[e.RowIndex].Cells["MaTre"].Value.ToString();
+            try
+            {
+                maTre = dgvListTre.Rows[e.RowIndex].Cells["MaTre"].Value.ToString();
+            }
+            catch(Exception ex)
+            {
+                maTre = "";
+            }
         }
 
     }

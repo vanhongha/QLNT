@@ -184,7 +184,7 @@ namespace QLNT.DataLayer
         {
             DataAccessHelper db = new DataAccessHelper();
 
-            SqlCommand cmd = db.Command("ThemKetQuaHoatDong");
+            SqlCommand cmd = db.Command("ThemKetQuaThamGiaHoatDong");
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@MaHoatDong", maHD);
             cmd.Parameters.AddWithValue("@MaTre", maTre);
@@ -212,7 +212,7 @@ namespace QLNT.DataLayer
         {
             DataAccessHelper db = new DataAccessHelper();
 
-            SqlCommand cmd = db.Command("XoaKetQuaHoatDong");
+            SqlCommand cmd = db.Command("XoaKetQuaThamGiaHoatDong");
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@MaHoatDong", maHD);
             cmd.Parameters.AddWithValue("@MaTre", maTre);
@@ -239,6 +239,30 @@ namespace QLNT.DataLayer
                 return new HoatDongNgoaiKhoa(row);
             }
             return null;
+        }
+
+        public static void XoaHoatDong(HoatDongNgoaiKhoa hoatDong)
+        {
+            DataAccessHelper db = new DataAccessHelper();
+
+            SqlCommand cmd = db.Command("XoaHoatDong");
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@MaHoatDong", hoatDong.MaHoatDong);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            db.dt = new DataTable();
+            da.Fill(db.dt);
+        }
+
+        public static string GetLastID()
+        {
+            DataAccessHelper db = new DataAccessHelper();
+            DataTable dt = db.GetDataTable("Select top 1 MaHoatDong from HOATDONGNGOAIKHOA order by MaHoatDong desc");
+            foreach (DataRow row in dt.Rows)
+            {
+                return row.ItemArray[0].ToString();
+            }
+            return "";
         }
 
     }

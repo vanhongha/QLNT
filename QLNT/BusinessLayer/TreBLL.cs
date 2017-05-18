@@ -43,6 +43,12 @@ namespace QLNT.BusinessLayer
             return TreDAL.GetListTreTheoLop(maLop);
         }
 
+
+        public static Tre GetTre(string maTre)
+        {
+            return TreDAL.GetTre(maTre);
+        }
+
         public static DataTable TimKiemTre(string tuKhoa)
         {
             return TreDAL.TimKiemTre(tuKhoa);
@@ -65,6 +71,32 @@ namespace QLNT.BusinessLayer
         public static void XoaTre(string maTre)
         {
             TreDAL.XoaTre(maTre);
+        }
+
+        public static DataTable GetLopDaHoc(string maTre)
+        {
+            return TreDAL.GetLopDaHoc(maTre);
+        }
+
+        public static DataTable GetSucKhoe(string maTre, int nam)
+        {
+            return TreDAL.GetSucKhoe(maTre, nam);
+        }
+
+        public static DataTable GetSucKhoeTheoThang(string maTre, int thang, int nam)
+        {
+            return TreDAL.GetSucKhoeTheoThang(maTre, thang, nam);
+        }
+
+        public static string GetHoTen(string maTre)
+        {
+            DataTable dt = TreDAL.GetHoTenTre(maTre);
+            foreach(DataRow row in dt.Rows)
+            {
+                return row["HoTenTre"].ToString();
+            }
+
+            return "";
         }
     }
 }

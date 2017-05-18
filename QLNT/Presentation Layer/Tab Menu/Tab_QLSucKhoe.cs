@@ -28,5 +28,11 @@ namespace QLNT.Presentation_Layer.Tab_Menu
             frmMain parentForm = (this.Parent.Parent.Parent as frmMain);
             parentForm.UpdateView(function.DichVuSucKhoe);
         }
+
+        private void btnCapNhatSucKhoe_Click(object sender, EventArgs e)
+        {
+            frmMain parentForm = (this.Parent.Parent.Parent as frmMain);
+            parentForm.UpdateView(function.CapNhatSucKhoe);
+        }
     }
 }

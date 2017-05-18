@@ -45,7 +45,12 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.content = new System.Windows.Forms.Panel();
             this.view_DanhSachLopThamGiaHoatDong1 = new QLNT.Presentation_Layer.View.QLHoatDong.View_DanhSachLopThamGiaHoatDong();
+<<<<<<< HEAD
             this.view_PhieuNguyenLieu1 = new QLNT.Presentation_Layer.View.QLDinhDuong.View_PhieuMuaNguyenLieu();
+=======
+            this.view_LopThamGia1 = new View.QLSucKhoe.View_LopThamGia();
+            this.view_PhieuNguyenLieu1 = new QLNT.Presentation_Layer.View.QLDinhDuong.View_PhieuNguyenLieu();
+>>>>>>> origin/master
             this.view_CapNhatNguyenLieu1 = new QLNT.Presentation_Layer.View.QLDinhDuong.View_CapNhatNguyenLieu();
             this.view_BieuDoCanNang1 = new QLNT.Presentation_Layer.View.QLSucKhoe.View_BieuDoCanNang();
             this.view_BieuDoChieuCao1 = new QLNT.Presentation_Layer.View.QLSucKhoe.View_BieuDoChieuCao();
@@ -468,6 +473,7 @@
             this.content.Controls.Add(this.view_CapNhatNguyenLieu1);
             this.content.Controls.Add(this.view_BieuDoCanNang1);
             this.content.Controls.Add(this.view_BieuDoChieuCao1);
+            this.content.Controls.Add(this.view_ThongTinChiTietSK1);
             this.content.Controls.Add(this.view_DiemNgoaiKhoa);
             this.content.Controls.Add(this.view_HoatDongNgoaiKhoa);
             this.content.Controls.Add(this.view_CapNhatTraCuuThucDon1);
@@ -482,6 +488,7 @@
             this.content.Controls.Add(this.view_ThemNV1);
             this.content.Controls.Add(this.view_TimKiemTre1);
             this.content.Controls.Add(this.view_ThemTre1);
+            this.content.Controls.Add(this.view_LopThamGia1);
             this.content.Dock = System.Windows.Forms.DockStyle.Fill;
             this.content.Location = new System.Drawing.Point(276, 100);
             this.content.Name = "content";
@@ -497,6 +504,16 @@
             this.view_DanhSachLopThamGiaHoatDong1.Name = "view_DanhSachLopThamGiaHoatDong1";
             this.view_DanhSachLopThamGiaHoatDong1.Size = new System.Drawing.Size(927, 542);
             this.view_DanhSachLopThamGiaHoatDong1.TabIndex = 18;
+            //
+            //
+            //
+            this.view_LopThamGia1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(236)))), ((int)(((byte)(245)))));
+            this.view_LopThamGia1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.view_LopThamGia1.Location = new System.Drawing.Point(0, 0);
+            this.view_LopThamGia1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.view_LopThamGia1.Name = "view_LopThamGia1";
+            this.view_LopThamGia1.Size = new System.Drawing.Size(927, 542);
+            this.view_LopThamGia1.TabIndex = 18;
             // 
             // view_PhieuNguyenLieu1
             // 
@@ -884,6 +901,7 @@
         private View.QLHoatDong.View_DanhSachLopThamGiaHoatDong view_DanhSachLopThamGiaHoatDong1;
         private View.QLSucKhoe.View_ThongTinChiTietSK view_ThongTinChiTietSK1;
         private View.QLSucKhoe.View_CapNhatSucKhoe view_CapNhatSucKhoe1;
+        private View.QLSucKhoe.View_LopThamGia view_LopThamGia1;
         private System.Windows.Forms.Button button1;
     }
 }

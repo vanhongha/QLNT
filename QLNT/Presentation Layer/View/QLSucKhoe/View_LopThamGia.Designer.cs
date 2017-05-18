@@ -31,12 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(View_LopThamGia));
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.cboTenDichVu = new System.Windows.Forms.ComboBox();
+            this.dgvListLop = new System.Windows.Forms.DataGridView();
             this.btnApDungTatCa = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnLuu = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnHuy = new Bunifu.Framework.UI.BunifuThinButton2();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListLop)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -63,22 +63,24 @@
             this.label3.TabIndex = 55;
             this.label3.Text = "Tên dịch vụ:";
             // 
-            // comboBox1
+            // cboTenDichVu
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(550, 146);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(312, 28);
-            this.comboBox1.TabIndex = 56;
+            this.cboTenDichVu.FormattingEnabled = true;
+            this.cboTenDichVu.Location = new System.Drawing.Point(550, 146);
+            this.cboTenDichVu.Name = "cboTenDichVu";
+            this.cboTenDichVu.Size = new System.Drawing.Size(312, 28);
+            this.cboTenDichVu.TabIndex = 56;
+            this.cboTenDichVu.SelectedIndexChanged += new System.EventHandler(this.cboTenDichVu_SelectedIndexChanged);
             // 
-            // dataGridView1
+            // dgvListLop
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(272, 232);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(789, 423);
-            this.dataGridView1.TabIndex = 57;
+            this.dgvListLop.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListLop.Location = new System.Drawing.Point(272, 232);
+            this.dgvListLop.Name = "dgvListLop";
+            this.dgvListLop.RowTemplate.Height = 28;
+            this.dgvListLop.Size = new System.Drawing.Size(789, 423);
+            this.dgvListLop.TabIndex = 57;
+            this.dgvListLop.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvListLop_DataBindingComplete);
             // 
             // btnApDungTatCa
             // 
@@ -104,6 +106,7 @@
             this.btnApDungTatCa.Size = new System.Drawing.Size(272, 63);
             this.btnApDungTatCa.TabIndex = 58;
             this.btnApDungTatCa.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnApDungTatCa.Click += new System.EventHandler(this.btnApDungTatCa_Click);
             // 
             // btnLuu
             // 
@@ -129,6 +132,7 @@
             this.btnLuu.Size = new System.Drawing.Size(272, 63);
             this.btnLuu.TabIndex = 58;
             this.btnLuu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnHuy
             // 
@@ -154,8 +158,9 @@
             this.btnHuy.Size = new System.Drawing.Size(272, 63);
             this.btnHuy.TabIndex = 58;
             this.btnHuy.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
-            // LopThamGia
+            // View_LopThamGia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -163,13 +168,14 @@
             this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.btnApDungTatCa);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.dgvListLop);
+            this.Controls.Add(this.cboTenDichVu);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
-            this.Name = "LopThamGia";
+            this.Name = "View_LopThamGia";
             this.Size = new System.Drawing.Size(1390, 834);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.View_LopThamGia_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListLop)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -179,8 +185,8 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ComboBox cboTenDichVu;
+        private System.Windows.Forms.DataGridView dgvListLop;
         private Bunifu.Framework.UI.BunifuThinButton2 btnApDungTatCa;
         private Bunifu.Framework.UI.BunifuThinButton2 btnLuu;
         private Bunifu.Framework.UI.BunifuThinButton2 btnHuy;

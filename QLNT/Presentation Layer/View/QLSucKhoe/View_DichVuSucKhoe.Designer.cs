@@ -30,21 +30,21 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(View_DichVuSucKhoe));
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvSucKhoe = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.bunifuMaterialTextbox2 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.bunifuMaterialTextbox1 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.bunifuMaterialTextbox3 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.bunifuMaterialTextbox4 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.txtMaDV = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.txtTenDV = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.txtChiPhi = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label6 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.txtChiTiet = new System.Windows.Forms.RichTextBox();
             this.btnLuu = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnThemMoi = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnDSLopThamGia = new Bunifu.Framework.UI.BunifuThinButton2();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dtNgayKham = new Bunifu.Framework.UI.BunifuDatepicker();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSucKhoe)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -59,14 +59,15 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Dịch vụ sức khỏe";
             // 
-            // dataGridView1
+            // dgvSucKhoe
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(15, 146);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(713, 573);
-            this.dataGridView1.TabIndex = 3;
+            this.dgvSucKhoe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSucKhoe.Location = new System.Drawing.Point(15, 146);
+            this.dgvSucKhoe.Name = "dgvSucKhoe";
+            this.dgvSucKhoe.RowTemplate.Height = 28;
+            this.dgvSucKhoe.Size = new System.Drawing.Size(713, 573);
+            this.dgvSucKhoe.TabIndex = 3;
+            this.dgvSucKhoe.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSucKhoe_CellClick);
             // 
             // label3
             // 
@@ -97,7 +98,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Gray;
-            this.label4.Location = new System.Drawing.Point(805, 317);
+            this.label4.Location = new System.Drawing.Point(805, 318);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(129, 26);
@@ -116,81 +117,62 @@
             this.label5.TabIndex = 54;
             this.label5.Text = "Chi phí:";
             // 
-            // bunifuMaterialTextbox2
+            // txtMaDV
             // 
-            this.bunifuMaterialTextbox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox2.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuMaterialTextbox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMaterialTextbox2.HintForeColor = System.Drawing.Color.Empty;
-            this.bunifuMaterialTextbox2.HintText = "";
-            this.bunifuMaterialTextbox2.isPassword = false;
-            this.bunifuMaterialTextbox2.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(89)))), ((int)(((byte)(180)))));
-            this.bunifuMaterialTextbox2.LineIdleColor = System.Drawing.Color.Gray;
-            this.bunifuMaterialTextbox2.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(89)))), ((int)(((byte)(180)))));
-            this.bunifuMaterialTextbox2.LineThickness = 3;
-            this.bunifuMaterialTextbox2.Location = new System.Drawing.Point(998, 147);
-            this.bunifuMaterialTextbox2.Margin = new System.Windows.Forms.Padding(6);
-            this.bunifuMaterialTextbox2.Name = "bunifuMaterialTextbox2";
-            this.bunifuMaterialTextbox2.Size = new System.Drawing.Size(316, 50);
-            this.bunifuMaterialTextbox2.TabIndex = 56;
-            this.bunifuMaterialTextbox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtMaDV.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMaDV.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtMaDV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtMaDV.HintForeColor = System.Drawing.Color.Empty;
+            this.txtMaDV.HintText = "";
+            this.txtMaDV.isPassword = false;
+            this.txtMaDV.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(89)))), ((int)(((byte)(180)))));
+            this.txtMaDV.LineIdleColor = System.Drawing.Color.Gray;
+            this.txtMaDV.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(89)))), ((int)(((byte)(180)))));
+            this.txtMaDV.LineThickness = 3;
+            this.txtMaDV.Location = new System.Drawing.Point(998, 147);
+            this.txtMaDV.Margin = new System.Windows.Forms.Padding(6);
+            this.txtMaDV.Name = "txtMaDV";
+            this.txtMaDV.Size = new System.Drawing.Size(316, 50);
+            this.txtMaDV.TabIndex = 56;
+            this.txtMaDV.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // bunifuMaterialTextbox1
+            // txtTenDV
             // 
-            this.bunifuMaterialTextbox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox1.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuMaterialTextbox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMaterialTextbox1.HintForeColor = System.Drawing.Color.Empty;
-            this.bunifuMaterialTextbox1.HintText = "";
-            this.bunifuMaterialTextbox1.isPassword = false;
-            this.bunifuMaterialTextbox1.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(89)))), ((int)(((byte)(180)))));
-            this.bunifuMaterialTextbox1.LineIdleColor = System.Drawing.Color.Gray;
-            this.bunifuMaterialTextbox1.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(89)))), ((int)(((byte)(180)))));
-            this.bunifuMaterialTextbox1.LineThickness = 3;
-            this.bunifuMaterialTextbox1.Location = new System.Drawing.Point(998, 219);
-            this.bunifuMaterialTextbox1.Margin = new System.Windows.Forms.Padding(6);
-            this.bunifuMaterialTextbox1.Name = "bunifuMaterialTextbox1";
-            this.bunifuMaterialTextbox1.Size = new System.Drawing.Size(316, 50);
-            this.bunifuMaterialTextbox1.TabIndex = 56;
-            this.bunifuMaterialTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtTenDV.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTenDV.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtTenDV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtTenDV.HintForeColor = System.Drawing.Color.Empty;
+            this.txtTenDV.HintText = "";
+            this.txtTenDV.isPassword = false;
+            this.txtTenDV.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(89)))), ((int)(((byte)(180)))));
+            this.txtTenDV.LineIdleColor = System.Drawing.Color.Gray;
+            this.txtTenDV.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(89)))), ((int)(((byte)(180)))));
+            this.txtTenDV.LineThickness = 3;
+            this.txtTenDV.Location = new System.Drawing.Point(998, 219);
+            this.txtTenDV.Margin = new System.Windows.Forms.Padding(6);
+            this.txtTenDV.Name = "txtTenDV";
+            this.txtTenDV.Size = new System.Drawing.Size(316, 50);
+            this.txtTenDV.TabIndex = 56;
+            this.txtTenDV.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // bunifuMaterialTextbox3
+            // txtChiPhi
             // 
-            this.bunifuMaterialTextbox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox3.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuMaterialTextbox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMaterialTextbox3.HintForeColor = System.Drawing.Color.Empty;
-            this.bunifuMaterialTextbox3.HintText = "";
-            this.bunifuMaterialTextbox3.isPassword = false;
-            this.bunifuMaterialTextbox3.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(89)))), ((int)(((byte)(180)))));
-            this.bunifuMaterialTextbox3.LineIdleColor = System.Drawing.Color.Gray;
-            this.bunifuMaterialTextbox3.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(89)))), ((int)(((byte)(180)))));
-            this.bunifuMaterialTextbox3.LineThickness = 3;
-            this.bunifuMaterialTextbox3.Location = new System.Drawing.Point(998, 293);
-            this.bunifuMaterialTextbox3.Margin = new System.Windows.Forms.Padding(6);
-            this.bunifuMaterialTextbox3.Name = "bunifuMaterialTextbox3";
-            this.bunifuMaterialTextbox3.Size = new System.Drawing.Size(316, 50);
-            this.bunifuMaterialTextbox3.TabIndex = 56;
-            this.bunifuMaterialTextbox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // bunifuMaterialTextbox4
-            // 
-            this.bunifuMaterialTextbox4.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox4.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuMaterialTextbox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMaterialTextbox4.HintForeColor = System.Drawing.Color.Empty;
-            this.bunifuMaterialTextbox4.HintText = "";
-            this.bunifuMaterialTextbox4.isPassword = false;
-            this.bunifuMaterialTextbox4.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(89)))), ((int)(((byte)(180)))));
-            this.bunifuMaterialTextbox4.LineIdleColor = System.Drawing.Color.Gray;
-            this.bunifuMaterialTextbox4.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(89)))), ((int)(((byte)(180)))));
-            this.bunifuMaterialTextbox4.LineThickness = 3;
-            this.bunifuMaterialTextbox4.Location = new System.Drawing.Point(998, 364);
-            this.bunifuMaterialTextbox4.Margin = new System.Windows.Forms.Padding(6);
-            this.bunifuMaterialTextbox4.Name = "bunifuMaterialTextbox4";
-            this.bunifuMaterialTextbox4.Size = new System.Drawing.Size(316, 50);
-            this.bunifuMaterialTextbox4.TabIndex = 56;
-            this.bunifuMaterialTextbox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtChiPhi.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtChiPhi.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtChiPhi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtChiPhi.HintForeColor = System.Drawing.Color.Empty;
+            this.txtChiPhi.HintText = "";
+            this.txtChiPhi.isPassword = false;
+            this.txtChiPhi.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(89)))), ((int)(((byte)(180)))));
+            this.txtChiPhi.LineIdleColor = System.Drawing.Color.Gray;
+            this.txtChiPhi.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(89)))), ((int)(((byte)(180)))));
+            this.txtChiPhi.LineThickness = 3;
+            this.txtChiPhi.Location = new System.Drawing.Point(998, 364);
+            this.txtChiPhi.Margin = new System.Windows.Forms.Padding(6);
+            this.txtChiPhi.Name = "txtChiPhi";
+            this.txtChiPhi.Size = new System.Drawing.Size(316, 50);
+            this.txtChiPhi.TabIndex = 56;
+            this.txtChiPhi.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // label6
             // 
@@ -204,13 +186,13 @@
             this.label6.TabIndex = 54;
             this.label6.Text = "Chi tiết:";
             // 
-            // richTextBox1
+            // txtChiTiet
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(998, 465);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(316, 113);
-            this.richTextBox1.TabIndex = 57;
-            this.richTextBox1.Text = "";
+            this.txtChiTiet.Location = new System.Drawing.Point(998, 465);
+            this.txtChiTiet.Name = "txtChiTiet";
+            this.txtChiTiet.Size = new System.Drawing.Size(316, 113);
+            this.txtChiTiet.TabIndex = 57;
+            this.txtChiTiet.Text = "";
             // 
             // btnLuu
             // 
@@ -236,6 +218,7 @@
             this.btnLuu.Size = new System.Drawing.Size(143, 63);
             this.btnLuu.TabIndex = 58;
             this.btnLuu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnThemMoi
             // 
@@ -246,7 +229,7 @@
             this.btnThemMoi.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
             this.btnThemMoi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(236)))), ((int)(((byte)(245)))));
             this.btnThemMoi.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnThemMoi.BackgroundImage")));
-            this.btnThemMoi.ButtonText = "Thêm mới";
+            this.btnThemMoi.ButtonText = "Refresh";
             this.btnThemMoi.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThemMoi.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThemMoi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
@@ -261,6 +244,7 @@
             this.btnThemMoi.Size = new System.Drawing.Size(153, 63);
             this.btnThemMoi.TabIndex = 58;
             this.btnThemMoi.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnThemMoi.Click += new System.EventHandler(this.btnThemMoi_Click);
             // 
             // btnDSLopThamGia
             // 
@@ -286,31 +270,47 @@
             this.btnDSLopThamGia.Size = new System.Drawing.Size(185, 63);
             this.btnDSLopThamGia.TabIndex = 58;
             this.btnDSLopThamGia.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnDSLopThamGia.Click += new System.EventHandler(this.btnDSLopThamGia_Click);
+            // 
+            // dtNgayKham
+            // 
+            this.dtNgayKham.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(89)))), ((int)(((byte)(180)))));
+            this.dtNgayKham.BorderRadius = 0;
+            this.dtNgayKham.ForeColor = System.Drawing.Color.White;
+            this.dtNgayKham.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dtNgayKham.FormatCustom = null;
+            this.dtNgayKham.Location = new System.Drawing.Point(998, 302);
+            this.dtNgayKham.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.dtNgayKham.Name = "dtNgayKham";
+            this.dtNgayKham.Size = new System.Drawing.Size(318, 55);
+            this.dtNgayKham.TabIndex = 76;
+            this.dtNgayKham.Value = new System.DateTime(2017, 4, 27, 21, 49, 25, 791);
             // 
             // View_DichVuSucKhoe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(236)))), ((int)(((byte)(245)))));
+            this.Controls.Add(this.dtNgayKham);
             this.Controls.Add(this.btnDSLopThamGia);
             this.Controls.Add(this.btnThemMoi);
             this.Controls.Add(this.btnLuu);
-            this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.bunifuMaterialTextbox4);
-            this.Controls.Add(this.bunifuMaterialTextbox3);
-            this.Controls.Add(this.bunifuMaterialTextbox1);
-            this.Controls.Add(this.bunifuMaterialTextbox2);
+            this.Controls.Add(this.txtChiTiet);
+            this.Controls.Add(this.txtChiPhi);
+            this.Controls.Add(this.txtTenDV);
+            this.Controls.Add(this.txtMaDV);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvSucKhoe);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "View_DichVuSucKhoe";
             this.Size = new System.Drawing.Size(1390, 834);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.View_DichVuSucKhoe_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSucKhoe)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -319,19 +319,19 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvSucKhoe;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox2;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox1;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox3;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox4;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtMaDV;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtTenDV;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtChiPhi;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox txtChiTiet;
         private Bunifu.Framework.UI.BunifuThinButton2 btnLuu;
         private Bunifu.Framework.UI.BunifuThinButton2 btnThemMoi;
         private Bunifu.Framework.UI.BunifuThinButton2 btnDSLopThamGia;
+        private Bunifu.Framework.UI.BunifuDatepicker dtNgayKham;
     }
 }

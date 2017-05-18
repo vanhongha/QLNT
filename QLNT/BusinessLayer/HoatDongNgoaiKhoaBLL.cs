@@ -9,6 +9,13 @@ namespace QLNT.BusinessLayer
 {
     class HoatDongNgoaiKhoaBLL
     {
+
+        public static string GetTenHoatDong(string maHD)
+        {
+            HoatDongNgoaiKhoa hoatDong = HoatDongNgoaiKhoaDAL.GetHoatDong(maHD);
+            return hoatDong.TenHoatDong;
+        }
+
         public static DataTable GetListHoatDong()
         {
             return HoatDongNgoaiKhoaDAL.GetListHoatDong();
@@ -155,6 +162,38 @@ namespace QLNT.BusinessLayer
 
             //Tien hanh xoa lop nay trong danh sach lop tham gia
             HoatDongNgoaiKhoaDAL.XoaLopThamGia(maHD, maLop);
+        }
+
+        public static bool XoaHoatDong(HoatDongNgoaiKhoa hoatDong)
+        {
+            if (DateTime.Today > hoatDong.NgayBatDau)
+            {
+                MessageBox.Show("Chỉ được xóa hoạt động chưa diễn ra.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            else
+            {
+                string[] listLop = GetListLopThamGia(hoatDong.MaHoatDong);
+                foreach (string maLop in listLop)
+                {
+                    XoaLopThamGia(hoatDong.MaHoatDong, maLop);
+                }
+                HoatDongNgoaiKhoaDAL.XoaHoatDong(hoatDong);
+                return true;
+            }
+        }
+
+        public static string AutoMaHoatDong()
+        {
+            string id = HoatDongNgoaiKhoaDAL.GetLastID().Trim();
+            if (id == "")
+            {
+                return "MAHD000001";
+            }
+            int nextID = int.Parse(id.Remove(0, "MAHD".Length)) + 1;
+            id = "00000" + nextID.ToString();
+            id = id.Substring(id.Length - 6, 6);
+            return "MAHD" + id;
         }
     }
 }
