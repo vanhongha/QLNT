@@ -45,12 +45,11 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.content = new System.Windows.Forms.Panel();
             this.view_DanhSachLopThamGiaHoatDong1 = new QLNT.Presentation_Layer.View.QLHoatDong.View_DanhSachLopThamGiaHoatDong();
-<<<<<<< HEAD
+
             this.view_PhieuNguyenLieu1 = new QLNT.Presentation_Layer.View.QLDinhDuong.View_PhieuMuaNguyenLieu();
-=======
+
             this.view_LopThamGia1 = new View.QLSucKhoe.View_LopThamGia();
-            this.view_PhieuNguyenLieu1 = new QLNT.Presentation_Layer.View.QLDinhDuong.View_PhieuNguyenLieu();
->>>>>>> origin/master
+
             this.view_CapNhatNguyenLieu1 = new QLNT.Presentation_Layer.View.QLDinhDuong.View_CapNhatNguyenLieu();
             this.view_BieuDoCanNang1 = new QLNT.Presentation_Layer.View.QLSucKhoe.View_BieuDoCanNang();
             this.view_BieuDoChieuCao1 = new QLNT.Presentation_Layer.View.QLSucKhoe.View_BieuDoChieuCao();
