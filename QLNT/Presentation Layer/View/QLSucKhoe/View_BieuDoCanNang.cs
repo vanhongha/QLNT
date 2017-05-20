@@ -41,7 +41,7 @@ namespace QLNT.Presentation_Layer.View.QLSucKhoe
 
         private void LoadCombobox()
         {
-            cboLop.DataSource = TreBLL.GetLopDaHoc(maTre);
+            //cboLop.DataSource = TreBLL.GetLopDaHoc(maTre);
             cboLop.DisplayMember = "TenLop";
             cboLop.ValueMember = "MaLop";
             cboLop.Text = "";
