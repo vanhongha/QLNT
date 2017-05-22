@@ -168,5 +168,101 @@ namespace QLNT.Presentation_Layer.View.QLDinhDuong
             getDataGridViewNguyenLieuTungMon("");
             setTextInfo();
         }
+
+        private void bunifuThinButton21_Click(object sender, EventArgs e)
+        {
+            if (txtMaMonAn.Text == "")
+            {
+                MessageBox.Show("Vui lòng chọn một món ăn cần cập nhật", "Thông báo", MessageBoxButtons.OK);
+                return;
+            }
+
+
+            //trường hợp đủ điều kiện để cập nhật
+            MonAn monan = new MonAn();
+            monan.MaMonAn = txtMaMonAn.Text;
+            monan.TenMonAn = txtTenMonAn.Text;
+            MonAnBLL.CapNhatMonAn(monan);
+            getDataGridViewMonAn();
+
+        }
+
+        private void btnThemNL_Click(object sender, EventArgs e)
+        {
+            if (txtMaMonAn.Text == "")
+            {
+                MessageBox.Show("Vui lòng chọn món ăn cần thêm nguyên liệu", "Thông báo", MessageBoxButtons.OK);
+                return;
+            }
+
+            if (cboChonNguyenLieu.Text == "")
+            {
+                MessageBox.Show("Nguyên liệu không được để trống \nVui lòng chọn một nguyên liệu", "Thông báo", MessageBoxButtons.OK);
+                return;
+            }
+
+
+            if (txtSoLuong.Text == "")
+            {
+                MessageBox.Show("Số lượng không đươc để trống \nVui lòng điền vào số lượng", "Thông báo", MessageBoxButtons.OK);
+                txtSoLuong.Text = "0";
+                return;
+            }
+
+
+
+            //đủ điều kiện thêm chi tiet
+            NguyenLieuTungMon nltungmon = new NguyenLieuTungMon();
+            nltungmon.MaMon=txtMaMonAn.Text.Trim();
+            nltungmon.MaNL = NguyenLieuBLL.LayMaNguyenLieuTheoTen(cboChonNguyenLieu.Text.Trim());
+            nltungmon.SoLuong = Convert.ToInt32(txtSoLuong.Text.Trim());
+
+
+            NguyenLieuTungMonBLL.ThemNLTungMon(nltungmon);
+            getDataGridViewNguyenLieuTungMon(txtMaMonAn.Text);
+        }
+
+        private void cboChonNguyenLieu_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtDonViTinh.Text= NguyenLieuBLL.LayDonViTinhTheoTen(cboChonNguyenLieu.Text.Trim());
+            txtCSDD.Text= NguyenLieuBLL.LayCSDDTheoTen(cboChonNguyenLieu.Text.Trim());
+        }
+
+        private void btnCapNhat_Click(object sender, EventArgs e)
+        {
+            if (cboChonNguyenLieu.Text == "")
+            {
+                MessageBox.Show("Chưa chọn nguyên liệu cần cập nhật", "Thông báo", MessageBoxButtons.OK);
+                return;
+            }
+            NguyenLieuTungMon nltungmon = new NguyenLieuTungMon();
+            nltungmon.MaMon = txtMaMonAn.Text.Trim();
+            nltungmon.MaNL = NguyenLieuBLL.LayMaNguyenLieuTheoTen(cboChonNguyenLieu.Text.Trim());
+            nltungmon.SoLuong = Convert.ToInt32(txtSoLuong.Text.Trim());
+
+            NguyenLieuTungMonBLL.CapNhatNL(nltungmon);
+            getDataGridViewNguyenLieuTungMon(txtMaMonAn.Text);
+        }
+
+        private void btnXoaTrang_Click(object sender, EventArgs e)
+        {
+            XoaTrang();
+            cboChonNguyenLieu.Enabled = true;
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+           
+            if (cboChonNguyenLieu.Text == "")
+            {
+                MessageBox.Show("Vui lòng chọn một nguyên liệu để xóa", "Thông báo", MessageBoxButtons.OK);
+                return;
+            }
+            string manl= NguyenLieuBLL.LayMaNguyenLieuTheoTen(cboChonNguyenLieu.Text.Trim());
+            NguyenLieuTungMonBLL.XoaNLTungMon(txtMaMonAn.Text.Trim(), manl);
+            XoaTrang();
+            getDataGridViewNguyenLieuTungMon(txtMaMonAn.Text);
+
+        }
     }
 }
