@@ -51,6 +51,14 @@ namespace QLNT.BusinessLayer
         {
             return NguyenLieuDAL.LayMaNguyenLieuTheoTen(tenNL);
         }
+        public static string LayDonViTinhTheoTen(string tenNL)
+        {
+            return NguyenLieuDAL.LayDonViTinhTheoTen(tenNL);
+        }
+        public static string LayCSDDTheoTen(string tenNL)
+        {
+            return NguyenLieuDAL.LayCSDDTheoTen(tenNL);
+        }
 
         public static string LaySoLuongTonTheoMaNguyenLieu(string maNguyenLieu)
         {
