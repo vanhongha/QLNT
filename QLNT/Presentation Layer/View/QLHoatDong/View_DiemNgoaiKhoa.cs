@@ -24,10 +24,12 @@ namespace QLNT.Presentation_Layer.View.QLHoatDong
             cboLop.DataSource = LopBLL.GetListLop();
             cboLop.DisplayMember = "TenLop";
             cboLop.ValueMember = "MaLop";
+            cboLop.Text = "";
 
             cboHoatDong.DataSource = HoatDongNgoaiKhoaBLL.GetListHoatDong();
             cboHoatDong.DisplayMember = "TenHoatDong";
             cboHoatDong.ValueMember = "MaHoatDong";
+            cboHoatDong.Text = "";
         }
 
         private void LoadDataGridView()
@@ -35,6 +37,10 @@ namespace QLNT.Presentation_Layer.View.QLHoatDong
             dgvDiemTre.DataSource = HoatDongNgoaiKhoaBLL.GetListDiemHoatDong(cboHoatDong.SelectedValue.ToString(), cboLop.SelectedValue.ToString());
             string[] listProp = { "MaTre", "HoTenTre", "Diem" };
             ControlFormat.DataGridViewFormat(dgvDiemTre, listProp);
+            dgvDiemTre.Columns["MaTre"].HeaderText = "Mã trẻ";
+            dgvDiemTre.Columns["HoTenTre"].HeaderText = "Họ tên trẻ";
+            dgvDiemTre.Columns["HoTenTre"].Width = 200;
+            dgvDiemTre.Columns["Diem"].HeaderText = "Điểm";
         }
 
         private void cboLop_SelectedIndexChanged(object sender, EventArgs e)
@@ -47,7 +53,8 @@ namespace QLNT.Presentation_Layer.View.QLHoatDong
 
         private void cboHoatDong_SelectedIndexChanged(object sender, EventArgs e)
         {
-            LoadDataGridView();
+            if(cboLop.Text != "")
+                LoadDataGridView();
         }
 
 

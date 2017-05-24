@@ -64,6 +64,7 @@
             this.chartCanNang.Location = new System.Drawing.Point(156, 200);
             this.chartCanNang.Name = "chartCanNang";
             series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.chartCanNang.Series.Add(series1);
@@ -144,10 +145,10 @@
             this.txtHoTenTre.LineIdleColor = System.Drawing.Color.Gray;
             this.txtHoTenTre.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(89)))), ((int)(((byte)(180)))));
             this.txtHoTenTre.LineThickness = 3;
-            this.txtHoTenTre.Location = new System.Drawing.Point(336, 112);
+            this.txtHoTenTre.Location = new System.Drawing.Point(337, 84);
             this.txtHoTenTre.Margin = new System.Windows.Forms.Padding(6);
             this.txtHoTenTre.Name = "txtHoTenTre";
-            this.txtHoTenTre.Size = new System.Drawing.Size(522, 49);
+            this.txtHoTenTre.Size = new System.Drawing.Size(522, 79);
             this.txtHoTenTre.TabIndex = 69;
             this.txtHoTenTre.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 

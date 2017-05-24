@@ -57,6 +57,11 @@ namespace QLNT.Presentation_Layer.View.QLSucKhoe
             dgvListTre.DataSource = DichVuSucKhoeBLL.GetListSucKhoe(cboDichVu.SelectedValue.ToString(), cboLop.SelectedValue.ToString());
             string[] listProp = { "MaTre", "HoTenTre", "CanNang", "ChieuCao" };
             ControlFormat.DataGridViewFormat(dgvListTre, listProp);
+            dgvListTre.Columns["MaTre"].HeaderText = "Mã trẻ";
+            dgvListTre.Columns["HoTenTre"].HeaderText = "Họ tên trẻ";
+            dgvListTre.Columns["CanNang"].HeaderText = "Cân nặng";
+            dgvListTre.Columns["ChieuCao"].HeaderText = "Chiều cao";
+
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
@@ -78,10 +83,19 @@ namespace QLNT.Presentation_Layer.View.QLSucKhoe
 
         private void dgvListTre_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtHoTen.Text = dgvListTre.Rows[e.RowIndex].Cells["HoTenTre"].Value.ToString();
-            txtCanNang.Text = dgvListTre.Rows[e.RowIndex].Cells["CanNang"].Value.ToString();
-            txtChieuCao.Text = dgvListTre.Rows[e.RowIndex].Cells["ChieuCao"].Value.ToString();
-            txtTinhTrang.Text = dgvListTre.Rows[e.RowIndex].Cells["TheTrang"].Value.ToString();
+            if(e.RowIndex > -1)
+            {
+                txtHoTen.Text = dgvListTre.Rows[e.RowIndex].Cells["HoTenTre"].Value.ToString();
+                txtCanNang.Text = dgvListTre.Rows[e.RowIndex].Cells["CanNang"].Value.ToString();
+                txtChieuCao.Text = dgvListTre.Rows[e.RowIndex].Cells["ChieuCao"].Value.ToString();
+                txtTinhTrang.Text = dgvListTre.Rows[e.RowIndex].Cells["TheTrang"].Value.ToString();
+            }
+            
+        }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

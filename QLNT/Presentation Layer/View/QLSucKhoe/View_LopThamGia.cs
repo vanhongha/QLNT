@@ -32,20 +32,15 @@ namespace QLNT.Presentation_Layer.View.QLSucKhoe
 
         private void View_LopThamGia_Load(object sender, EventArgs e)
         {
-            SetMaDV();
-            LoadListDichVu();
-            SetMaDV();
-            if (maDV != "")
-                LoadDataGridView();
+            
         }
 
-        private void LoadListDichVu()
+        public void LoadForm(string maDV)
         {
-            cboTenDichVu.DataSource = DichVuSucKhoeBLL.GetListDichVu();
-            cboTenDichVu.DisplayMember = "TenDichVu";
-            cboTenDichVu.ValueMember = "MaDichVu";
-            if (cboTenDichVu.Text == "")
-                cboTenDichVu.SelectedText = maDV;
+            this.maDV = maDV;
+            labelTenDV.Text = DichVuSucKhoeBLL.GetTenDV(maDV);
+            if (maDV != "")
+                LoadDataGridView();
         }
 
         private void LoadDataGridView()
@@ -53,6 +48,9 @@ namespace QLNT.Presentation_Layer.View.QLSucKhoe
             dgvListLop.DataSource = LopBLL.GetListLop();
             string[] listProp = { "CheckBox", "MaLop", "TenLop", "SiSo" };
             ControlFormat.DataGridViewFormat(dgvListLop, listProp);
+            dgvListLop.Columns["MaLop"].HeaderText = "Mã lớp";
+            dgvListLop.Columns["TenLop"].HeaderText = "Tên lớp";
+            dgvListLop.Columns["SiSo"].HeaderText = "Sỉ số";
         }
 
         private bool CheckLopThamGia(string maLop, string[] listLop)
@@ -67,15 +65,9 @@ namespace QLNT.Presentation_Layer.View.QLSucKhoe
             return false;
         }
 
-        private void cboTenDichVu_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            maDV = cboTenDichVu.SelectedValue.ToString();
-            LoadDataGridView();
-        }
-
         private void btnApDungTatCa_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < dgvListLop.Rows.Count - 1; i++)
+            for (int i = 0; i < dgvListLop.Rows.Count; i++)
             {
                 listLop[dgvListLop.Rows[i].Cells["MaLop"].Value.ToString()] = true;
             }
@@ -88,10 +80,10 @@ namespace QLNT.Presentation_Layer.View.QLSucKhoe
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < dgvListLop.Rows.Count - 1; i++)
+            for (int i = 0; i < dgvListLop.Rows.Count; i++)
             {
                 string maLop = dgvListLop.Rows[i].Cells["MaLop"].Value.ToString();
-                if (dgvListLop.Rows[i].Cells["CheckBox"].Value.ToString() == "True")
+                if (dgvListLop.Rows[i].Cells["CheckBox"].Value.ToString() == "True" || dgvListLop.Rows[i].Cells["CheckBox"].Value.ToString() == "true")
                     listLop[maLop] = true;
                 else
                     listLop[maLop] = false;
@@ -114,7 +106,7 @@ namespace QLNT.Presentation_Layer.View.QLSucKhoe
             listLop.Clear();
             if (lopThamGia != null)
             {
-                for (int i = 0; i < dgvListLop.RowCount - 1; i++)
+                for (int i = 0; i < dgvListLop.RowCount; i++)
                 {
                     DataGridViewCheckBoxCell chkBoxCell = (DataGridViewCheckBoxCell)dgvListLop.Rows[i].Cells["CheckBox"];
                     if (CheckLopThamGia(dgvListLop.Rows[i].Cells["MaLop"].Value.ToString(), lopThamGia))
@@ -128,6 +120,37 @@ namespace QLNT.Presentation_Layer.View.QLSucKhoe
                         listLop.Add(dgvListLop.Rows[i].Cells["MaLop"].Value.ToString(), false);
                     }
                 }
+            }
+        }
+
+        private void btnTreThamGia_Click(object sender, EventArgs e)
+        {
+            string[] lopThamGia = DichVuSucKhoeBLL.GetListLopThamGia(maDV);
+            if (dgvListLop.SelectedRows.Count > 0)
+            {
+                if (!CheckLopThamGia(dgvListLop.SelectedRows[0].Cells["MaLop"].Value.ToString(), lopThamGia))
+                {
+                    MessageBox.Show("Lớp này không tham gia dịch vụ y tế này, bạn cần chọn và lưu lớp này tham gia dịch vụ trước mới có thể chỉnh sửa danh sách trẻ tham gia dịch vụ.",
+                        "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    frmMain parentForm = (this.Parent.Parent as frmMain);
+                    parentForm.UpdateSubView("DanhSachTreThamGiaDichVu");
+                    View_DanhSachTreThamGiaDichVu view = (View_DanhSachTreThamGiaDichVu)parentForm.GetSubView("DanhSachTreThamGiaDichVu");
+                    view.LoadForm(maDV, dgvListLop.SelectedRows[0].Cells["MaLop"].Value.ToString());
+                }
+            }
+        }
+
+        private void dgvListLop_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex > -1)
+            {
+                txtMaLop.Text = dgvListLop.Rows[e.RowIndex].Cells["MaLop"].Value.ToString();
+                txtTenLop.Text = dgvListLop.Rows[e.RowIndex].Cells["TenLop"].Value.ToString();
+                txtSiSoLop.Text = dgvListLop.Rows[e.RowIndex].Cells["SiSo"].Value.ToString();
+                txtTreThamGia.Text = DichVuSucKhoeBLL.GetListTreThamGiaDichVu(maDV, txtMaLop.Text).Length.ToString();
             }
         }
     }

@@ -195,5 +195,34 @@ namespace QLNT.BusinessLayer
             id = id.Substring(id.Length - 6, 6);
             return "MAHD" + id;
         }
+
+        public static bool CapNhatTreThamGiaHoatDong(Dictionary<string, bool> listTre, string maHD)
+        {
+            HoatDongNgoaiKhoa hoatDong = HoatDongNgoaiKhoaDAL.GetHoatDong(maHD);
+            if (DateTime.Today > hoatDong.NgayBatDau)
+            {
+                MessageBox.Show("Hoạt động này đã diễn ra, không được thay đổi thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            else
+            {
+                foreach (string key in listTre.Keys)
+                {
+                    HoatDongNgoaiKhoaDAL.CapNhatTreThamGiaHoatDong(maHD, key, listTre[key] ? 1 : 0);
+                }
+                return true;
+            }
+        }
+
+        public static string[] GetListTreThamGiaHoatDong(string maHD, string maLop)
+        {
+            DataTable dt = HoatDongNgoaiKhoaDAL.GetListTreThamGiaHoatDong(maHD, maLop);
+            string[] listTre = new string[dt.Rows.Count];
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                listTre[i] = dt.Rows[i]["Matre"].ToString();
+            }
+            return listTre;
+        }
     }
 }

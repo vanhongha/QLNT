@@ -226,6 +226,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SucKhoeDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Presentation Layer\View\QLSucKhoe\View_DanhSachTreThamGiaDichVu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\View\QLSucKhoe\View_DanhSachTreThamGiaDichVu.Designer.cs">
+      <DependentUpon>View_DanhSachTreThamGiaDichVu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentation Layer\View\QLSucKhoe\View_LopThamGia.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -387,6 +393,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation Layer\View\QLSucKhoe\frm_BaoCaoChiTietSK.resx">
       <DependentUpon>frm_BaoCaoChiTietSK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\View\QLSucKhoe\View_DanhSachTreThamGiaDichVu.resx">
+      <DependentUpon>View_DanhSachTreThamGiaDichVu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation Layer\View\QLSucKhoe\View_LopThamGia.resx">
       <DependentUpon>View_LopThamGia.cs</DependentUpon>

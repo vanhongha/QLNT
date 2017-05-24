@@ -9,6 +9,20 @@ namespace QLNT.BusinessLayer
 {
     class DichVuSucKhoeBLL
     {
+
+        public static DichVuSucKhoe GetDV(string maDV)
+        {
+            return DichVuSucKhoeDAL.GetDichVu(maDV);
+        }
+
+        public static string GetTenDV(string maDV)
+        {
+            DichVuSucKhoe dichVu = DichVuSucKhoeDAL.GetDichVu(maDV);
+            if(dichVu != null)
+                return dichVu.TenDV;
+            return "";
+        }
+
         public static DataTable GetListDichVu()
         {
             return DichVuSucKhoeDAL.GetListDichVu();
@@ -144,6 +158,72 @@ namespace QLNT.BusinessLayer
                 DichVuSucKhoeDAL.CapNhatSucKhoe(maDV, maTre, canNang, chieuCao, tinhTrang);
                 return true;
             }
+        }
+
+        public static bool XoaDichVu(DichVuSucKhoe dichVu)
+        {
+            if (DateTime.Today > dichVu.NgayKham)
+            {
+                MessageBox.Show("Chỉ được xóa dịch vụ chưa diễn ra.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            else
+            {
+                string[] listLop = GetListLopThamGia(dichVu.MaDV);
+                foreach (string maLop in listLop)
+                {
+                    XoaLopThamGia(dichVu.MaDV, maLop);
+                }
+                DichVuSucKhoeDAL.XoaDichVu(dichVu);
+                return true;
+            }
+        }
+
+        public static string AutoMaDichVu()
+        {
+            string id = DichVuSucKhoeDAL.GetLastID().Trim();
+            if (id == "")
+            {
+                return "MADV000001";
+            }
+            int nextID = int.Parse(id.Remove(0, "MADV".Length)) + 1;
+            id = "00000" + nextID.ToString();
+            id = id.Substring(id.Length - 6, 6);
+            return "MADV" + id;
+        }
+
+        public static bool CapNhatTreThamGiaDichVu(Dictionary<string, bool> listTre, string maDV)
+        {
+            DichVuSucKhoe dichVu = DichVuSucKhoeDAL.GetDichVu(maDV);
+            if (DateTime.Today > dichVu.NgayKham)
+            {
+                MessageBox.Show("Dịch vụ này đã diễn ra, không được thay đổi thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            else
+            {
+                foreach (string key in listTre.Keys)
+                {
+                    DichVuSucKhoeDAL.CapNhatTreThamGiaDichVu(maDV, key, listTre[key] ? 1 : 0);
+                }
+                return true;
+            }
+        }
+
+        public static string[] GetListTreThamGiaDichVu(string maDV, string maLop)
+        {
+            DataTable dt = DichVuSucKhoeDAL.GetListTreThamGiaDichVu(maDV, maLop);
+            string[] listTre = new string[dt.Rows.Count];
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                listTre[i] = dt.Rows[i]["Matre"].ToString();
+            }
+            return listTre;
+        }
+
+        public static DataTable GetListKetQuaSucKhoeTheoThang(string maTre, int thang, int nam)
+        {
+            return DichVuSucKhoeDAL.GetListSucKhoeTheoThang(maTre, thang, nam);
         }
     }
 }

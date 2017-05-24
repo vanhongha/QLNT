@@ -187,6 +187,16 @@ namespace QLNT.Presentation_Layer
                     view_LopThamGia1.Visible = true;
                     view_LopThamGia1.BringToFront();
                     break;
+                case "DanhSachTreThamGiaDichVu":
+                    view_DanhSachTreThamGiaDichVu1.Enabled = true;
+                    view_DanhSachTreThamGiaDichVu1.Visible = true;
+                    view_DanhSachTreThamGiaDichVu1.BringToFront();
+                    break;
+                case "DanhSachTreThamGiaHoatDong":
+                    view_DanhSachTreThamGiaHoatDong1.Enabled = true;
+                    view_DanhSachTreThamGiaHoatDong1.Visible = true;
+                    view_DanhSachTreThamGiaHoatDong1.BringToFront();
+                    break;
             }
         }
 
@@ -204,6 +214,12 @@ namespace QLNT.Presentation_Layer
                     return view_CapNhatSucKhoe1;
                 case "DanhSachLopThamGiaHoatDong":
                     return view_DanhSachLopThamGiaHoatDong1;
+                case "DanhSachLopThamGiaDichVu":
+                    return view_LopThamGia1;
+                case "DanhSachTreThamGiaHoatDong":
+                    return view_DanhSachTreThamGiaHoatDong1;
+                case "DanhSachTreThamGiaDichVu":
+                    return view_DanhSachTreThamGiaDichVu1;
             }
             return null;
         }

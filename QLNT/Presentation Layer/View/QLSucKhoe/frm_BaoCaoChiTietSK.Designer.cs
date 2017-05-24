@@ -30,13 +30,23 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.SucKhoeDataSet = new QLNT.Presentation_Layer.View.QLSucKhoe.SucKhoeDataSet();
             this.VW_SUCKHOEBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.SucKhoeDataSet = new QLNT.Presentation_Layer.View.QLSucKhoe.SucKhoeDataSet();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.VW_SUCKHOETableAdapter = new QLNT.Presentation_Layer.View.QLSucKhoe.SucKhoeDataSetTableAdapters.VW_SUCKHOETableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.SucKhoeDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.VW_SUCKHOEBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SucKhoeDataSet)).BeginInit();
             this.SuspendLayout();
+            // 
+            // VW_SUCKHOEBindingSource
+            // 
+            this.VW_SUCKHOEBindingSource.DataMember = "VW_SUCKHOE";
+            this.VW_SUCKHOEBindingSource.DataSource = this.SucKhoeDataSet;
+            // 
+            // SucKhoeDataSet
+            // 
+            this.SucKhoeDataSet.DataSetName = "SucKhoeDataSet";
+            this.SucKhoeDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
@@ -47,18 +57,8 @@
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "QLNT.Presentation_Layer.View.QLSucKhoe.ChiTietSK.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(1054, 610);
+            this.reportViewer1.Size = new System.Drawing.Size(1054, 763);
             this.reportViewer1.TabIndex = 0;
-            // 
-            // SucKhoeDataSet
-            // 
-            this.SucKhoeDataSet.DataSetName = "SucKhoeDataSet";
-            this.SucKhoeDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // VW_SUCKHOEBindingSource
-            // 
-            this.VW_SUCKHOEBindingSource.DataMember = "VW_SUCKHOE";
-            this.VW_SUCKHOEBindingSource.DataSource = this.SucKhoeDataSet;
             // 
             // VW_SUCKHOETableAdapter
             // 
@@ -68,13 +68,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1054, 610);
+            this.ClientSize = new System.Drawing.Size(1054, 763);
             this.Controls.Add(this.reportViewer1);
             this.Name = "frm_BaoCaoChiTietSK";
             this.Text = "frm_BaoCaoChiTietSK";
             this.Load += new System.EventHandler(this.frm_BaoCaoChiTietSK_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.SucKhoeDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.VW_SUCKHOEBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SucKhoeDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }

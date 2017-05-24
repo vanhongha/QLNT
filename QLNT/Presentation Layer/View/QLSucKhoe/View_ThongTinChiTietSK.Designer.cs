@@ -182,10 +182,10 @@
             this.txtHoTenTre.LineIdleColor = System.Drawing.Color.Gray;
             this.txtHoTenTre.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(89)))), ((int)(((byte)(180)))));
             this.txtHoTenTre.LineThickness = 3;
-            this.txtHoTenTre.Location = new System.Drawing.Point(318, 134);
+            this.txtHoTenTre.Location = new System.Drawing.Point(312, 110);
             this.txtHoTenTre.Margin = new System.Windows.Forms.Padding(6);
             this.txtHoTenTre.Name = "txtHoTenTre";
-            this.txtHoTenTre.Size = new System.Drawing.Size(522, 50);
+            this.txtHoTenTre.Size = new System.Drawing.Size(522, 74);
             this.txtHoTenTre.TabIndex = 55;
             this.txtHoTenTre.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -201,10 +201,10 @@
             this.txtCanNang.LineIdleColor = System.Drawing.Color.Gray;
             this.txtCanNang.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(89)))), ((int)(((byte)(180)))));
             this.txtCanNang.LineThickness = 3;
-            this.txtCanNang.Location = new System.Drawing.Point(318, 222);
+            this.txtCanNang.Location = new System.Drawing.Point(312, 198);
             this.txtCanNang.Margin = new System.Windows.Forms.Padding(6);
             this.txtCanNang.Name = "txtCanNang";
-            this.txtCanNang.Size = new System.Drawing.Size(522, 50);
+            this.txtCanNang.Size = new System.Drawing.Size(522, 74);
             this.txtCanNang.TabIndex = 55;
             this.txtCanNang.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -220,10 +220,10 @@
             this.txtChieuCao.LineIdleColor = System.Drawing.Color.Gray;
             this.txtChieuCao.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(89)))), ((int)(((byte)(180)))));
             this.txtChieuCao.LineThickness = 3;
-            this.txtChieuCao.Location = new System.Drawing.Point(318, 316);
+            this.txtChieuCao.Location = new System.Drawing.Point(312, 292);
             this.txtChieuCao.Margin = new System.Windows.Forms.Padding(6);
             this.txtChieuCao.Name = "txtChieuCao";
-            this.txtChieuCao.Size = new System.Drawing.Size(522, 50);
+            this.txtChieuCao.Size = new System.Drawing.Size(522, 74);
             this.txtChieuCao.TabIndex = 55;
             this.txtChieuCao.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -239,10 +239,10 @@
             this.txtTinhTrangSK.LineIdleColor = System.Drawing.Color.Gray;
             this.txtTinhTrangSK.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(89)))), ((int)(((byte)(180)))));
             this.txtTinhTrangSK.LineThickness = 3;
-            this.txtTinhTrangSK.Location = new System.Drawing.Point(318, 408);
+            this.txtTinhTrangSK.Location = new System.Drawing.Point(312, 384);
             this.txtTinhTrangSK.Margin = new System.Windows.Forms.Padding(6);
             this.txtTinhTrangSK.Name = "txtTinhTrangSK";
-            this.txtTinhTrangSK.Size = new System.Drawing.Size(522, 50);
+            this.txtTinhTrangSK.Size = new System.Drawing.Size(522, 74);
             this.txtTinhTrangSK.TabIndex = 55;
             this.txtTinhTrangSK.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
