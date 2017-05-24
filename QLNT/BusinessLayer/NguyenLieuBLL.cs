@@ -12,26 +12,6 @@ namespace QLNT.BusinessLayer
 {
     class NguyenLieuBLL
     {
-        public static DataTable LayDanhSachNguyenLieu()
-        {
-            return NguyenLieuDAL.LayDanhSachNguyenLieu();
-        }
-
-        public static DataTable LayDanhSachNguyenLieu(string tuKhoa)
-        {
-            return NguyenLieuDAL.LayDanhSachNguyenLieu(tuKhoa);
-        }
-        
-        public static DataTable LayDanhSachTenVaMaNguyenLieu()
-        {
-            return NguyenLieuDAL.LayDanhSachTenVaMaNguyenLieu();
-        }
-
-        public static string LayMaNguyenLieuTheoTen(string tenNL)
-        {
-            return NguyenLieuDAL.LayMaNguyenLieuTheoTen(tenNL);
-        }
-
         public static void ThemNguyenLieu(NguyenLieu nguyenlieu)
         {
             NguyenLieuDAL.ThemNguyenLieu(nguyenlieu);
@@ -45,6 +25,36 @@ namespace QLNT.BusinessLayer
         public static void CapNhatNguyenLieu(NguyenLieu nguyenlieu)
         {
             NguyenLieuDAL.CapNhatNguyenLieu(nguyenlieu);
+        }
+
+        public static void CapNhatTonNguyenLieuTheoMa(string maNguyenLieu, int soLuongDung)
+        {
+            NguyenLieuDAL.CapNhatTonNguyenLieuTheoMa(maNguyenLieu,soLuongDung);
+        }
+
+        public static DataTable LayDanhSachNguyenLieu()
+        {
+            return NguyenLieuDAL.LayDanhSachNguyenLieu();
+        }
+
+        public static DataTable LayDanhSachNguyenLieu(string tuKhoa)
+        {
+            return NguyenLieuDAL.LayDanhSachNguyenLieu(tuKhoa);
+        }
+
+        public static DataTable LayDanhSachTenVaMaNguyenLieu()
+        {
+            return NguyenLieuDAL.LayDanhSachTenVaMaNguyenLieu();
+        }
+
+        public static string LayMaNguyenLieuTheoTen(string tenNL)
+        {
+            return NguyenLieuDAL.LayMaNguyenLieuTheoTen(tenNL);
+        }
+
+        public static string LaySoLuongTonTheoMaNguyenLieu(string maNguyenLieu)
+        {
+            return NguyenLieuDAL.LaySoLuongTonTheoMaNguyenLieu(maNguyenLieu);
         }
 
         public static string SinhMaTuDong()

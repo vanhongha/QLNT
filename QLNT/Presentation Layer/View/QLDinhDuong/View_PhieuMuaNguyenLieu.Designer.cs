@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(View_PhieuMuaNguyenLieu));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.label1 = new System.Windows.Forms.Label();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblWarning = new System.Windows.Forms.Label();
             this.btnReload = new System.Windows.Forms.Button();
             this.txtMaPhieuMua2 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.btnXoa = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btnXoaChiTietPhieuMua = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnCapNhat = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnThem = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnXoaTrang = new Bunifu.Framework.UI.BunifuThinButton2();
@@ -54,28 +54,19 @@
             this.label5 = new System.Windows.Forms.Label();
             this.dgvPhieuMua = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btnReloadPhieuMua = new System.Windows.Forms.Button();
+            this.btnNhapKho = new Bunifu.Framework.UI.BunifuThinButton2();
             this.txtThoiGian = new System.Windows.Forms.TextBox();
             this.txtNguoiLapPhieu = new System.Windows.Forms.TextBox();
             this.txtMaPhieuMua = new System.Windows.Forms.TextBox();
             this.btnXoaPhieuMua = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnTaoMoiPhieuMua = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.label11 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChiTietPhieuMua)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhieuMua)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Gray;
-            this.label1.Location = new System.Drawing.Point(289, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(266, 31);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "MUA NGUYÊN LIỆU";
             // 
             // label4
             // 
@@ -112,11 +103,12 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.lblWarning);
             this.groupBox1.Controls.Add(this.btnReload);
             this.groupBox1.Controls.Add(this.txtMaPhieuMua2);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.btnXoa);
+            this.groupBox1.Controls.Add(this.btnXoaChiTietPhieuMua);
             this.groupBox1.Controls.Add(this.btnCapNhat);
             this.groupBox1.Controls.Add(this.btnThem);
             this.groupBox1.Controls.Add(this.btnXoaTrang);
@@ -131,12 +123,23 @@
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.groupBox1.Location = new System.Drawing.Point(14, 288);
+            this.groupBox1.Location = new System.Drawing.Point(14, 265);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(896, 251);
+            this.groupBox1.Size = new System.Drawing.Size(896, 262);
             this.groupBox1.TabIndex = 41;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "CHI TIẾT PHIẾU MUA";
+            // 
+            // lblWarning
+            // 
+            this.lblWarning.AutoSize = true;
+            this.lblWarning.ForeColor = System.Drawing.Color.Maroon;
+            this.lblWarning.Location = new System.Drawing.Point(533, 11);
+            this.lblWarning.Name = "lblWarning";
+            this.lblWarning.Size = new System.Drawing.Size(346, 16);
+            this.lblWarning.TabIndex = 83;
+            this.lblWarning.Text = "Không thể cập nhật chi tiết đối với phiếu mua đã nhập kho";
+            this.lblWarning.Visible = false;
             // 
             // btnReload
             // 
@@ -153,7 +156,7 @@
             // txtMaPhieuMua2
             // 
             this.txtMaPhieuMua2.Enabled = false;
-            this.txtMaPhieuMua2.Location = new System.Drawing.Point(671, 21);
+            this.txtMaPhieuMua2.Location = new System.Drawing.Point(671, 31);
             this.txtMaPhieuMua2.Name = "txtMaPhieuMua2";
             this.txtMaPhieuMua2.Size = new System.Drawing.Size(209, 22);
             this.txtMaPhieuMua2.TabIndex = 71;
@@ -163,7 +166,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Gray;
-            this.label10.Location = new System.Drawing.Point(678, 27);
+            this.label10.Location = new System.Drawing.Point(678, 37);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(0, 18);
             this.label10.TabIndex = 68;
@@ -173,37 +176,37 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Gray;
-            this.label9.Location = new System.Drawing.Point(563, 22);
+            this.label9.Location = new System.Drawing.Point(563, 32);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(111, 18);
             this.label9.TabIndex = 67;
             this.label9.Text = "Mã Phiếu Mua: ";
             // 
-            // btnXoa
+            // btnXoaChiTietPhieuMua
             // 
-            this.btnXoa.ActiveBorderThickness = 1;
-            this.btnXoa.ActiveCornerRadius = 20;
-            this.btnXoa.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
-            this.btnXoa.ActiveForecolor = System.Drawing.Color.White;
-            this.btnXoa.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
-            this.btnXoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(236)))), ((int)(((byte)(245)))));
-            this.btnXoa.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnXoa.BackgroundImage")));
-            this.btnXoa.ButtonText = "Xóa";
-            this.btnXoa.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnXoa.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
-            this.btnXoa.IdleBorderThickness = 1;
-            this.btnXoa.IdleCornerRadius = 20;
-            this.btnXoa.IdleFillColor = System.Drawing.Color.White;
-            this.btnXoa.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
-            this.btnXoa.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
-            this.btnXoa.Location = new System.Drawing.Point(584, 169);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(5);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(122, 41);
-            this.btnXoa.TabIndex = 66;
-            this.btnXoa.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            this.btnXoaChiTietPhieuMua.ActiveBorderThickness = 1;
+            this.btnXoaChiTietPhieuMua.ActiveCornerRadius = 20;
+            this.btnXoaChiTietPhieuMua.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
+            this.btnXoaChiTietPhieuMua.ActiveForecolor = System.Drawing.Color.White;
+            this.btnXoaChiTietPhieuMua.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
+            this.btnXoaChiTietPhieuMua.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(236)))), ((int)(((byte)(245)))));
+            this.btnXoaChiTietPhieuMua.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnXoaChiTietPhieuMua.BackgroundImage")));
+            this.btnXoaChiTietPhieuMua.ButtonText = "Xóa";
+            this.btnXoaChiTietPhieuMua.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnXoaChiTietPhieuMua.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoaChiTietPhieuMua.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
+            this.btnXoaChiTietPhieuMua.IdleBorderThickness = 1;
+            this.btnXoaChiTietPhieuMua.IdleCornerRadius = 20;
+            this.btnXoaChiTietPhieuMua.IdleFillColor = System.Drawing.Color.White;
+            this.btnXoaChiTietPhieuMua.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
+            this.btnXoaChiTietPhieuMua.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
+            this.btnXoaChiTietPhieuMua.Location = new System.Drawing.Point(584, 179);
+            this.btnXoaChiTietPhieuMua.Margin = new System.Windows.Forms.Padding(5);
+            this.btnXoaChiTietPhieuMua.Name = "btnXoaChiTietPhieuMua";
+            this.btnXoaChiTietPhieuMua.Size = new System.Drawing.Size(122, 41);
+            this.btnXoaChiTietPhieuMua.TabIndex = 66;
+            this.btnXoaChiTietPhieuMua.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnXoaChiTietPhieuMua.Click += new System.EventHandler(this.btnXoaChiTietPhieuMua_Click);
             // 
             // btnCapNhat
             // 
@@ -223,7 +226,7 @@
             this.btnCapNhat.IdleFillColor = System.Drawing.Color.White;
             this.btnCapNhat.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
             this.btnCapNhat.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
-            this.btnCapNhat.Location = new System.Drawing.Point(720, 169);
+            this.btnCapNhat.Location = new System.Drawing.Point(720, 179);
             this.btnCapNhat.Margin = new System.Windows.Forms.Padding(5);
             this.btnCapNhat.Name = "btnCapNhat";
             this.btnCapNhat.Size = new System.Drawing.Size(122, 41);
@@ -249,7 +252,7 @@
             this.btnThem.IdleFillColor = System.Drawing.Color.White;
             this.btnThem.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
             this.btnThem.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
-            this.btnThem.Location = new System.Drawing.Point(584, 205);
+            this.btnThem.Location = new System.Drawing.Point(584, 215);
             this.btnThem.Margin = new System.Windows.Forms.Padding(5);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(122, 41);
@@ -275,7 +278,7 @@
             this.btnXoaTrang.IdleFillColor = System.Drawing.Color.White;
             this.btnXoaTrang.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
             this.btnXoaTrang.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
-            this.btnXoaTrang.Location = new System.Drawing.Point(720, 205);
+            this.btnXoaTrang.Location = new System.Drawing.Point(720, 215);
             this.btnXoaTrang.Margin = new System.Windows.Forms.Padding(5);
             this.btnXoaTrang.Name = "btnXoaTrang";
             this.btnXoaTrang.Size = new System.Drawing.Size(122, 41);
@@ -287,21 +290,21 @@
             // 
             this.dgvChiTietPhieuMua.AllowUserToAddRows = false;
             this.dgvChiTietPhieuMua.AllowUserToDeleteRows = false;
-            this.dgvChiTietPhieuMua.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvChiTietPhieuMua.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvChiTietPhieuMua.BackgroundColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvChiTietPhieuMua.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvChiTietPhieuMua.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvChiTietPhieuMua.Location = new System.Drawing.Point(6, 21);
             this.dgvChiTietPhieuMua.Name = "dgvChiTietPhieuMua";
             this.dgvChiTietPhieuMua.ReadOnly = true;
             this.dgvChiTietPhieuMua.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvChiTietPhieuMua.Size = new System.Drawing.Size(507, 222);
+            this.dgvChiTietPhieuMua.Size = new System.Drawing.Size(507, 235);
             this.dgvChiTietPhieuMua.TabIndex = 44;
             this.dgvChiTietPhieuMua.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvChiTietPhieuMua_CellClick);
             // 
@@ -309,7 +312,7 @@
             // 
             this.cboNguyenLieu.Enabled = false;
             this.cboNguyenLieu.FormattingEnabled = true;
-            this.cboNguyenLieu.Location = new System.Drawing.Point(671, 51);
+            this.cboNguyenLieu.Location = new System.Drawing.Point(671, 61);
             this.cboNguyenLieu.Name = "cboNguyenLieu";
             this.cboNguyenLieu.Size = new System.Drawing.Size(171, 24);
             this.cboNguyenLieu.TabIndex = 49;
@@ -317,7 +320,7 @@
             // txtThanhTien
             // 
             this.txtThanhTien.Enabled = false;
-            this.txtThanhTien.Location = new System.Drawing.Point(671, 145);
+            this.txtThanhTien.Location = new System.Drawing.Point(671, 155);
             this.txtThanhTien.Name = "txtThanhTien";
             this.txtThanhTien.Size = new System.Drawing.Size(210, 22);
             this.txtThanhTien.TabIndex = 48;
@@ -326,7 +329,7 @@
             // txtSoLuong
             // 
             this.txtSoLuong.Enabled = false;
-            this.txtSoLuong.Location = new System.Drawing.Point(671, 113);
+            this.txtSoLuong.Location = new System.Drawing.Point(671, 123);
             this.txtSoLuong.Name = "txtSoLuong";
             this.txtSoLuong.Size = new System.Drawing.Size(210, 22);
             this.txtSoLuong.TabIndex = 47;
@@ -336,7 +339,7 @@
             // txtDonGia
             // 
             this.txtDonGia.Enabled = false;
-            this.txtDonGia.Location = new System.Drawing.Point(671, 83);
+            this.txtDonGia.Location = new System.Drawing.Point(671, 93);
             this.txtDonGia.Name = "txtDonGia";
             this.txtDonGia.Size = new System.Drawing.Size(210, 22);
             this.txtDonGia.TabIndex = 46;
@@ -348,7 +351,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Gray;
-            this.label8.Location = new System.Drawing.Point(589, 146);
+            this.label8.Location = new System.Drawing.Point(589, 156);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(80, 18);
             this.label8.TabIndex = 45;
@@ -359,7 +362,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Gray;
-            this.label7.Location = new System.Drawing.Point(597, 114);
+            this.label7.Location = new System.Drawing.Point(597, 124);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(71, 18);
             this.label7.TabIndex = 44;
@@ -370,7 +373,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Gray;
-            this.label6.Location = new System.Drawing.Point(561, 84);
+            this.label6.Location = new System.Drawing.Point(561, 94);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(108, 18);
             this.label6.TabIndex = 43;
@@ -381,7 +384,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Gray;
-            this.label5.Location = new System.Drawing.Point(557, 52);
+            this.label5.Location = new System.Drawing.Point(557, 62);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(114, 18);
             this.label5.TabIndex = 42;
@@ -391,7 +394,7 @@
             // 
             this.dgvPhieuMua.AllowUserToAddRows = false;
             this.dgvPhieuMua.AllowUserToDeleteRows = false;
-            this.dgvPhieuMua.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.dgvPhieuMua.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dgvPhieuMua.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPhieuMua.Location = new System.Drawing.Point(6, 19);
             this.dgvPhieuMua.Name = "dgvPhieuMua";
@@ -403,7 +406,8 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.bunifuThinButton21);
+            this.groupBox2.Controls.Add(this.btnReloadPhieuMua);
+            this.groupBox2.Controls.Add(this.btnNhapKho);
             this.groupBox2.Controls.Add(this.txtThoiGian);
             this.groupBox2.Controls.Add(this.txtNguoiLapPhieu);
             this.groupBox2.Controls.Add(this.txtMaPhieuMua);
@@ -415,37 +419,50 @@
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.groupBox2.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.groupBox2.Location = new System.Drawing.Point(14, 88);
+            this.groupBox2.Location = new System.Drawing.Point(14, 54);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(896, 194);
             this.groupBox2.TabIndex = 46;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "PHIẾU MUA";
             // 
-            // bunifuThinButton21
+            // btnReloadPhieuMua
             // 
-            this.bunifuThinButton21.ActiveBorderThickness = 1;
-            this.bunifuThinButton21.ActiveCornerRadius = 20;
-            this.bunifuThinButton21.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
-            this.bunifuThinButton21.ActiveForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton21.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
-            this.bunifuThinButton21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(236)))), ((int)(((byte)(245)))));
-            this.bunifuThinButton21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton21.BackgroundImage")));
-            this.bunifuThinButton21.ButtonText = "Xác nhận nhập kho";
-            this.bunifuThinButton21.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton21.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
-            this.bunifuThinButton21.IdleBorderThickness = 1;
-            this.bunifuThinButton21.IdleCornerRadius = 20;
-            this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.White;
-            this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
-            this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
-            this.bunifuThinButton21.Location = new System.Drawing.Point(620, 149);
-            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuThinButton21.Name = "bunifuThinButton21";
-            this.bunifuThinButton21.Size = new System.Drawing.Size(191, 41);
-            this.bunifuThinButton21.TabIndex = 73;
-            this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnReloadPhieuMua.BackColor = System.Drawing.Color.GhostWhite;
+            this.btnReloadPhieuMua.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnReloadPhieuMua.Image = global::QLNT.Properties.Resources.refresh_icon;
+            this.btnReloadPhieuMua.Location = new System.Drawing.Point(7, 20);
+            this.btnReloadPhieuMua.Name = "btnReloadPhieuMua";
+            this.btnReloadPhieuMua.Size = new System.Drawing.Size(32, 28);
+            this.btnReloadPhieuMua.TabIndex = 81;
+            this.btnReloadPhieuMua.UseVisualStyleBackColor = false;
+            this.btnReloadPhieuMua.Click += new System.EventHandler(this.btnReloadPhieuMua_Click);
+            // 
+            // btnNhapKho
+            // 
+            this.btnNhapKho.ActiveBorderThickness = 1;
+            this.btnNhapKho.ActiveCornerRadius = 20;
+            this.btnNhapKho.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
+            this.btnNhapKho.ActiveForecolor = System.Drawing.Color.White;
+            this.btnNhapKho.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
+            this.btnNhapKho.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(236)))), ((int)(((byte)(245)))));
+            this.btnNhapKho.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnNhapKho.BackgroundImage")));
+            this.btnNhapKho.ButtonText = "Xác nhận nhập kho";
+            this.btnNhapKho.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNhapKho.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNhapKho.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
+            this.btnNhapKho.IdleBorderThickness = 1;
+            this.btnNhapKho.IdleCornerRadius = 20;
+            this.btnNhapKho.IdleFillColor = System.Drawing.Color.White;
+            this.btnNhapKho.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
+            this.btnNhapKho.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
+            this.btnNhapKho.Location = new System.Drawing.Point(620, 149);
+            this.btnNhapKho.Margin = new System.Windows.Forms.Padding(5);
+            this.btnNhapKho.Name = "btnNhapKho";
+            this.btnNhapKho.Size = new System.Drawing.Size(191, 41);
+            this.btnNhapKho.TabIndex = 73;
+            this.btnNhapKho.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnNhapKho.Click += new System.EventHandler(this.btnNhapKho_Click);
             // 
             // txtThoiGian
             // 
@@ -524,14 +541,26 @@
             this.btnTaoMoiPhieuMua.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnTaoMoiPhieuMua.Click += new System.EventHandler(this.btnTaoMoiPhieuMua_Click);
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Corbel", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label11.ForeColor = System.Drawing.Color.Gray;
+            this.label11.Location = new System.Drawing.Point(303, 5);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(294, 39);
+            this.label11.TabIndex = 48;
+            this.label11.Text = "MUA NGUYÊN LIỆU";
+            // 
             // View_PhieuMuaNguyenLieu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(236)))), ((int)(((byte)(245)))));
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.label1);
             this.Name = "View_PhieuMuaNguyenLieu";
             this.Size = new System.Drawing.Size(927, 542);
             this.Load += new System.EventHandler(this.View_PhieuNguyenLieu_Load);
@@ -547,8 +576,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -565,7 +592,7 @@
         private Bunifu.Framework.UI.BunifuThinButton2 btnXoaTrang;
         private System.Windows.Forms.DataGridView dgvPhieuMua;
         private System.Windows.Forms.GroupBox groupBox2;
-        private Bunifu.Framework.UI.BunifuThinButton2 btnXoa;
+        private Bunifu.Framework.UI.BunifuThinButton2 btnXoaChiTietPhieuMua;
         private Bunifu.Framework.UI.BunifuThinButton2 btnThem;
         private Bunifu.Framework.UI.BunifuThinButton2 btnCapNhat;
         private System.Windows.Forms.Label label10;
@@ -577,6 +604,9 @@
         private System.Windows.Forms.TextBox txtMaPhieuMua;
         private System.Windows.Forms.TextBox txtMaPhieuMua2;
         private System.Windows.Forms.Button btnReload;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton21;
+        private Bunifu.Framework.UI.BunifuThinButton2 btnNhapKho;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button btnReloadPhieuMua;
+        private System.Windows.Forms.Label lblWarning;
     }
 }

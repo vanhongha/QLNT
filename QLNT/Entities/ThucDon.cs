@@ -15,19 +15,18 @@ namespace QLNT.Entities
             set { _maThucDon = value; }
         }
 
-
-        private string _maLop;
-        private string maLop
+        private string _nguoiLap;
+        public string NguoiLap
         {
-            get { return _maLop; }
-            set { _maLop = value; }
+            get { return _nguoiLap; }
+            set { _nguoiLap = value; }
         }
 
-        private DateTime _ngay;
-        public DateTime Ngay
+        private DateTime _ngayLap;
+        public DateTime NgayLap
         {
-            get { return _ngay; }
-            set { _ngay = value; }
+            get { return _ngayLap; }
+            set { _ngayLap = value; }
         }
     }
 }

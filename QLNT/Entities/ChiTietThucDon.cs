@@ -21,12 +21,5 @@ namespace QLNT.Entities
             get { return _maMonAn; }
             set { _maMonAn = value; }
         }
-
-        private string _buoi;
-        public string Buoi
-        {
-            get { return _buoi; }
-            set { _buoi = value; }
-        }
     }
 }

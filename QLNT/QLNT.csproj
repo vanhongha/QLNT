@@ -57,7 +57,9 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusinessLayer\ApDungThucDonBLL.cs" />
     <Compile Include="BusinessLayer\ChiTietPhieuMuaNLBLL.cs" />
+    <Compile Include="BusinessLayer\ChiTietThucDonBLL.cs" />
     <Compile Include="BusinessLayer\DichVuSucKhoeBLL.cs" />
     <Compile Include="BusinessLayer\HoatDongNgoaiKhoaBLL.cs" />
     <Compile Include="BusinessLayer\LoaiNguyenLieuBLL.cs" />
@@ -65,8 +67,11 @@
     <Compile Include="BusinessLayer\NguyenLieuBLL.cs" />
     <Compile Include="BusinessLayer\NhanVienBLL.cs" />
     <Compile Include="BusinessLayer\PhieuMuaNLBLL.cs" />
+    <Compile Include="BusinessLayer\ThucDonBLL.cs" />
     <Compile Include="BusinessLayer\TreBLL.cs" />
+    <Compile Include="DataLayer\ApDungThucDonDAL.cs" />
     <Compile Include="DataLayer\ChiTietPhieuMuaNLDAL.cs" />
+    <Compile Include="DataLayer\ChiTietThucDonDAL.cs" />
     <Compile Include="DataLayer\DataAccessHelper.cs" />
     <Compile Include="DataLayer\DichVuSucKhoeDAL.cs" />
     <Compile Include="DataLayer\HoatDongNgoaiKhoaDAL.cs" />
@@ -75,7 +80,9 @@
     <Compile Include="DataLayer\NguyenLieuDAL.cs" />
     <Compile Include="DataLayer\NhanVienDAL.cs" />
     <Compile Include="DataLayer\PhieuMuaNLDAL.cs" />
+    <Compile Include="DataLayer\ThucDonDAL.cs" />
     <Compile Include="DataLayer\TreDAL.cs" />
+    <Compile Include="Entities\ApDungThucDon.cs" />
     <Compile Include="Entities\ChiTietMonAn.cs" />
     <Compile Include="Entities\ChiTietPhieuMuaNL.cs" />
     <Compile Include="Entities\ChiTietThucDon.cs" />

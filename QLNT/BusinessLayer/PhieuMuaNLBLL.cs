@@ -26,9 +26,19 @@ namespace QLNT.BusinessLayer
             PhieuMuaNLDAL.CapNhatPhieuMuaNL(phieuMuaNL);
         }
 
+        public static void CapNhatTrangThaiPhieuMuaNL(string maPhieu)
+        {
+            PhieuMuaNLDAL.CapNhatTrangThaiPhieuMuaNL(maPhieu);
+        }
+
         public static DataTable LayDanhSachPhieuMuaNL()
         {
             return PhieuMuaNLDAL.LayDanhSachPhieuMuaNL();
+        }
+
+        public static string LayTongTienTuMaPhieu(string maPhieu)
+        {
+            return PhieuMuaNLDAL.LayTongTienTuMaPhieu(maPhieu);
         }
 
         public static string SinhMaTuDong()
@@ -38,7 +48,7 @@ namespace QLNT.BusinessLayer
             //chưa có phiếu mua nào trong CSDL
             if (maCuoi == "")
             {
-                return "MAPML000001";
+                return "MAPM000001";
             }
 
             //xoa 4 chữ cái đầu chuỗi và tăng số đếm lên 1
