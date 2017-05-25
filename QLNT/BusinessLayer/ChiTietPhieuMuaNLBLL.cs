@@ -11,6 +11,17 @@ namespace QLNT.BusinessLayer
 {
     class ChiTietPhieuMuaNLBLL
     {
+        public static void ThemChiTietPhieuMuaNL( string maPhieu, string maNguyenLieu, decimal soLuong, decimal donGia, decimal thanhTien )
+        {
+            ChiTietPhieuMuaNL chitiet = new ChiTietPhieuMuaNL();
+            chitiet.MaPhieu = maPhieu;
+            chitiet.MaNguyenLieu = maNguyenLieu;
+            chitiet.SoLuong = soLuong;
+            chitiet.DonGia = donGia;
+            chitiet.ThanhTien = thanhTien;
+            ChiTietPhieuMuaNLDAL.ThemChiTietPhieuMuaNL(chitiet);
+        }
+
         public static void ThemChiTietPhieuMuaNL(ChiTietPhieuMuaNL chiTietPhieuMuaNL)
         {
             ChiTietPhieuMuaNLDAL.ThemChiTietPhieuMuaNL(chiTietPhieuMuaNL);

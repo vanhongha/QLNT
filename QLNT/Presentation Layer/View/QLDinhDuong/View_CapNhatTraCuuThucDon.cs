@@ -35,7 +35,7 @@ namespace QLNT.Presentation_Layer.View.QLDinhDuong
 
         private void getDataGridViewThucDon()
         {
-            /*dgvThucDon.DataSource = ThucDonBLL.LayDanhSachThucDon();
+            dgvThucDon.DataSource = ThucDonBLL.LayDanhSachThucDon();
             string[] columns = { "MaThucDon", "NgayLap", "NguoiLap" };
             Utility.ControlFormat.DataGridViewFormat(dgvThucDon, columns);
 
@@ -45,13 +45,13 @@ namespace QLNT.Presentation_Layer.View.QLDinhDuong
             dgvThucDon.Columns[1].HeaderText = "Ngày lập";
             dgvThucDon.Columns[1].Width = 130;
             dgvThucDon.Columns[2].HeaderText = "Người lập";
-            dgvThucDon.Columns[2].Width = 135;*/
+            dgvThucDon.Columns[2].Width = 135;
         }
 
         private void getDataGridViewChiTietThucDon(string maThucDon)
         {
-            /*dgvChiTietThucDon.DataSource = ChiTietThucDonBLL.LayDanhSachChiTietThucDon(maThucDon);
-            string[] columns = { "MaThucDon", "MaMonAn","TenMonAn" };
+            dgvChiTietThucDon.DataSource = ChiTietThucDonBLL.LayDanhSachChiTietThucDon(maThucDon);
+            string[] columns = { "MaThucDon", "MaMonAn", "TenMonAn" };
             Utility.ControlFormat.DataGridViewFormat(dgvChiTietThucDon, columns);
 
             dgvChiTietThucDon.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
@@ -60,13 +60,13 @@ namespace QLNT.Presentation_Layer.View.QLDinhDuong
             dgvChiTietThucDon.Columns[1].HeaderText = "Mã Món Ăn";
             dgvChiTietThucDon.Columns[1].Width = 150;
             dgvChiTietThucDon.Columns[2].HeaderText = "Tên Món Ăn";
-            dgvChiTietThucDon.Columns[2].Width = 150;*/
+            dgvChiTietThucDon.Columns[2].Width = 150;
         }
 
         private void getDataGridViewApDungThucDon(string maThucDon)
         {
-            /*dgvApDungThucDon.DataSource = ApDungThucDonBLL.LayDanhSachApDungThucDon(maThucDon);
-            string[] columns = { "MaThucDon", "TenLop","Buoi", "NgayApDung" };
+            dgvApDungThucDon.DataSource = ApDungThucDonBLL.LayDanhSachApDungThucDon(maThucDon);
+            string[] columns = { "MaThucDon", "TenLop", "Buoi", "NgayApDung" };
             Utility.ControlFormat.DataGridViewFormat(dgvApDungThucDon, columns);
 
             dgvApDungThucDon.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
@@ -77,31 +77,31 @@ namespace QLNT.Presentation_Layer.View.QLDinhDuong
             dgvApDungThucDon.Columns[2].HeaderText = "Buổi";
             dgvApDungThucDon.Columns[2].Width = 100;
             dgvApDungThucDon.Columns[3].HeaderText = "Ngày áp dụng";
-            dgvApDungThucDon.Columns[3].Width = 120;*/
+            dgvApDungThucDon.Columns[3].Width = 120;
         }
 
         private void getComboBoxMonAn()
         {
-            /*cboMonAn.DataSource = ChiTietThucDonBLL.LayDanhSachTenVaMaMonAn();
+            cboMonAn.DataSource = ChiTietThucDonBLL.LayDanhSachTenVaMaMonAn();
             cboMonAn.DisplayMember = "TenMonAn";
-            cboMonAn.ValueMember = "MaMonAn";*/
+            cboMonAn.ValueMember = "MaMonAn";
         }
 
         private void getComboBoxLop()
         {
-            /*cboLop.DataSource = ApDungThucDonBLL.LayDanhSachTenVaMaLop();
+            cboLop.DataSource = ApDungThucDonBLL.LayDanhSachTenVaMaLop();
             cboLop.DisplayMember = "TenLop";
-            cboLop.ValueMember = "MaLop";*/
-            
+            cboLop.ValueMember = "MaLop";
+
         }
 
         private void btnTaoMoiThucDon_Click(object sender, EventArgs e)
         {
-            /*string maThucDonMoi = ThucDonBLL.SinhMaTuDong();
+            string maThucDonMoi = ThucDonBLL.SinhMaTuDong();
             ThucDonBLL.ThemThucDon(maThucDonMoi);
             getDataGridViewThucDon();
             getDataGridViewChiTietThucDon(maThucDonMoi);
-            getDataGridViewApDungThucDon(maThucDonMoi);*/
+            getDataGridViewApDungThucDon(maThucDonMoi);
         }
 
         public void SetEnableComponent(bool value)
@@ -129,7 +129,7 @@ namespace QLNT.Presentation_Layer.View.QLDinhDuong
 
         private void btnXoaThucDon_Click(object sender, EventArgs e)
         {
-            /*if(ThucDonBLL.KiemTraThucDonDaDuocApDung(maThucDon))
+            if (ThucDonBLL.KiemTraThucDonDaDuocApDung(maThucDon))
             {
                 MessageBox.Show("Không thể xóa thực đơn này, Thực đơn đã được áp dụng", "Thông báo", MessageBoxButtons.OK);
                 return;
@@ -140,13 +140,13 @@ namespace QLNT.Presentation_Layer.View.QLDinhDuong
             getDataGridViewChiTietThucDon("");
             getDataGridViewApDungThucDon("");
             SetEnableComponent(false);
-            txtMaThucDon.Text = "";*/
+            txtMaThucDon.Text = "";
 
         }
 
         private void btnThemChiTiet_Click(object sender, EventArgs e)
         {
-            /*if (maThucDon == "")
+            if (maThucDon == "")
             {
                 MessageBox.Show("Chưa chọn thực đơn để cập nhật,\nNhấp chọn 1 thực đơn trong bảng THỰC ĐƠN", "Thông báo", MessageBoxButtons.OK);
                 return;
@@ -164,7 +164,7 @@ namespace QLNT.Presentation_Layer.View.QLDinhDuong
                 return;
             }
 
-            if(ChiTietThucDonBLL.KiemTraMonAnTrongThucDon(maThucDon, cboMonAn.SelectedValue.ToString().Trim()))
+            if (ChiTietThucDonBLL.KiemTraMonAnTrongThucDon(maThucDon, cboMonAn.SelectedValue.ToString().Trim()))
             {
                 MessageBox.Show("Món ăn này đã có trong thực đơn, Vui lòng chọn món khác để thêm", "Thông báo", MessageBoxButtons.OK);
                 return;
@@ -172,18 +172,18 @@ namespace QLNT.Presentation_Layer.View.QLDinhDuong
 
             ChiTietThucDonBLL.ThemChiTietThucDon(maThucDon, cboMonAn.SelectedValue.ToString().Trim());
             getDataGridViewChiTietThucDon(maThucDon);
-            */
+
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            /*if (maThucDon == "")
+            if (maThucDon == "")
             {
                 MessageBox.Show("Chưa chọn thực đơn để cập nhật,\nNhấp chọn 1 thực đơn trong bảng THỰC ĐƠN", "Thông báo", MessageBoxButtons.OK);
                 return;
             }
 
-            if(ThucDonBLL.KiemTraThucDonDaDuocApDung(maThucDon))
+            if (ThucDonBLL.KiemTraThucDonDaDuocApDung(maThucDon))
             {
                 MessageBox.Show("Không thể cập nhật chi tiết của thực đơn đã được áp dụng", "Thông báo", MessageBoxButtons.OK);
                 return;
@@ -194,7 +194,7 @@ namespace QLNT.Presentation_Layer.View.QLDinhDuong
                 MessageBox.Show("Chưa chọn món ăn để xóa , Vui lòng chọn một món ăn", "Thông báo", MessageBoxButtons.OK);
                 return;
             }
-            
+
             if (!ChiTietThucDonBLL.KiemTraMonAnTrongThucDon(maThucDon, cboMonAn.SelectedValue.ToString().Trim()))
             {
                 MessageBox.Show("Món ăn này chưa có trong thực đơn, Vui lòng kiểm tra lại", "Thông báo", MessageBoxButtons.OK);
@@ -202,43 +202,25 @@ namespace QLNT.Presentation_Layer.View.QLDinhDuong
             }
 
             ChiTietThucDonBLL.XoaChiTietThucDon(maThucDon, cboMonAn.SelectedValue.ToString().Trim());
-            getDataGridViewChiTietThucDon(maThucDon);*/
+            getDataGridViewChiTietThucDon(maThucDon);
         }
 
         private void btnApDungThucDon_Click(object sender, EventArgs e)
-        {/*
+        {
             //---------------kiểm tra điều kiện nhấn áp dụng-------------------
-            if(txtMaThucDon.Text == "")
-            {
-                MessageBox.Show("Chưa chọn thực đơn để áp dụng,\nNhấp chọn 1 thực đơn trong bảng THỰC ĐƠN", "Thông báo", MessageBoxButtons.OK);
+            if (!KiemTra_btnApDungThucDon_Click())
                 return;
-            }
-
-            if (ApDungThucDonBLL.KiemTraApdungThucDon(cboLop.Text, dtpNgayApDung.Value, cboBuoiApDung.Text))
-            {
-                MessageBox.Show("Thất bại! Lớp đã xét thực đơn vào thời điểm này rồi", "Thông báo", MessageBoxButtons.OK);
-                return;
-            }
-
-            if(dtpNgayApDung.Value < DateTime.Today)
-            {
-                MessageBox.Show("Thất bại! Không thể áp dụng thực đơn cho ngày đã qua", "Thông báo", MessageBoxButtons.OK);
-                return;
-            }
 
             //--------------------------tiến hành kiểm tra thông tin và áp dụng--------------------------
+
             //biến kiểm tra số lượng nguyên liệu có đủ dùng hay không
             bool KiemTraSoLuongTonCoDuDung = true;
-            
-            //biến tạm lưu mã nguyên liệu, số lượng
-            string strMaNguyenLieu = "";
-            string strSoLuong = "";
 
-            //xóa danh sách số lượng nguyên liệu cần để áp dụng (cũ)
+            //xóa danh sách số lượng nguyên liệu cần để áp dụng(cũ)
             thongTinSoLuongNguyenLieuCanDeApDung.Clear();
 
             //duyệt tất cả các món ăn trong thực đơn
-            foreach(DataGridViewRow MonAn in dgvChiTietThucDon.Rows)
+            foreach (DataGridViewRow MonAn in dgvChiTietThucDon.Rows)
             {
                 //lấy ra danh sách các nguyên liệu có trong món ăn đang duyệt
                 DataTable danhSachNguyenLieu = ApDungThucDonBLL.LayDanhSachMaNguyenLieuVaSoLuongTrongMonAn(MonAn.Cells["MaMonAn"].Value.ToString());
@@ -246,27 +228,13 @@ namespace QLNT.Presentation_Layer.View.QLDinhDuong
                 //duyệt danh sách nguyên liệu của món ăn
                 foreach (DataRow nguyenLieu in danhSachNguyenLieu.Rows)
                 {
-                    //gán giá trị mã nguyên liệu và số lượng nguyên liệu vào biến tạm
-                    strMaNguyenLieu = nguyenLieu["MaNguyenLieu"].ToString();
-                    strSoLuong = nguyenLieu["SoLuong"].ToString();
-
-                    //nếu đã có nguyên liệu này trong danh sách thì cộng dồn số lượng nguyên liệu vào danh sách các nguyên liệu cần
-                    if (thongTinSoLuongNguyenLieuCanDeApDung.ContainsKey(strMaNguyenLieu))
-                    {
-                        thongTinSoLuongNguyenLieuCanDeApDung[strMaNguyenLieu] += int.Parse(strSoLuong);
-                    }
-                    else //nếu chưa có nguyên liệu này trong danh sách thì thêm nguyên liệu và số lượng nguyên liệu vào danh sách
-                    {
-                        thongTinSoLuongNguyenLieuCanDeApDung.Add(strMaNguyenLieu, int.Parse(strSoLuong));
-                    }
+                    ThemNguyenLieuVaoDanhSach(nguyenLieu["MaNguyenLieu"].ToString(), nguyenLieu["SoLuong"].ToString());
                 }
             }
-            
-           //lấy ra danh sách nguyên liệu,sô lượng
+
+            //lấy ra danh sách nguyên liệu, sô lượng
             List<string> listMaNguyenLieu = new List<string>(thongTinSoLuongNguyenLieuCanDeApDung.Keys);
             List<int> listSoLuong = new List<int>(thongTinSoLuongNguyenLieuCanDeApDung.Values);
-
-            string thongtin = "";
 
             //Thêm phiếu mua mới vào CSDL (giả sử cần phải mua thêm nguyên liệu)
             PhieuMuaNL phieuMua = new PhieuMuaNL();
@@ -278,61 +246,86 @@ namespace QLNT.Presentation_Layer.View.QLDinhDuong
                 int soLuongThieu = listSoLuong[i] - int.Parse(NguyenLieuBLL.LaySoLuongTonTheoMaNguyenLieu(listMaNguyenLieu[i]));
 
                 //trường hợp thiếu nguyên liệu
-                if(soLuongThieu > 0)
+                if (soLuongThieu > 0)
                 {
                     //Thêm chi tiết mua nguyên liệu bị thiếu
-                    ChiTietPhieuMuaNL chitiet = new ChiTietPhieuMuaNL();
-                    chitiet.MaPhieu = phieuMua.MaPhieu;
-                    chitiet.MaNguyenLieu = listMaNguyenLieu[i];
-                    chitiet.SoLuong = soLuongThieu;
-                    chitiet.DonGia = 0;
-                    chitiet.ThanhTien = 0;
-                    ChiTietPhieuMuaNLBLL.ThemChiTietPhieuMuaNL(chitiet);
-
+                    ChiTietPhieuMuaNLBLL.ThemChiTietPhieuMuaNL(phieuMua.MaPhieu, listMaNguyenLieu[i], soLuongThieu, 0, 0);
                     //xác nhận số lượng không đủ dùng
                     KiemTraSoLuongTonCoDuDung = false;
                 }
-
-                thongtin += "Mã nguyên liệu: " + listMaNguyenLieu[i] + " cần dùng: " + listSoLuong[i] + " trong kho có: " + NguyenLieuBLL.LaySoLuongTonTheoMaNguyenLieu(listMaNguyenLieu[i]) + "\n";
             }
 
             //trường hợp mọi nguyên liệu đủ dùng
-            if(KiemTraSoLuongTonCoDuDung)
+            if (KiemTraSoLuongTonCoDuDung)
             {
-                //xóa phiếu mua vừa tạo
-                PhieuMuaNLBLL.XoaPhieuMuaNL(phieuMua.MaPhieu);
-
-                //thực hiện trừ số lượng nguyên liệu được dùng
-                for(int i = 0; i < listMaNguyenLieu.Count; i++)
-                {
-                    NguyenLieuBLL.CapNhatTonNguyenLieuTheoMa(listMaNguyenLieu[i], -listSoLuong[i]);
-                }
-
-                //Thêm thông tin áp dụng vào CSDL
-
-                ApDungThucDon apDung = new ApDungThucDon();
-                apDung.MaThucDon = txtMaThucDon.Text;
-                apDung.MaLop = cboLop.SelectedValue.ToString();
-                apDung.NgayApDung = dtpNgayApDung.Value;
-                apDung.Buoi = cboBuoiApDung.Text;
-                ApDungThucDonBLL.ThemApDungThucDon(apDung);
-                getDataGridViewApDungThucDon(txtMaThucDon.Text);
-
-                MessageBox.Show("Áp dụng thành công", "Thông báo", MessageBoxButtons.OK);
+                HuyBoMuaHang_btnApDungThucDon_Click(phieuMua, listMaNguyenLieu, listSoLuong);
                 return;
             }
 
+            ThongBaoThanhCong_btnApDungThucDon_Click(phieuMua.MaPhieu);
+        }
+
+        private bool KiemTra_btnApDungThucDon_Click()
+        {
+            if (txtMaThucDon.Text == "")
+            {
+                MessageBox.Show("Chưa chọn thực đơn để áp dụng,\nNhấp chọn 1 thực đơn trong bảng THỰC ĐƠN", "Thông báo", MessageBoxButtons.OK);
+                return false;
+            }
+
+            if (ApDungThucDonBLL.KiemTraApdungThucDon(cboLop.Text, dtpNgayApDung.Value, cboBuoiApDung.Text))
+            {
+                MessageBox.Show("Thất bại! Lớp đã xét thực đơn vào thời điểm này rồi", "Thông báo", MessageBoxButtons.OK);
+                return false;
+            }
+
+            if (dtpNgayApDung.Value < DateTime.Today)
+            {
+                MessageBox.Show("Thất bại! Không thể áp dụng thực đơn cho ngày đã qua", "Thông báo", MessageBoxButtons.OK);
+                return false;
+            }
+
+            return true;
+        }
+
+        private void ThemNguyenLieuVaoDanhSach(string strMaNguyenLieu, string strSoLuong)
+        {
+            //nếu đã có nguyên liệu này trong danh sách thì cộng dồn số lượng nguyên liệu vào danh sách các nguyên liệu cần
+            if (thongTinSoLuongNguyenLieuCanDeApDung.ContainsKey(strMaNguyenLieu))
+            {
+                thongTinSoLuongNguyenLieuCanDeApDung[strMaNguyenLieu] += int.Parse(strSoLuong);
+            }
+            else //nếu chưa có nguyên liệu này trong danh sách thì thêm nguyên liệu và số lượng nguyên liệu vào danh sách
+            {
+                thongTinSoLuongNguyenLieuCanDeApDung.Add(strMaNguyenLieu, int.Parse(strSoLuong));
+            }
+        }
+
+        private void HuyBoMuaHang_btnApDungThucDon_Click(PhieuMuaNL phieuMua, List<string> listMaNguyenLieu, List<int> listSoLuong)
+        {
+            //xóa phiếu mua vừa tạo
+            PhieuMuaNLBLL.XoaPhieuMuaNL(phieuMua.MaPhieu);
+
+            //thực hiện trừ số lượng nguyên liệu được dùng
+            for (int i = 0; i < listMaNguyenLieu.Count; i++)
+                NguyenLieuBLL.CapNhatTonNguyenLieuTheoMa(listMaNguyenLieu[i], -listSoLuong[i]);
+
+            //Thêm thông tin áp dụng vào CSDL
+            ApDungThucDonBLL.ThemApDungThucDon(txtMaThucDon.Text, cboLop.SelectedValue.ToString(), dtpNgayApDung.Value, cboBuoiApDung.Text);
+            getDataGridViewApDungThucDon(txtMaThucDon.Text);
+
+            MessageBox.Show("Áp dụng thành công", "Thông báo", MessageBoxButtons.OK);
+        }
+
+        private void ThongBaoThanhCong_btnApDungThucDon_Click(string maPhieu)
+        {
             DialogResult dialogResult = MessageBox.Show("Không đủ nguyên liệu để áp dụng\nTự động thêm phiếu mua hàng?", "Thông báo", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
-                MessageBox.Show("Đã thêm phiếu mua thành công với mã '"+ phieuMua.MaPhieu+ "'\nvui lòng chuyển sang màn hình phiếu mua để xác nhận nhập kho\nCuối cùng Nhấp ''Áp dụng thực đơn'' để hoàn tất", "Thông báo", MessageBoxButtons.OK);
+                MessageBox.Show("Đã thêm phiếu mua thành công với mã '" + maPhieu + "'\nvui lòng chuyển sang màn hình phiếu mua để xác nhận nhập kho\nCuối cùng Nhấp ''Áp dụng thực đơn'' để hoàn tất", "Thông báo", MessageBoxButtons.OK);
             }
             else if (dialogResult == DialogResult.No)
-            {
-                return;
-            }
-
-            //MessageBox.Show(thongtin);*/
+            { return; }
         }
 
         private void dgvChiTietThucDon_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -346,7 +339,7 @@ namespace QLNT.Presentation_Layer.View.QLDinhDuong
 
         private void dgvThucDon_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-           /* if (e.RowIndex < 0 || e.RowIndex > dgvThucDon.RowCount)
+            if (e.RowIndex < 0 || e.RowIndex > dgvThucDon.RowCount)
                 return;
             txtMaThucDon.Text = dgvThucDon.Rows[e.RowIndex].Cells["MaThucDon"].Value.ToString();
             txtNguoiLap.Text = dgvThucDon.Rows[e.RowIndex].Cells["NguoiLap"].Value.ToString();
@@ -361,8 +354,8 @@ namespace QLNT.Presentation_Layer.View.QLDinhDuong
             {
                 lblWarning.Visible = false;
             }
-            
-            SetEnableComponent(true);*/
+
+            SetEnableComponent(true);
         }
 
         private void dgvApDungThucDon_CellClick(object sender, DataGridViewCellEventArgs e)
