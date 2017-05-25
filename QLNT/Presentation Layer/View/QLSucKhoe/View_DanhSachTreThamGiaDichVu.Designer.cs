@@ -28,17 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(View_DanhSachTreThamGiaDichVu));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtThamGia = new System.Windows.Forms.TextBox();
             this.txtTenTre = new System.Windows.Forms.TextBox();
             this.txtMaTre = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvListTre = new System.Windows.Forms.DataGridView();
-            this.labelTenHoatDong = new System.Windows.Forms.Label();
+            this.labelTenDV = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnHuy = new Bunifu.Framework.UI.BunifuThinButton2();
@@ -50,63 +48,41 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.txtThamGia);
             this.groupBox1.Controls.Add(this.txtTenTre);
             this.groupBox1.Controls.Add(this.txtMaTre);
-            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.groupBox1.Location = new System.Drawing.Point(845, 234);
+            this.groupBox1.Location = new System.Drawing.Point(796, 234);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(494, 258);
+            this.groupBox1.Size = new System.Drawing.Size(571, 230);
             this.groupBox1.TabIndex = 83;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin chi tiết:";
             // 
-            // txtThamGia
-            // 
-            this.txtThamGia.Enabled = false;
-            this.txtThamGia.Location = new System.Drawing.Point(210, 179);
-            this.txtThamGia.Name = "txtThamGia";
-            this.txtThamGia.Size = new System.Drawing.Size(235, 35);
-            this.txtThamGia.TabIndex = 61;
-            // 
             // txtTenTre
             // 
             this.txtTenTre.Enabled = false;
-            this.txtTenTre.Location = new System.Drawing.Point(210, 115);
+            this.txtTenTre.Location = new System.Drawing.Point(210, 137);
             this.txtTenTre.Name = "txtTenTre";
-            this.txtTenTre.Size = new System.Drawing.Size(235, 35);
+            this.txtTenTre.Size = new System.Drawing.Size(331, 35);
             this.txtTenTre.TabIndex = 61;
             // 
             // txtMaTre
             // 
             this.txtMaTre.Enabled = false;
-            this.txtMaTre.Location = new System.Drawing.Point(210, 56);
+            this.txtMaTre.Location = new System.Drawing.Point(210, 66);
             this.txtMaTre.Name = "txtMaTre";
-            this.txtMaTre.Size = new System.Drawing.Size(235, 35);
+            this.txtMaTre.Size = new System.Drawing.Size(331, 35);
             this.txtMaTre.TabIndex = 61;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Navy;
-            this.label5.Location = new System.Drawing.Point(39, 188);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(108, 26);
-            this.label5.TabIndex = 60;
-            this.label5.Text = "Tham gia:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Navy;
-            this.label4.Location = new System.Drawing.Point(62, 124);
+            this.label4.Location = new System.Drawing.Point(62, 146);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(85, 26);
@@ -118,7 +94,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Navy;
-            this.label2.Location = new System.Drawing.Point(68, 61);
+            this.label2.Location = new System.Drawing.Point(68, 71);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(79, 26);
@@ -130,32 +106,35 @@
             this.dgvListTre.AllowUserToAddRows = false;
             this.dgvListTre.AllowUserToDeleteRows = false;
             this.dgvListTre.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvListTre.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvListTre.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvListTre.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvListTre.Location = new System.Drawing.Point(52, 234);
             this.dgvListTre.Name = "dgvListTre";
             this.dgvListTre.RowTemplate.Height = 28;
-            this.dgvListTre.Size = new System.Drawing.Size(758, 552);
+            this.dgvListTre.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvListTre.Size = new System.Drawing.Size(698, 552);
             this.dgvListTre.TabIndex = 79;
+            this.dgvListTre.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListTre_CellClick);
+            this.dgvListTre.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvListTre_DataBindingComplete);
             // 
-            // labelTenHoatDong
+            // labelTenDV
             // 
-            this.labelTenHoatDong.AutoSize = true;
-            this.labelTenHoatDong.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTenHoatDong.ForeColor = System.Drawing.Color.Black;
-            this.labelTenHoatDong.Location = new System.Drawing.Point(323, 159);
-            this.labelTenHoatDong.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelTenHoatDong.Name = "labelTenHoatDong";
-            this.labelTenHoatDong.Size = new System.Drawing.Size(156, 26);
-            this.labelTenHoatDong.TabIndex = 77;
-            this.labelTenHoatDong.Text = "Tên hoạt động:";
+            this.labelTenDV.AutoSize = true;
+            this.labelTenDV.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTenDV.ForeColor = System.Drawing.Color.Black;
+            this.labelTenDV.Location = new System.Drawing.Point(323, 159);
+            this.labelTenDV.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelTenDV.Name = "labelTenDV";
+            this.labelTenDV.Size = new System.Drawing.Size(129, 26);
+            this.labelTenDV.TabIndex = 77;
+            this.labelTenDV.Text = "Tên dịch vụ:";
             // 
             // label3
             // 
@@ -205,6 +184,7 @@
             this.btnHuy.Size = new System.Drawing.Size(401, 63);
             this.btnHuy.TabIndex = 80;
             this.btnHuy.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // btnLuu
             // 
@@ -230,6 +210,7 @@
             this.btnLuu.Size = new System.Drawing.Size(401, 63);
             this.btnLuu.TabIndex = 81;
             this.btnLuu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnApDungTatCa
             // 
@@ -255,6 +236,7 @@
             this.btnApDungTatCa.Size = new System.Drawing.Size(401, 63);
             this.btnApDungTatCa.TabIndex = 82;
             this.btnApDungTatCa.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnApDungTatCa.Click += new System.EventHandler(this.btnApDungTatCa_Click);
             // 
             // View_DanhSachTreThamGiaDichVu
             // 
@@ -266,11 +248,12 @@
             this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.btnApDungTatCa);
             this.Controls.Add(this.dgvListTre);
-            this.Controls.Add(this.labelTenHoatDong);
+            this.Controls.Add(this.labelTenDV);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Name = "View_DanhSachTreThamGiaDichVu";
             this.Size = new System.Drawing.Size(1390, 834);
+            this.Load += new System.EventHandler(this.View_DanhSachTreThamGiaDichVu_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListTre)).EndInit();
@@ -282,17 +265,15 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txtThamGia;
         private System.Windows.Forms.TextBox txtTenTre;
         private System.Windows.Forms.TextBox txtMaTre;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private Bunifu.Framework.UI.BunifuThinButton2 btnHuy;
         private Bunifu.Framework.UI.BunifuThinButton2 btnLuu;
         private Bunifu.Framework.UI.BunifuThinButton2 btnApDungTatCa;
         private System.Windows.Forms.DataGridView dgvListTre;
-        private System.Windows.Forms.Label labelTenHoatDong;
+        private System.Windows.Forms.Label labelTenDV;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
     }

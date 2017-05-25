@@ -239,5 +239,76 @@ namespace QLNT.DataLayer
             return db.dt;
         }
 
+        public static void XoaDichVu(DichVuSucKhoe dichVu)
+        {
+            DataAccessHelper db = new DataAccessHelper();
+
+            SqlCommand cmd = db.Command("XoaDichVu");
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@MaDichVu", dichVu.MaDV);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            db.dt = new DataTable();
+            da.Fill(db.dt);
+        }
+
+        public static string GetLastID()
+        {
+            DataAccessHelper db = new DataAccessHelper();
+            DataTable dt = db.GetDataTable("Select top 1 MaDichVu from DICHVUYTE order by MaDichVu desc");
+            foreach (DataRow row in dt.Rows)
+            {
+                return row.ItemArray[0].ToString();
+            }
+            return "";
+        }
+
+        public static void CapNhatTreThamGiaDichVu(string maDV, string maTre, int thamGia)
+        {
+            DataAccessHelper db = new DataAccessHelper();
+
+            SqlCommand cmd = db.Command("CapNhatTreThamGiaDichVu");
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@MaDichVu", maDV);
+            cmd.Parameters.AddWithValue("@MaTre", maTre);
+            cmd.Parameters.AddWithValue("@ThamGia", thamGia);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            db.dt = new DataTable();
+            da.Fill(db.dt);
+        }
+
+        public static DataTable GetListTreThamGiaDichVu(string maDV, string maLop)
+        {
+            DataAccessHelper db = new DataAccessHelper();
+
+            SqlCommand cmd = db.Command("GetListTreThamGiaDichVu");
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@MaDichVu", maDV);
+            cmd.Parameters.AddWithValue("@MaLop", maLop);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            db.dt = new DataTable();
+            da.Fill(db.dt);
+
+            return db.dt;
+        }
+
+        public static DataTable GetListSucKhoeTheoThang(string maTre, int thang, int nam)
+        {
+            DataAccessHelper db = new DataAccessHelper();
+
+            SqlCommand cmd = db.Command("GetListSucKhoeTheoThang");
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@MaTre", maTre);
+            cmd.Parameters.AddWithValue("@Thang", thang);
+            cmd.Parameters.AddWithValue("@Nam", nam);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            db.dt = new DataTable();
+            da.Fill(db.dt);
+
+            return db.dt;
+        }
     }
 }

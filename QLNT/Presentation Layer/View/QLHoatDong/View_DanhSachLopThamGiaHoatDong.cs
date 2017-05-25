@@ -84,7 +84,7 @@ namespace QLNT.Presentation_Layer.View.QLHoatDong
             for (int i = 0; i < dgvListLop.Rows.Count; i++)
             {
                 string maLop = dgvListLop.Rows[i].Cells["MaLop"].Value.ToString();
-                if (dgvListLop.Rows[i].Cells["CheckBox"].Value.ToString() == "true")
+                if (dgvListLop.Rows[i].Cells["CheckBox"].Value.ToString() == "true" || dgvListLop.Rows[i].Cells["CheckBox"].Value.ToString() == "True")
                     listLop[maLop] = true;
                 else
                     listLop[maLop] = false;
@@ -136,7 +136,10 @@ namespace QLNT.Presentation_Layer.View.QLHoatDong
                 }
                 else
                 {
-
+                    frmMain parentForm = (this.Parent.Parent as frmMain);
+                    parentForm.UpdateSubView("DanhSachTreThamGiaHoatDong");
+                    View_DanhSachTreThamGiaHoatDong view = (View_DanhSachTreThamGiaHoatDong)parentForm.GetSubView("DanhSachTreThamGiaHoatDong");
+                    view.LoadForm(maHD, dgvListLop.SelectedRows[0].Cells["MaLop"].Value.ToString());
                 }
             }
         }
@@ -148,6 +151,7 @@ namespace QLNT.Presentation_Layer.View.QLHoatDong
                 txtMaLop.Text = dgvListLop.Rows[e.RowIndex].Cells["MaLop"].Value.ToString();
                 txtTenLop.Text = dgvListLop.Rows[e.RowIndex].Cells["TenLop"].Value.ToString();
                 txtSiSoLop.Text = dgvListLop.Rows[e.RowIndex].Cells["SiSo"].Value.ToString();
+                txtTreThamGia.Text = HoatDongNgoaiKhoaBLL.GetListTreThamGiaHoatDong(maHD, txtMaLop.Text).Length.ToString();
             }
         }
     }

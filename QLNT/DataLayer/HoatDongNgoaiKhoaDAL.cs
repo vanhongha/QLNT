@@ -265,5 +265,36 @@ namespace QLNT.DataLayer
             return "";
         }
 
+        public static void CapNhatTreThamGiaHoatDong(string maHD, string maTre, int thamGia)
+        {
+            DataAccessHelper db = new DataAccessHelper();
+
+            SqlCommand cmd = db.Command("CapNhatTreThamGiaHoatDong");
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@MaHoatDong", maHD);
+            cmd.Parameters.AddWithValue("@MaTre", maTre);
+            cmd.Parameters.AddWithValue("@ThamGia", thamGia);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            db.dt = new DataTable();
+            da.Fill(db.dt);
+        }
+
+        public static DataTable GetListTreThamGiaHoatDong(string maHD, string maLop)
+        {
+            DataAccessHelper db = new DataAccessHelper();
+
+            SqlCommand cmd = db.Command("GetListTreThamGiaHoatDong");
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@MaHoatDong", maHD);
+            cmd.Parameters.AddWithValue("@MaLop", maLop);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            db.dt = new DataTable();
+            da.Fill(db.dt);
+
+            return db.dt;
+        }
+
     }
 }

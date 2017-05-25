@@ -39,14 +39,14 @@
             this.labelTenHoatDong = new System.Windows.Forms.Label();
             this.btnTreThamGia = new Bunifu.Framework.UI.BunifuThinButton2();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtMaLop = new System.Windows.Forms.TextBox();
-            this.txtTenLop = new System.Windows.Forms.TextBox();
-            this.txtTreThamGia = new System.Windows.Forms.TextBox();
             this.txtSiSoLop = new System.Windows.Forms.TextBox();
+            this.txtTreThamGia = new System.Windows.Forms.TextBox();
+            this.txtTenLop = new System.Windows.Forms.TextBox();
+            this.txtMaLop = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListLop)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -68,6 +68,7 @@
             this.dgvListLop.Location = new System.Drawing.Point(31, 230);
             this.dgvListLop.Name = "dgvListLop";
             this.dgvListLop.RowTemplate.Height = 28;
+            this.dgvListLop.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvListLop.Size = new System.Drawing.Size(758, 552);
             this.dgvListLop.TabIndex = 62;
             this.dgvListLop.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListLop_CellClick);
@@ -232,69 +233,13 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin chi tiết:";
             // 
-            // label2
+            // txtSiSoLop
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Navy;
-            this.label2.Location = new System.Drawing.Point(95, 61);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(83, 26);
-            this.label2.TabIndex = 60;
-            this.label2.Text = "Mã lớp:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Navy;
-            this.label4.Location = new System.Drawing.Point(89, 124);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(89, 26);
-            this.label4.TabIndex = 60;
-            this.label4.Text = "Tên lớp:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Navy;
-            this.label5.Location = new System.Drawing.Point(12, 188);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(166, 26);
-            this.label5.TabIndex = 60;
-            this.label5.Text = "Số trẻ tham gia:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Navy;
-            this.label6.Location = new System.Drawing.Point(76, 254);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(102, 26);
-            this.label6.TabIndex = 60;
-            this.label6.Text = "Sỉ số lớp:";
-            // 
-            // txtMaLop
-            // 
-            this.txtMaLop.Enabled = false;
-            this.txtMaLop.Location = new System.Drawing.Point(210, 56);
-            this.txtMaLop.Name = "txtMaLop";
-            this.txtMaLop.Size = new System.Drawing.Size(235, 35);
-            this.txtMaLop.TabIndex = 61;
-            // 
-            // txtTenLop
-            // 
-            this.txtTenLop.Enabled = false;
-            this.txtTenLop.Location = new System.Drawing.Point(210, 115);
-            this.txtTenLop.Name = "txtTenLop";
-            this.txtTenLop.Size = new System.Drawing.Size(235, 35);
-            this.txtTenLop.TabIndex = 61;
+            this.txtSiSoLop.Enabled = false;
+            this.txtSiSoLop.Location = new System.Drawing.Point(210, 245);
+            this.txtSiSoLop.Name = "txtSiSoLop";
+            this.txtSiSoLop.Size = new System.Drawing.Size(235, 35);
+            this.txtSiSoLop.TabIndex = 61;
             // 
             // txtTreThamGia
             // 
@@ -304,13 +249,69 @@
             this.txtTreThamGia.Size = new System.Drawing.Size(235, 35);
             this.txtTreThamGia.TabIndex = 61;
             // 
-            // txtSiSoLop
+            // txtTenLop
             // 
-            this.txtSiSoLop.Enabled = false;
-            this.txtSiSoLop.Location = new System.Drawing.Point(210, 245);
-            this.txtSiSoLop.Name = "txtSiSoLop";
-            this.txtSiSoLop.Size = new System.Drawing.Size(235, 35);
-            this.txtSiSoLop.TabIndex = 61;
+            this.txtTenLop.Enabled = false;
+            this.txtTenLop.Location = new System.Drawing.Point(210, 115);
+            this.txtTenLop.Name = "txtTenLop";
+            this.txtTenLop.Size = new System.Drawing.Size(235, 35);
+            this.txtTenLop.TabIndex = 61;
+            // 
+            // txtMaLop
+            // 
+            this.txtMaLop.Enabled = false;
+            this.txtMaLop.Location = new System.Drawing.Point(210, 56);
+            this.txtMaLop.Name = "txtMaLop";
+            this.txtMaLop.Size = new System.Drawing.Size(235, 35);
+            this.txtMaLop.TabIndex = 61;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Navy;
+            this.label6.Location = new System.Drawing.Point(88, 253);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(102, 26);
+            this.label6.TabIndex = 60;
+            this.label6.Text = "Sỉ số lớp:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Navy;
+            this.label5.Location = new System.Drawing.Point(46, 187);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(166, 26);
+            this.label5.TabIndex = 60;
+            this.label5.Text = "Số trẻ tham gia:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Navy;
+            this.label4.Location = new System.Drawing.Point(97, 123);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(89, 26);
+            this.label4.TabIndex = 60;
+            this.label4.Text = "Tên lớp:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Navy;
+            this.label2.Location = new System.Drawing.Point(101, 60);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(83, 26);
+            this.label2.TabIndex = 60;
+            this.label2.Text = "Mã lớp:";
             // 
             // View_DanhSachLopThamGiaHoatDong
             // 
