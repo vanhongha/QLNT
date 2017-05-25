@@ -33,7 +33,8 @@ namespace QLNT.Presentation_Layer
         BieuDoChieuCao,
         ThongTinSucKhoe,
         ThongTinChiTietSK,
-        CapNhatMonAn
+        CapNhatMonAn,
+        ApDungThucDon
     }
 
     public enum tab

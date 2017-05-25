@@ -55,6 +55,7 @@
             this.view_BieuDoCanNang1 = new QLNT.Presentation_Layer.View.QLSucKhoe.View_BieuDoCanNang();
             this.view_BieuDoChieuCao1 = new QLNT.Presentation_Layer.View.QLSucKhoe.View_BieuDoChieuCao();
             this.view_DanhSachTreThamGiaHoatDong1 = new View.QLHoatDong.View_DanhSachTreThamGiaHoatDong();
+            this.view_ApDungThucDon1 = new View.QLDinhDuong.View_ApDungThucDon();
             this.view_DanhSachTreThamGiaDichVu1 = new View.QLSucKhoe.View_DanhSachTreThamGiaDichVu();
             this.view_DiemNgoaiKhoa = new QLNT.Presentation_Layer.View.QLHoatDong.View_DiemNgoaiKhoa();
             this.view_HoatDongNgoaiKhoa = new QLNT.Presentation_Layer.View.QLHoatDong.View_HoatDongNgoaiKhoa();
@@ -494,11 +495,22 @@
             this.content.Controls.Add(view_CapNhatMonAn1);
             this.content.Controls.Add(this.view_DanhSachTreThamGiaDichVu1);
             this.content.Controls.Add(this.view_DanhSachTreThamGiaHoatDong1);
+            this.content.Controls.Add(this.view_ApDungThucDon1);
             this.content.Dock = System.Windows.Forms.DockStyle.Fill;
             this.content.Location = new System.Drawing.Point(276, 100);
             this.content.Name = "content";
             this.content.Size = new System.Drawing.Size(927, 542);
             this.content.TabIndex = 2;
+            // 
+            // view_ApDungThucDon1
+            // 
+            this.view_ApDungThucDon1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(236)))), ((int)(((byte)(245)))));
+            this.view_ApDungThucDon1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.view_ApDungThucDon1.Location = new System.Drawing.Point(0, 0);
+            this.view_ApDungThucDon1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.view_ApDungThucDon1.Name = "view_ApDungThucDon1";
+            this.view_ApDungThucDon1.Size = new System.Drawing.Size(927, 542);
+            this.view_ApDungThucDon1.TabIndex = 23;
             // 
             // view_CapNhatMonAn1
             // 
@@ -940,6 +952,7 @@
         private View.QLDinhDuong.View_CapNhatMonAn view_CapNhatMonAn1;
         private View.QLSucKhoe.View_DanhSachTreThamGiaDichVu view_DanhSachTreThamGiaDichVu1;
         private View.QLHoatDong.View_DanhSachTreThamGiaHoatDong view_DanhSachTreThamGiaHoatDong1;
+        private View.QLDinhDuong.View_ApDungThucDon view_ApDungThucDon1;
         private System.Windows.Forms.Button button1;
     }
 }
