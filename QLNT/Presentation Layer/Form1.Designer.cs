@@ -491,19 +491,15 @@
             this.content.Controls.Add(this.view_TimKiemTre1);
             this.content.Controls.Add(this.view_ThemTre1);
             this.content.Controls.Add(this.view_LopThamGia1);
-<<<<<<< HEAD
             this.content.Controls.Add(view_CapNhatMonAn1);
-=======
             this.content.Controls.Add(this.view_DanhSachTreThamGiaDichVu1);
             this.content.Controls.Add(this.view_DanhSachTreThamGiaHoatDong1);
->>>>>>> origin/master
             this.content.Dock = System.Windows.Forms.DockStyle.Fill;
             this.content.Location = new System.Drawing.Point(276, 100);
             this.content.Name = "content";
             this.content.Size = new System.Drawing.Size(927, 542);
             this.content.TabIndex = 2;
             // 
-<<<<<<< HEAD
             // view_CapNhatMonAn1
             // 
             this.view_CapNhatMonAn1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(236)))), ((int)(((byte)(245)))));
@@ -512,8 +508,7 @@
             this.view_CapNhatMonAn1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.view_CapNhatMonAn1.Name = "view_DanhSachLopThamGiaHoatDong1";
             this.view_CapNhatMonAn1.Size = new System.Drawing.Size(927, 542);
-            this.view_CapNhatMonAn1.TabIndex = 20;
-=======
+            this.view_CapNhatMonAn1.TabIndex = 22;
             // view_DanhSachTreThamGiaHoatDong
             // 
             this.view_DanhSachTreThamGiaHoatDong1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(236)))), ((int)(((byte)(245)))));
@@ -533,7 +528,6 @@
             this.view_DanhSachTreThamGiaDichVu1.Name = "view_DanhSachTreThamGiaDichVu1";
             this.view_DanhSachTreThamGiaDichVu1.Size = new System.Drawing.Size(927, 542);
             this.view_DanhSachTreThamGiaDichVu1.TabIndex = 20;
->>>>>>> origin/master
             // 
             // view_DanhSachLopThamGiaHoatDong1
             // 
@@ -544,10 +538,6 @@
             this.view_DanhSachLopThamGiaHoatDong1.Name = "view_DanhSachLopThamGiaHoatDong1";
             this.view_DanhSachLopThamGiaHoatDong1.Size = new System.Drawing.Size(927, 542);
             this.view_DanhSachLopThamGiaHoatDong1.TabIndex = 19;
-<<<<<<< HEAD
-=======
-            //
->>>>>>> origin/master
             //
             // view_LopThamGia1
             //
@@ -947,12 +937,9 @@
         private View.QLSucKhoe.View_ThongTinChiTietSK view_ThongTinChiTietSK1;
         private View.QLSucKhoe.View_CapNhatSucKhoe view_CapNhatSucKhoe1;
         private View.QLSucKhoe.View_LopThamGia view_LopThamGia1;
-<<<<<<< HEAD
         private View.QLDinhDuong.View_CapNhatMonAn view_CapNhatMonAn1;
-=======
         private View.QLSucKhoe.View_DanhSachTreThamGiaDichVu view_DanhSachTreThamGiaDichVu1;
         private View.QLHoatDong.View_DanhSachTreThamGiaHoatDong view_DanhSachTreThamGiaHoatDong1;
->>>>>>> origin/master
         private System.Windows.Forms.Button button1;
     }
 }

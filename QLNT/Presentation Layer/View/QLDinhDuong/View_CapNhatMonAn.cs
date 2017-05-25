@@ -32,7 +32,7 @@ namespace QLNT.Presentation_Layer.View.QLDinhDuong
         private void getDataGridViewNguyenLieuTungMon(string maMon)
         {
 
-            dgvNguyenLieuTungMon.DataSource = NguyenLieuTungMonBLL.LayDanhSachNLTungMon(maMon);
+            //dgvNguyenLieuTungMon.DataSource = NguyenLieuTungMonBLL.LayDanhSachNLTungMon(maMon);
 
             string[] column = {"TenNguyenLieu", "SoLuong","DonViTinh", "ChiSoDinhDuong"};
             Utility.ControlFormat.DataGridViewFormat(dgvNguyenLieuTungMon, column);
@@ -55,7 +55,7 @@ namespace QLNT.Presentation_Layer.View.QLDinhDuong
 
         private void getDataGridViewMonAn()
         {
-            dgvMonAn.DataSource = MonAnBLL.LayDanhSachMonAn();
+            //dgvMonAn.DataSource = MonAnBLL.LayDanhSachMonAn();
 
             string[] column = { "MaMonAn", "TenMonAn" };
             Utility.ControlFormat.DataGridViewFormat(dgvMonAn, column);
@@ -145,13 +145,13 @@ namespace QLNT.Presentation_Layer.View.QLDinhDuong
             MonAn monan = new MonAn();
             monan.MaMonAn = txtMaMonAn.Text;
             monan.TenMonAn = txtTenMonAn.Text;
-            MonAnBLL.ThemMonAn(monan);
+            //MonAnBLL.ThemMonAn(monan);
             getDataGridViewMonAn();
         }
 
         private void btnLamMoi_Click(object sender, EventArgs e)
         {
-            txtMaMonAn.Text = MonAnBLL.SinhMaTuDong();
+            //txtMaMonAn.Text = MonAnBLL.SinhMaTuDong();
             txtTenMonAn.Text = "";
             
         }
@@ -163,7 +163,7 @@ namespace QLNT.Presentation_Layer.View.QLDinhDuong
                 MessageBox.Show("Vui lòng nhấn chọn món ăn cần xóa", "Thông báo", MessageBoxButtons.OK);
                 return;
             }
-            MonAnBLL.XoaMonAn(txtMaMonAn.Text.Trim());
+            //MonAnBLL.XoaMonAn(txtMaMonAn.Text.Trim());
             getDataGridViewMonAn();
             getDataGridViewNguyenLieuTungMon("");
             setTextInfo();
@@ -182,7 +182,7 @@ namespace QLNT.Presentation_Layer.View.QLDinhDuong
             MonAn monan = new MonAn();
             monan.MaMonAn = txtMaMonAn.Text;
             monan.TenMonAn = txtTenMonAn.Text;
-            MonAnBLL.CapNhatMonAn(monan);
+            //MonAnBLL.CapNhatMonAn(monan);
             getDataGridViewMonAn();
 
         }
@@ -212,14 +212,14 @@ namespace QLNT.Presentation_Layer.View.QLDinhDuong
 
 
             //đủ điều kiện thêm chi tiet
-            NguyenLieuTungMon nltungmon = new NguyenLieuTungMon();
+            /*NguyenLieuTungMon nltungmon = new NguyenLieuTungMon();
             nltungmon.MaMon=txtMaMonAn.Text.Trim();
             nltungmon.MaNL = NguyenLieuBLL.LayMaNguyenLieuTheoTen(cboChonNguyenLieu.Text.Trim());
             nltungmon.SoLuong = Convert.ToInt32(txtSoLuong.Text.Trim());
 
 
             NguyenLieuTungMonBLL.ThemNLTungMon(nltungmon);
-            getDataGridViewNguyenLieuTungMon(txtMaMonAn.Text);
+            getDataGridViewNguyenLieuTungMon(txtMaMonAn.Text);*/
         }
 
         private void cboChonNguyenLieu_SelectedIndexChanged(object sender, EventArgs e)
@@ -235,13 +235,13 @@ namespace QLNT.Presentation_Layer.View.QLDinhDuong
                 MessageBox.Show("Chưa chọn nguyên liệu cần cập nhật", "Thông báo", MessageBoxButtons.OK);
                 return;
             }
-            NguyenLieuTungMon nltungmon = new NguyenLieuTungMon();
+            /*NguyenLieuTungMon nltungmon = new NguyenLieuTungMon();
             nltungmon.MaMon = txtMaMonAn.Text.Trim();
             nltungmon.MaNL = NguyenLieuBLL.LayMaNguyenLieuTheoTen(cboChonNguyenLieu.Text.Trim());
             nltungmon.SoLuong = Convert.ToInt32(txtSoLuong.Text.Trim());
 
             NguyenLieuTungMonBLL.CapNhatNL(nltungmon);
-            getDataGridViewNguyenLieuTungMon(txtMaMonAn.Text);
+            getDataGridViewNguyenLieuTungMon(txtMaMonAn.Text);*/
         }
 
         private void btnXoaTrang_Click(object sender, EventArgs e)
@@ -259,7 +259,7 @@ namespace QLNT.Presentation_Layer.View.QLDinhDuong
                 return;
             }
             string manl= NguyenLieuBLL.LayMaNguyenLieuTheoTen(cboChonNguyenLieu.Text.Trim());
-            NguyenLieuTungMonBLL.XoaNLTungMon(txtMaMonAn.Text.Trim(), manl);
+            //NguyenLieuTungMonBLL.XoaNLTungMon(txtMaMonAn.Text.Trim(), manl);
             XoaTrang();
             getDataGridViewNguyenLieuTungMon(txtMaMonAn.Text);
 

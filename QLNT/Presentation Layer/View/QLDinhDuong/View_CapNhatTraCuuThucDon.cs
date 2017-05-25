@@ -35,7 +35,7 @@ namespace QLNT.Presentation_Layer.View.QLDinhDuong
 
         private void getDataGridViewThucDon()
         {
-            dgvThucDon.DataSource = ThucDonBLL.LayDanhSachThucDon();
+            /*dgvThucDon.DataSource = ThucDonBLL.LayDanhSachThucDon();
             string[] columns = { "MaThucDon", "NgayLap", "NguoiLap" };
             Utility.ControlFormat.DataGridViewFormat(dgvThucDon, columns);
 
@@ -45,12 +45,12 @@ namespace QLNT.Presentation_Layer.View.QLDinhDuong
             dgvThucDon.Columns[1].HeaderText = "Ngày lập";
             dgvThucDon.Columns[1].Width = 130;
             dgvThucDon.Columns[2].HeaderText = "Người lập";
-            dgvThucDon.Columns[2].Width = 135;
+            dgvThucDon.Columns[2].Width = 135;*/
         }
 
         private void getDataGridViewChiTietThucDon(string maThucDon)
         {
-            dgvChiTietThucDon.DataSource = ChiTietThucDonBLL.LayDanhSachChiTietThucDon(maThucDon);
+            /*dgvChiTietThucDon.DataSource = ChiTietThucDonBLL.LayDanhSachChiTietThucDon(maThucDon);
             string[] columns = { "MaThucDon", "MaMonAn","TenMonAn" };
             Utility.ControlFormat.DataGridViewFormat(dgvChiTietThucDon, columns);
 
@@ -60,12 +60,12 @@ namespace QLNT.Presentation_Layer.View.QLDinhDuong
             dgvChiTietThucDon.Columns[1].HeaderText = "Mã Món Ăn";
             dgvChiTietThucDon.Columns[1].Width = 150;
             dgvChiTietThucDon.Columns[2].HeaderText = "Tên Món Ăn";
-            dgvChiTietThucDon.Columns[2].Width = 150;
+            dgvChiTietThucDon.Columns[2].Width = 150;*/
         }
 
         private void getDataGridViewApDungThucDon(string maThucDon)
         {
-            dgvApDungThucDon.DataSource = ApDungThucDonBLL.LayDanhSachApDungThucDon(maThucDon);
+            /*dgvApDungThucDon.DataSource = ApDungThucDonBLL.LayDanhSachApDungThucDon(maThucDon);
             string[] columns = { "MaThucDon", "TenLop","Buoi", "NgayApDung" };
             Utility.ControlFormat.DataGridViewFormat(dgvApDungThucDon, columns);
 
@@ -77,31 +77,31 @@ namespace QLNT.Presentation_Layer.View.QLDinhDuong
             dgvApDungThucDon.Columns[2].HeaderText = "Buổi";
             dgvApDungThucDon.Columns[2].Width = 100;
             dgvApDungThucDon.Columns[3].HeaderText = "Ngày áp dụng";
-            dgvApDungThucDon.Columns[3].Width = 120;
+            dgvApDungThucDon.Columns[3].Width = 120;*/
         }
 
         private void getComboBoxMonAn()
         {
-            cboMonAn.DataSource = ChiTietThucDonBLL.LayDanhSachTenVaMaMonAn();
+            /*cboMonAn.DataSource = ChiTietThucDonBLL.LayDanhSachTenVaMaMonAn();
             cboMonAn.DisplayMember = "TenMonAn";
-            cboMonAn.ValueMember = "MaMonAn";
+            cboMonAn.ValueMember = "MaMonAn";*/
         }
 
         private void getComboBoxLop()
         {
-            cboLop.DataSource = ApDungThucDonBLL.LayDanhSachTenVaMaLop();
+            /*cboLop.DataSource = ApDungThucDonBLL.LayDanhSachTenVaMaLop();
             cboLop.DisplayMember = "TenLop";
-            cboLop.ValueMember = "MaLop";
+            cboLop.ValueMember = "MaLop";*/
             
         }
 
         private void btnTaoMoiThucDon_Click(object sender, EventArgs e)
         {
-            string maThucDonMoi = ThucDonBLL.SinhMaTuDong();
+            /*string maThucDonMoi = ThucDonBLL.SinhMaTuDong();
             ThucDonBLL.ThemThucDon(maThucDonMoi);
             getDataGridViewThucDon();
             getDataGridViewChiTietThucDon(maThucDonMoi);
-            getDataGridViewApDungThucDon(maThucDonMoi);
+            getDataGridViewApDungThucDon(maThucDonMoi);*/
         }
 
         public void SetEnableComponent(bool value)
@@ -129,7 +129,7 @@ namespace QLNT.Presentation_Layer.View.QLDinhDuong
 
         private void btnXoaThucDon_Click(object sender, EventArgs e)
         {
-            if(ThucDonBLL.KiemTraThucDonDaDuocApDung(maThucDon))
+            /*if(ThucDonBLL.KiemTraThucDonDaDuocApDung(maThucDon))
             {
                 MessageBox.Show("Không thể xóa thực đơn này, Thực đơn đã được áp dụng", "Thông báo", MessageBoxButtons.OK);
                 return;
@@ -140,13 +140,13 @@ namespace QLNT.Presentation_Layer.View.QLDinhDuong
             getDataGridViewChiTietThucDon("");
             getDataGridViewApDungThucDon("");
             SetEnableComponent(false);
-            txtMaThucDon.Text = "";
+            txtMaThucDon.Text = "";*/
 
         }
 
         private void btnThemChiTiet_Click(object sender, EventArgs e)
         {
-            if (maThucDon == "")
+            /*if (maThucDon == "")
             {
                 MessageBox.Show("Chưa chọn thực đơn để cập nhật,\nNhấp chọn 1 thực đơn trong bảng THỰC ĐƠN", "Thông báo", MessageBoxButtons.OK);
                 return;
@@ -172,12 +172,12 @@ namespace QLNT.Presentation_Layer.View.QLDinhDuong
 
             ChiTietThucDonBLL.ThemChiTietThucDon(maThucDon, cboMonAn.SelectedValue.ToString().Trim());
             getDataGridViewChiTietThucDon(maThucDon);
-
+            */
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            if (maThucDon == "")
+            /*if (maThucDon == "")
             {
                 MessageBox.Show("Chưa chọn thực đơn để cập nhật,\nNhấp chọn 1 thực đơn trong bảng THỰC ĐƠN", "Thông báo", MessageBoxButtons.OK);
                 return;
@@ -202,11 +202,11 @@ namespace QLNT.Presentation_Layer.View.QLDinhDuong
             }
 
             ChiTietThucDonBLL.XoaChiTietThucDon(maThucDon, cboMonAn.SelectedValue.ToString().Trim());
-            getDataGridViewChiTietThucDon(maThucDon);
+            getDataGridViewChiTietThucDon(maThucDon);*/
         }
 
         private void btnApDungThucDon_Click(object sender, EventArgs e)
-        {
+        {/*
             //---------------kiểm tra điều kiện nhấn áp dụng-------------------
             if(txtMaThucDon.Text == "")
             {
@@ -332,7 +332,7 @@ namespace QLNT.Presentation_Layer.View.QLDinhDuong
                 return;
             }
 
-            //MessageBox.Show(thongtin);
+            //MessageBox.Show(thongtin);*/
         }
 
         private void dgvChiTietThucDon_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -346,7 +346,7 @@ namespace QLNT.Presentation_Layer.View.QLDinhDuong
 
         private void dgvThucDon_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex < 0 || e.RowIndex > dgvThucDon.RowCount)
+           /* if (e.RowIndex < 0 || e.RowIndex > dgvThucDon.RowCount)
                 return;
             txtMaThucDon.Text = dgvThucDon.Rows[e.RowIndex].Cells["MaThucDon"].Value.ToString();
             txtNguoiLap.Text = dgvThucDon.Rows[e.RowIndex].Cells["NguoiLap"].Value.ToString();
@@ -361,8 +361,8 @@ namespace QLNT.Presentation_Layer.View.QLDinhDuong
             {
                 lblWarning.Visible = false;
             }
-
-            SetEnableComponent(true);
+            
+            SetEnableComponent(true);*/
         }
 
         private void dgvApDungThucDon_CellClick(object sender, DataGridViewCellEventArgs e)

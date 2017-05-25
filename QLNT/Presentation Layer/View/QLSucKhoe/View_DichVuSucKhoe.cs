@@ -57,11 +57,8 @@ namespace QLNT.Presentation_Layer.View.QLSucKhoe
                 //goi form danh sach lop tham gia dich vu
                 frmMain parentForm = (this.Parent.Parent as frmMain);
                 parentForm.UpdateSubView("DanhSachLopThamGiaDichVu");
-<<<<<<< HEAD
-=======
                 View_LopThamGia view = (View_LopThamGia)parentForm.GetSubView("DanhSachLopThamGiaDichVu");
                 view.LoadForm(maDV);
->>>>>>> origin/master
             }
             else
             {
