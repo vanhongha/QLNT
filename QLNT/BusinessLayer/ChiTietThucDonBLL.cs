@@ -31,6 +31,11 @@ namespace QLNT.BusinessLayer
             return ChiTietThucDonDAL.LayDanhSachTenVaMaMonAn();
         }
 
+        public static DataTable LayDanhSachMaMonAnTheoThucDon(string maThucDon)
+        {
+            return ChiTietThucDonDAL.LayDanhSachMaMonAnTheoThucDon(maThucDon);
+        }
+
         public static bool KiemTraMonAnTrongThucDon(string maThucDon, string maMonAn)
         {
             return ChiTietThucDonDAL.KiemTraMonAnTrongThucDon(maThucDon, maMonAn);

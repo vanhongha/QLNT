@@ -77,25 +77,22 @@ namespace QLNT.Presentation_Layer.View.QLDinhDuong
 
             foreach (DataGridViewRow row in dgvLop.Rows)
             {
-                
+                row.Selected = false;
+                row.Cells[0].Value = true;
+
                 if (ApDungThucDonBLL.KiemTraApdungThucDon(row.Cells["MaLop"].Value.ToString(), dtpNgay_Loc.Value.ToShortDateString(), cboBuoiAD.Text))
                 {
                     row.DefaultCellStyle.BackColor = Color.Yellow;
                     row.ReadOnly = true;
-                    DataGridViewCheckBoxCell cell = (DataGridViewCheckBoxCell)row.Cells[0];
-                    //cell.Selected = true;
-                    cell.Value = true;
-                }
+                    row.Cells[0].Value = true;
 
+                }
                 else
                 {
-                    row.DefaultCellStyle.BackColor = Color.White;
                     row.ReadOnly = false;
-                    DataGridViewCheckBoxCell cell = (DataGridViewCheckBoxCell)row.Cells[0];
-                    //cell.Selected = true;
-                    cell.Value = false;
+                    row.Cells[0].Value = false;
+                    row.DefaultCellStyle.BackColor = Color.White;
                 }
-                
             }
         }
 
@@ -125,11 +122,8 @@ namespace QLNT.Presentation_Layer.View.QLDinhDuong
             
         }
 
-        private bool KiemTra_btnApDungThucDon_Click()
+        private bool KiemTraDieuKienBanDauDeApDungThucDon()
         {
-
-            
-
             if (dtpNgay_Loc.Value < DateTime.Today)
             {
                 MessageBox.Show("Thất bại! Không thể áp dụng thực đơn cho ngày đã qua", "Thông báo", MessageBoxButtons.OK);
@@ -138,9 +132,25 @@ namespace QLNT.Presentation_Layer.View.QLDinhDuong
 
             if (cboBuoiAD.Text == "")
             {
-                MessageBox.Show("chọn buổi để áp dụng", "Thông báo", MessageBoxButtons.OK);
+                MessageBox.Show("Vui lòng chọn buổi để áp dụng", "Thông báo", MessageBoxButtons.OK);
                 return false;
             }
+
+            if(cboThucDon_Loc.Text == "")
+            {
+                MessageBox.Show("Vui lòng chọn thực đơn để áp dụng", "Thông báo", MessageBoxButtons.OK);
+                return false;
+            }
+            
+            //có lớp để áp dụng hợp lệ
+            foreach (DataGridViewRow row in dgvLop.Rows)
+            {
+                if (Convert.ToBoolean(row.Cells[0].Value) && !(row.DefaultCellStyle.BackColor == Color.Yellow))
+                {
+                    return true;
+                }
+            }
+            MessageBox.Show("Vui lòng chọn lớp chưa áp dụng để thực thi áp dụng", "Thông báo", MessageBoxButtons.OK);
 
             return true;
         }
@@ -158,31 +168,28 @@ namespace QLNT.Presentation_Layer.View.QLDinhDuong
             }
         }
 
-        private void HuyBoMuaHang_btnApDungThucDon_Click(PhieuMuaNL phieuMua, List<string> listMaNguyenLieu, List<int> listSoLuong)
+        private void HuyBoMuaHangVaCapNhatNguyenLieu(PhieuMuaNL phieuMua, List<string> listMaNguyenLieu, List<int> listSoLuong, int TongSoHocSinhAD)
         {
             //xóa phiếu mua vừa tạo
             PhieuMuaNLBLL.XoaPhieuMuaNL(phieuMua.MaPhieu);
 
             //thực hiện trừ số lượng nguyên liệu được dùng
             for (int i = 0; i < listMaNguyenLieu.Count; i++)
-                NguyenLieuBLL.CapNhatTonNguyenLieuTheoMa(listMaNguyenLieu[i], -listSoLuong[i]);
-
-            //Thêm thông tin áp dụng vào CSDL
-            //ApDungThucDonBLL.ThemApDungThucDon(txtMaThucDon.Text, cboLop.SelectedValue.ToString(), dtpNgayApDung.Value, cboBuoiAD2.Text);
-            getDataGridViewApDungThucDon(dtpNgay_Loc.Value, cboBuoiAD.Text);
-
-            MessageBox.Show("Áp dụng thành công", "Thông báo", MessageBoxButtons.OK);
+                NguyenLieuBLL.CapNhatTonNguyenLieuTheoMa(listMaNguyenLieu[i], -TongSoHocSinhAD*listSoLuong[i]);
         }
 
-        private void ThongBaoThanhCong_btnApDungThucDon_Click(string maPhieu)
+        private void ThongBaoXacNhanThemPhieuMua(string maPhieu)
         {
             DialogResult dialogResult = MessageBox.Show("Không đủ nguyên liệu để áp dụng\nTự động thêm phiếu mua hàng?", "Thông báo", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
-                MessageBox.Show("Đã thêm phiếu mua thành công với mã '" + maPhieu + "'\nvui lòng chuyển sang màn hình phiếu mua để xác nhận nhập kho\nCuối cùng Nhấp ''Áp dụng thực đơn'' để hoàn tất", "Thông báo", MessageBoxButtons.OK);
+                MessageBox.Show("Đã thêm phiếu mua thành công với mã '" + maPhieu + "'\n\nB1: chuyển sang màn hình 'PHIẾU MUA NGUYÊN LIỆU' để xác nhận nhập kho phiếu mua mã: " + maPhieu + "\n\nB2: quay lại màn hình 'ÁP DỤNG THỰC ĐƠN' Nhấp 'Áp dụng thực đơn' để hoàn tất", "Thông báo", MessageBoxButtons.OK);
             }
             else if (dialogResult == DialogResult.No)
-            { return; }
+            {
+                PhieuMuaNLBLL.XoaPhieuMuaNL(maPhieu);
+                return;
+            }
         }
 
         private void dgvApDungThucDon_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -191,101 +198,93 @@ namespace QLNT.Presentation_Layer.View.QLDinhDuong
                 return;
         }
 
-        private void dgvLop_CellClick(object sender, DataGridViewCellEventArgs e)
+        private bool SoSanhSoLuongTonVaSoLuongCanDung(List<string> listMaNguyenLieu, List<int> listSoLuong, int TongSoHocSinhAD, PhieuMuaNL phieuMua)
         {
-            if (e.RowIndex < 0 || e.ColumnIndex < 0 || e.RowIndex > dgvApDungThucDon.RowCount)
-                return;
-
-            if(dgvLop.Rows[e.RowIndex].DefaultCellStyle.BackColor == Color.Yellow)
+            bool KiemTraSoLuongTonCoDuDung = true;
+            //duyệt từng nguyên liệu để so sánh số lượng cần dùng và số lượng tồn trong kho
+            for (int i = 0; i < listMaNguyenLieu.Count; i++)
             {
-                dgvLop.ClearSelection();
-                return;
-            }
+                int soLuongThieu = TongSoHocSinhAD * listSoLuong[i] - int.Parse(NguyenLieuBLL.LaySoLuongTonTheoMaNguyenLieu(listMaNguyenLieu[i]));
 
-            if(!Convert.ToBoolean(dgvLop.Rows[e.RowIndex].Cells[0].Value))
-            {
-                dgvLop.Rows[e.RowIndex].Cells[0].Value = true;
-            }
-        }
-
-        private void ckbAll_Click(object sender, EventArgs e)
-        {
-            foreach (DataGridViewRow row in dgvLop.Rows)
-            {
-                if(!(row.DefaultCellStyle.BackColor == Color.Yellow))
+                //trường hợp thiếu nguyên liệu
+                if (soLuongThieu > 0)
                 {
-                    DataGridViewCheckBoxCell cell = (DataGridViewCheckBoxCell)row.Cells[0];
-                    cell.Selected = ckbAll.Checked;
-                    cell.Value = ckbAll.Checked;
+                    //Thêm chi tiết mua nguyên liệu bị thiếu
+                    ChiTietPhieuMuaNLBLL.ThemChiTietPhieuMuaNL(phieuMua.MaPhieu, listMaNguyenLieu[i], soLuongThieu, 0, 0);
+                    //xác nhận số lượng không đủ dùng
+                    KiemTraSoLuongTonCoDuDung =  false;
                 }
             }
+
+            return KiemTraSoLuongTonCoDuDung;
+        }
+
+        private int TinhTongSoLuongHocSinhApDung()
+        {
+            int TongSoHocSinhAD = 0;
+            foreach (DataGridViewRow row in dgvLop.Rows)
+            {
+                if (Convert.ToBoolean(row.Cells[0].Value) && !(row.DefaultCellStyle.BackColor == Color.Yellow))
+                    TongSoHocSinhAD += int.Parse(row.Cells["SiSo"].Value.ToString());
+            }
+            return TongSoHocSinhAD;
+        }
+
+        private bool KiemTraNguyenLieuTrongKho()
+        {
+            //làm mới danh sách
+            thongTinSoLuongNguyenLieuCanDeApDung.Clear();
+
+            DataTable DanhSachMonAn = ChiTietThucDonBLL.LayDanhSachMaMonAnTheoThucDon(cboThucDon_Loc.Text.Trim());
+            //duyệt tất cả các món ăn trong thực đơn
+            foreach (DataRow MonAn in DanhSachMonAn.Rows)
+            {
+                //lấy ra danh sách các nguyên liệu có trong món ăn đang duyệt
+                DataTable danhSachNguyenLieu = ApDungThucDonBLL.LayDanhSachMaNguyenLieuVaSoLuongTrongMonAn(MonAn["MaMonAn"].ToString());
+
+                //duyệt danh sách nguyên liệu của món ăn
+                foreach (DataRow nguyenLieu in danhSachNguyenLieu.Rows)
+                {
+                    ThemNguyenLieuVaoDanhSach(nguyenLieu["MaNguyenLieu"].ToString(), nguyenLieu["SoLuong"].ToString());
+                }
+            }
+
+            //lấy ra danh sách nguyên liệu, sô lượng
+            List<string> listMaNguyenLieu = new List<string>(thongTinSoLuongNguyenLieuCanDeApDung.Keys);
+            List<int> listSoLuong = new List<int>(thongTinSoLuongNguyenLieuCanDeApDung.Values);
+
+            //Thêm phiếu mua mới vào CSDL (giả sử cần phải mua thêm nguyên liệu)
+            PhieuMuaNL phieuMua = new PhieuMuaNL();
+            phieuMua = PhieuMuaNLBLL.TaoPhieuMuaMoi();
+            
+            //trường hợp mọi nguyên liệu đủ dùng
+            if (SoSanhSoLuongTonVaSoLuongCanDung(listMaNguyenLieu,listSoLuong, TinhTongSoLuongHocSinhApDung(), phieuMua))
+            {
+                HuyBoMuaHangVaCapNhatNguyenLieu(phieuMua, listMaNguyenLieu, listSoLuong, TinhTongSoLuongHocSinhApDung());
+                return true;
+            }
+
+            ThongBaoXacNhanThemPhieuMua(phieuMua.MaPhieu);
+            return false;
         }
 
         private void btnApDungThucDon_Click(object sender, EventArgs e)
         {
             //---------------kiểm tra điều kiện nhấn áp dụng-------------------
-            if (!KiemTra_btnApDungThucDon_Click())
+            if (!KiemTraDieuKienBanDauDeApDungThucDon())
                 return;
 
             //--------------------------tiến hành kiểm tra thông tin và áp dụng--------------------------
-
-            ////biến kiểm tra số lượng nguyên liệu có đủ dùng hay không
-            //bool KiemTraSoLuongTonCoDuDung = true;
-
-            ////xóa danh sách số lượng nguyên liệu cần để áp dụng(cũ)
-            //thongTinSoLuongNguyenLieuCanDeApDung.Clear();
-            //DataTable DanhSachMonAn = ChiTietThucDonBLL.LayDanhSachTenVaMaMonAn();
-            ////duyệt tất cả các món ăn trong thực đơn
-            //foreach (DataRow MonAn in DanhSachMonAn.Rows)
-            //{
-            //    //lấy ra danh sách các nguyên liệu có trong món ăn đang duyệt
-            //    DataTable danhSachNguyenLieu = ApDungThucDonBLL.LayDanhSachMaNguyenLieuVaSoLuongTrongMonAn(MonAn["MaMonAn"].ToString());
-
-            //    //duyệt danh sách nguyên liệu của món ăn
-            //    foreach (DataRow nguyenLieu in danhSachNguyenLieu.Rows)
-            //    {
-            //        ThemNguyenLieuVaoDanhSach(nguyenLieu["MaNguyenLieu"].ToString(), nguyenLieu["SoLuong"].ToString());
-            //    }
-            //}
-
-            ////lấy ra danh sách nguyên liệu, sô lượng
-            //List<string> listMaNguyenLieu = new List<string>(thongTinSoLuongNguyenLieuCanDeApDung.Keys);
-            //List<int> listSoLuong = new List<int>(thongTinSoLuongNguyenLieuCanDeApDung.Values);
-
-            ////Thêm phiếu mua mới vào CSDL (giả sử cần phải mua thêm nguyên liệu)
-            //PhieuMuaNL phieuMua = new PhieuMuaNL();
-            //phieuMua = PhieuMuaNLBLL.TaoPhieuMuaMoi();
-
-            ////duyệt từng nguyên liệu để so sánh số lượng cần dùng và số lượng tồn trong kho
-            //for (int i = 0; i < listMaNguyenLieu.Count; i++)
-            //{
-            //    int soLuongThieu = listSoLuong[i] - int.Parse(NguyenLieuBLL.LaySoLuongTonTheoMaNguyenLieu(listMaNguyenLieu[i]));
-
-            //    //trường hợp thiếu nguyên liệu
-            //    if (soLuongThieu > 0)
-            //    {
-            //        //Thêm chi tiết mua nguyên liệu bị thiếu
-            //        ChiTietPhieuMuaNLBLL.ThemChiTietPhieuMuaNL(phieuMua.MaPhieu, listMaNguyenLieu[i], soLuongThieu, 0, 0);
-            //        //xác nhận số lượng không đủ dùng
-            //        KiemTraSoLuongTonCoDuDung = false;
-            //    }
-            //}
-
-            ////trường hợp mọi nguyên liệu đủ dùng
-            //if (KiemTraSoLuongTonCoDuDung)
-            //{
-            //    HuyBoMuaHang_btnApDungThucDon_Click(phieuMua, listMaNguyenLieu, listSoLuong);
-            //    return;
-            //}
-
-            //ThongBaoThanhCong_btnApDungThucDon_Click(phieuMua.MaPhieu);
+            if(!KiemTraNguyenLieuTrongKho())
+            {
+                return;
+            }
 
             string danhSachLopThanhCong = "";
             string danhSachLopThatBai = "";
 
             foreach (DataGridViewRow row in dgvLop.Rows)
             {
-                //DataGridViewCheckBoxCell cell = (DataGridViewCheckBoxCell)row.Cells[0];
                 if (Convert.ToBoolean(row.Cells[0].Value) && !(row.DefaultCellStyle.BackColor == Color.Yellow))
                 {
                     if (ApDungThucDonBLL.KiemTraApdungThucDon(row.Cells["MaLop"].Value.ToString(), dtpNgay_Loc.Value.ToShortDateString(), cboBuoiAD.Text))
@@ -299,19 +298,39 @@ namespace QLNT.Presentation_Layer.View.QLDinhDuong
                 }
             }
 
-            if(danhSachLopThanhCong != "")
+            if (danhSachLopThanhCong != "")
                 MessageBox.Show("Lớp áp dụng thành công:\n" + danhSachLopThanhCong, "Thông báo", MessageBoxButtons.OK);
-            if(danhSachLopThatBai != "")
+            if (danhSachLopThatBai != "")
                 MessageBox.Show("Lớp áp dụng không thành công:\n" + danhSachLopThatBai + "các lớp này đã được xét áp dụng thực đơn rồi", "Thông báo", MessageBoxButtons.OK);
 
             ChangeRowsColor();
 
         }
 
+        private void dgvLop_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0 || e.ColumnIndex < 0 || e.RowIndex > dgvLop.RowCount)
+                return;
+
+            if(dgvLop.Rows[e.RowIndex].DefaultCellStyle.BackColor == Color.Yellow)
+            {
+                dgvLop.ClearSelection();
+                return;
+            }
+        }
+
+        private void ckbAll_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+      
+
         private void dtpNgay_Loc_ValueChanged(object sender, EventArgs e)
         {
             ChangeRowsColor();
             getDataGridViewApDungThucDon(dtpNgay_Loc.Value, cboBuoiAD.Text);
+            Check_DgvLop();
 
         }
 
@@ -319,6 +338,27 @@ namespace QLNT.Presentation_Layer.View.QLDinhDuong
         {
             ChangeRowsColor();
             getDataGridViewApDungThucDon(dtpNgay_Loc.Value, cboBuoiAD.Text);
+            Check_DgvLop();
+        }
+
+        private void ckbAll_CheckedChanged(object sender, EventArgs e)
+        {
+            Check_DgvLop();
+        }
+
+        //hàm check combobox của dgvLop theo combobox CheckAll
+        public void Check_DgvLop()
+        {
+            foreach (DataGridViewRow row in dgvLop.Rows)
+            {
+                if (!(row.DefaultCellStyle.BackColor == Color.Yellow))
+                {
+                    DataGridViewCheckBoxCell cell = (DataGridViewCheckBoxCell)row.Cells[0];
+                    cell.Selected = ckbAll.Checked;
+                    cell.Value = ckbAll.Checked;
+                    row.Cells[0].Value = ckbAll.Checked;
+                }
+            }
         }
     }
 }

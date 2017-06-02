@@ -70,13 +70,13 @@ namespace QLNT.Presentation_Layer.View.QLDinhDuong
             dgvPhieuMua.Columns[0].HeaderText = "Mã phiếu";
             dgvPhieuMua.Columns[0].Width = 100;
             dgvPhieuMua.Columns[1].HeaderText = "Ngày mua";
-            dgvPhieuMua.Columns[1].Width = 90;
+            dgvPhieuMua.Columns[1].Width = 100;
             dgvPhieuMua.Columns[2].HeaderText = "Tổng tiền";
             dgvPhieuMua.Columns[2].Width = 100;
             dgvPhieuMua.Columns[3].HeaderText = "Trạng thái";
             dgvPhieuMua.Columns[3].Width = 100;
             dgvPhieuMua.Columns[4].HeaderText = "Người lập phiếu";
-            dgvPhieuMua.Columns[4].Width = 100;
+            dgvPhieuMua.Columns[4].Width = 130;
 
             dgvPhieuMua.ClearSelection();
             dgvPhieuMua.CurrentCell = null;

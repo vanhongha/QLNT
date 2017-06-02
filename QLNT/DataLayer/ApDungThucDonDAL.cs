@@ -19,7 +19,7 @@ namespace QLNT.DataLayer
             cmd.CommandType = CommandType.StoredProcedure;
 
             cmd.Parameters.AddWithValue("@MaThucDon", apDungThucDon.MaThucDon);
-            cmd.Parameters.AddWithValue("@Buoi", apDungThucDon.Buoi);
+            cmd.Parameters.AddWithValue("@Buoi", apDungThucDon.Buoi.Trim());
             cmd.Parameters.AddWithValue("@NgayApDung", apDungThucDon.NgayApDung);
             cmd.Parameters.AddWithValue("@MaLop", apDungThucDon.MaLop);
 
@@ -51,7 +51,7 @@ namespace QLNT.DataLayer
 
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@NgayApDung", NgayApDung);
-            cmd.Parameters.AddWithValue("@Buoi", Buoi);
+            cmd.Parameters.AddWithValue("@Buoi", Buoi.Trim());
 
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             db.dt = new DataTable();
@@ -93,7 +93,7 @@ namespace QLNT.DataLayer
 
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@MaLop", maLop);
-            cmd.Parameters.AddWithValue("@Buoi", buoiApDung);
+            cmd.Parameters.AddWithValue("@Buoi", buoiApDung.Trim());
 
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             db.dt = new DataTable();

@@ -237,7 +237,7 @@ namespace QLNT.Presentation_Layer.View.QLDinhDuong
             }
             catch
             {
-                MessageBox.Show("Số lượng tồn phải là số nguyên và không quá 2147483647 \nVui lòng điền đúng số lượng", "Thông báo", MessageBoxButtons.OK);
+                MessageBox.Show("Số lượng tồn phải là số nguyên và nhỏ hơn 2000000000 \nVui lòng điền đúng số lượng", "Thông báo", MessageBoxButtons.OK);
                 txtSoLuongTon.Text = "0";
             }
 
@@ -264,6 +264,11 @@ namespace QLNT.Presentation_Layer.View.QLDinhDuong
 
         private void txtTimKiem_TextChanged(object sender, EventArgs e)
         {
+            if(txtTimKiem.Text.Length > 50)
+            {
+                MessageBox.Show("Vui lòng nhập từ khóa dưới 50 kí tự", "Thông báo", MessageBoxButtons.OK);
+                txtTimKiem.Text = "";
+            }
             TuKhoa = txtTimKiem.Text;
             getDataGridView();            
             lblSoKetQua.Text = dgvNguyenLieu.RowCount.ToString();

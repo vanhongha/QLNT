@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(View_ApDungThucDon));
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvApDungThucDon = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cboBuoiAD = new System.Windows.Forms.ComboBox();
@@ -45,7 +46,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.cboThucDon_Loc = new System.Windows.Forms.ComboBox();
             this.btnApDungThucDon = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvApDungThucDon)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -76,19 +76,30 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "CHI TIẾT ÁP DỤNG THỰC ĐƠN";
             // 
+            // groupBox2
+            // 
+            this.groupBox2.BackgroundImage = global::QLNT.Properties.Resources.chef;
+            this.groupBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.groupBox2.Location = new System.Drawing.Point(614, 8);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(198, 191);
+            this.groupBox2.TabIndex = 45;
+            this.groupBox2.TabStop = false;
+            // 
             // dgvApDungThucDon
             // 
             this.dgvApDungThucDon.AllowUserToAddRows = false;
             this.dgvApDungThucDon.AllowUserToDeleteRows = false;
             this.dgvApDungThucDon.BackgroundColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvApDungThucDon.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvApDungThucDon.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvApDungThucDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvApDungThucDon.Location = new System.Drawing.Point(6, 20);
             this.dgvApDungThucDon.Name = "dgvApDungThucDon";
@@ -110,12 +121,14 @@
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.cboThucDon_Loc);
             this.groupBox1.Controls.Add(this.btnApDungThucDon);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.Highlight;
             this.groupBox1.Location = new System.Drawing.Point(13, 70);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(902, 264);
             this.groupBox1.TabIndex = 87;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "DANH SÁCH LỚP CHƯA ÁP DỤNG THỰC ĐƠN";
+            this.groupBox1.Text = "DANH SÁCH LỚP";
             // 
             // cboBuoiAD
             // 
@@ -127,20 +140,21 @@
             "Sáng",
             "Trưa",
             "Chiều"});
-            this.cboBuoiAD.Location = new System.Drawing.Point(685, 113);
+            this.cboBuoiAD.Location = new System.Drawing.Point(702, 93);
             this.cboBuoiAD.Name = "cboBuoiAD";
-            this.cboBuoiAD.Size = new System.Drawing.Size(138, 21);
+            this.cboBuoiAD.Size = new System.Drawing.Size(138, 24);
             this.cboBuoiAD.TabIndex = 96;
             this.cboBuoiAD.SelectedIndexChanged += new System.EventHandler(this.cboBuoiAD_SelectedIndexChanged);
             // 
             // ckbAll
             // 
             this.ckbAll.AutoSize = true;
-            this.ckbAll.Location = new System.Drawing.Point(27, 22);
+            this.ckbAll.Location = new System.Drawing.Point(27, 24);
             this.ckbAll.Name = "ckbAll";
             this.ckbAll.Size = new System.Drawing.Size(15, 14);
             this.ckbAll.TabIndex = 88;
             this.ckbAll.UseVisualStyleBackColor = true;
+            this.ckbAll.CheckedChanged += new System.EventHandler(this.ckbAll_CheckedChanged);
             this.ckbAll.Click += new System.EventHandler(this.ckbAll_Click);
             // 
             // dgvLop
@@ -148,14 +162,14 @@
             this.dgvLop.AllowUserToAddRows = false;
             this.dgvLop.AllowUserToDeleteRows = false;
             this.dgvLop.BackgroundColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.InactiveCaption;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvLop.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.InactiveCaption;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvLop.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvLop.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvLop.Location = new System.Drawing.Point(6, 19);
             this.dgvLop.Name = "dgvLop";
@@ -170,7 +184,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label4.Location = new System.Drawing.Point(564, 85);
+            this.label4.Location = new System.Drawing.Point(581, 65);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(115, 20);
             this.label4.TabIndex = 98;
@@ -181,7 +195,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(644, 16);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(114, 13);
+            this.label3.Size = new System.Drawing.Size(139, 16);
             this.label3.TabIndex = 96;
             this.label3.Text = "LỌC KẾT QUẢ THEO ";
             // 
@@ -190,7 +204,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label5.Location = new System.Drawing.Point(563, 113);
+            this.label5.Location = new System.Drawing.Point(580, 93);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(116, 20);
             this.label5.TabIndex = 96;
@@ -200,7 +214,7 @@
             // 
             this.dtpNgay_Loc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.dtpNgay_Loc.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpNgay_Loc.Location = new System.Drawing.Point(685, 85);
+            this.dtpNgay_Loc.Location = new System.Drawing.Point(702, 65);
             this.dtpNgay_Loc.Name = "dtpNgay_Loc";
             this.dtpNgay_Loc.Size = new System.Drawing.Size(138, 22);
             this.dtpNgay_Loc.TabIndex = 95;
@@ -212,7 +226,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label8.Location = new System.Drawing.Point(574, 141);
+            this.label8.Location = new System.Drawing.Point(591, 121);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(105, 20);
             this.label8.TabIndex = 97;
@@ -222,9 +236,9 @@
             // 
             this.cboThucDon_Loc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboThucDon_Loc.FormattingEnabled = true;
-            this.cboThucDon_Loc.Location = new System.Drawing.Point(685, 140);
+            this.cboThucDon_Loc.Location = new System.Drawing.Point(702, 120);
             this.cboThucDon_Loc.Name = "cboThucDon_Loc";
-            this.cboThucDon_Loc.Size = new System.Drawing.Size(138, 21);
+            this.cboThucDon_Loc.Size = new System.Drawing.Size(138, 24);
             this.cboThucDon_Loc.TabIndex = 89;
             // 
             // btnApDungThucDon
@@ -245,24 +259,13 @@
             this.btnApDungThucDon.IdleFillColor = System.Drawing.Color.White;
             this.btnApDungThucDon.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
             this.btnApDungThucDon.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
-            this.btnApDungThucDon.Location = new System.Drawing.Point(596, 169);
+            this.btnApDungThucDon.Location = new System.Drawing.Point(621, 184);
             this.btnApDungThucDon.Margin = new System.Windows.Forms.Padding(5);
             this.btnApDungThucDon.Name = "btnApDungThucDon";
             this.btnApDungThucDon.Size = new System.Drawing.Size(191, 41);
             this.btnApDungThucDon.TabIndex = 83;
             this.btnApDungThucDon.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnApDungThucDon.Click += new System.EventHandler(this.btnApDungThucDon_Click);
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.BackgroundImage = global::QLNT.Properties.Resources.chef;
-            this.groupBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.groupBox2.Location = new System.Drawing.Point(614, 8);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(198, 191);
-            this.groupBox2.TabIndex = 45;
-            this.groupBox2.TabStop = false;
             // 
             // View_ApDungThucDon
             // 
