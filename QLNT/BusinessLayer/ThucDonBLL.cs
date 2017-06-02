@@ -30,6 +30,11 @@ namespace QLNT.BusinessLayer
             return ThucDonDAL.LayDanhSachThucDon();
         }
 
+        public static DataTable LayDanhSachMaThucDon()
+        {
+            return ThucDonDAL.LayDanhSachMaThucDon();
+        }
+
         public static bool KiemTraThucDonDaDuocApDung(string maThucDon)
         {
             return ThucDonDAL.KiemTraThucDonDaDuocApDung(maThucDon);

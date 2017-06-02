@@ -21,7 +21,7 @@ namespace QLNT.DataLayer
         #region Init properties
         public DataAccessHelper()
         {
-            String connectionString = @"Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=QLNT;Data Source=(local)\SQLEXPRESS";
+            String connectionString = @"Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=QLNT;Data Source=DESKTOP-HVQQFLB\VYLE";
             con = new SqlConnection(connectionString);
         }
         #endregion

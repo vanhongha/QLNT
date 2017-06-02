@@ -51,6 +51,18 @@ namespace QLNT.DataLayer
             return db.dt;
         }
 
+        public static DataTable LayDanhSachMaThucDon()
+        {
+            DataAccessHelper db = new DataAccessHelper();
+            SqlCommand cmd = db.Command("LAY_DANH_SACH_MA_THUC_DON");
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            db.dt = new DataTable();
+            da.Fill(db.dt);
+            return db.dt;
+        }
+
         public static bool KiemTraThucDonDaDuocApDung(string maThucDon)
         {
             DataAccessHelper db = new DataAccessHelper();

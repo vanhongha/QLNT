@@ -506,6 +506,12 @@
   <ItemGroup>
     <None Include="Resources\refresh-icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\43ee1cafca2f947f0be0d94aeff0fc26-chef-cartoon-profession-by-vexels.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chef.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
