@@ -29,10 +29,7 @@ namespace QLNT.Presentation_Layer
         DanhSachHoatDong,
         ApDungHoatDong,
         CapNhatSucKhoe,
-        BieuDoCanNang,
-        BieuDoChieuCao,
         ThongTinSucKhoe,
-        ThongTinChiTietSK,
         CapNhatMonAn,
         ApDungThucDon
     }

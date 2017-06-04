@@ -42,10 +42,7 @@ namespace QLNT.Presentation_Layer
             listView.Add(function.ThemCapNhatHoatDong, view_HoatDongNgoaiKhoa);
             listView.Add(function.ApDungHoatDong, view_DiemNgoaiKhoa);
             listView.Add(function.CapNhatSucKhoe, view_CapNhatSucKhoe1);
-            listView.Add(function.ThongTinChiTietSK, view_ThongTinChiTietSK1);
             listView.Add(function.DanhSachHoatDong, view_DanhSachLopThamGiaHoatDong1);
-            listView.Add(function.BieuDoCanNang, view_BieuDoCanNang1);
-            listView.Add(function.BieuDoChieuCao, view_BieuDoChieuCao1);
             listView.Add(function.CapNhatMonAn, view_CapNhatMonAn1);
             listView.Add(function.ApDungThucDon, view_ApDungThucDon1);
 
@@ -159,21 +156,6 @@ namespace QLNT.Presentation_Layer
         {
             switch(name)
             {
-                case "BieuDoCanNang":
-                    view_BieuDoCanNang1.Enabled = true;
-                    view_BieuDoCanNang1.Visible = true;
-                    view_BieuDoCanNang1.BringToFront();
-                    break;
-                case "BieuDoChieuCao":
-                    view_BieuDoChieuCao1.Enabled = true;
-                    view_BieuDoChieuCao1.Visible = true;
-                    view_BieuDoChieuCao1.BringToFront();
-                    break;
-                case "ThongTinChiTietSK":
-                    view_ThongTinChiTietSK1.Enabled = true;
-                    view_ThongTinChiTietSK1.Visible = true;
-                    view_ThongTinChiTietSK1.BringToFront();
-                    break;
                 case "CapNhatSucKhoe":
                     view_CapNhatSucKhoe1.Enabled = true;
                     view_CapNhatSucKhoe1.Visible = true;
@@ -206,12 +188,6 @@ namespace QLNT.Presentation_Layer
         {
             switch (name)
             {
-                case "BieuDoCanNang":
-                    return view_BieuDoCanNang1;
-                case "BieuDoChieuCao":
-                    return view_BieuDoChieuCao1;
-                case "ThongTinChiTietSK":
-                    return view_ThongTinChiTietSK1;
                 case "CapNhatSucKhoe":
                     return view_CapNhatSucKhoe1;
                 case "DanhSachLopThamGiaHoatDong":

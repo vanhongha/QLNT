@@ -260,18 +260,6 @@
     <Compile Include="Presentation Layer\View\QLSucKhoe\View_LopThamGia.Designer.cs">
       <DependentUpon>View_LopThamGia.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentation Layer\View\QLSucKhoe\View_BieuDoCanNang.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Presentation Layer\View\QLSucKhoe\View_BieuDoCanNang.Designer.cs">
-      <DependentUpon>View_BieuDoCanNang.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Presentation Layer\View\QLSucKhoe\View_BieuDoChieuCao.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Presentation Layer\View\QLSucKhoe\View_BieuDoChieuCao.Designer.cs">
-      <DependentUpon>View_BieuDoChieuCao.cs</DependentUpon>
-    </Compile>
     <Compile Include="Presentation Layer\View\QLSucKhoe\View_CapNhatSucKhoe.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -283,12 +271,6 @@
     </Compile>
     <Compile Include="Presentation Layer\View\QLSucKhoe\View_DichVuSucKhoe.Designer.cs">
       <DependentUpon>View_DichVuSucKhoe.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Presentation Layer\View\QLSucKhoe\View_ThongTinChiTietSK.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Presentation Layer\View\QLSucKhoe\View_ThongTinChiTietSK.Designer.cs">
-      <DependentUpon>View_ThongTinChiTietSK.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentation Layer\View\QLSucKhoe\View_ThongTinSucKhoe.cs">
       <SubType>UserControl</SubType>
@@ -425,20 +407,11 @@
     <EmbeddedResource Include="Presentation Layer\View\QLSucKhoe\View_LopThamGia.resx">
       <DependentUpon>View_LopThamGia.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentation Layer\View\QLSucKhoe\View_BieuDoCanNang.resx">
-      <DependentUpon>View_BieuDoCanNang.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Presentation Layer\View\QLSucKhoe\View_BieuDoChieuCao.resx">
-      <DependentUpon>View_BieuDoChieuCao.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Presentation Layer\View\QLSucKhoe\View_CapNhatSucKhoe.resx">
       <DependentUpon>View_CapNhatSucKhoe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation Layer\View\QLSucKhoe\View_DichVuSucKhoe.resx">
       <DependentUpon>View_DichVuSucKhoe.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Presentation Layer\View\QLSucKhoe\View_ThongTinChiTietSK.resx">
-      <DependentUpon>View_ThongTinChiTietSK.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation Layer\View\QLSucKhoe\View_ThongTinSucKhoe.resx">
       <DependentUpon>View_ThongTinSucKhoe.cs</DependentUpon>

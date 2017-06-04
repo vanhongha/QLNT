@@ -52,8 +52,6 @@
             this.view_CapNhatMonAn1 = new View.QLDinhDuong.View_CapNhatMonAn();
 
             this.view_CapNhatNguyenLieu1 = new QLNT.Presentation_Layer.View.QLDinhDuong.View_CapNhatNguyenLieu();
-            this.view_BieuDoCanNang1 = new QLNT.Presentation_Layer.View.QLSucKhoe.View_BieuDoCanNang();
-            this.view_BieuDoChieuCao1 = new QLNT.Presentation_Layer.View.QLSucKhoe.View_BieuDoChieuCao();
             this.view_DanhSachTreThamGiaHoatDong1 = new View.QLHoatDong.View_DanhSachTreThamGiaHoatDong();
             this.view_ApDungThucDon1 = new View.QLDinhDuong.View_ApDungThucDon();
             this.view_DanhSachTreThamGiaDichVu1 = new View.QLSucKhoe.View_DanhSachTreThamGiaDichVu();
@@ -82,7 +80,6 @@
             this.tab_QLTre1 = new QLNT.Presentation_Layer.Tab_Menu.Tab_QLTre();
             this.headerDrag = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.view_ThongTinChiTietSK1 = new QLNT.Presentation_Layer.View.QLSucKhoe.View_ThongTinChiTietSK();
             this.view_CapNhatSucKhoe1 = new QLNT.Presentation_Layer.View.QLSucKhoe.View_CapNhatSucKhoe();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
@@ -474,9 +471,6 @@
             this.content.Controls.Add(this.view_DanhSachLopThamGiaHoatDong1);
             this.content.Controls.Add(this.view_PhieuNguyenLieu1);
             this.content.Controls.Add(this.view_CapNhatNguyenLieu1);
-            this.content.Controls.Add(this.view_BieuDoCanNang1);
-            this.content.Controls.Add(this.view_BieuDoChieuCao1);
-            this.content.Controls.Add(this.view_ThongTinChiTietSK1);
             this.content.Controls.Add(this.view_DiemNgoaiKhoa);
             this.content.Controls.Add(this.view_HoatDongNgoaiKhoa);
             this.content.Controls.Add(this.view_CapNhatTraCuuThucDon1);
@@ -578,27 +572,6 @@
             this.view_CapNhatNguyenLieu1.Name = "view_CapNhatNguyenLieu1";
             this.view_CapNhatNguyenLieu1.Size = new System.Drawing.Size(927, 542);
             this.view_CapNhatNguyenLieu1.TabIndex = 16;
-            // 
-            // view_BieuDoCanNang1
-            // 
-            this.view_BieuDoCanNang1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(236)))), ((int)(((byte)(245)))));
-            this.view_BieuDoCanNang1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.view_BieuDoCanNang1.Location = new System.Drawing.Point(0, 0);
-            this.view_BieuDoCanNang1.Margin = new System.Windows.Forms.Padding(2);
-            this.view_BieuDoCanNang1.Name = "view_BieuDoCanNang1";
-            this.view_BieuDoCanNang1.Size = new System.Drawing.Size(927, 542);
-            this.view_BieuDoCanNang1.TabIndex = 15;
-            // 
-            // view_BieuDoChieuCao1
-            // 
-            this.view_BieuDoChieuCao1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(236)))), ((int)(((byte)(245)))));
-            this.view_BieuDoChieuCao1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.view_BieuDoChieuCao1.Location = new System.Drawing.Point(0, 0);
-            this.view_BieuDoChieuCao1.Margin = new System.Windows.Forms.Padding(2);
-            this.view_BieuDoChieuCao1.Name = "view_BieuDoChieuCao1";
-            this.view_BieuDoChieuCao1.Size = new System.Drawing.Size(927, 542);
-            this.view_BieuDoChieuCao1.TabIndex = 14;
-
             // 
             // view_DiemNgoaiKhoa
             // 
@@ -843,16 +816,6 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Phần mềm quản lý nhà trẻ";
             // 
-            // view_ThongTinChiTietSK1
-            // 
-            this.view_ThongTinChiTietSK1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(236)))), ((int)(((byte)(245)))));
-            this.view_ThongTinChiTietSK1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.view_ThongTinChiTietSK1.Location = new System.Drawing.Point(276, 100);
-            this.view_ThongTinChiTietSK1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.view_ThongTinChiTietSK1.Name = "view_ThongTinChiTietSK1";
-            this.view_ThongTinChiTietSK1.Size = new System.Drawing.Size(927, 542);
-            this.view_ThongTinChiTietSK1.TabIndex = 19;
-            // 
             // view_CapNhatSucKhoe1
             // 
             this.view_CapNhatSucKhoe1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(236)))), ((int)(((byte)(245)))));
@@ -879,7 +842,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1203, 642);
             this.Controls.Add(this.view_CapNhatSucKhoe1);
-            this.Controls.Add(this.view_ThongTinChiTietSK1);
             this.Controls.Add(this.content);
             this.Controls.Add(this.header);
             this.Controls.Add(this.panel1);
@@ -941,12 +903,9 @@
         private Tab_Menu.Tab_QLHoatDong tab_QLHoatDong1;
         private View.QLHoatDong.View_HoatDongNgoaiKhoa view_HoatDongNgoaiKhoa;
         private View.QLHoatDong.View_DiemNgoaiKhoa view_DiemNgoaiKhoa;
-        private View.QLSucKhoe.View_BieuDoChieuCao view_BieuDoChieuCao1;
-        private View.QLSucKhoe.View_BieuDoCanNang view_BieuDoCanNang1;
         private View.QLDinhDuong.View_CapNhatNguyenLieu view_CapNhatNguyenLieu1;
         private View.QLDinhDuong.View_PhieuMuaNguyenLieu view_PhieuNguyenLieu1;
         private View.QLHoatDong.View_DanhSachLopThamGiaHoatDong view_DanhSachLopThamGiaHoatDong1;
-        private View.QLSucKhoe.View_ThongTinChiTietSK view_ThongTinChiTietSK1;
         private View.QLSucKhoe.View_CapNhatSucKhoe view_CapNhatSucKhoe1;
         private View.QLSucKhoe.View_LopThamGia view_LopThamGia1;
         private View.QLDinhDuong.View_CapNhatMonAn view_CapNhatMonAn1;
