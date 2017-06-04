@@ -98,16 +98,11 @@ namespace QLNT.DataLayer
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             db.dt = new DataTable();
             da.Fill(db.dt);
-            string thongbao = "";
             foreach (DataRow row in db.dt.Rows)
             {
-                string chuoi = row["NgayApDung"].ToString();
-                if (row["NgayApDung"].ToString().Substring(0, 10) == ngayApDung)
+                if (Convert.ToDateTime( row["NgayApDung"]).ToShortDateString() == ngayApDung)
                     return true;
-                //thongbao += chuoi.Substring(0,10) + " va " + ngayApDung.ToShortDateString() + "\n";
-
             }
-            //MessageBox.Show(thongbao);
             return false;
         }
     }

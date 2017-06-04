@@ -273,8 +273,7 @@ namespace QLNT.Presentation_Layer.View.QLDinhDuong
             //---------------kiểm tra điều kiện nhấn áp dụng-------------------
             if (!KiemTraDieuKienBanDauDeApDungThucDon())
                 return;
-
-            //--------------------------tiến hành kiểm tra thông tin và áp dụng--------------------------
+            
             if(!KiemTraNguyenLieuTrongKho())
             {
                 return;
@@ -289,7 +288,6 @@ namespace QLNT.Presentation_Layer.View.QLDinhDuong
                 {
                     if (ApDungThucDonBLL.KiemTraApdungThucDon(row.Cells["MaLop"].Value.ToString(), dtpNgay_Loc.Value.ToShortDateString(), cboBuoiAD.Text))
                         danhSachLopThatBai += row.Cells["MaLop"].Value.ToString() + "\n";
-
                     else
                     {
                         danhSachLopThanhCong += row.Cells["MaLop"].Value.ToString() + "\n";
@@ -304,6 +302,7 @@ namespace QLNT.Presentation_Layer.View.QLDinhDuong
                 MessageBox.Show("Lớp áp dụng không thành công:\n" + danhSachLopThatBai + "các lớp này đã được xét áp dụng thực đơn rồi", "Thông báo", MessageBoxButtons.OK);
 
             ChangeRowsColor();
+            getDataGridViewApDungThucDon(dtpNgay_Loc.Value, cboBuoiAD.Text.Trim());
 
         }
 
