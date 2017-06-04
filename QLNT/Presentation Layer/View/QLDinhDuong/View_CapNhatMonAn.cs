@@ -32,7 +32,7 @@ namespace QLNT.Presentation_Layer.View.QLDinhDuong
         private void getDataGridViewNguyenLieuTungMon(string maMon)
         {
 
-            //dgvNguyenLieuTungMon.DataSource = NguyenLieuTungMonBLL.LayDanhSachNLTungMon(maMon);
+            dgvNguyenLieuTungMon.DataSource = NguyenLieuTungMonBLL.LayDanhSachNLTungMon(maMon);
 
             string[] column = {"TenNguyenLieu", "SoLuong","DonViTinh", "ChiSoDinhDuong"};
             Utility.ControlFormat.DataGridViewFormat(dgvNguyenLieuTungMon, column);
@@ -55,7 +55,7 @@ namespace QLNT.Presentation_Layer.View.QLDinhDuong
 
         private void getDataGridViewMonAn()
         {
-            //dgvMonAn.DataSource = MonAnBLL.LayDanhSachMonAn();
+            dgvMonAn.DataSource = MonAnBLL.LayDanhSachMonAn();
 
             string[] column = { "MaMonAn", "TenMonAn" };
             Utility.ControlFormat.DataGridViewFormat(dgvMonAn, column);

@@ -64,7 +64,9 @@
     <Compile Include="BusinessLayer\HoatDongNgoaiKhoaBLL.cs" />
     <Compile Include="BusinessLayer\LoaiNguyenLieuBLL.cs" />
     <Compile Include="BusinessLayer\LopBLL.cs" />
+    <Compile Include="BusinessLayer\MonAnBLL.cs" />
     <Compile Include="BusinessLayer\NguyenLieuBLL.cs" />
+    <Compile Include="BusinessLayer\NguyenLieuTungMonBLL.cs" />
     <Compile Include="BusinessLayer\NhanVienBLL.cs" />
     <Compile Include="BusinessLayer\PhieuMuaNLBLL.cs" />
     <Compile Include="BusinessLayer\ThucDonBLL.cs" />
@@ -77,8 +79,10 @@
     <Compile Include="DataLayer\HoatDongNgoaiKhoaDAL.cs" />
     <Compile Include="DataLayer\LoaiNguyenLieuDAL.cs" />
     <Compile Include="DataLayer\LopDAL.cs" />
+    <Compile Include="DataLayer\MonAnDAL.cs" />
     <Compile Include="DataLayer\NguyenLieuDAL.cs" />
     <Compile Include="DataLayer\NhanVienDAL.cs" />
+    <Compile Include="DataLayer\NLTungMonDAL.cs" />
     <Compile Include="DataLayer\PhieuMuaNLDAL.cs" />
     <Compile Include="DataLayer\ThucDonDAL.cs" />
     <Compile Include="DataLayer\TreDAL.cs" />
@@ -92,6 +96,7 @@
     <Compile Include="Entities\Lop.cs" />
     <Compile Include="Entities\MonAn.cs" />
     <Compile Include="Entities\NguyenLieu.cs" />
+    <Compile Include="Entities\NguyenLieuTungMon.cs" />
     <Compile Include="Entities\NhanVien.cs" />
     <Compile Include="Entities\PhieuMuaNL.cs" />
     <Compile Include="Entities\ThucDon.cs" />
