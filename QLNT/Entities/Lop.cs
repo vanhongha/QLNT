@@ -9,6 +9,7 @@ namespace QLNT.Entities
 {
     class Lop
     {
+
         private string _maLop;
 
         public string MaLop
@@ -60,6 +61,17 @@ namespace QLNT.Entities
 
 
         public Lop() { }
+
+
+        public Lop(string maLop, string maLoaiLop, string tenLop, int namHoc, string maGV, int siSo)
+        {
+            this.MaLop = maLop;
+            this.MaLoaiLop = maLoaiLop;
+            this.TenLop = tenLop;
+            this.NamHoc = namHoc;
+            this.MaGV = maGV;
+            this.SiSo = siSo;
+        }
 
         public Lop(DataRow row)
         {

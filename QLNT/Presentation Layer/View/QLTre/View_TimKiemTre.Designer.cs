@@ -241,9 +241,12 @@
             // 
             // dgvTimKiem
             // 
+            this.dgvTimKiem.AllowUserToAddRows = false;
+            this.dgvTimKiem.AllowUserToDeleteRows = false;
             this.dgvTimKiem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTimKiem.Location = new System.Drawing.Point(3, 112);
             this.dgvTimKiem.Name = "dgvTimKiem";
+            this.dgvTimKiem.ReadOnly = true;
             this.dgvTimKiem.Size = new System.Drawing.Size(477, 427);
             this.dgvTimKiem.TabIndex = 25;
             this.dgvTimKiem.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTimKiem_CellClick);

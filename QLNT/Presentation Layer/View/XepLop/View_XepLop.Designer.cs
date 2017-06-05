@@ -39,8 +39,17 @@
             this.rdoLopCoSan = new System.Windows.Forms.RadioButton();
             this.rdoLopMoi = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btn_TiepNhanTre = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.cboLoaiLop = new System.Windows.Forms.ComboBox();
             this.txtTaoLop = new System.Windows.Forms.TextBox();
+            this.titleLoaiLop = new System.Windows.Forms.Label();
+            this.btn_TiepNhanTre = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.ckbAll = new System.Windows.Forms.CheckBox();
+            this.titleGVCN = new System.Windows.Forms.Label();
+            this.cboGVCN = new System.Windows.Forms.ComboBox();
+            this.titleNam = new System.Windows.Forms.Label();
+            this.txtNam = new System.Windows.Forms.TextBox();
+            this.txtSS = new System.Windows.Forms.TextBox();
+            this.titleSS = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTre)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -64,9 +73,9 @@
             this.dgvTre.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTre.Location = new System.Drawing.Point(3, 128);
             this.dgvTre.Name = "dgvTre";
-            this.dgvTre.ReadOnly = true;
             this.dgvTre.Size = new System.Drawing.Size(505, 411);
             this.dgvTre.TabIndex = 2;
+            this.dgvTre.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTre_CellValueChanged);
             // 
             // label2
             // 
@@ -155,17 +164,51 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtSS);
+            this.groupBox1.Controls.Add(this.titleSS);
+            this.groupBox1.Controls.Add(this.txtNam);
+            this.groupBox1.Controls.Add(this.titleNam);
+            this.groupBox1.Controls.Add(this.titleGVCN);
+            this.groupBox1.Controls.Add(this.cboGVCN);
+            this.groupBox1.Controls.Add(this.cboLoaiLop);
             this.groupBox1.Controls.Add(this.txtTaoLop);
             this.groupBox1.Controls.Add(this.rdoLopMoi);
+            this.groupBox1.Controls.Add(this.titleLoaiLop);
             this.groupBox1.Controls.Add(this.title);
             this.groupBox1.Controls.Add(this.rdoLopCoSan);
             this.groupBox1.Controls.Add(this.cboLop);
             this.groupBox1.Location = new System.Drawing.Point(514, 128);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(410, 126);
+            this.groupBox1.Size = new System.Drawing.Size(410, 249);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Xếp lớp";
+            // 
+            // cboLoaiLop
+            // 
+            this.cboLoaiLop.FormattingEnabled = true;
+            this.cboLoaiLop.Location = new System.Drawing.Point(94, 113);
+            this.cboLoaiLop.Name = "cboLoaiLop";
+            this.cboLoaiLop.Size = new System.Drawing.Size(305, 21);
+            this.cboLoaiLop.TabIndex = 14;
+            // 
+            // txtTaoLop
+            // 
+            this.txtTaoLop.Location = new System.Drawing.Point(6, 78);
+            this.txtTaoLop.Name = "txtTaoLop";
+            this.txtTaoLop.Size = new System.Drawing.Size(398, 20);
+            this.txtTaoLop.TabIndex = 13;
+            // 
+            // titleLoaiLop
+            // 
+            this.titleLoaiLop.AutoSize = true;
+            this.titleLoaiLop.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titleLoaiLop.ForeColor = System.Drawing.Color.Gray;
+            this.titleLoaiLop.Location = new System.Drawing.Point(24, 112);
+            this.titleLoaiLop.Name = "titleLoaiLop";
+            this.titleLoaiLop.Size = new System.Drawing.Size(64, 18);
+            this.titleLoaiLop.TabIndex = 6;
+            this.titleLoaiLop.Text = "Loại lớp:";
             // 
             // btn_TiepNhanTre
             // 
@@ -185,25 +228,85 @@
             this.btn_TiepNhanTre.IdleFillColor = System.Drawing.Color.White;
             this.btn_TiepNhanTre.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
             this.btn_TiepNhanTre.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
-            this.btn_TiepNhanTre.Location = new System.Drawing.Point(628, 262);
+            this.btn_TiepNhanTre.Location = new System.Drawing.Point(628, 385);
             this.btn_TiepNhanTre.Margin = new System.Windows.Forms.Padding(5);
             this.btn_TiepNhanTre.Name = "btn_TiepNhanTre";
             this.btn_TiepNhanTre.Size = new System.Drawing.Size(181, 41);
             this.btn_TiepNhanTre.TabIndex = 12;
             this.btn_TiepNhanTre.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_TiepNhanTre.Click += new System.EventHandler(this.btn_TiepNhanTre_Click);
             // 
-            // txtTaoLop
+            // ckbAll
             // 
-            this.txtTaoLop.Location = new System.Drawing.Point(6, 78);
-            this.txtTaoLop.Name = "txtTaoLop";
-            this.txtTaoLop.Size = new System.Drawing.Size(398, 20);
-            this.txtTaoLop.TabIndex = 13;
+            this.ckbAll.AutoSize = true;
+            this.ckbAll.Location = new System.Drawing.Point(88, 132);
+            this.ckbAll.Name = "ckbAll";
+            this.ckbAll.Size = new System.Drawing.Size(15, 14);
+            this.ckbAll.TabIndex = 89;
+            this.ckbAll.UseVisualStyleBackColor = true;
+            this.ckbAll.CheckedChanged += new System.EventHandler(this.ckbAll_CheckedChanged);
+            // 
+            // titleGVCN
+            // 
+            this.titleGVCN.AutoSize = true;
+            this.titleGVCN.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titleGVCN.ForeColor = System.Drawing.Color.Gray;
+            this.titleGVCN.Location = new System.Drawing.Point(33, 146);
+            this.titleGVCN.Name = "titleGVCN";
+            this.titleGVCN.Size = new System.Drawing.Size(55, 18);
+            this.titleGVCN.TabIndex = 15;
+            this.titleGVCN.Text = "GVCN:";
+            // 
+            // cboGVCN
+            // 
+            this.cboGVCN.FormattingEnabled = true;
+            this.cboGVCN.Location = new System.Drawing.Point(94, 147);
+            this.cboGVCN.Name = "cboGVCN";
+            this.cboGVCN.Size = new System.Drawing.Size(305, 21);
+            this.cboGVCN.TabIndex = 14;
+            // 
+            // titleNam
+            // 
+            this.titleNam.AutoSize = true;
+            this.titleNam.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titleNam.ForeColor = System.Drawing.Color.Gray;
+            this.titleNam.Location = new System.Drawing.Point(9, 180);
+            this.titleNam.Name = "titleNam";
+            this.titleNam.Size = new System.Drawing.Size(79, 18);
+            this.titleNam.TabIndex = 16;
+            this.titleNam.Text = "Niên khóa:";
+            // 
+            // txtNam
+            // 
+            this.txtNam.Location = new System.Drawing.Point(94, 181);
+            this.txtNam.Name = "txtNam";
+            this.txtNam.Size = new System.Drawing.Size(305, 20);
+            this.txtNam.TabIndex = 17;
+            // 
+            // txtSS
+            // 
+            this.txtSS.Location = new System.Drawing.Point(94, 215);
+            this.txtSS.Name = "txtSS";
+            this.txtSS.Size = new System.Drawing.Size(305, 20);
+            this.txtSS.TabIndex = 19;
+            // 
+            // titleSS
+            // 
+            this.titleSS.AutoSize = true;
+            this.titleSS.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titleSS.ForeColor = System.Drawing.Color.Gray;
+            this.titleSS.Location = new System.Drawing.Point(42, 214);
+            this.titleSS.Name = "titleSS";
+            this.titleSS.Size = new System.Drawing.Size(46, 18);
+            this.titleSS.TabIndex = 18;
+            this.titleSS.Text = "Sỉ số:";
             // 
             // View_XepLop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(236)))), ((int)(((byte)(245)))));
+            this.Controls.Add(this.ckbAll);
             this.Controls.Add(this.btn_TiepNhanTre);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.txtKetQua);
@@ -236,5 +339,14 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txtTaoLop;
         private Bunifu.Framework.UI.BunifuThinButton2 btn_TiepNhanTre;
+        private System.Windows.Forms.ComboBox cboLoaiLop;
+        private System.Windows.Forms.Label titleLoaiLop;
+        private System.Windows.Forms.CheckBox ckbAll;
+        private System.Windows.Forms.TextBox txtSS;
+        private System.Windows.Forms.Label titleSS;
+        private System.Windows.Forms.TextBox txtNam;
+        private System.Windows.Forms.Label titleNam;
+        private System.Windows.Forms.Label titleGVCN;
+        private System.Windows.Forms.ComboBox cboGVCN;
     }
 }

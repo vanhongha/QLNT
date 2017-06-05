@@ -34,8 +34,7 @@
             this.dgvNguyenLieu = new System.Windows.Forms.DataGridView();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.lblKetQua = new System.Windows.Forms.Label();
-            this.lblSoKetQua = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.txtMaNguyenLieu = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -52,7 +51,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lbl7 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lblKetQua = new System.Windows.Forms.Label();
+            this.lblSoKetQua = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNguyenLieu)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -136,31 +136,14 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "BẢNG NGUYÊN LIỆU";
             // 
-            // lblKetQua
+            // label7
             // 
-            this.lblKetQua.AutoSize = true;
-            this.lblKetQua.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblKetQua.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblKetQua.Location = new System.Drawing.Point(11, 80);
-            this.lblKetQua.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblKetQua.Name = "lblKetQua";
-            this.lblKetQua.Size = new System.Drawing.Size(124, 16);
-            this.lblKetQua.TabIndex = 77;
-            this.lblKetQua.Text = "Kết quả tìm kiếm:";
-            this.lblKetQua.Visible = false;
-            // 
-            // lblSoKetQua
-            // 
-            this.lblSoKetQua.AutoSize = true;
-            this.lblSoKetQua.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSoKetQua.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblSoKetQua.Location = new System.Drawing.Point(141, 80);
-            this.lblSoKetQua.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblSoKetQua.Name = "lblSoKetQua";
-            this.lblSoKetQua.Size = new System.Drawing.Size(16, 16);
-            this.lblSoKetQua.TabIndex = 78;
-            this.lblSoKetQua.Text = "0";
-            this.lblSoKetQua.Visible = false;
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(627, 23);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(233, 16);
+            this.label7.TabIndex = 90;
+            this.label7.Text = "THÔNG TIN CHI TIẾT NGUYÊN LIỆU";
             // 
             // txtMaNguyenLieu
             // 
@@ -397,14 +380,31 @@
             this.label3.TabIndex = 82;
             this.label3.Text = "Đơn vị tính:";
             // 
-            // label7
+            // lblKetQua
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(627, 23);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(233, 16);
-            this.label7.TabIndex = 90;
-            this.label7.Text = "THÔNG TIN CHI TIẾT NGUYÊN LIỆU";
+            this.lblKetQua.AutoSize = true;
+            this.lblKetQua.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblKetQua.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblKetQua.Location = new System.Drawing.Point(11, 80);
+            this.lblKetQua.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblKetQua.Name = "lblKetQua";
+            this.lblKetQua.Size = new System.Drawing.Size(124, 16);
+            this.lblKetQua.TabIndex = 77;
+            this.lblKetQua.Text = "Kết quả tìm kiếm:";
+            this.lblKetQua.Visible = false;
+            // 
+            // lblSoKetQua
+            // 
+            this.lblSoKetQua.AutoSize = true;
+            this.lblSoKetQua.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSoKetQua.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblSoKetQua.Location = new System.Drawing.Point(141, 80);
+            this.lblSoKetQua.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblSoKetQua.Name = "lblSoKetQua";
+            this.lblSoKetQua.Size = new System.Drawing.Size(16, 16);
+            this.lblSoKetQua.TabIndex = 78;
+            this.lblSoKetQua.Text = "0";
+            this.lblSoKetQua.Visible = false;
             // 
             // View_CapNhatNguyenLieu
             // 

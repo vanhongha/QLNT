@@ -119,5 +119,13 @@ namespace QLNT.DataLayer
             db.dt = new DataTable();
             da.Fill(db.dt);
         }
+
+        public static DataTable GetGVCN()
+        {
+            DataAccessHelper db = new DataAccessHelper();
+            DataTable dt = db.GetDataTable("SELECT * FROM NHANVIEN");
+            return dt;
+        }
+
     }
 }

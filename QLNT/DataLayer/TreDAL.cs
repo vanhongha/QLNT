@@ -34,6 +34,20 @@ namespace QLNT.DataLayer
             return db.dt;
         }
 
+        public static void ThemTreVaoLop(string maTre, string maLop)
+        {
+            DataAccessHelper db = new DataAccessHelper();
+            SqlCommand cmd = db.Command("THEMTREVAOLOP");
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("@MaTre", maTre);
+            cmd.Parameters.AddWithValue("@MaLop", maLop);
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            db.dt = new DataTable();
+            da.Fill(db.dt);
+        }
+
         public static List<Tre> GetListTre()
         {
             DataAccessHelper db = new DataAccessHelper();

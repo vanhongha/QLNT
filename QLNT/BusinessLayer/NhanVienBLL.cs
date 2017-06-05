@@ -56,5 +56,10 @@ namespace QLNT.BusinessLayer
         {
             NhanVienDAL.XoaNV(maNV);
         }
+
+        public static DataTable GetGVCN()
+        {
+            return NhanVienDAL.GetGVCN();
+        }
     }
 }

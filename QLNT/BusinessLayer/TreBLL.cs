@@ -103,5 +103,10 @@ namespace QLNT.BusinessLayer
         {
             return TreDAL.TreChuaCoLop(namSinh);
         }
+
+        public static void ThemTreVaoLop(string maTre, string maLop)
+        {
+            TreDAL.ThemTreVaoLop(maTre, maLop);
+        }
     }
 }
