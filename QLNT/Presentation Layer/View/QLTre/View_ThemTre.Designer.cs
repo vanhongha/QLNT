@@ -73,6 +73,7 @@
             this.txtHoTen.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(89)))), ((int)(((byte)(180)))));
             this.txtHoTen.LineThickness = 3;
             this.txtHoTen.Location = new System.Drawing.Point(142, 68);
+            this.txtHoTen.Margin = new System.Windows.Forms.Padding(4);
             this.txtHoTen.Name = "txtHoTen";
             this.txtHoTen.Size = new System.Drawing.Size(503, 42);
             this.txtHoTen.TabIndex = 1;
@@ -94,7 +95,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Gray;
-            this.label3.Location = new System.Drawing.Point(43, 151);
+            this.label3.Location = new System.Drawing.Point(43, 150);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(77, 18);
             this.label3.TabIndex = 3;
@@ -107,8 +108,8 @@
             this.dtNgaySinh.ForeColor = System.Drawing.Color.White;
             this.dtNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.dtNgaySinh.FormatCustom = null;
-            this.dtNgaySinh.Location = new System.Drawing.Point(142, 127);
-            this.dtNgaySinh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtNgaySinh.Location = new System.Drawing.Point(142, 126);
+            this.dtNgaySinh.Margin = new System.Windows.Forms.Padding(2);
             this.dtNgaySinh.Name = "dtNgaySinh";
             this.dtNgaySinh.Size = new System.Drawing.Size(682, 42);
             this.dtNgaySinh.TabIndex = 2;
@@ -119,7 +120,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Gray;
-            this.label4.Location = new System.Drawing.Point(43, 210);
+            this.label4.Location = new System.Drawing.Point(43, 209);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(77, 18);
             this.label4.TabIndex = 5;
@@ -137,7 +138,8 @@
             this.txtTenBo.LineIdleColor = System.Drawing.Color.Gray;
             this.txtTenBo.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(89)))), ((int)(((byte)(180)))));
             this.txtTenBo.LineThickness = 3;
-            this.txtTenBo.Location = new System.Drawing.Point(142, 186);
+            this.txtTenBo.Location = new System.Drawing.Point(142, 185);
+            this.txtTenBo.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenBo.Name = "txtTenBo";
             this.txtTenBo.Size = new System.Drawing.Size(682, 42);
             this.txtTenBo.TabIndex = 3;
@@ -148,7 +150,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Gray;
-            this.label5.Location = new System.Drawing.Point(39, 269);
+            this.label5.Location = new System.Drawing.Point(39, 268);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(81, 18);
             this.label5.TabIndex = 7;
@@ -166,7 +168,8 @@
             this.txtTenMe.LineIdleColor = System.Drawing.Color.Gray;
             this.txtTenMe.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(89)))), ((int)(((byte)(180)))));
             this.txtTenMe.LineThickness = 3;
-            this.txtTenMe.Location = new System.Drawing.Point(142, 245);
+            this.txtTenMe.Location = new System.Drawing.Point(142, 244);
+            this.txtTenMe.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenMe.Name = "txtTenMe";
             this.txtTenMe.Size = new System.Drawing.Size(682, 42);
             this.txtTenMe.TabIndex = 4;
@@ -177,7 +180,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Gray;
-            this.label6.Location = new System.Drawing.Point(63, 328);
+            this.label6.Location = new System.Drawing.Point(63, 327);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(57, 18);
             this.label6.TabIndex = 9;
@@ -188,7 +191,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Gray;
-            this.label7.Location = new System.Drawing.Point(42, 387);
+            this.label7.Location = new System.Drawing.Point(42, 386);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(78, 18);
             this.label7.TabIndex = 10;
@@ -206,7 +209,8 @@
             this.txtDiaChi.LineIdleColor = System.Drawing.Color.Gray;
             this.txtDiaChi.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(89)))), ((int)(((byte)(180)))));
             this.txtDiaChi.LineThickness = 3;
-            this.txtDiaChi.Location = new System.Drawing.Point(142, 304);
+            this.txtDiaChi.Location = new System.Drawing.Point(142, 303);
+            this.txtDiaChi.Margin = new System.Windows.Forms.Padding(4);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(682, 42);
             this.txtDiaChi.TabIndex = 5;
@@ -224,7 +228,8 @@
             this.txtDienThoai.LineIdleColor = System.Drawing.Color.Gray;
             this.txtDienThoai.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(89)))), ((int)(((byte)(180)))));
             this.txtDienThoai.LineThickness = 3;
-            this.txtDienThoai.Location = new System.Drawing.Point(142, 363);
+            this.txtDienThoai.Location = new System.Drawing.Point(142, 362);
+            this.txtDienThoai.Margin = new System.Windows.Forms.Padding(4);
             this.txtDienThoai.Name = "txtDienThoai";
             this.txtDienThoai.Size = new System.Drawing.Size(682, 42);
             this.txtDienThoai.TabIndex = 6;
@@ -248,8 +253,8 @@
             this.btn_TiepNhanTre.IdleFillColor = System.Drawing.Color.White;
             this.btn_TiepNhanTre.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
             this.btn_TiepNhanTre.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
-            this.btn_TiepNhanTre.Location = new System.Drawing.Point(287, 484);
-            this.btn_TiepNhanTre.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btn_TiepNhanTre.Location = new System.Drawing.Point(287, 428);
+            this.btn_TiepNhanTre.Margin = new System.Windows.Forms.Padding(5);
             this.btn_TiepNhanTre.Name = "btn_TiepNhanTre";
             this.btn_TiepNhanTre.Size = new System.Drawing.Size(181, 41);
             this.btn_TiepNhanTre.TabIndex = 11;
@@ -274,8 +279,8 @@
             this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.White;
             this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
             this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
-            this.bunifuThinButton21.Location = new System.Drawing.Point(478, 484);
-            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.bunifuThinButton21.Location = new System.Drawing.Point(478, 428);
+            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuThinButton21.Name = "bunifuThinButton21";
             this.bunifuThinButton21.Size = new System.Drawing.Size(181, 41);
             this.bunifuThinButton21.TabIndex = 12;
@@ -298,7 +303,7 @@
             this.rdoNam.AutoSize = true;
             this.rdoNam.ForeColor = System.Drawing.Color.Gray;
             this.rdoNam.Location = new System.Drawing.Point(733, 93);
-            this.rdoNam.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdoNam.Margin = new System.Windows.Forms.Padding(2);
             this.rdoNam.Name = "rdoNam";
             this.rdoNam.Size = new System.Drawing.Size(47, 17);
             this.rdoNam.TabIndex = 14;
@@ -311,7 +316,7 @@
             this.rdoNu.AutoSize = true;
             this.rdoNu.ForeColor = System.Drawing.Color.Gray;
             this.rdoNu.Location = new System.Drawing.Point(784, 92);
-            this.rdoNu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdoNu.Margin = new System.Windows.Forms.Padding(2);
             this.rdoNu.Name = "rdoNu";
             this.rdoNu.Size = new System.Drawing.Size(39, 17);
             this.rdoNu.TabIndex = 15;

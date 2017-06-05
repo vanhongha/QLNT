@@ -31,11 +31,13 @@ namespace QLNT.Presentation_Layer
         CapNhatSucKhoe,
         ThongTinSucKhoe,
         CapNhatMonAn,
-        ApDungThucDon
+        ApDungThucDon,
+        XepLop
     }
 
     public enum tab
     {
+        None,
         QLTre,
         QLNhanVien,
         QLDinhDuong,

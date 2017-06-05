@@ -12,7 +12,7 @@ namespace QLNT.DataLayer
     class DataAccessHelper
     {
         #region Data access properties
-        SqlConnection con;
+        public SqlConnection con;
         SqlCommand cmd;
         public DataTable dt;
 

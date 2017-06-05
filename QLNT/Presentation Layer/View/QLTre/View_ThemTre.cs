@@ -2,6 +2,8 @@
 
 using System.Windows.Forms;
 using QLNT.BusinessLayer;
+using System.Data.SqlClient;
+using System.Data;
 
 namespace QLNT.Presentation_Layer.View
 {
@@ -14,8 +16,10 @@ namespace QLNT.Presentation_Layer.View
 
         private void btn_TiepNhanTre_Click(object sender, EventArgs e)
         {
+            int tuoi = DateTime.Now.Year - dtNgaySinh.Value.Year;
+
             string gioiTinh;
-            if(rdoNu.Checked == false && rdoNam.Checked == false)
+            if (rdoNu.Checked == false && rdoNam.Checked == false)
             {
                 MessageBox.Show("Vui lòng chọn giới tính cho trẻ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;

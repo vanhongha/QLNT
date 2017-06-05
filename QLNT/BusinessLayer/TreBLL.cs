@@ -98,5 +98,10 @@ namespace QLNT.BusinessLayer
 
             return "";
         }
+
+        public static DataTable TreChuaCoLop(string namSinh)
+        {
+            return TreDAL.TreChuaCoLop(namSinh);
+        }
     }
 }

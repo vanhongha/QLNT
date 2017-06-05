@@ -45,16 +45,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.content = new System.Windows.Forms.Panel();
             this.view_DanhSachLopThamGiaHoatDong1 = new QLNT.Presentation_Layer.View.QLHoatDong.View_DanhSachLopThamGiaHoatDong();
-
             this.view_PhieuNguyenLieu1 = new QLNT.Presentation_Layer.View.QLDinhDuong.View_PhieuMuaNguyenLieu();
-
-            this.view_LopThamGia1 = new View.QLSucKhoe.View_LopThamGia();
-            this.view_CapNhatMonAn1 = new View.QLDinhDuong.View_CapNhatMonAn();
-
             this.view_CapNhatNguyenLieu1 = new QLNT.Presentation_Layer.View.QLDinhDuong.View_CapNhatNguyenLieu();
-            this.view_DanhSachTreThamGiaHoatDong1 = new View.QLHoatDong.View_DanhSachTreThamGiaHoatDong();
-            this.view_ApDungThucDon1 = new View.QLDinhDuong.View_ApDungThucDon();
-            this.view_DanhSachTreThamGiaDichVu1 = new View.QLSucKhoe.View_DanhSachTreThamGiaDichVu();
             this.view_DiemNgoaiKhoa = new QLNT.Presentation_Layer.View.QLHoatDong.View_DiemNgoaiKhoa();
             this.view_HoatDongNgoaiKhoa = new QLNT.Presentation_Layer.View.QLHoatDong.View_HoatDongNgoaiKhoa();
             this.view_CapNhatTraCuuThucDon1 = new QLNT.Presentation_Layer.View.QLDinhDuong.View_CapNhatTraCuuThucDon();
@@ -69,6 +61,11 @@
             this.view_ThemNV1 = new QLNT.Presentation_Layer.View.View_ThemNV();
             this.view_TimKiemTre1 = new QLNT.Presentation_Layer.View.View_TimKiemTre();
             this.view_ThemTre1 = new QLNT.Presentation_Layer.View.View_ThemTre();
+            this.view_LopThamGia1 = new QLNT.Presentation_Layer.View.QLSucKhoe.View_LopThamGia();
+            this.view_CapNhatMonAn1 = new QLNT.Presentation_Layer.View.QLDinhDuong.View_CapNhatMonAn();
+            this.view_DanhSachTreThamGiaDichVu1 = new QLNT.Presentation_Layer.View.QLSucKhoe.View_DanhSachTreThamGiaDichVu();
+            this.view_DanhSachTreThamGiaHoatDong1 = new QLNT.Presentation_Layer.View.QLHoatDong.View_DanhSachTreThamGiaHoatDong();
+            this.view_ApDungThucDon1 = new QLNT.Presentation_Layer.View.QLDinhDuong.View_ApDungThucDon();
             this.header = new System.Windows.Forms.Panel();
             this.tabMenu = new System.Windows.Forms.Panel();
             this.tab_QLHoatDong1 = new QLNT.Presentation_Layer.Tab_Menu.Tab_QLHoatDong();
@@ -79,9 +76,10 @@
             this.tab_QLNhanVien1 = new QLNT.Presentation_Layer.Tab_Menu.Tab_QLNhanVien();
             this.tab_QLTre1 = new QLNT.Presentation_Layer.Tab_Menu.Tab_QLTre();
             this.headerDrag = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.view_CapNhatSucKhoe1 = new QLNT.Presentation_Layer.View.QLSucKhoe.View_CapNhatSucKhoe();
-            this.button1 = new System.Windows.Forms.Button();
+            this.view_XepLop1 = new QLNT.Presentation_Layer.View.XepLop.View_XepLop();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -89,6 +87,7 @@
             this.header.SuspendLayout();
             this.tabMenu.SuspendLayout();
             this.headerDrag.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -143,6 +142,7 @@
             this.btnXepLop.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnXepLop.Textcolor = System.Drawing.Color.White;
             this.btnXepLop.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXepLop.Click += new System.EventHandler(this.btnXepLop_Click);
             // 
             // btnQLHocTap
             // 
@@ -486,7 +486,7 @@
             this.content.Controls.Add(this.view_TimKiemTre1);
             this.content.Controls.Add(this.view_ThemTre1);
             this.content.Controls.Add(this.view_LopThamGia1);
-            this.content.Controls.Add(view_CapNhatMonAn1);
+            this.content.Controls.Add(this.view_CapNhatMonAn1);
             this.content.Controls.Add(this.view_DanhSachTreThamGiaDichVu1);
             this.content.Controls.Add(this.view_DanhSachTreThamGiaHoatDong1);
             this.content.Controls.Add(this.view_ApDungThucDon1);
@@ -495,45 +495,6 @@
             this.content.Name = "content";
             this.content.Size = new System.Drawing.Size(927, 542);
             this.content.TabIndex = 2;
-            // 
-            // view_ApDungThucDon1
-            // 
-            this.view_ApDungThucDon1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(236)))), ((int)(((byte)(245)))));
-            this.view_ApDungThucDon1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.view_ApDungThucDon1.Location = new System.Drawing.Point(0, 0);
-            this.view_ApDungThucDon1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.view_ApDungThucDon1.Name = "view_ApDungThucDon1";
-            this.view_ApDungThucDon1.Size = new System.Drawing.Size(927, 542);
-            this.view_ApDungThucDon1.TabIndex = 23;
-            // 
-            // view_CapNhatMonAn1
-            // 
-            this.view_CapNhatMonAn1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(236)))), ((int)(((byte)(245)))));
-            this.view_CapNhatMonAn1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.view_CapNhatMonAn1.Location = new System.Drawing.Point(0, 0);
-            this.view_CapNhatMonAn1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.view_CapNhatMonAn1.Name = "view_DanhSachLopThamGiaHoatDong1";
-            this.view_CapNhatMonAn1.Size = new System.Drawing.Size(927, 542);
-            this.view_CapNhatMonAn1.TabIndex = 22;
-            // view_DanhSachTreThamGiaHoatDong
-            // 
-            this.view_DanhSachTreThamGiaHoatDong1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(236)))), ((int)(((byte)(245)))));
-            this.view_DanhSachTreThamGiaHoatDong1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.view_DanhSachTreThamGiaHoatDong1.Location = new System.Drawing.Point(0, 0);
-            this.view_DanhSachTreThamGiaHoatDong1.Margin = new System.Windows.Forms.Padding(2);
-            this.view_DanhSachTreThamGiaHoatDong1.Name = "view_DanhSachTreThamGiaHoatDong1";
-            this.view_DanhSachTreThamGiaHoatDong1.Size = new System.Drawing.Size(927, 542);
-            this.view_DanhSachTreThamGiaHoatDong1.TabIndex = 21;
-            // 
-            // view_DanhSachTreThamGiaDichVU
-            // 
-            this.view_DanhSachTreThamGiaDichVu1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(236)))), ((int)(((byte)(245)))));
-            this.view_DanhSachTreThamGiaDichVu1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.view_DanhSachTreThamGiaDichVu1.Location = new System.Drawing.Point(0, 0);
-            this.view_DanhSachTreThamGiaDichVu1.Margin = new System.Windows.Forms.Padding(2);
-            this.view_DanhSachTreThamGiaDichVu1.Name = "view_DanhSachTreThamGiaDichVu1";
-            this.view_DanhSachTreThamGiaDichVu1.Size = new System.Drawing.Size(927, 542);
-            this.view_DanhSachTreThamGiaDichVu1.TabIndex = 20;
             // 
             // view_DanhSachLopThamGiaHoatDong1
             // 
@@ -544,16 +505,6 @@
             this.view_DanhSachLopThamGiaHoatDong1.Name = "view_DanhSachLopThamGiaHoatDong1";
             this.view_DanhSachLopThamGiaHoatDong1.Size = new System.Drawing.Size(927, 542);
             this.view_DanhSachLopThamGiaHoatDong1.TabIndex = 19;
-            //
-            // view_LopThamGia1
-            //
-            this.view_LopThamGia1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(236)))), ((int)(((byte)(245)))));
-            this.view_LopThamGia1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.view_LopThamGia1.Location = new System.Drawing.Point(0, 0);
-            this.view_LopThamGia1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.view_LopThamGia1.Name = "view_LopThamGia1";
-            this.view_LopThamGia1.Size = new System.Drawing.Size(927, 542);
-            this.view_LopThamGia1.TabIndex = 18;
             // 
             // view_PhieuNguyenLieu1
             // 
@@ -568,7 +519,9 @@
             // 
             this.view_CapNhatNguyenLieu1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(236)))), ((int)(((byte)(245)))));
             this.view_CapNhatNguyenLieu1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.view_CapNhatNguyenLieu1.Font = new System.Drawing.Font("Corbel", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.view_CapNhatNguyenLieu1.Location = new System.Drawing.Point(0, 0);
+            this.view_CapNhatNguyenLieu1.Margin = new System.Windows.Forms.Padding(4);
             this.view_CapNhatNguyenLieu1.Name = "view_CapNhatNguyenLieu1";
             this.view_CapNhatNguyenLieu1.Size = new System.Drawing.Size(927, 542);
             this.view_CapNhatNguyenLieu1.TabIndex = 16;
@@ -625,6 +578,7 @@
             this.view_DichVuSucKhoe1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(236)))), ((int)(((byte)(245)))));
             this.view_DichVuSucKhoe1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.view_DichVuSucKhoe1.Location = new System.Drawing.Point(0, 0);
+            this.view_DichVuSucKhoe1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.view_DichVuSucKhoe1.Name = "view_DichVuSucKhoe1";
             this.view_DichVuSucKhoe1.Size = new System.Drawing.Size(927, 542);
             this.view_DichVuSucKhoe1.TabIndex = 7;
@@ -701,6 +655,56 @@
             this.view_ThemTre1.Name = "view_ThemTre1";
             this.view_ThemTre1.Size = new System.Drawing.Size(927, 542);
             this.view_ThemTre1.TabIndex = 0;
+            // 
+            // view_LopThamGia1
+            // 
+            this.view_LopThamGia1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(236)))), ((int)(((byte)(245)))));
+            this.view_LopThamGia1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.view_LopThamGia1.Location = new System.Drawing.Point(0, 0);
+            this.view_LopThamGia1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.view_LopThamGia1.Name = "view_LopThamGia1";
+            this.view_LopThamGia1.Size = new System.Drawing.Size(927, 542);
+            this.view_LopThamGia1.TabIndex = 18;
+            // 
+            // view_CapNhatMonAn1
+            // 
+            this.view_CapNhatMonAn1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(236)))), ((int)(((byte)(245)))));
+            this.view_CapNhatMonAn1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.view_CapNhatMonAn1.Location = new System.Drawing.Point(0, 0);
+            this.view_CapNhatMonAn1.Margin = new System.Windows.Forms.Padding(2);
+            this.view_CapNhatMonAn1.Name = "view_CapNhatMonAn1";
+            this.view_CapNhatMonAn1.Size = new System.Drawing.Size(927, 542);
+            this.view_CapNhatMonAn1.TabIndex = 22;
+            // 
+            // view_DanhSachTreThamGiaDichVu1
+            // 
+            this.view_DanhSachTreThamGiaDichVu1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(236)))), ((int)(((byte)(245)))));
+            this.view_DanhSachTreThamGiaDichVu1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.view_DanhSachTreThamGiaDichVu1.Location = new System.Drawing.Point(0, 0);
+            this.view_DanhSachTreThamGiaDichVu1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.view_DanhSachTreThamGiaDichVu1.Name = "view_DanhSachTreThamGiaDichVu1";
+            this.view_DanhSachTreThamGiaDichVu1.Size = new System.Drawing.Size(927, 542);
+            this.view_DanhSachTreThamGiaDichVu1.TabIndex = 20;
+            // 
+            // view_DanhSachTreThamGiaHoatDong1
+            // 
+            this.view_DanhSachTreThamGiaHoatDong1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(236)))), ((int)(((byte)(245)))));
+            this.view_DanhSachTreThamGiaHoatDong1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.view_DanhSachTreThamGiaHoatDong1.Location = new System.Drawing.Point(0, 0);
+            this.view_DanhSachTreThamGiaHoatDong1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.view_DanhSachTreThamGiaHoatDong1.Name = "view_DanhSachTreThamGiaHoatDong1";
+            this.view_DanhSachTreThamGiaHoatDong1.Size = new System.Drawing.Size(927, 542);
+            this.view_DanhSachTreThamGiaHoatDong1.TabIndex = 21;
+            // 
+            // view_ApDungThucDon1
+            // 
+            this.view_ApDungThucDon1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(236)))), ((int)(((byte)(245)))));
+            this.view_ApDungThucDon1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.view_ApDungThucDon1.Location = new System.Drawing.Point(0, 0);
+            this.view_ApDungThucDon1.Margin = new System.Windows.Forms.Padding(2);
+            this.view_ApDungThucDon1.Name = "view_ApDungThucDon1";
+            this.view_ApDungThucDon1.Size = new System.Drawing.Size(927, 542);
+            this.view_ApDungThucDon1.TabIndex = 23;
             // 
             // header
             // 
@@ -794,7 +798,7 @@
             // headerDrag
             // 
             this.headerDrag.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(236)))), ((int)(((byte)(245)))));
-            this.headerDrag.Controls.Add(this.button1);
+            this.headerDrag.Controls.Add(this.pictureBox2);
             this.headerDrag.Controls.Add(this.label3);
             this.headerDrag.Dock = System.Windows.Forms.DockStyle.Top;
             this.headerDrag.Location = new System.Drawing.Point(0, 0);
@@ -804,6 +808,17 @@
             this.headerDrag.MouseDown += new System.Windows.Forms.MouseEventHandler(this.headerDrag_MouseDown);
             this.headerDrag.MouseMove += new System.Windows.Forms.MouseEventHandler(this.headerDrag_MouseMove);
             this.headerDrag.MouseUp += new System.Windows.Forms.MouseEventHandler(this.headerDrag_MouseUp);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::QLNT.Properties.Resources.x_1152114_640;
+            this.pictureBox2.Location = new System.Drawing.Point(887, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(37, 37);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // label3
             // 
@@ -826,21 +841,21 @@
             this.view_CapNhatSucKhoe1.Size = new System.Drawing.Size(927, 542);
             this.view_CapNhatSucKhoe1.TabIndex = 20;
             // 
-            // button1
+            // view_XepLop1
             // 
-            this.button1.Location = new System.Drawing.Point(852, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "X";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.view_XepLop1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(236)))), ((int)(((byte)(245)))));
+            this.view_XepLop1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.view_XepLop1.Location = new System.Drawing.Point(276, 100);
+            this.view_XepLop1.Name = "view_XepLop1";
+            this.view_XepLop1.Size = new System.Drawing.Size(927, 542);
+            this.view_XepLop1.TabIndex = 21;
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1203, 642);
+            this.Controls.Add(this.view_XepLop1);
             this.Controls.Add(this.view_CapNhatSucKhoe1);
             this.Controls.Add(this.content);
             this.Controls.Add(this.header);
@@ -857,6 +872,7 @@
             this.tabMenu.ResumeLayout(false);
             this.headerDrag.ResumeLayout(false);
             this.headerDrag.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -872,7 +888,6 @@
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton21;
         private Bunifu.Framework.UI.BunifuFlatButton btnQLNhanVien;
         private Bunifu.Framework.UI.BunifuFlatButton btnQLDinhDuong;
-        private Bunifu.Framework.UI.BunifuFlatButton btnXepLop;
         private Bunifu.Framework.UI.BunifuFlatButton btnQLHocTap;
         private Bunifu.Framework.UI.BunifuFlatButton btnQLThuChi;
         private Bunifu.Framework.UI.BunifuFlatButton btnQLHoatDong;
@@ -912,7 +927,9 @@
         private View.QLSucKhoe.View_DanhSachTreThamGiaDichVu view_DanhSachTreThamGiaDichVu1;
         private View.QLHoatDong.View_DanhSachTreThamGiaHoatDong view_DanhSachTreThamGiaHoatDong1;
         private View.QLDinhDuong.View_ApDungThucDon view_ApDungThucDon1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private Bunifu.Framework.UI.BunifuFlatButton btnXepLop;
+        private View.XepLop.View_XepLop view_XepLop1;
     }
 }
 

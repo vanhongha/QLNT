@@ -20,7 +20,7 @@ namespace QLNT.Presentation_Layer.View
             {
                 if (txtTimKiem.Text != "")
                 {
-                    dgvTimKiem.DataSource = TreBLL.TimKiemTre(txtTimKiem.Text);
+                    dgvTimKiem.DataSource = TreBLL.TreChuaCoLop(txtTimKiem.Text);
                     labSoLuong.Text = "Tìm được " + (dgvTimKiem.RowCount - 1).ToString() + " kết quả";
                 }
                 else

@@ -45,6 +45,7 @@ namespace QLNT.Presentation_Layer
             listView.Add(function.DanhSachHoatDong, view_DanhSachLopThamGiaHoatDong1);
             listView.Add(function.CapNhatMonAn, view_CapNhatMonAn1);
             listView.Add(function.ApDungThucDon, view_ApDungThucDon1);
+            listView.Add(function.XepLop, view_XepLop1);
 
             foreach (function f in listView.Keys)
             {
@@ -128,10 +129,15 @@ namespace QLNT.Presentation_Layer
             UpdateTab(tab.QLHoatDong);
         }
 
+        private void btnXepLop_Click(object sender, System.EventArgs e)
+        {
+            UpdateView(function.XepLop);
+            UpdateTab(tab.None);
+        }
+
         private void SetNormalColor(BunifuFlatButton button)
         {
             button.Normalcolor = Color.FromArgb(1, 41, 89, 180);
-
         }
 
         public void UpdateView(function function)
@@ -232,9 +238,11 @@ namespace QLNT.Presentation_Layer
             }
         }
 
-        private void button1_Click(object sender, System.EventArgs e)
+        private void pictureBox2_Click(object sender, System.EventArgs e)
         {
             this.Close();
         }
+
+ 
     }
 }
