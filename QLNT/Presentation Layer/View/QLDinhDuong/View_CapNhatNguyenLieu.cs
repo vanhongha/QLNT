@@ -280,5 +280,6 @@ namespace QLNT.Presentation_Layer.View.QLDinhDuong
         {
             getCombobox();
         }
+
     }
 }
