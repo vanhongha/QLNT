@@ -16,7 +16,7 @@ namespace QLNT.Presentation_Layer.View
             string gioiTinh;
             if (rdoNu.Checked == false && rdoNam.Checked == false)
             {
-                MessageBox.Show("Vui lòng chọn giới tính cho trẻ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Vui lòng chọn giới tính cho nhân viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             else
@@ -27,14 +27,17 @@ namespace QLNT.Presentation_Layer.View
                     gioiTinh = "Nam";
             }
 
-            Entities.NhanVien nhanVien = new Entities.NhanVien(
-            NhanVienBLL.AutoMaNV(),
-            txtHoTen.Text,
-            gioiTinh,
-            dtNgaySinh.Value,
-            txtEmail.Text,
-            txtDiaChi.Text,
-            txtSDT.Text);
+           
+
+                Entities.NhanVien nhanVien = new Entities.NhanVien(
+                NhanVienBLL.AutoMaNV().ToString(),
+                txtHoTen.Text,
+                gioiTinh,
+                dtNgaySinh.Value,
+                txtEmail.Text,
+                txtDiaChi.Text,
+                txtSDT.Text);
+
 
             try
             {

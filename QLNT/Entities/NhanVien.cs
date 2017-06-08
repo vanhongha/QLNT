@@ -11,17 +11,17 @@ namespace QLNT.Entities
     {
 
         #region Properties
-        private String _maNV;
+        private string _maNV;
 
-        public String MaNV
+        public string MaNV
         {
             get { return _maNV; }
             set { _maNV = value; }
         }
 
-        private String _tenNhanVien;
+        private string _tenNhanVien;
 
-        public String TenNhanVien
+        public string TenNhanVien
         {
             get { return _tenNhanVien; }
             set { _tenNhanVien = value; }
@@ -35,33 +35,33 @@ namespace QLNT.Entities
             set { _ngaySinh = value; }
         }
 
-        private String _gioiTinh;
+        private string _gioiTinh;
 
-        public String GioiTinh
+        public string GioiTinh
         {
             get { return _gioiTinh; }
             set { _gioiTinh = value; }
         }
 
-        private String _diaChi;
+        private string _diaChi;
 
-        public String DiaChi
+        public string DiaChi
         {
             get { return _diaChi; }
             set { _diaChi = value; }
         }
 
-        private String _soDT;
+        private string _soDT;
 
-        public String SoDT
+        public string SoDT
         {
             get { return _soDT; }
             set { _soDT = value; }
         }
 
-        private String _email;
+        private string _email;
 
-        public String Email
+        public string Email
         {
             get { return _email; }
             set { _email = value; }

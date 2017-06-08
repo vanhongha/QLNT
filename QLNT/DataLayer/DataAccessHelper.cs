@@ -21,6 +21,9 @@ namespace QLNT.DataLayer
         #region Init properties
         public DataAccessHelper()
         {
+            //con = new System.Data.SqlClient.SqlConnection();
+            //con.ConnectionString = "Server=.\\SQLEXPRESS; AttachDbFilename = QLNT.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True";
+            //con.Open();
             String connectionString = @"Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=QLNT;Data Source=HONGHA";
             con = new SqlConnection(connectionString);
         }

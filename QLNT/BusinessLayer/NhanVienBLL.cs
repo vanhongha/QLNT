@@ -12,12 +12,12 @@ namespace QLNT.BusinessLayer
             string id = NhanVienDAL.GetLastID().Trim();
             if (id == "")
             {
-                return "MNV000001";
+                return "MANV000001";
             }
-            int nextID = int.Parse(id.Remove(0, "MNV".Length)) + 1;
+            int nextID = int.Parse(id.Remove(0, "MANV".Length)) + 1;
             id = "00000" + nextID.ToString();
             id = id.Substring(id.Length - 6, 6);
-            return "MNV" + id;
+            return "MANV" + id;
         }
 
         public static bool ThemNV(NhanVien nhanVien)
