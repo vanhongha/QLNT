@@ -148,5 +148,36 @@ namespace QLNT.Presentation_Layer.View.QLHoatDong
                 MessageBox.Show("Bạn phải chọn một hoạt động để xóa.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        private void txtTenHoatDong_TextChanged(object sender, EventArgs e)
+        {
+            if(txtTenHoatDong.Text.Length > 50)
+            {
+                MessageBox.Show("Độ dài dữ liệu Tên hoạt động phải nhỏ hơn 50", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtTenHoatDong.Clear();
+            }
+        }
+
+        private void txtChiPhi_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtChiPhi.Text != "")
+                    decimal.Parse(txtChiPhi.Text);
+            } catch(Exception ex)
+            {
+                MessageBox.Show("Chi phí phải là số dương", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtChiPhi.Clear();
+            }
+        }
+
+        private void txtKeHoach_TextChanged(object sender, EventArgs e)
+        {
+            if (txtKeHoach.Text.Length > 100)
+            {
+                MessageBox.Show("Độ dài dữ liệu Chi tiết phải nhỏ hơn 100", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtKeHoach.Clear();
+            }
+        }
     }
 }

@@ -143,6 +143,7 @@
             this.txtChiTiet.Size = new System.Drawing.Size(358, 113);
             this.txtChiTiet.TabIndex = 57;
             this.txtChiTiet.Text = "";
+            this.txtChiTiet.TextChanged += new System.EventHandler(this.txtChiTiet_TextChanged);
             // 
             // btnLuu
             // 
@@ -291,6 +292,7 @@
             this.txtTenDV.Name = "txtTenDV";
             this.txtTenDV.Size = new System.Drawing.Size(358, 26);
             this.txtTenDV.TabIndex = 77;
+            this.txtTenDV.TextChanged += new System.EventHandler(this.txtTenDV_TextChanged);
             // 
             // txtChiPhi
             // 
@@ -302,6 +304,7 @@
             this.txtChiPhi.Name = "txtChiPhi";
             this.txtChiPhi.Size = new System.Drawing.Size(358, 26);
             this.txtChiPhi.TabIndex = 77;
+            this.txtChiPhi.TextChanged += new System.EventHandler(this.txtChiPhi_TextChanged);
             // 
             // btnXoa
             // 

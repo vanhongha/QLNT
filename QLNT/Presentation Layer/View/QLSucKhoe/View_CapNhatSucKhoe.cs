@@ -93,9 +93,40 @@ namespace QLNT.Presentation_Layer.View.QLSucKhoe
             
         }
 
-        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        private void txtCanNang_TextChanged(object sender, EventArgs e)
         {
+            try
+            {
+                if(txtCanNang.Text != "")
+                    float.Parse(txtCanNang.Text);
+            } catch(Exception ex)
+            {
+                MessageBox.Show("Cân nặng phải là kiểu số thực", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtCanNang.Clear();
+            }
+        }
 
+        private void txtChieuCao_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if(txtChieuCao.Text != "")
+                    float.Parse(txtChieuCao.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Chiều cao phải là kiểu số thực", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtChieuCao.Clear();
+            }
+        }
+
+        private void txtTinhTrang_TextChanged(object sender, EventArgs e)
+        {
+            if(txtTinhTrang.Text.Length > 100)
+            {
+                MessageBox.Show("Độ dài dữ liệu phải nhỏ hơn 100", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtTinhTrang.Clear();
+            }
         }
     }
 }

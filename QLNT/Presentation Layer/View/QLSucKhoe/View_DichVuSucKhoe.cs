@@ -134,5 +134,36 @@ namespace QLNT.Presentation_Layer.View.QLSucKhoe
                 MessageBox.Show("Bạn phải chọn một hoạt động để xóa.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        private void txtChiPhi_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if(txtChiPhi.Text != "")
+                    decimal.Parse(txtChiPhi.Text);
+            } catch (Exception ex)
+            {
+                MessageBox.Show("Chi phí phải là số dương", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtChiPhi.Clear();
+            }
+        }
+
+        private void txtTenDV_TextChanged(object sender, EventArgs e)
+        {
+            if (txtTenDV.Text.Length > 50)
+            {
+                MessageBox.Show("Độ dài tên dịch vụ không được lớn hơn 50", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtTenDV.Clear();
+            }
+        }
+
+        private void txtChiTiet_TextChanged(object sender, EventArgs e)
+        {
+            if (txtChiTiet.Text.Length > 100)
+            {
+                MessageBox.Show("Độ dài chi tiết không được lớn hơn 100", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtChiTiet.Clear();
+            }
+        }
     }
 }

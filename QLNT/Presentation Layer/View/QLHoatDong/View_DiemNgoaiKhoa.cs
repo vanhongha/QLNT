@@ -98,6 +98,27 @@ namespace QLNT.Presentation_Layer.View.QLHoatDong
             txtDiem.Text = dgvDiemTre.Rows[e.RowIndex].Cells["Diem"].Value.ToString();
         }
 
-        
+        private void txtDiem_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtDiem.Text != "")
+                    float.Parse(txtDiem.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Điểm phải là số dương", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtDiem.Clear();
+            }
+        }
+
+        private void txtNhanXet_TextChanged(object sender, EventArgs e)
+        {
+            if (txtNhanXet.Text.Length > 100)
+            {
+                MessageBox.Show("Độ dài dữ liệu Nhận xét phải nhỏ hơn 100", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtNhanXet.Clear();
+            }
+        }
     }
 }
