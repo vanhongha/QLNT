@@ -18,6 +18,24 @@ namespace QLNT.Presentation_Layer.View
         {
             int tuoi = DateTime.Now.Year - dtNgaySinh.Value.Year;
 
+            if(txtHoTen.Text.Length > 50)
+            {
+                MessageBox.Show("Vui lòng nhập họ tên trẻ ít hơn 50 ký tự", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (txtTenBo.Text.Length > 50)
+            {
+                MessageBox.Show("Vui lòng nhập họ tên bố ít hơn 50 ký tự", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (txtTenMe.Text.Length > 50)
+            {
+                MessageBox.Show("Vui lòng nhập họ tên mẹ ít hơn 50 ký tự", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             string gioiTinh;
             if (rdoNu.Checked == false && rdoNam.Checked == false)
             {

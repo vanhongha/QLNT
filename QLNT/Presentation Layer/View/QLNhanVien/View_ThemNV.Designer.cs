@@ -31,20 +31,20 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(View_ThemNV));
             this.btnNhapLai = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnThemNV = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.txtSDT = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtEmail = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtDiaChi = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label4 = new System.Windows.Forms.Label();
             this.dtNgaySinh = new Bunifu.Framework.UI.BunifuDatepicker();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtHoTen = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label1 = new System.Windows.Forms.Label();
             this.rdoNu = new System.Windows.Forms.RadioButton();
             this.rdoNam = new System.Windows.Forms.RadioButton();
             this.label8 = new System.Windows.Forms.Label();
+            this.txtHoTen = new System.Windows.Forms.TextBox();
+            this.txtDiaChi = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtSDT = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnNhapLai
@@ -99,25 +99,6 @@
             this.btnThemNV.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnThemNV.Click += new System.EventHandler(this.btnThemNV_Click);
             // 
-            // txtSDT
-            // 
-            this.txtSDT.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSDT.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtSDT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtSDT.HintForeColor = System.Drawing.Color.Empty;
-            this.txtSDT.HintText = "";
-            this.txtSDT.isPassword = false;
-            this.txtSDT.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(89)))), ((int)(((byte)(180)))));
-            this.txtSDT.LineIdleColor = System.Drawing.Color.Gray;
-            this.txtSDT.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(89)))), ((int)(((byte)(180)))));
-            this.txtSDT.LineThickness = 3;
-            this.txtSDT.Location = new System.Drawing.Point(129, 302);
-            this.txtSDT.Margin = new System.Windows.Forms.Padding(4);
-            this.txtSDT.Name = "txtSDT";
-            this.txtSDT.Size = new System.Drawing.Size(757, 44);
-            this.txtSDT.TabIndex = 20;
-            this.txtSDT.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -129,25 +110,6 @@
             this.label6.TabIndex = 24;
             this.label6.Text = "Điện thoại:";
             // 
-            // txtEmail
-            // 
-            this.txtEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtEmail.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtEmail.HintForeColor = System.Drawing.Color.Empty;
-            this.txtEmail.HintText = "";
-            this.txtEmail.isPassword = false;
-            this.txtEmail.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(89)))), ((int)(((byte)(180)))));
-            this.txtEmail.LineIdleColor = System.Drawing.Color.Gray;
-            this.txtEmail.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(89)))), ((int)(((byte)(180)))));
-            this.txtEmail.LineThickness = 3;
-            this.txtEmail.Location = new System.Drawing.Point(129, 243);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(757, 44);
-            this.txtEmail.TabIndex = 19;
-            this.txtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -158,25 +120,6 @@
             this.label5.Size = new System.Drawing.Size(49, 18);
             this.label5.TabIndex = 23;
             this.label5.Text = "Email:";
-            // 
-            // txtDiaChi
-            // 
-            this.txtDiaChi.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtDiaChi.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtDiaChi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtDiaChi.HintForeColor = System.Drawing.Color.Empty;
-            this.txtDiaChi.HintText = "";
-            this.txtDiaChi.isPassword = false;
-            this.txtDiaChi.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(89)))), ((int)(((byte)(180)))));
-            this.txtDiaChi.LineIdleColor = System.Drawing.Color.Gray;
-            this.txtDiaChi.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(89)))), ((int)(((byte)(180)))));
-            this.txtDiaChi.LineThickness = 3;
-            this.txtDiaChi.Location = new System.Drawing.Point(129, 184);
-            this.txtDiaChi.Margin = new System.Windows.Forms.Padding(4);
-            this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(757, 44);
-            this.txtDiaChi.TabIndex = 17;
-            this.txtDiaChi.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // label4
             // 
@@ -223,25 +166,6 @@
             this.label2.Size = new System.Drawing.Size(56, 18);
             this.label2.TabIndex = 16;
             this.label2.Text = "Họ tên:";
-            // 
-            // txtHoTen
-            // 
-            this.txtHoTen.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtHoTen.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtHoTen.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtHoTen.HintForeColor = System.Drawing.Color.Empty;
-            this.txtHoTen.HintText = "";
-            this.txtHoTen.isPassword = false;
-            this.txtHoTen.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(89)))), ((int)(((byte)(180)))));
-            this.txtHoTen.LineIdleColor = System.Drawing.Color.Gray;
-            this.txtHoTen.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(89)))), ((int)(((byte)(180)))));
-            this.txtHoTen.LineThickness = 3;
-            this.txtHoTen.Location = new System.Drawing.Point(129, 66);
-            this.txtHoTen.Margin = new System.Windows.Forms.Padding(4);
-            this.txtHoTen.Name = "txtHoTen";
-            this.txtHoTen.Size = new System.Drawing.Size(577, 44);
-            this.txtHoTen.TabIndex = 14;
-            this.txtHoTen.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // label1
             // 
@@ -292,26 +216,54 @@
             this.label8.TabIndex = 28;
             this.label8.Text = "  - Giới tính:";
             // 
+            // txtHoTen
+            // 
+            this.txtHoTen.Location = new System.Drawing.Point(128, 90);
+            this.txtHoTen.Name = "txtHoTen";
+            this.txtHoTen.Size = new System.Drawing.Size(583, 20);
+            this.txtHoTen.TabIndex = 31;
+            // 
+            // txtDiaChi
+            // 
+            this.txtDiaChi.Location = new System.Drawing.Point(128, 208);
+            this.txtDiaChi.Name = "txtDiaChi";
+            this.txtDiaChi.Size = new System.Drawing.Size(757, 20);
+            this.txtDiaChi.TabIndex = 31;
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Location = new System.Drawing.Point(128, 267);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(757, 20);
+            this.txtEmail.TabIndex = 31;
+            // 
+            // txtSDT
+            // 
+            this.txtSDT.Location = new System.Drawing.Point(128, 326);
+            this.txtSDT.Name = "txtSDT";
+            this.txtSDT.Size = new System.Drawing.Size(757, 20);
+            this.txtSDT.TabIndex = 31;
+            // 
             // View_ThemNV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(236)))), ((int)(((byte)(245)))));
+            this.Controls.Add(this.txtSDT);
+            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.txtDiaChi);
+            this.Controls.Add(this.txtHoTen);
             this.Controls.Add(this.rdoNu);
             this.Controls.Add(this.rdoNam);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.btnNhapLai);
             this.Controls.Add(this.btnThemNV);
-            this.Controls.Add(this.txtSDT);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.txtDiaChi);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.dtNgaySinh);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtHoTen);
             this.Controls.Add(this.label1);
             this.Name = "View_ThemNV";
             this.Size = new System.Drawing.Size(927, 542);
@@ -324,19 +276,19 @@
 
         private Bunifu.Framework.UI.BunifuThinButton2 btnNhapLai;
         private Bunifu.Framework.UI.BunifuThinButton2 btnThemNV;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtSDT;
         private System.Windows.Forms.Label label6;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtEmail;
         private System.Windows.Forms.Label label5;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtDiaChi;
         private System.Windows.Forms.Label label4;
         private Bunifu.Framework.UI.BunifuDatepicker dtNgaySinh;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtHoTen;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RadioButton rdoNu;
         private System.Windows.Forms.RadioButton rdoNam;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtHoTen;
+        private System.Windows.Forms.TextBox txtDiaChi;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtSDT;
     }
 }

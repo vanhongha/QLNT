@@ -9,10 +9,17 @@ namespace QLNT.Presentation_Layer.View
         public View_ThemNV()
         {
             InitializeComponent();
+            
         }
 
         private void btnThemNV_Click(object sender, EventArgs e)
         {
+            if(txtHoTen.Text.Length > 50)
+            {
+                MessageBox.Show("Vui lòng nhập họ tên ít hơn 50 ký tự", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             string gioiTinh;
             if (rdoNu.Checked == false && rdoNam.Checked == false)
             {
@@ -25,19 +32,16 @@ namespace QLNT.Presentation_Layer.View
                     gioiTinh = "Nu";
                 else
                     gioiTinh = "Nam";
-            }
+            }           
 
-           
-
-                Entities.NhanVien nhanVien = new Entities.NhanVien(
-                NhanVienBLL.AutoMaNV().ToString(),
-                txtHoTen.Text,
-                gioiTinh,
-                dtNgaySinh.Value,
-                txtEmail.Text,
-                txtDiaChi.Text,
-                txtSDT.Text);
-
+            Entities.NhanVien nhanVien = new Entities.NhanVien(
+            NhanVienBLL.AutoMaNV().ToString(),
+            txtHoTen.Text,
+            gioiTinh,
+            dtNgaySinh.Value,
+            txtEmail.Text,
+            txtDiaChi.Text,
+            txtSDT.Text);
 
             try
             {
