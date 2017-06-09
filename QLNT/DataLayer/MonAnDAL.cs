@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using QLNT.Entities;
 using System.Data;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 namespace QLNT.DataLayer
 {
     class MonAnDAL
@@ -26,15 +27,23 @@ namespace QLNT.DataLayer
 
         public static void XoaMonAn(string maMon)
         {
-            DataAccessHelper db = new DataAccessHelper();
-            SqlCommand cmd = db.Command("XOA_MON_AN");
-            cmd.CommandType = CommandType.StoredProcedure;
+            try
+            {
+                DataAccessHelper db = new DataAccessHelper();
+                SqlCommand cmd = db.Command("XOA_MON_AN");
+                cmd.CommandType = CommandType.StoredProcedure;
 
-            cmd.Parameters.AddWithValue("@MaMonAn", maMon);
+                cmd.Parameters.AddWithValue("@MaMonAn", maMon);
 
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            db.dt = new DataTable();
-            da.Fill(db.dt);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                db.dt = new DataTable();
+                da.Fill(db.dt);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Không thể xóa món ăn đã áp dụng vào thực đơn");
+            }
+
         }
 
         public static void CapNhatMonAn(MonAn monAn)
@@ -74,6 +83,32 @@ namespace QLNT.DataLayer
                 return row.ItemArray[0].ToString();
             }
             return "";
+        }
+
+        public static bool KiemTraMonAn(string maMonAn)
+        {
+
+            DataAccessHelper db = new DataAccessHelper();
+            DataTable dt = db.GetDataTable("select * from MONAN where MaMonAn = '" + maMonAn.Trim() + "'");
+
+            foreach (DataRow row in dt.Rows)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public static bool KiemTraMonAnTrongThucDon(string maMonAn)
+        {
+
+            DataAccessHelper db = new DataAccessHelper();
+            DataTable dt = db.GetDataTable("select * from CHITIET_THUCDON where MaMonAn = '" + maMonAn.Trim() + "'");
+
+            foreach (DataRow row in dt.Rows)
+            {
+                return true;
+            }
+            return false;
         }
     }
 }

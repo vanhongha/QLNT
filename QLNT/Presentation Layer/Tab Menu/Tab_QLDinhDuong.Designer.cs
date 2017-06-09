@@ -54,10 +54,10 @@
             this.btnCapNhatMonAn.IdleFillColor = System.Drawing.Color.White;
             this.btnCapNhatMonAn.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
             this.btnCapNhatMonAn.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
-            this.btnCapNhatMonAn.Location = new System.Drawing.Point(196, 7);
+            this.btnCapNhatMonAn.Location = new System.Drawing.Point(569, 7);
             this.btnCapNhatMonAn.Margin = new System.Windows.Forms.Padding(5);
             this.btnCapNhatMonAn.Name = "btnCapNhatMonAn";
-            this.btnCapNhatMonAn.Size = new System.Drawing.Size(181, 41);
+            this.btnCapNhatMonAn.Size = new System.Drawing.Size(155, 41);
             this.btnCapNhatMonAn.TabIndex = 7;
             this.btnCapNhatMonAn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnCapNhatMonAn.Click += new System.EventHandler(this.btnCapNhatMonAn_Click);
@@ -71,7 +71,7 @@
             this.btnPhieuNguyenLieu.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
             this.btnPhieuNguyenLieu.BackColor = System.Drawing.Color.White;
             this.btnPhieuNguyenLieu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPhieuNguyenLieu.BackgroundImage")));
-            this.btnPhieuNguyenLieu.ButtonText = "Phiếu nguyên liệu";
+            this.btnPhieuNguyenLieu.ButtonText = "Phiếu mua nguyên liệu";
             this.btnPhieuNguyenLieu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPhieuNguyenLieu.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPhieuNguyenLieu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
@@ -80,10 +80,10 @@
             this.btnPhieuNguyenLieu.IdleFillColor = System.Drawing.Color.White;
             this.btnPhieuNguyenLieu.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
             this.btnPhieuNguyenLieu.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
-            this.btnPhieuNguyenLieu.Location = new System.Drawing.Point(578, 7);
+            this.btnPhieuNguyenLieu.Location = new System.Drawing.Point(371, 7);
             this.btnPhieuNguyenLieu.Margin = new System.Windows.Forms.Padding(5);
             this.btnPhieuNguyenLieu.Name = "btnPhieuNguyenLieu";
-            this.btnPhieuNguyenLieu.Size = new System.Drawing.Size(161, 41);
+            this.btnPhieuNguyenLieu.Size = new System.Drawing.Size(182, 41);
             this.btnPhieuNguyenLieu.TabIndex = 6;
             this.btnPhieuNguyenLieu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnPhieuNguyenLieu.Click += new System.EventHandler(this.btnPhieuNguyenLieu_Click);
@@ -106,7 +106,7 @@
             this.btnCapNhatNguyenLieu.IdleFillColor = System.Drawing.Color.White;
             this.btnCapNhatNguyenLieu.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
             this.btnCapNhatNguyenLieu.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
-            this.btnCapNhatNguyenLieu.Location = new System.Drawing.Point(387, 7);
+            this.btnCapNhatNguyenLieu.Location = new System.Drawing.Point(740, 7);
             this.btnCapNhatNguyenLieu.Margin = new System.Windows.Forms.Padding(5);
             this.btnCapNhatNguyenLieu.Name = "btnCapNhatNguyenLieu";
             this.btnCapNhatNguyenLieu.Size = new System.Drawing.Size(181, 41);
@@ -158,7 +158,7 @@
             this.btnApDungThucDon.IdleFillColor = System.Drawing.Color.White;
             this.btnApDungThucDon.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
             this.btnApDungThucDon.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(77)))), ((int)(((byte)(161)))));
-            this.btnApDungThucDon.Location = new System.Drawing.Point(749, 7);
+            this.btnApDungThucDon.Location = new System.Drawing.Point(202, 7);
             this.btnApDungThucDon.Margin = new System.Windows.Forms.Padding(5);
             this.btnApDungThucDon.Name = "btnApDungThucDon";
             this.btnApDungThucDon.Size = new System.Drawing.Size(153, 41);

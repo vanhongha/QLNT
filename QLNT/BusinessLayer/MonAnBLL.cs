@@ -54,6 +54,14 @@ namespace QLNT.BusinessLayer
             return "MAMA" + maTuDong;
         }
 
-       
+        public static bool KiemTraMonAn(string maMonAn)
+        {
+            return MonAnDAL.KiemTraMonAn(maMonAn);
+        }
+
+        public static bool KiemTraMonAnTrongThucDon(string maMonAn)
+        {
+            return MonAnDAL.KiemTraMonAnTrongThucDon(maMonAn);
+        }
     }
 }

@@ -76,10 +76,11 @@ namespace QLNT.Presentation_Layer.View.QLDinhDuong
             dgvPhieuMua.Columns[3].HeaderText = "Trạng thái";
             dgvPhieuMua.Columns[3].Width = 100;
             dgvPhieuMua.Columns[4].HeaderText = "Người lập phiếu";
-            dgvPhieuMua.Columns[4].Width = 130;
+            dgvPhieuMua.Columns[4].Width = 140;
 
             dgvPhieuMua.ClearSelection();
             dgvPhieuMua.CurrentCell = null;
+            
         }
 
         private void getCombobox()
@@ -317,6 +318,7 @@ namespace QLNT.Presentation_Layer.View.QLDinhDuong
 
             ChiTietPhieuMuaNLBLL.CapNhatPhieuMuaNL(chiTiet);
             getDataGridViewChiTietPhieuMua(txtMaPhieuMua.Text);
+            getDataGridViewPhieuMua();
 
 
         }
@@ -400,6 +402,7 @@ namespace QLNT.Presentation_Layer.View.QLDinhDuong
             XoaTrang();
             setEnabledComponent(false);
             getDataGridViewChiTietPhieuMua(txtMaPhieuMua2.Text.Trim());
+            getDataGridViewPhieuMua();
         }
 
         //------------------------------event TextChanged-----------------------------------------------

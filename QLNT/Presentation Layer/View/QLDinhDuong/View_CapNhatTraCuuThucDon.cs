@@ -45,7 +45,7 @@ namespace QLNT.Presentation_Layer.View.QLDinhDuong
             dgvThucDon.Columns[1].HeaderText = "Ngày lập";
             dgvThucDon.Columns[1].Width = 130;
             dgvThucDon.Columns[2].HeaderText = "Người lập";
-            dgvThucDon.Columns[2].Width = 135;
+            dgvThucDon.Columns[2].Width = 150;
         }
 
         private void getDataGridViewChiTietThucDon(string maThucDon)

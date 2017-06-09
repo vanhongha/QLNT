@@ -32,17 +32,24 @@ namespace QLNT.DataLayer
         }
         public static void XoaNguyenLieu(string maNL)
         {
-            DataAccessHelper db = new DataAccessHelper();
-            SqlCommand cmd = db.Command("XOA_NGUYEN_LIEU");
+            try
+            { 
+                DataAccessHelper db = new DataAccessHelper();
+                SqlCommand cmd = db.Command("XOA_NGUYEN_LIEU");
 
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@MaNL", maNL);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@MaNL", maNL);
 
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
 
-            db.dt = new DataTable();
-            da.Fill(db.dt);
-        }
+                db.dt = new DataTable();
+                da.Fill(db.dt);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Không thể xóa nguyên liệu đã được sử dụng trong món ăn");
+            }
+}
 
         public static void CapNhatNguyenLieu(NguyenLieu nguyenLieu)
         {

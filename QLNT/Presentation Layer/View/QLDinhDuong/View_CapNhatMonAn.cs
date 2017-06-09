@@ -108,6 +108,24 @@ namespace QLNT.Presentation_Layer.View.QLDinhDuong
             txtMaMonAn.Text = dgvMonAn.Rows[e.RowIndex].Cells["MaMonAn"].Value.ToString();
             txtTenMonAn.Text = dgvMonAn.Rows[e.RowIndex].Cells["TenMonAn"].Value.ToString();
             getDataGridViewNguyenLieuTungMon(txtMaMonAn.Text);
+
+            if (MonAnBLL.KiemTraMonAnTrongThucDon(txtMaMonAn.Text))
+            {
+                lblWarning.Visible = true;
+                setEnabledComponent(false);
+            }
+            else
+            {
+                lblWarning.Visible = false;
+                XoaTrang();
+                setEnabledComponent(true);
+            }
+        }
+
+        public void setEnabledComponent(bool value)
+        {
+            cboChonNguyenLieu.Enabled = value;
+            txtSoLuong.Enabled = value;
         }
 
         private void dgvNguyenLieuTungMon_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -137,9 +155,27 @@ namespace QLNT.Presentation_Layer.View.QLDinhDuong
 
         private void btnThemMonAn_Click(object sender, EventArgs e)
         {
-            if(txtMaMonAn.Text=="")
+            if(lblWarning.Visible)
+            {
+                MessageBox.Show("Không thể sửa đổi chi tiết món ăn đã được thêm vào thực đơn", "Thông báo", MessageBoxButtons.OK);
+                return;
+            }
+
+            if (MonAnBLL.KiemTraMonAn(txtMaMonAn.Text))
+            {
+                MessageBox.Show("Vui lòng chọn Cập nhật để sửa đổi món ăn đã tồn tại", "Thông báo", MessageBoxButtons.OK);
+                return;
+            }
+
+            if (txtMaMonAn.Text=="")
             {
                 MessageBox.Show("Vui lòng bấm 'Làm mới' để lấy mã món ăn mới", "Thông báo", MessageBoxButtons.OK);
+                return;
+            }
+
+            if (txtTenMonAn.Text == "")
+            {
+                MessageBox.Show("Tên món ăn không được để trống", "Thông báo", MessageBoxButtons.OK);
                 return;
             }
             MonAn monan = new MonAn();
@@ -151,6 +187,12 @@ namespace QLNT.Presentation_Layer.View.QLDinhDuong
 
         private void btnLamMoi_Click(object sender, EventArgs e)
         {
+            if (lblWarning.Visible)
+            {
+                MessageBox.Show("Không thể sửa đổi chi tiết món ăn đã được thêm vào thực đơn", "Thông báo", MessageBoxButtons.OK);
+                return;
+            }
+
             txtMaMonAn.Text = MonAnBLL.SinhMaTuDong();
             txtTenMonAn.Text = "";
             
@@ -158,6 +200,12 @@ namespace QLNT.Presentation_Layer.View.QLDinhDuong
 
         private void btnXoaMonAn_Click(object sender, EventArgs e)
         {
+            if (lblWarning.Visible)
+            {
+                MessageBox.Show("Không thể sửa đổi chi tiết món ăn đã được thêm vào thực đơn", "Thông báo", MessageBoxButtons.OK);
+                return;
+            }
+
             if (txtMaMonAn.Text == "")
             {
                 MessageBox.Show("Vui lòng nhấn chọn món ăn cần xóa", "Thông báo", MessageBoxButtons.OK);
@@ -171,9 +219,21 @@ namespace QLNT.Presentation_Layer.View.QLDinhDuong
 
         private void bunifuThinButton21_Click(object sender, EventArgs e)
         {
+            if (lblWarning.Visible)
+            {
+                MessageBox.Show("Không thể sửa đổi chi tiết món ăn đã được thêm vào thực đơn", "Thông báo", MessageBoxButtons.OK);
+                return;
+            }
+
             if (txtMaMonAn.Text == "")
             {
                 MessageBox.Show("Vui lòng chọn một món ăn cần cập nhật", "Thông báo", MessageBoxButtons.OK);
+                return;
+            }
+
+            if (!MonAnBLL.KiemTraMonAn(txtMaMonAn.Text))
+            {
+                MessageBox.Show("món ăn này chưa tồn tại", "Thông báo", MessageBoxButtons.OK);
                 return;
             }
 
